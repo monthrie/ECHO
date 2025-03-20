@@ -11,7 +11,7 @@ class ObsidianConverter:
         self.model = config.MODEL
         
         # Create output directory for markdown files
-        self.output_dir = Path("markdown_output")
+        self.output_dir = Path(config.OBSIDIAN_VAULT_PATH)
         self.output_dir.mkdir(exist_ok=True)
         print(f"Created output directory: {self.output_dir}")
         
