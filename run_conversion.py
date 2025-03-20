@@ -11,7 +11,7 @@ class Config:
     OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
     DB_PATH = os.getenv("DB_PATH", "second_brain.db")
     OBSIDIAN_VAULT_PATH = os.getenv("OBSIDIAN_VAULT_PATH", 
-        "/Users/wilmon/Documents/projects/FTFM/notes/")
+        "/Users/wilmon/Documents/projects/ECHO/markdown_output")
     MODEL = os.getenv("MODEL", "deepseek/deepseek-chat:free")
     JSON_OUTPUT_DIR = "output_jsons"
     
