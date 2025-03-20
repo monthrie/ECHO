@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "031a1241904e8fb4",
+    "type": "split",
+    "children": [
+      {
+        "id": "854e19697c65dd26",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4890f6c89caadb34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/FTFM - MVP Glenn Greenwald Podcast Mapping.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FTFM - MVP Glenn Greenwald Podcast Mapping"
+            }
+          },
+          {
+            "id": "8a0f4836cfd66b0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/AI Playground Minimal Viable Prototype.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI Playground Minimal Viable Prototype"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a3ca4bb55ed3e2d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "0a6d9308e4115e94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4a3bc9bc88dbec93",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "83cf838ff440350d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "36a6e650ac28e752",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 430.5
+  },
+  "right": {
+    "id": "5702bc677f34d35a",
+    "type": "split",
+    "children": [
+      {
+        "id": "d570a55d677f81df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "933e3a5f6fa34af9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Projects/AI Playground Minimal Viable Prototype.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for AI Playground Minimal Viable Prototype"
+            }
+          },
+          {
+            "id": "2105fb52dcae5d38",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Projects/AI Playground Minimal Viable Prototype.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from AI Playground Minimal Viable Prototype"
+            }
+          },
+          {
+            "id": "49555286ed73c72d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c218ae15861662f8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Projects/AI Playground Minimal Viable Prototype.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of AI Playground Minimal Viable Prototype"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "8a0f4836cfd66b0f",
+  "lastOpenFiles": [
+    "Areas/Professional Networking.md",
+    "Areas/Daily Story - One-Sentence Journal Practice.md",
+    "Daily Notes/2023-11-10.md",
+    "Daily Notes/Daily Note Template.md",
+    "Entities/Rajiv.md",
+    "Entities/Future Intelligence Lab.md",
+    "Projects/notes for 0.1.1 SB.md",
+    "Projects/FTFM - Public Accountability Information System.md",
+    "FTFM Project MOC.md",
+    "Resources/Zhang's Stanford Paper on Agent Communication Protocols.md",
+    "Resources/Agent-to-Agent Communication Protocols.md",
+    "Resources/Microsoft DecentralAI Paper Review.md",
+    "Projects/Mom's Birthday Celebration.md",
+    "Projects/FTFM - MVP Glenn Greenwald Podcast Mapping.md"
+  ]
+}
