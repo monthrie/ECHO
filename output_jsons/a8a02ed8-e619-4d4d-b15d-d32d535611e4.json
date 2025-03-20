@@ -1,0 +1,117 @@
+{
+  "session": {
+    "session_id": "7f8e9d6c-5b4a-4321-9876-1a2b3c4d5e6f",
+    "user_id": "default_user",
+    "started_at": "2023-11-09T14:30:00Z",
+    "summary": "The session covers plans for an AI-powered knowledge management system, pending open-source model research, and a note to review materials tomorrow."
+  },
+  "records": [
+    {
+      "record_id": "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
+      "session_id": "7f8e9d6c-5b4a-4321-9876-1a2b3c4d5e6f",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "idea",
+      "content": "Develop an AI-powered knowledge management system to streamline information organization and retrieval processes.",
+      "created_at": "2023-11-09T14:30:05Z",
+      "tags": [
+        "AI",
+        "knowledge management",
+        "productivity",
+        "software development"
+      ],
+      "links": [
+        "b2c3d4e5-f6a7-8901-bcde-23456789abcd",
+        "c3d4e5f6-a7b8-9012-cdef-3456789abcde"
+      ],
+      "details": {
+        "title": "AI Knowledge Management System",
+        "priority": "medium",
+        "notes": "Consider exploring existing solutions first to identify gaps and potential improvements. This could leverage recent advancements in LLMs for better content organization.",
+        "due_date": null,
+        "completion_criteria": "Functional prototype that can organize and retrieve information using AI capabilities",
+        "maintenance_requirements": null
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a functioning prototype of an AI-powered knowledge management system",
+          "deadline": "2024-02-09T00:00:00Z",
+          "status": "planning"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      }
+    },
+    {
+      "record_id": "b2c3d4e5-f6a7-8901-bcde-23456789abcd",
+      "session_id": "7f8e9d6c-5b4a-4321-9876-1a2b3c4d5e6f",
+      "para_type": "resource",
+      "para_status": "active",
+      "type": "research_request",
+      "content": "Conduct comprehensive research on available open-source AI models that could be leveraged for knowledge management applications.",
+      "created_at": "2023-11-09T14:30:15Z",
+      "tags": [
+        "AI models",
+        "open-source",
+        "research",
+        "machine learning"
+      ],
+      "links": [
+        "a1b2c3d4-e5f6-7890-abcd-1234567890ab"
+      ],
+      "details": {
+        "title": "Open-Source AI Models Research",
+        "priority": "high",
+        "notes": "Focus on models with good text understanding and organization capabilities. Consider comparing models based on size, performance, licensing, and community support.",
+        "due_date": "2023-11-16T00:00:00Z",
+        "completion_criteria": null,
+        "maintenance_requirements": null
+      },
+      "para_metadata": {
+        "project": null,
+        "area": null,
+        "resource": {
+          "category": "AI research",
+          "format": "research findings"
+        },
+        "archive": null
+      }
+    },
+    {
+      "record_id": "c3d4e5f6-a7b8-9012-cdef-3456789abcde",
+      "session_id": "7f8e9d6c-5b4a-4321-9876-1a2b3c4d5e6f",
+      "para_type": "area",
+      "para_status": "active",
+      "type": "reminder",
+      "content": "Review all notes and findings related to the AI knowledge management system and open-source model research.",
+      "created_at": "2023-11-09T14:30:25Z",
+      "tags": [
+        "review",
+        "follow-up",
+        "productivity"
+      ],
+      "links": [
+        "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
+        "b2c3d4e5-f6a7-8901-bcde-23456789abcd"
+      ],
+      "details": {
+        "title": "Review Project Notes",
+        "priority": "medium",
+        "notes": "Set aside dedicated time for this review to consolidate findings and plan next steps for both the system development and research tasks.",
+        "due_date": "2023-11-10T00:00:00Z",
+        "completion_criteria": null,
+        "maintenance_requirements": "Regular reviews of project progress and research findings"
+      },
+      "para_metadata": {
+        "project": null,
+        "area": {
+          "responsibility": "Maintaining organized research and project documentation",
+          "review_frequency": "1"
+        },
+        "resource": null,
+        "archive": null
+      }
+    }
+  ]
+}

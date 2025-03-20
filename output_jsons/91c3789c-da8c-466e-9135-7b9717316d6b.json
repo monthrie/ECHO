@@ -1,0 +1,224 @@
+{
+  "session": {
+    "session_id": "30de50c7-f9c4-4a94-9e2f-b2c63978e4ce",
+    "user_id": "default_user",
+    "started_at": "2023-11-05T15:22:43Z",
+    "summary": "The user outlines a concept for FTFM, a system that would record, structure, and analyze news and public statements to create a searchable database of claims, promises, and statements. This would serve as an accountability tool and source of truth for verifying what public figures have said over time. The system would use AI to extract entities, detect patterns, and identify contradictions or hypocrisies. The user also briefly mentions a separate AI dictation project and a daily journaling concept."
+  },
+  "records": [
+    {
+      "record_id": "a7b23f19-8e3d-42e5-b961-58d9b15a1e74",
+      "session_id": "30de50c7-f9c4-4a94-9e2f-b2c63978e4ce",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "idea",
+      "content": "Develop FTFM as a system to track, index, and analyze public statements, creating a searchable 'source of truth' for accountability. The system would extract named entities and claims from podcasts and other media, linking them to specific moments when statements were made. This would enable tracking of promises, pattern identification, and verification of consistency in public figures' positions over time.",
+      "created_at": "2023-11-05T15:22:50Z",
+      "tags": [
+        "FTFM",
+        "accountability",
+        "news",
+        "transparency",
+        "fact-checking",
+        "public statements"
+      ],
+      "links": [
+        "b6cd8931-f02d-4587-a120-8294e1a4c639",
+        "dfc28b52-59f3-4acb-bd9c-e4ca7f8ab123"
+      ],
+      "details": {
+        "title": "FTFM: A Public Accountability Information System",
+        "priority": "high",
+        "notes": "Consider starting with podcasts as test data. The concept addresses a gap in current media accountability systems. Worth exploring partnerships with existing fact-checking organizations.",
+        "due_date": null,
+        "completion_criteria": "A functioning prototype that can ingest podcast transcripts, extract claims and entities, and allow querying by topic or individual."
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Build a working proof of concept for FTFM that demonstrates the core accountability functionality",
+          "deadline": "2024-03-31T00:00:00Z",
+          "status": "planning"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      }
+    },
+    {
+      "record_id": "b6cd8931-f02d-4587-a120-8294e1a4c639",
+      "session_id": "30de50c7-f9c4-4a94-9e2f-b2c63978e4ce",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "plan",
+      "content": "Develop an MVP for FTFM by mapping Glenn Greenwald's podcasts from the last six months, extracting all named entities, claims, and evidence references. The system should structure this information in JSON format with embeddings data for searchability. This will serve as a proof of concept for the larger accountability system.",
+      "created_at": "2023-11-05T15:23:10Z",
+      "tags": [
+        "FTFM",
+        "MVP",
+        "Glenn Greenwald",
+        "podcast analysis",
+        "entity extraction"
+      ],
+      "links": [
+        "a7b23f19-8e3d-42e5-b961-58d9b15a1e74",
+        "dfc28b52-59f3-4acb-bd9c-e4ca7f8ab123"
+      ],
+      "details": {
+        "title": "FTFM MVP: Glenn Greenwald Podcast Mapping",
+        "priority": "high",
+        "notes": "Start by obtaining transcripts of 1-2 podcasts. Build a model for batching and converting to structured JSON. Focus on identifying people, places, laws, and events, with special attention to conflicts of interest or changes in position.",
+        "due_date": "2024-01-15T00:00:00Z",
+        "completion_criteria": "Working prototype that can ingest Greenwald podcasts and output structured data with entity extraction"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a functional prototype demonstrating entity extraction and statement tracking capabilities",
+          "deadline": "2024-01-15T00:00:00Z",
+          "status": "planning"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      }
+    },
+    {
+      "record_id": "dfc28b52-59f3-4acb-bd9c-e4ca7f8ab123",
+      "session_id": "30de50c7-f9c4-4a94-9e2f-b2c63978e4ce",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "idea",
+      "content": "Create a two-layer system for FTFM: A back-end server storing structured JSON data with embeddings, and a front-end using markdown files viewable in Obsidian. Implement sync functionality between these layers. The system would allow AI analysis of the database, enabling users to query information while viewing relevant notes, with the AI able to access the same context.",
+      "created_at": "2023-11-05T15:23:30Z",
+      "tags": [
+        "FTFM",
+        "system architecture",
+        "Obsidian",
+        "RAG",
+        "JSON",
+        "markdown"
+      ],
+      "links": [
+        "a7b23f19-8e3d-42e5-b961-58d9b15a1e74",
+        "b6cd8931-f02d-4587-a120-8294e1a4c639"
+      ],
+      "details": {
+        "title": "FTFM System Architecture: Back-end JSON to Front-end Obsidian Notes",
+        "priority": "medium",
+        "notes": "Consider implementing this as a RAG (Retrieval-Augmented Generation) pipeline. The back-end should handle heavy computation and AI processing, while the front-end focuses on user interaction and visualization.",
+        "due_date": null,
+        "completion_criteria": "Functioning system with demonstrable sync between JSON database and Obsidian notes, with AI query capabilities"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Build a working prototype of the two-layer system architecture with sync functionality",
+          "deadline": "2024-02-28T00:00:00Z",
+          "status": "planning"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      }
+    },
+    {
+      "record_id": "e5f29a54-7d12-47c1-8ba3-31a8e5d7ae4f",
+      "session_id": "30de50c7-f9c4-4a94-9e2f-b2c63978e4ce",
+      "para_type": "area",
+      "para_status": "active",
+      "type": "idea",
+      "content": "Implement a 'Daily Story' journaling practice - a condensed daily journal entry consisting of just a single sentence to capture the most memorable aspect of each day. This serves as a lightweight but consistent way to document personal history.",
+      "created_at": "2023-11-05T15:23:50Z",
+      "tags": [
+        "journaling",
+        "daily story",
+        "habit",
+        "personal documentation"
+      ],
+      "links": [],
+      "details": {
+        "title": "Daily Story: One-Sentence Journal Practice",
+        "priority": "medium",
+        "notes": "Example mentioned: 'Today's daily story: Cool with Ralphie and a memorable video call with Jaz.' Consider integrating this into an existing note-taking system or database.",
+        "due_date": null,
+        "maintenance_requirements": "Daily entry of a single sentence capturing the day's most notable experience or memory"
+      },
+      "para_metadata": {
+        "project": null,
+        "area": {
+          "responsibility": "Maintain a consistent daily journaling practice to document personal experiences",
+          "review_frequency": "7"
+        },
+        "resource": null,
+        "archive": null
+      }
+    },
+    {
+      "record_id": "f2e31a88-b96d-4c88-9bd7-12457e8c35a9",
+      "session_id": "30de50c7-f9c4-4a94-9e2f-b2c63978e4ce",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "idea",
+      "content": "Develop an AI dictation project that can transform spoken research requests into structured JSON data. The system would allow users to verbally request research tasks which the AI would then perform, returning results in a structured format.",
+      "created_at": "2023-11-05T15:24:10Z",
+      "tags": [
+        "AI",
+        "dictation",
+        "research assistant",
+        "voice interface",
+        "JSON structure"
+      ],
+      "links": [],
+      "details": {
+        "title": "AI Dictation System for Automated Research",
+        "priority": "medium",
+        "notes": "This appears to be a separate project from FTFM but could potentially integrate with it. The system would convert voice commands like 'make a piece of research and turn it into JSON' into actual research actions.",
+        "due_date": null,
+        "completion_criteria": "Working prototype that can accept verbal research requests and return structured results"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a voice-activated research assistant that structures findings in JSON format",
+          "deadline": "2024-04-30T00:00:00Z",
+          "status": "planning"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      }
+    },
+    {
+      "record_id": "af83b6c2-9e8d-4513-b71c-25614fd9a0ef",
+      "session_id": "30de50c7-f9c4-4a94-9e2f-b2c63978e4ce",
+      "para_type": "resource",
+      "para_status": "active",
+      "type": "research_request",
+      "content": "Investigate existing systems and methods for tracking public statements and accountability in news reporting. Explore Wikipedia's limitations as a dynamic news tracking system and identify gaps in current approaches to information verification and historical statement tracking.",
+      "created_at": "2023-11-05T15:24:30Z",
+      "tags": [
+        "accountability systems",
+        "news tracking",
+        "Wikipedia limitations",
+        "information verification",
+        "public statements"
+      ],
+      "links": [
+        "a7b23f19-8e3d-42e5-b961-58d9b15a1e74"
+      ],
+      "details": {
+        "title": "Research: Existing Systems for Public Accountability in News",
+        "priority": "medium",
+        "notes": "The user notes that Wikipedia serves for static information (births, deaths, major events) but lacks capacity for tracking day-to-day statements and accountability. Research should focus on this gap in the market.",
+        "due_date": null,
+        "completion_criteria": null
+      },
+      "para_metadata": {
+        "project": null,
+        "area": null,
+        "resource": {
+          "category": "News and Media Accountability",
+          "format": "research topic"
+        },
+        "archive": null
+      }
+    }
+  ]
+}
