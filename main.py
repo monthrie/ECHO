@@ -8,6 +8,7 @@ import os
 import csv
 import requests  # We'll need this for OpenRouter
 from prompts import get_structuring_prompt
+from json_to_obsidian import convert_all_json_files
 
 # Load environment variables
 load_dotenv()
@@ -165,7 +166,8 @@ def main():
         transcripts = load_transcripts_from_csv()
         process_transcripts(transcripts, conn, cursor)
         
-        # TODO: Add markdown conversion and Obsidian sync here
+        # Convert JSON files to markdown (stored in markdown_output directory)
+        convert_all_json_files(Config)
         
     finally:
         # Ensure database connection is closed
