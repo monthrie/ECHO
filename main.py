@@ -144,7 +144,6 @@ def main():
         process_transcripts(transcripts, conn, cursor)
         
         # Convert JSON files to markdown (stored in markdown_output directory)
-        # comment out the conversion to markdown files
         convert_all_json_files(Config)
         
     finally:
