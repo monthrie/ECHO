@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 import requests
 from datetime import datetime
+from config import Config
 
 class ObsidianConverter:
     def __init__(self, config):

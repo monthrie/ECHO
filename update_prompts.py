@@ -70,34 +70,67 @@ IMPORTANT INSTRUCTIONS:
 """
 
 def get_content_update_prompt(existing_content, record):
-    """Generate a prompt for updating existing content with new information."""
+    """Generate a prompt focused on preserving ALL new information when updating content."""
+    # Extract record details
     record_title = record.get('details', {}).get('title', 'Untitled')
     record_content = record.get('content', '')
     record_type = record.get('type', '')
+    record_tags = record.get('tags', [])
+    
+    # Additional metadata that might be useful
+    priority = record.get('details', {}).get('priority', '')
+    due_date = record.get('details', {}).get('due_date', '')
+    notes = record.get('details', {}).get('notes', '')
+    completion_criteria = record.get('details', {}).get('completion_criteria', '')
+    
+    # Format tags as a string for display
+    tags_str = ", ".join(record_tags)
+    
+    # Create a structured block of the new information that MUST be preserved
+    must_preserve = f"""
+NEW CONTENT THAT MUST BE PRESERVED:
+
+* Title: {record_title}
+* Content: {record_content}
+* Type: {record_type}
+* Tags: {tags_str}
+"""
+    
+    if priority:
+        must_preserve += f"* Priority: {priority}\n"
+    if due_date:
+        must_preserve += f"* Due Date: {due_date}\n"
+    if notes:
+        must_preserve += f"* Notes: {notes}\n"
+    if completion_criteria:
+        must_preserve += f"* Completion Criteria: {completion_criteria}\n"
     
     return f"""
-You are tasked with updating an existing Obsidian markdown file with new information.
+You are updating an Obsidian markdown file with new information. Your PRIMARY GOAL is to ensure that EVERY PIECE of new information is incorporated into the document - nothing should be lost.
 
 EXISTING FILE CONTENT:
-```markdown
+markdown
 {existing_content}
-```
 
-NEW INFORMATION TO INCORPORATE:
-Title: {record_title}
-Type: {record_type}
-Content: {record_content}
+{must_preserve}
 
-Please update the file content by:
-1. Preserving the existing YAML frontmatter (but updating tags if relevant)
-2. Integrating the new information in the most appropriate section
-3. Creating a new section if necessary (but only if it doesn't fit elsewhere)
-4. Avoiding duplication of information
-5. Maintaining the overall document structure and flow
-6. If it's a task, add it to a tasks or to-do section (creating one if needed)
-7. If it's an update to existing information, integrate it seamlessly
-8. If it contradicts existing information, update the existing content noting the change
-9. Maintain proper markdown formatting throughout
+CRITICAL INSTRUCTIONS:
+1. Ensure all important new information is incorporated into the document
+2. Integrate new content thoughtfully while maintaining document coherence
+3. Add all new tags to the frontmatter (keeping existing tags)
+4. For tasks or action items, add them appropriately, avoiding exact duplicates
+5. If new content contradicts existing content, include both with a note about the update
+6. Maintain proper markdown formatting throughout
+7. Use your judgment to organize information logically
 
-CRITICAL: Your response must ONLY contain the complete updated markdown content with no additional text, explanations, code blocks, or formatting. Do not include phrases like "Here's the updated content" or "```markdown" tags. The output should be ready to be written directly to a file.
+APPROACH:
+1. Identify key new information not present in the existing content
+2. Find the most appropriate location in the document to add each piece
+3. Integrate new content naturally, extending the document structure as needed
+4. For tasks, add them to a Tasks/To-Do section (create one if needed)
+5. For concepts or ideas, integrate them in relevant sections or create new ones
+
+The updated content should be coherent and well-organized, incorporating the valuable new information.
+
+Your response must ONLY contain the complete updated markdown content with no additional text or explanations. Begin with the YAML frontmatter and include the entire document.
 """
