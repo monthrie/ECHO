@@ -9,27 +9,7 @@ import csv
 import requests  # We'll need this for OpenRouter
 from prompts import get_structuring_prompt
 from json_to_obsidian import convert_all_json_files
-
-# Load environment variables
-load_dotenv()
-
-# --- Configuration ---
-class Config:
-    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-    DB_PATH = os.getenv("DB_PATH", "second_brain.db")
-    OBSIDIAN_VAULT_PATH = os.getenv("OBSIDIAN_VAULT_PATH", 
-        "/Users/wilmon/Documents/projects/ECHO/markdown_output")
-    MODEL = os.getenv("MODEL", "deepseek/deepseek-chat:free")  # changed default
-    JSON_OUTPUT_DIR = "output_jsons"  # New setting for JSON output
-    
-    @classmethod
-    def validate(cls):
-        if not cls.OPENROUTER_API_KEY:
-            raise ValueError("OPENROUTER_API_KEY not found in environment variables")
-        if not Path(cls.OBSIDIAN_VAULT_PATH).exists():
-            raise ValueError(f"Obsidian vault path does not exist: {cls.OBSIDIAN_VAULT_PATH}")
-        # Create JSON output directory if it doesn't exist
-        Path(cls.JSON_OUTPUT_DIR).mkdir(exist_ok=True)
+from config import Config
 
 # --- Prompt & Schema ---
 def get_structured_json(transcript, user_id="default_user"):
@@ -79,9 +59,6 @@ def get_structured_json(transcript, user_id="default_user"):
     except Exception as e:
         print(f"Error in get_structured_json: {str(e)}")
         raise
-
-# SQLite settings: a local file "second_brain.db"
-DB_PATH = "second_brain.db"
 
 # --- Database Setup ---
 def init_db():
@@ -156,7 +133,7 @@ def process_transcripts(transcripts, conn, cursor):
 # --- Main Pipeline ---
 def main():
     # Validate configuration
-    Config.validate()
+    Config.initialize()
     
     # Initialize the local SQLite database
     conn, cursor = init_db()

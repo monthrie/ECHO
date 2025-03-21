@@ -4,18 +4,11 @@ import logging
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, Set, Optional
-from markdown_embedder import MarkdownEmbeddingService, Config
+from markdown_embedder import MarkdownEmbeddingService
+from config import Config
 
 # Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("embedding_service.log"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger("EmbeddingService")
+logger = Config.setup_logging()
 
 class AutomaticEmbeddingService:
     def __init__(self, config: Config = Config()):

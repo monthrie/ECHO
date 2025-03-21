@@ -10,21 +10,7 @@ from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams, PointStruct
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue
-
-# Configuration
-class Config:
-    # Path to Obsidian vault
-    OBSIDIAN_VAULT_PATH = os.getenv("OBSIDIAN_VAULT_PATH", "./sample_vault/")
-    # Qdrant storage directory (for local persistence)
-    QDRANT_PATH = os.getenv("QDRANT_PATH", "./qdrant_storage")
-    # Collection name in Qdrant
-    COLLECTION_NAME = "markdown_notes"
-    # Embedding model name
-    EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Smaller, faster model
-    # EMBEDDING_MODEL = "all-mpnet-base-v2"  # More accurate but slower
-    # Embedding dimension (depends on the model)
-    EMBEDDING_DIM = 384  # for MiniLM-L6-v2
-    # EMBEDDING_DIM = 768  # for mpnet-base-v2
+from config import Config
 
 # Main embedding service class
 class MarkdownEmbeddingService:

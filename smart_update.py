@@ -11,32 +11,13 @@ import yaml
 import re
 from dotenv import load_dotenv
 from update_prompts import get_integration_decision_prompt, get_content_update_prompt, get_summary_prompt
+from config import Config
 
-# Load environment variables from .env file
-load_dotenv()
+# Setup logging
+logger = Config.setup_logging()
+logger.info(f"OBSIDIAN_VAULT_PATH: {Config.OBSIDIAN_VAULT_PATH}")
+logger.info(f"Current working directory: {os.getcwd()}")
 
-# Debug print to verify environment variables
-print(f"OBSIDIAN_VAULT_PATH from env: {os.getenv('OBSIDIAN_VAULT_PATH')}")
-print(f"Current working directory: {os.getcwd()}")
-
-class Config:
-    """Configuration settings for the application."""
-    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-    OBSIDIAN_VAULT_PATH = os.getenv("OBSIDIAN_VAULT_PATH", "/Users/wilmon/Documents/projects/ECHO/markdown_output")
-    MODEL = os.getenv("MODEL", "anthropic/claude-3-haiku-20240307")
-    JSON_OUTPUT_DIR = "output_jsons"
-    INDEX_FILE = "file_index.csv"
-    DB_PATH = "second_brain.db"
-    
-    @classmethod
-    def validate(cls):
-        """Validate configuration settings."""
-        if not cls.OPENROUTER_API_KEY:
-            raise ValueError("OPENROUTER_API_KEY not found in environment variables")
-        # Create necessary directories
-        Path(cls.JSON_OUTPUT_DIR).mkdir(exist_ok=True)
-        Path(cls.OBSIDIAN_VAULT_PATH).mkdir(exist_ok=True)
-        print(f"Using vault path: {os.path.abspath(cls.OBSIDIAN_VAULT_PATH)}")
 
 # --- File Indexing ---
 
@@ -510,7 +491,7 @@ def process_json_records():
 
 def main():
     """Main function to run the program."""
-    Config.validate()
+    Config.initialize()
     
     print("Second Brain AI - Smart Update System")
     print("1. Build/Update File Index")
