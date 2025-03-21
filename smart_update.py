@@ -147,11 +147,19 @@ def build_file_index():
     md_files = list(vault_path.glob('**/*.md'))
     print(f"Found {len(md_files)} markdown files")
     
+    # Get all current file paths in the index
+    cursor.execute("SELECT file_path FROM file_index")
+    existing_file_paths = set(row[0] for row in cursor.fetchall())
+    
+    # Track current file paths to identify deleted files
+    current_file_paths = set()
+    
     # Process each markdown file
     updated_count = 0
     for md_file in md_files:
         rel_path = md_file.relative_to(vault_path)
         file_path = str(rel_path)
+        current_file_paths.add(file_path)
         
         # Get file modification time
         last_modified = datetime.fromtimestamp(md_file.stat().st_mtime).isoformat()
@@ -174,6 +182,14 @@ def build_file_index():
             
             updated_count += 1
     
+    # Find and remove entries for deleted files
+    deleted_file_paths = existing_file_paths - current_file_paths
+    deleted_count = 0
+    
+    for deleted_path in deleted_file_paths:
+        cursor.execute("DELETE FROM file_index WHERE file_path = ?", (deleted_path,))
+        deleted_count += 1
+    
     # Commit changes and close connection
     conn.commit()
     
@@ -187,7 +203,8 @@ def build_file_index():
     
     conn.close()
     
-    print(f"Updated file index with {updated_count} entries")
+    print(f"Updated file index with {updated_count} new/modified entries")
+    print(f"Removed {deleted_count} entries for deleted files")
     return entries
 
 def get_file_index():
@@ -443,6 +460,105 @@ def update_index_record_id(file_path, record_id):
     
     conn.close()
 
+def create_new_file(record):
+    """Create a new markdown file from a record."""
+    # Extract record details
+    title = record.get('details', {}).get('title', 'Untitled')
+    content = record.get('content', '')
+    tags = record.get('tags', [])
+    para_type = record.get('para_type', 'resource')
+    
+    # Determine the appropriate directory based on PARA type
+    if para_type == 'project':
+        directory = 'Projects'
+    elif para_type == 'area':
+        directory = 'Areas'
+    elif para_type == 'archive':
+        directory = 'Archives'
+    else:
+        directory = 'Resources'
+    
+    # Get parent entity if available
+    parent_entity = record.get('details', {}).get('parent_entity', '')
+    if parent_entity:
+        # Sanitize parent entity name for directory
+        parent_dir = re.sub(r'[\\/*?:"<>|]', "_", parent_entity).strip()
+        directory = f"{directory}/{parent_dir}"
+    
+    # Create a filename from the title
+    filename = re.sub(r'[\\/*?:"<>|]', "_", title).strip().replace(' ', '-')
+    file_path = f"{directory}/{filename}.md"
+    full_path = Path(Config.OBSIDIAN_VAULT_PATH) / file_path
+    
+    # Create parent directories if they don't exist
+    full_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Prepare frontmatter
+    frontmatter = {
+        'tags': tags,
+        'record_ids': [record.get('record_id', str(uuid.uuid4()))]
+    }
+    
+    # Convert frontmatter to YAML
+    frontmatter_yaml = yaml.dump(frontmatter, default_flow_style=False)
+    
+    # Use LLM to format the content nicely
+    prompt = f"""
+    Create a well-structured markdown note from the following information:
+    
+    Title: {title}
+    Content: {content}
+    
+    Format the note with:
+    1. A clear H1 title
+    2. Appropriate headings for sections
+    3. Well-organized content
+    4. Any relevant links or references
+    
+    Do not include frontmatter (I'll add that separately).
+    """
+    
+    try:
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {Config.OPENROUTER_API_KEY}",
+                "HTTP-Referer": "http://localhost:8000",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": Config.MODEL,
+                "messages": [
+                    {"role": "system", "content": "You create well-structured markdown notes from information."},
+                    {"role": "user", "content": prompt}
+                ]
+            }
+        )
+        
+        if response.status_code != 200:
+            print(f"Error creating file content: {response.text}")
+            formatted_content = f"# {title}\n\n{content}"
+        else:
+            formatted_content = response.json()["choices"][0]["message"]["content"].strip()
+        
+        # Combine frontmatter and content
+        full_content = f"---\n{frontmatter_yaml}---\n\n{formatted_content}"
+        
+        # Write to file
+        with open(full_path, 'w', encoding='utf-8') as f:
+            f.write(full_content)
+        
+        print(f"Created new file: {file_path}")
+        
+        # Update the index to include the new file
+        build_file_index()
+        
+        return file_path
+        
+    except Exception as e:
+        print(f"Error in create_new_file: {str(e)}")
+        return None
+
 # --- Main Process ---
 
 def process_json_records():
@@ -456,6 +572,8 @@ def process_json_records():
     json_dir = Path(Config.JSON_OUTPUT_DIR)
     json_files = list(json_dir.glob('*.json'))
     
+    processed_files = []
+    
     for json_file in json_files:
         try:
             with open(json_file, 'r') as f:
@@ -463,6 +581,10 @@ def process_json_records():
             
             # Process each record
             for record in data.get('records', []):
+                # Ensure record has a unique ID
+                if 'record_id' not in record:
+                    record['record_id'] = str(uuid.uuid4())
+                
                 # Find potential matching files
                 matching_files = find_matching_files(record)
                 
@@ -471,21 +593,33 @@ def process_json_records():
                 print(f"Decision for record '{record.get('details', {}).get('title', 'Untitled')}': {decision['action']}")
                 
                 # Integrate based on decision
-                if decision['action'] == 'update':
-                    update_existing_file(decision['files'][0], record)
-                elif decision['action'] == 'merge':
-                    merge_files(decision['files'], record)
+                success = False
+                if decision['action'] == 'update' and decision['files']:
+                    success = update_existing_file(decision['files'][0], record)
+                elif decision['action'] == 'merge' and len(decision['files']) > 1:
+                    success = merge_files(decision['files'], record)
                 else:  # create
-                    # This would use your existing file creation logic
-                    # For POC, we'll just print a message
-                    print(f"Would create new file for record: {record.get('details', {}).get('title', 'Untitled')}")
-                    
-                    # In a full implementation, you would:
-                    # 1. Create the new file
-                    # 2. Update the index with the new file info
-                    
+                    file_path = create_new_file(record)
+                    success = file_path is not None
+                
+                if success:
+                    print(f"Successfully processed record: {record.get('details', {}).get('title', 'Untitled')}")
+                else:
+                    print(f"Failed to process record: {record.get('details', {}).get('title', 'Untitled')}")
+            
+            # Move processed file to a 'processed' directory
+            processed_dir = json_dir / 'processed'
+            processed_dir.mkdir(exist_ok=True)
+            
+            new_path = processed_dir / json_file.name
+            json_file.rename(new_path)
+            processed_files.append(json_file.name)
+            
         except Exception as e:
             print(f"Error processing {json_file}: {str(e)}")
+    
+    print(f"Processed {len(processed_files)} JSON files: {', '.join(processed_files)}")
+    return processed_files
 
 # --- Command Line Interface ---
 
