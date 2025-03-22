@@ -6,9 +6,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 import csv
-import requests  # We'll need this for OpenRouter
+import requests
 from prompts import get_structuring_prompt
-from json_to_obsidian import convert_all_json_files
 from config import Config
 
 # --- Prompt & Schema ---
@@ -26,7 +25,7 @@ def get_structured_json(transcript, user_id="default_user"):
             json={
                 "model": Config.MODEL,
                 "messages": [
-                    {"role": "system", "content": "You structure transcripts into JSON."},
+                    {"role": "system", "content": "You structure transcripts into valid JSON. Always respond with properly formatted JSON only."},
                     {"role": "user", "content": prompt}
                 ]
             }
@@ -40,13 +39,18 @@ def get_structured_json(transcript, user_id="default_user"):
         # Remove markdown code block markers if present
         if json_text.startswith("```"):
             # Split by ``` and take the content between the markers
-            json_text = json_text.split("```")[1]
+            parts = json_text.split("```")
+            if len(parts) >= 3:  # Proper code block with start and end markers
+                json_text = parts[1]
+            else:
+                json_text = parts[-1]  # Take the last part if splitting is weird
+                
             # Remove the "json" language identifier if present
             if json_text.startswith("json"):
                 json_text = json_text[4:].strip()
         
         # Add debug logging
-        print("Cleaned JSON text:", json_text)
+        print("Cleaned JSON text:", json_text[:200] + "..." if len(json_text) > 200 else json_text)
         
         try:
             parsed_json = json.loads(json_text)
@@ -143,8 +147,8 @@ def main():
         transcripts = load_transcripts_from_csv()
         process_transcripts(transcripts, conn, cursor)
         
-        # Convert JSON files to markdown (stored in markdown_output directory)
-        convert_all_json_files(Config)
+        # Note: We've removed the markdown conversion step
+        print("Processing complete! JSON files saved to the output directory.")
         
     finally:
         # Ensure database connection is closed
