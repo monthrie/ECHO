@@ -12,6 +12,7 @@ class Config:
     # API Settings
     OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
     MODEL = os.getenv("MODEL", "anthropic/claude-3-haiku-20240307")
+    TEMPERATURE = float(os.getenv("TEMPERATURE", "0.3"))  # Default temperature of 0.7
     
     # File Paths
     DB_PATH = os.getenv("DB_PATH", "second_brain.db")

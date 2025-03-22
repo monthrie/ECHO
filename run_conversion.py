@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from json_to_obsidian import convert_all_json_files
+from archive.json_to_obsidian import convert_all_json_files
 from config import Config
 
 
