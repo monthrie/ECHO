@@ -1,0 +1,455 @@
+{
+  "session": {
+    "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+    "user_id": "default_user",
+    "started_at": "2023-11-15T10:30:00Z",
+    "summary": "Planning for a Substack publication focused on urban balcony gardening, covering content strategy, publishing cadence, monetization plans, and outreach approaches."
+  },
+  "records": [
+    {
+      "record_id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "plan",
+      "content": "Create and launch a Substack publication focused on urban balcony gardening to share personal experiences, tips, and techniques for growing vegetables in small apartment spaces.",
+      "created_at": "2023-11-15T10:31:00Z",
+      "tags": [
+        "writing",
+        "substack",
+        "content creation",
+        "urban gardening",
+        "side project"
+      ],
+      "links": [
+        "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+        "3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+        "4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f"
+      ],
+      "details": {
+        "title": "Urban Balcony Gardening Substack Launch",
+        "priority": "medium",
+        "notes": "This project combines passion for gardening with content creation, potentially developing into a modest income stream while documenting gardening experiences.",
+        "due_date": null,
+        "completion_criteria": "Successfully launch Substack with initial free content and establish regular publishing schedule",
+        "maintenance_requirements": "Regular content creation and community engagement",
+        "parent_entity": "Content Creation Projects",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Launch and establish an urban balcony gardening Substack with regular content",
+          "deadline": null,
+          "status": "planning",
+          "parent_project": null
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Content Creation Projects",
+        "related_items": [
+          "Balcony Gardening Content Strategy",
+          "Substack Monetization Plan",
+          "Substack Promotion Strategy"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "task",
+      "content": "Develop initial content strategy for free Substack posts focusing on basic urban gardening topics: containers, soil selection, and plant recommendations for small spaces.",
+      "created_at": "2023-11-15T10:32:00Z",
+      "tags": [
+        "content strategy",
+        "urban gardening",
+        "substack",
+        "planning"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      ],
+      "details": {
+        "title": "Balcony Gardening Content Strategy",
+        "priority": "high",
+        "notes": "Start with fundamentals that will help beginners get started with minimal space and resources. Document your own setup with photos to demonstrate real-world applications.",
+        "due_date": null,
+        "completion_criteria": "Content calendar with at least 8 weeks of planned topics, with the first 3 articles fully outlined",
+        "maintenance_requirements": null,
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a comprehensive content strategy for initial Substack launch",
+          "deadline": null,
+          "status": "planning",
+          "parent_project": "Urban Balcony Gardening Substack Launch"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Substack Promotion Strategy"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "task",
+      "content": "Photograph current balcony garden setup to create a visual portfolio showcasing what's possible in small spaces, to use as supporting content for Substack articles.",
+      "created_at": "2023-11-15T10:33:00Z",
+      "tags": [
+        "photography",
+        "urban gardening",
+        "visual content",
+        "documentation"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      ],
+      "details": {
+        "title": "Balcony Garden Photography Session",
+        "priority": "medium",
+        "notes": "Take high-quality photos during optimal lighting times. Include wide shots of the entire setup as well as close-ups of specific plants, containers, and growing solutions. Document both successes and challenges.",
+        "due_date": null,
+        "completion_criteria": "Collection of 20+ high-quality photos organized by category (setup, plants, solutions, etc.)",
+        "maintenance_requirements": null,
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create visual documentation of balcony garden for Substack content",
+          "deadline": null,
+          "status": "planning",
+          "parent_project": "Urban Balcony Gardening Substack Launch"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Balcony Gardening Content Strategy"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "plan",
+      "content": "Develop a monetization strategy for the Substack with a free tier for basic content and a paid subscription tier offering premium content including detailed guides and personalized gardening advice.",
+      "created_at": "2023-11-15T10:34:00Z",
+      "tags": [
+        "monetization",
+        "subscription model",
+        "content strategy",
+        "substack"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      ],
+      "details": {
+        "title": "Substack Monetization Plan",
+        "priority": "low",
+        "notes": "Focus on building value and audience first before implementing paid tier. Consider what exclusive content would be most valuable to subscribers and what pricing would be appropriate for the value offered.",
+        "due_date": null,
+        "completion_criteria": "Defined free vs. paid content strategy, pricing model, and timeline for implementing paid subscriptions",
+        "maintenance_requirements": null,
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create sustainable monetization strategy for balcony gardening Substack",
+          "deadline": null,
+          "status": "planning",
+          "parent_project": "Urban Balcony Gardening Substack Launch"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Balcony Gardening Content Strategy"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "5d6e7f8a-9b0c-1d2e-3f4a-5b6c7d8e9f0a",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "task",
+      "content": "Create a promotion strategy to announce the Substack launch to friends and social media followers, emphasizing authentic sharing of personal gardening experiences.",
+      "created_at": "2023-11-15T10:35:00Z",
+      "tags": [
+        "marketing",
+        "social media",
+        "launch strategy",
+        "community building"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      ],
+      "details": {
+        "title": "Substack Promotion Strategy",
+        "priority": "medium",
+        "notes": "Keep messaging authentic and focused on passion for urban gardening rather than coming across as overly promotional. Consider creating shareable graphics or photos that showcase both your garden and the Substack.",
+        "due_date": null,
+        "completion_criteria": "Complete promotion plan with announcement templates for different platforms and a timeline for initial outreach",
+        "maintenance_requirements": null,
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Develop effective, authentic promotion plan for Substack launch",
+          "deadline": null,
+          "status": "planning",
+          "parent_project": "Urban Balcony Gardening Substack Launch"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Balcony Gardening Content Strategy"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "task",
+      "content": "Establish a weekly publishing schedule for Substack posts with seasonal gardening tips that align with the current growing calendar.",
+      "created_at": "2023-11-15T10:36:00Z",
+      "tags": [
+        "content calendar",
+        "publishing schedule",
+        "seasonal content",
+        "planning"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+        "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
+      ],
+      "details": {
+        "title": "Substack Weekly Publishing Schedule",
+        "priority": "high",
+        "notes": "Align content with the natural gardening calendar to ensure posts are relevant and timely. Buffer some evergreen content for weeks when you might be too busy to create new content.",
+        "due_date": null,
+        "completion_criteria": "12-week rolling content calendar with specific topics assigned to each week",
+        "maintenance_requirements": null,
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create sustainable publishing schedule aligned with seasonal gardening needs",
+          "deadline": null,
+          "status": "planning",
+          "parent_project": "Urban Balcony Gardening Substack Launch"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Balcony Gardening Content Strategy"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "resource",
+      "para_status": "active",
+      "type": "idea",
+      "content": "Explore potential future collaborations with other urban gardening enthusiasts to expand content offerings and reach a wider audience.",
+      "created_at": "2023-11-15T10:37:00Z",
+      "tags": [
+        "collaboration",
+        "community building",
+        "content expansion",
+        "networking"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      ],
+      "details": {
+        "title": "Urban Gardening Collaboration Opportunities",
+        "priority": "low",
+        "notes": "Consider guest posts, interviews, or co-created content with other gardeners who have different specialties or growing conditions. This could add diversity to content while reducing individual content creation burden.",
+        "due_date": null,
+        "completion_criteria": null,
+        "maintenance_requirements": null,
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": null,
+        "area": null,
+        "resource": {
+          "category": "content ideas",
+          "format": "note"
+        },
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Balcony Gardening Content Strategy"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "8a9b0c1d-2e3f-4a5b-6c7d-8e9f0a1b2c3d",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "agent_reflection",
+      "content": "Contents.md file for organizing the Urban Balcony Gardening Substack project, providing an overview of all related files and components.",
+      "created_at": "2023-11-15T10:38:00Z",
+      "tags": [
+        "organization",
+        "project management",
+        "documentation"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+        "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+        "3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+        "4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f",
+        "5d6e7f8a-9b0c-1d2e-3f4a-5b6c7d8e9f0a",
+        "6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b",
+        "7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c",
+        "9b0c1d2e-3f4a-5b6c-7d8e-9f0a1b2c3d4e"
+      ],
+      "details": {
+        "title": "_Contents.md",
+        "priority": null,
+        "notes": "Central organizational document that links all project components together for easy navigation",
+        "due_date": null,
+        "completion_criteria": null,
+        "maintenance_requirements": "Update with any new components as project evolves",
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Organize all project components for easy navigation",
+          "deadline": null,
+          "status": "in_progress",
+          "parent_project": "Urban Balcony Gardening Substack Launch"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Balcony Gardening Content Strategy",
+          "Balcony Garden Photography Session",
+          "Substack Monetization Plan",
+          "Substack Promotion Strategy",
+          "Substack Weekly Publishing Schedule",
+          "Urban Gardening Collaboration Opportunities",
+          "_Tasks.md"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    },
+    {
+      "record_id": "9b0c1d2e-3f4a-5b6c-7d8e-9f0a1b2c3d4e",
+      "session_id": "8a7b6c5d-4e3f-2a1b-9c8d-7e6f5a4b3c2d",
+      "para_type": "project",
+      "para_status": "active",
+      "type": "agent_reflection",
+      "content": "Tasks.md file for consolidating all actionable items related to the Urban Balcony Gardening Substack project, tracking priorities and status.",
+      "created_at": "2023-11-15T10:39:00Z",
+      "tags": [
+        "task management",
+        "project planning",
+        "action items"
+      ],
+      "links": [
+        "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+        "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+        "3b4c5d6e-7f8a-9b0c-1d2e-3f4a5b6c7d8e",
+        "5d6e7f8a-9b0c-1d2e-3f4a-5b6c7d8e9f0a",
+        "6e7f8a9b-0c1d-2e3f-4a5b-6c7d8e9f0a1b"
+      ],
+      "details": {
+        "title": "_Tasks.md",
+        "priority": null,
+        "notes": "Central task tracking document that compiles all actionable items from across the project components",
+        "due_date": null,
+        "completion_criteria": null,
+        "maintenance_requirements": "Regularly update task status and add new tasks as they emerge",
+        "parent_entity": "Urban Balcony Gardening Substack Launch",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Centrally track all project tasks and their status",
+          "deadline": null,
+          "status": "in_progress",
+          "parent_project": "Urban Balcony Gardening Substack Launch"
+        },
+        "area": null,
+        "resource": null,
+        "archive": null
+      },
+      "relationships": {
+        "belongs_to": "Urban Balcony Gardening Substack Launch",
+        "related_items": [
+          "Urban Balcony Gardening Substack Launch",
+          "Balcony Gardening Content Strategy",
+          "Balcony Garden Photography Session",
+          "Substack Promotion Strategy",
+          "Substack Weekly Publishing Schedule",
+          "_Contents.md"
+        ],
+        "collection": "Urban Balcony Gardening Substack"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+---
+tags: ["setup", "substack", "account creation", "first steps"]
+record_ids: ["d45fcc32-8e1c-4b82-9db4-17fe30651b9c"]
+goal: Establish online presence with new Substack account
+---
+
+# Create Substack Account
+
+Create a Substack account specifically for the Urban Balcony Gardening publication.
