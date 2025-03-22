@@ -1,0 +1,149 @@
+2025-03-21 13:11:10,953 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 13:11:10,953 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 13:11:10,953 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 13:11:10,953 - SecondBrain - INFO - Logger initialized successfully
+2025-03-21 14:18:09,809 - SecondBrain - INFO - OBSIDIAN_VAULT_PATH: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:18:09,809 - SecondBrain - INFO - Current working directory: /Users/wilmon/Documents/projects/ECHO
+2025-03-21 14:18:09,809 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:18:09,809 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 14:18:09,809 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 14:19:21,101 - SecondBrain - INFO - OBSIDIAN_VAULT_PATH: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:19:21,101 - SecondBrain - INFO - Current working directory: /Users/wilmon/Documents/projects/ECHO
+2025-03-21 14:19:21,101 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:19:21,101 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 14:19:21,101 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 14:32:34,293 - SecondBrain - INFO - OBSIDIAN_VAULT_PATH: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:32:34,293 - SecondBrain - INFO - Current working directory: /Users/wilmon/Documents/projects/ECHO
+2025-03-21 14:32:34,293 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:32:34,293 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 14:32:34,293 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 14:37:50,566 - SecondBrain - INFO - OBSIDIAN_VAULT_PATH: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:37:50,566 - SecondBrain - INFO - Current working directory: /Users/wilmon/Documents/projects/ECHO
+2025-03-21 14:37:50,566 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 14:37:50,566 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 14:37:50,566 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 15:13:47,523 - SecondBrain - INFO - OBSIDIAN_VAULT_PATH: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 15:13:47,523 - SecondBrain - INFO - Current working directory: /Users/wilmon/Documents/projects/ECHO
+2025-03-21 15:13:47,523 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 15:13:47,523 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 15:13:47,523 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 15:15:20,700 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 15:15:20,700 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 15:15:20,700 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 16:00:59,251 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 16:00:59,252 - SecondBrain - INFO - Using model: openai/chatgpt-4o-latest
+2025-03-21 16:00:59,252 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 16:04:06,541 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 16:04:06,541 - SecondBrain - INFO - Using model: openai/chatgpt-4o-latest
+2025-03-21 16:04:06,541 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 16:11:51,457 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 16:11:51,457 - SecondBrain - INFO - Using model: openai/chatgpt-4o-latest
+2025-03-21 16:11:51,457 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 16:13:48,411 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 16:13:48,411 - SecondBrain - INFO - Using model: openai/chatgpt-4o-latest
+2025-03-21 16:13:48,411 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 16:16:52,766 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 16:16:52,766 - SecondBrain - INFO - Using model: openai/chatgpt-4o-latest
+2025-03-21 16:16:52,766 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 16:25:47,779 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 16:25:47,779 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 16:25:47,779 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 17:01:53,349 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 17:01:53,350 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 17:01:53,350 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-21 17:08:28,995 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-21 17:08:28,995 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-21 17:08:28,995 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-22 13:10:37,268 - SecondBrain - INFO - Initialized with vault path: /Users/wilmon/Documents/projects/ECHO/markdown_output
+2025-03-22 13:10:37,268 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
+2025-03-22 13:10:37,268 - SecondBrain - INFO - Database path: second_brain.db
+2025-03-22 15:47:03,133 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 15:47:03,134 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 15:47:03,134 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 15:47:03,134 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_154703
+2025-03-22 15:48:08,699 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 15:48:08,699 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 15:48:08,700 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 15:48:08,700 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_154808
+2025-03-22 15:48:08,700 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 15:49:10,500 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 15:49:10,500 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 15:49:10,500 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 15:49:10,500 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_154910
+2025-03-22 15:49:10,501 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 15:50:34,400 - SecondBrain - ERROR - Pipeline error: type object 'Config' has no attribute 'BLUEPRINTS_DIR'
+2025-03-22 16:00:05,204 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 16:00:05,205 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 16:00:05,205 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 16:00:05,205 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_160005
+2025-03-22 16:00:05,205 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 16:13:43,951 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 16:13:43,952 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 16:13:43,952 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 16:13:43,952 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_161343
+2025-03-22 16:13:43,952 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 16:17:57,945 - SecondBrain - ERROR - Pipeline error: 'str' object has no attribute 'get'
+2025-03-22 16:32:24,898 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 16:32:24,899 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 16:32:24,899 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 16:32:24,899 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_163224
+2025-03-22 16:32:24,899 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 16:37:56,235 - SecondBrain - ERROR - Pipeline error: expected str, bytes or os.PathLike object, not list
+2025-03-22 16:43:33,172 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 16:43:33,172 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 16:43:33,173 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 16:43:33,173 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_164333
+2025-03-22 16:43:33,173 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 16:48:03,487 - SecondBrain - ERROR - Pipeline error: 'str' object has no attribute 'get'
+2025-03-22 16:50:11,440 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 16:50:11,440 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 16:50:11,440 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 16:50:11,440 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_165011
+2025-03-22 16:50:11,440 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 16:58:53,182 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 16:58:53,182 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 16:58:53,182 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 16:58:53,182 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_165853
+2025-03-22 16:58:53,182 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 17:04:45,529 - SecondBrain - ERROR - Pipeline error: 'str' object has no attribute 'get'
+2025-03-22 17:12:19,220 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 17:12:19,221 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 17:12:19,221 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 17:12:19,221 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_171219
+2025-03-22 17:12:19,221 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 17:19:40,555 - SecondBrain - ERROR - Pipeline error: type object 'Config' has no attribute 'VAULT_PATH'
+2025-03-22 17:38:45,590 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 17:38:45,590 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 17:38:45,590 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 17:38:45,590 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_173845
+2025-03-22 17:38:45,590 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 17:40:06,540 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 17:40:06,541 - SecondBrain - ERROR - Transcript file not found: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/test_output/test_transcript.csv
+2025-03-22 17:55:21,552 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 17:55:21,553 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 17:55:21,553 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 17:55:21,553 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_175521
+2025-03-22 17:55:21,553 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 17:59:34,558 - SecondBrain - ERROR - Pipeline error: 'str' object has no attribute 'get'
+2025-03-22 18:09:24,294 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 18:09:24,294 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 18:09:24,295 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 18:09:24,295 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_180924
+2025-03-22 18:09:24,295 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 18:48:16,112 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 18:48:16,113 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 18:48:16,113 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 18:48:16,113 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/vaults/listed_things_20250322_184816
+2025-03-22 18:48:16,113 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 19:05:55,088 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 19:05:55,089 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 19:05:55,089 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 19:05:55,089 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_190555
+2025-03-22 19:05:55,089 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 19:08:26,368 - SecondBrain - ERROR - Pipeline error: 'str' object has no attribute 'get'
+2025-03-22 19:10:36,059 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 19:10:36,059 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 19:10:36,060 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 19:10:36,060 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_191036
+2025-03-22 19:10:36,060 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 19:14:35,899 - SecondBrain - ERROR - Pipeline error: 'str' object has no attribute 'get'

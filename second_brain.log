@@ -1,0 +1,26 @@
+2025-03-22 19:27:23,421 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 19:27:23,421 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 19:27:23,422 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 19:27:23,422 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_192723
+2025-03-22 19:27:23,422 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 19:28:33,714 - SecondBrain - ERROR - Pipeline error: 'str' object has no attribute 'get'
+2025-03-22 19:33:31,794 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 19:33:31,794 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 19:33:31,794 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 19:33:31,794 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_193331
+2025-03-22 19:33:31,794 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 19:36:14,280 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 19:36:14,280 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 19:36:14,281 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 19:36:14,281 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_193614
+2025-03-22 19:36:14,281 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 19:45:29,311 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 19:45:29,311 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 19:45:29,311 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 19:45:29,311 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_194529
+2025-03-22 19:45:29,311 - SecondBrain - INFO - Starting pipeline...
+2025-03-22 19:51:05,262 - SecondBrain - INFO - Logger initialized successfully
+2025-03-22 19:51:05,263 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
+2025-03-22 19:51:05,263 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/listed_things.csv
+2025-03-22 19:51:05,263 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_195105
+2025-03-22 19:51:05,263 - SecondBrain - INFO - Starting pipeline...

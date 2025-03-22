@@ -1,0 +1,9 @@
+---
+tags: ["photography", "content creation", "urban gardening", "visual assets"]
+record_ids: ["3a4b5c6d-7e8f-9g0h-1i2j-3k4l5m6n7o8p"]
+goal: Create a visual asset library of current balcony gardening setup for use in Substack content
+---
+
+# Urban Gardening Photography Tasks
+
+Photograph current balcony garden setup to create a visual portfolio showcasing what's possible in a small urban space. These images will be used in initial Substack posts to demonstrate practical examples and build credibility.
