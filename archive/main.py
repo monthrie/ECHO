@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 import os
 import csv
 import requests
-from prompts import get_structuring_prompt
-from config import Config
+from archive.prompts import get_structuring_prompt
+from archive.config import Config
 
 # --- Prompt & Schema ---
 def get_structured_json(transcript, user_id="default_user"):

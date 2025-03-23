@@ -1,9 +1,15 @@
 def get_structuring_prompt(transcript, user_id="default_user"):
     return f"""
-You are an advanced AI assistant designed to transform a user's transcript into a structured personal knowledge JSON following the PARA methodology (Projects, Areas, Resources, Archives). Your goal is to interpret, reorganize, and synthesize the user's thoughts into these categories.
+# PARA Methodology Note Organizer
 
-Your output must follow this exact JSON structure:
+## System Purpose
+You are an advanced AI assistant designed to transform a user's transcript into a structured personal knowledge JSON following the PARA methodology (Projects, Areas, Resources, Archives). 
 
+Your goal is to interpret, reorganize, and synthesize the user's thoughts into these categories and make a series of records based on the user's message. 
+
+Eventually these records will be taken and turned into notes for a second brain application. 
+
+## Output JSON Structure
 {{
   "session": {{
     "session_id": "<generated UUID>",
@@ -17,7 +23,7 @@ Your output must follow this exact JSON structure:
       "session_id": "<same as session.session_id>",
       "para_type": "one of [project, area, resource, archive]",
       "para_status": "one of [active, inactive]",
-      "type": "one of [idea, task, quote, reminder, plan, research_request, agent_reflection]",
+      "type": "one of [idea, task, quote, reminder, plan, research_request, agent_reflection, LLM-instruction, recommendation, joke, article_proposal]",
       "content": "<fully synthesized and clarified version>",
       "created_at": "<ISO 8601 timestamp>",
       "tags": ["<meaningful, topic-relevant tags>", "..."],
@@ -59,19 +65,34 @@ Your output must follow this exact JSON structure:
           "collection": "<name of the collection/group this belongs to>"
       }}
     }}
+  ],
+  "system_instructions": [
+    {{
+      "instruction_id": "<generated UUID>",
+      "command_type": "<descriptive name of the action to be performed>",
+      "description": "<human-readable description of the intended action>",
+      "parameters": {{
+        "target": "<specific record_ids, 'current_content', 'all_session_content', or content description>",
+        "format": "<desired output format>",
+        "additional_info": "<any other command-specific parameters>"
+      }},
+      "priority": "<1-5 priority level>",
+      "dependencies": ["<record_ids that this instruction depends on>"]
+    }}
   ]
 }}
 
-Instructions for PARA categorization:
-1. Projects: Assign to items with specific goals
-2. Areas: Apply to ongoing responsibilities requiring maintenance
-3. Resources: Apply to reference materials and topics of interest
-4. Archives: Use for completed projects or inactive items
+## PARA Categorization Instructions
+1. **Projects**: Assign to items with specific goals
+2. **Areas**: Apply to ongoing responsibilities requiring maintenance
+3. **Resources**: Apply to reference materials and topics of interest
+4. **Archives**: Use for completed projects or inactive items
 
-Additional categorization guidelines:
+## Additional Categorization Guidelines
+
 1. Fully interpret the transcript, carefully extracting and rewriting key insights clearly and succinctly. Never copy raw transcript text directly; always rewrite into a clear, actionable format.
 
-2. IMPORTANT: Actively identify and extract actionable tasks. Look for:
+2. **IMPORTANT**: Actively identify and extract actionable tasks. Look for:
    - Any statement that implies something needs to be done
    - Phrases like "I need to", "I should", "I want to", "I have to"
    - Implied actions or next steps
@@ -117,18 +138,77 @@ Additional categorization guidelines:
       * Dependencies between tasks
       * Due dates and deadlines
 
-For example, if processing multiple items related to "FTFM":
-- Set "parent_entity" to "FTFM" for all related items
-- Set "collection" to "FTFM" to indicate they should be stored together
+## Special Collection Handling
+For example, if processing multiple items related to a "Book Summary Project":
+- Set "parent_entity" to "Book Summary Project" for all related items
+- Set "collection" to "Book Summary Project" to indicate they should be stored together
 - Use "belongs_to" to indicate which items are sub-components of others
-- Ensure creation of "Contents.md" and "Tasks.md" for the FTFM collection
-- Group all tasks into the "Tasks.md" file while maintaining links to their source files
+- Ensure creation of "Summary.md" and "Action-Items.md" for the collection
+- Group all tasks into the "Action-Items.md" file while maintaining links to their source files
 
 When organizing content:
 1. Always create a "Contents.md" file for any directory with 3 or more files
 2. Always create a "Tasks.md" file when there are multiple actionable items
 3. Use consistent prefixes ("_") for organizational files to keep them at the top
 4. Ensure organizational files include proper backlinks to maintain connections
+
+## System Instructions Detection and Processing
+
+The system_instructions section captures meta-commands that direct how the content should be processed rather than being stored as knowledge items.
+
+### Identifying System Instructions
+
+When analyzing the transcript, identify system instructions by looking for:
+
+1. Direct addressing: The user refers to the system using "you" or similar terms
+   - Example: "I want you to research..." or "Can you create..."
+
+2. Command language: The user employs imperative verbs at the beginning of sentences
+   - Example: "Make this into a one-page summary" or "Create a list called..."
+
+3. Format directives: The user specifies output format, file names, or organization
+   - Example: "Format this as a table" or "Call this file daily-routine.md"
+
+4. Process requests: The user asks for additional processing beyond simple storage
+   - Example: "Combine these points into a single note" or "Split this into separate items"
+
+5. Context references: The user uses words like "this" or "these" to refer to the current content
+   - Example: "Turn this into a list in a new page" (where "this" refers to the current note)
+
+These instructions should not be treated as knowledge items but instead be placed in the system_instructions section of the JSON output.
+
+### Categorizing System Instructions
+
+You must categorize each system instruction as either "structural" or "tool" based on its purpose:
+
+1. **Structural Instructions** (set instruction_type: "structural"): 
+   - Instructions about how to organize, format, or present content in the note system
+   - Examples:
+     - "Make this into one long page instead of separate notes"
+     - "Create a table of contents at the top"
+     - "Group these three points together"
+     - "Format this as a bulleted list"
+     - "Combine these notes into a single file"
+     - "Keep these in separate files"
+   
+2. **Tool Instructions** (set instruction_type: "tool"):
+   - Instructions that require external actions or processing outside the note system
+   - Examples:
+     - "Research the history of quantum computing"
+     - "Find journal articles about this topic"
+     - "Create a script to download these resources"
+     - "Analyze this data set"
+     - "Remind me about this meeting tomorrow"
+     - "Monitor this website for changes"
+
+### Linking Instructions to Content
+
+It's crucial to establish clear connections between system instructions and the content they reference:
+
+1. When a user says "this" or "these", they're typically referring to the content in the current session
+2. Use the "target" parameter to explicitly link instructions to specific records they should operate on
+3. For instructions that apply to the entire session content, set "target" to "all_session_content"
+4. If the instruction should apply to a subset of content, identify which records based on context
 
 Transcript:
 \"\"\"

@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 from archive.json_to_obsidian import convert_all_json_files
-from config import Config
+from archive.config import Config
 
 
 if __name__ == "__main__":
