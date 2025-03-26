@@ -65,6 +65,7 @@ Eventually these records will be taken and turned into notes for a second brain 
     {{
       "instruction_id": "<generated UUID>",
       "command_type": "<descriptive name of the action to be performed>",
+      "instruction_type": "one of [structural, tool]",
       "description": "<human-readable description of the intended action>",
       "parameters": {{
         "target": "<specific record_ids, 'current_content', 'all_session_content', or content description>",
@@ -139,6 +140,20 @@ When analyzing the transcript, identify system instructions by looking for:
    - Example: "Turn this into a list in a new page" (where "this" refers to the current note)
 
 These instructions should not be treated as knowledge items but instead be placed in the system_instructions section of the JSON output.
+
+### Instruction Types
+
+When creating system instructions, determine the appropriate instruction_type:
+
+1. **structural**: Instructions about organizing, formatting, or presenting content
+   - Example: "Create a single page with all ideas"
+   - Example: "Split this into separate notes for each project"
+   - Example: "Tabulate the following information"
+
+2. **tool**: Instructions requiring external tools or specialized processing
+   - Example: "Research the latest studies on this topic"
+   - Example: "Generate an image for this concept"
+   - Example: "Calculate the ROI for this project"
 
 ### Linking Instructions to Content
 

@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "e9378c7464d62c73",
+    "type": "split",
+    "children": [
+      {
+        "id": "980fd0a4064743c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "731056a0cfa5326d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vaults/kichen_ting_20250323_184708/markdown/Projects/Home Improvement Projects/Kitchen Renovation Project Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kitchen Renovation Project Overview"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "89a1155f35fefbd8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca8730f87fb02185",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ce313294c6f3cb9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f1bab720ce31fd44",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "43c13043e127a9a5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8c5bda5e0854e0c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "d66fd7768a6e092d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "312a61c0b5dd3128",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Tasks.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Kitchen Renovation Tasks"
+            }
+          },
+          {
+            "id": "8e30ef2b41ac4472",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Tasks.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Kitchen Renovation Tasks"
+            }
+          },
+          {
+            "id": "213470c5af8d5ddc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b66fdc834f04223b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Tasks.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Kitchen Renovation Tasks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "731056a0cfa5326d",
+  "lastOpenFiles": [
+    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Modern Kitchen Design Research.md",
+    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Timeline.md",
+    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Tasks.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation/Open Floor Plan Design Inspiration.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation/Kitchen Renovation Contacts.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation/Child-Friendly Countertop Materials Research.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation",
+    "vaults/kichen_one_file_20250323_190758/markdown/Resources",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Kitchen Renovation Document Structure Plan.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Kitchen Renovation Budget Breakdown.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Kitchen Renovation 6-Week Timeline.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Demolition Options Analysis.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Create Kitchen Renovation Task Sequence.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Create Kitchen Renovation Master Document.md",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation",
+    "vaults/kichen_one_file_20250323_190758/markdown/Projects",
+    "vaults/kichen_one_file_20250323_190758/blueprints/g1h2i3j4-k5l6-m7n8-o9p0-q1r2s3t4u5v6_blueprint.json",
+    "vaults/kichen_one_file_20250323_190758/blueprints/f1e2d3c4-b5a6-7890-9876-5432fedcba98_blueprint.json",
+    "vaults/kichen_one_file_20250323_190758/blueprints/e1d2c3b4-a5f6-7e8d-9c0b-1a2f3e4d5c6b_blueprint.json",
+    "vaults/kichen_one_file_20250323_190758/blueprints/d1c2b3a4-e5f6-7g8h-9i0j-1k2l3m4n5o6p_blueprint.json",
+    "vaults/kichen_one_file_20250323_190758/blueprints/c1d2e3f4-a5b6-7c8d-9e0f-1a2b3c4d5e6f_blueprint.json",
+    "vaults/kichen_one_file_20250323_190758/blueprints/a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d_blueprint.json",
+    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Budget.md",
+    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Demolition Method Decision.md",
+    "vaults/kichen_ting_20250323_184708/markdown/Projects/Home Improvement Projects/Kitchen Renovation Project Overview.md"
+  ]
+}

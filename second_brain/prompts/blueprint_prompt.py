@@ -132,6 +132,8 @@ Each blueprint should have this structure:
   }}
 }}
 
-Your response must be a valid JSON array of these blueprint objects, with no additional text or explanation.
+IMPORTANT: Your response must be a valid JSON array of these blueprint objects, with no additional text or explanation.
+Make sure all strings in the JSON are properly escaped, especially when they contain newlines or special characters.
+DO NOT include actual newlines within JSON string values - use \\n instead to represent newlines in content.
 """
     return prompt
