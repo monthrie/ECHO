@@ -1,0 +1,268 @@
+{
+  "session": {
+    "session_id": "a7b9c3d1-e5f2-4g6h-8i9j-0k1l2m3n4o5p",
+    "user_id": "default_user",
+    "started_at": "2023-11-14T15:30:00Z",
+    "summary": "The user shared various ideas for future AI-related projects, including developing a Human Rights due diligence tool with Dan Murphy, collaborating with Travis on AI-powered audience management, creating autonomous AI agents like VITA, building an AI-powered second brain application, and developing a 'Follow The Money' platform for financial transparency."
+  },
+  "records": [
+    {
+      "record_id": "b8c4d0e6-f2g3-4h5i-6j7k-8l9m0n1o2p3q",
+      "session_id": "a7b9c3d1-e5f2-4g6h-8i9j-0k1l2m3n4o5p",
+      "para_type": "resource",
+      "type": "idea",
+      "content": "Exploring different AI project possibilities for future development, ranging from human rights tools to autonomous digital life forms and knowledge management systems. These ideas represent potential areas for innovation and business development in the AI space.",
+      "created_at": "2023-11-14T15:30:05Z",
+      "tags": [
+        "artificial-intelligence",
+        "future-projects",
+        "innovation",
+        "business-ideas"
+      ],
+      "links": [
+        "c9d5e1f7-g3h4-5i6j-7k8l-9m0n1o2p3q4r",
+        "d0e6f2g8-h4i5-6j7k-8l9m-0n1o2p3q4r5s",
+        "e1f7g3h9-i5j6-7k8l-9m0n-1o2p3q4r5s6t",
+        "f2g8h4i0-j6k7-8l9m-0n1o-2p3q4r5s6t7u",
+        "g3h9i5j1-k7l8-9m0n-1o2p-3q4r5s6t7u8v"
+      ],
+      "details": {
+        "title": "Future AI Project Ideas Collection",
+        "notes": "This is a collection of brainstormed ideas that could be developed into full projects. Each represents a different approach to leveraging AI for business or social impact.",
+        "parent_entity": "AI Innovation Exploration",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "resource": {
+          "category": "AI project ideas",
+          "format": "brainstorm collection"
+        }
+      },
+      "relationships": {
+        "belongs_to": "inbox",
+        "related_items": [
+          "Human Rights Due Diligence Tool",
+          "Travis AI Support Team",
+          "VITA Autonomous Agent",
+          "AI-Powered Second Brain",
+          "Follow The Money Platform"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "c9d5e1f7-g3h4-5i6j-7k8l-9m0n1o2p3q4r",
+      "session_id": "a7b9c3d1-e5f2-4g6h-8i9j-0k1l2m3n4o5p",
+      "para_type": "project",
+      "type": "idea",
+      "content": "Collaborate with Dan Murphy on a Human Rights due diligence tool. Options include helping structure existing data, selling the data directly, or transforming the data into a model for fine-tuning AI. Potential collaboration with CLIM could enhance this project.",
+      "created_at": "2023-11-14T15:30:10Z",
+      "tags": [
+        "human-rights",
+        "ai-ethics",
+        "data-structuring",
+        "fine-tuning",
+        "collaboration",
+        "dan-murphy",
+        "clim"
+      ],
+      "links": [
+        "b8c4d0e6-f2g3-4h5i-6j7k-8l9m0n1o2p3q"
+      ],
+      "details": {
+        "title": "Human Rights Due Diligence Tool",
+        "notes": "This project involves multiple potential approaches to leveraging Dan's existing data. The AI fine-tuning option could create a specialized model for human rights assessment.",
+        "parent_entity": "Human Rights AI Applications",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Develop a Human Rights due diligence tool with Dan Murphy",
+          "deadline": "",
+          "parent_project": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "inbox",
+        "related_items": [
+          "Future AI Project Ideas Collection"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "d0e6f2g8-h4i5-6j7k-8l9m-0n1o2p3q4r5s",
+      "session_id": "a7b9c3d1-e5f2-4g6h-8i9j-0k1l2m3n4o5p",
+      "para_type": "project",
+      "type": "idea",
+      "content": "Partner with Travis to enhance his social media reach (currently 200,000 Instagram followers) or monetize his existing audience. Develop AI agents that function as virtual staff members to support his work, potentially creating a scalable business model that could be marketed as a product.",
+      "created_at": "2023-11-14T15:30:15Z",
+      "tags": [
+        "social-media",
+        "audience-monetization",
+        "ai-agents",
+        "virtual-staff",
+        "business-model",
+        "travis"
+      ],
+      "links": [
+        "b8c4d0e6-f2g3-4h5i-6j7k-8l9m0n1o2p3q"
+      ],
+      "details": {
+        "title": "Travis AI Support Team",
+        "notes": "This concept could extend beyond just helping Travis to become a productized service for influencers and content creators who need scalable support staff.",
+        "parent_entity": "AI for Content Creators",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create AI agents to support Travis's content creation and audience growth",
+          "deadline": "",
+          "parent_project": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "inbox",
+        "related_items": [
+          "Future AI Project Ideas Collection"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "e1f7g3h9-i5j6-7k8l-9m0n-1o2p3q4r5s6t",
+      "session_id": "a7b9c3d1-e5f2-4g6h-8i9j-0k1l2m3n4o5p",
+      "para_type": "project",
+      "type": "idea",
+      "content": "Develop VITA into the world's first autonomous digital life form. This could include creating an agent arena for testing and demonstrating capabilities. Consider seeking funding from early investors in the AI space to accelerate development.",
+      "created_at": "2023-11-14T15:30:20Z",
+      "tags": [
+        "autonomous-agents",
+        "digital-life-form",
+        "vita",
+        "agent-arena",
+        "ai-investment"
+      ],
+      "links": [
+        "b8c4d0e6-f2g3-4h5i-6j7k-8l9m0n1o2p3q"
+      ],
+      "details": {
+        "title": "VITA Autonomous Agent",
+        "notes": "The agent arena concept could provide both a testing ground and demonstration platform for VITA's capabilities, potentially attracting investor interest.",
+        "parent_entity": "Autonomous AI Systems",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Develop VITA as an autonomous digital life form and create an agent testing arena",
+          "deadline": "",
+          "parent_project": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "inbox",
+        "related_items": [
+          "Future AI Project Ideas Collection"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "f2g8h4i0-j6k7-8l9m-0n1o-2p3q4r5s6t7u",
+      "session_id": "a7b9c3d1-e5f2-4g6h-8i9j-0k1l2m3n4o5p",
+      "para_type": "project",
+      "type": "idea",
+      "content": "Create an AI-powered second brain application to fill the market gap for effective knowledge management. Challenge OpenAI's high-cost PhD-level assistant model ($20,000/month) by building a more accessible alternative based on powerful agent frameworks rather than just model capabilities. Consider using Obsidian as the front end or developing a custom version.",
+      "created_at": "2023-11-14T15:30:25Z",
+      "tags": [
+        "second-brain",
+        "knowledge-management",
+        "agent-frameworks",
+        "obsidian",
+        "personal-knowledge-system",
+        "accessibility"
+      ],
+      "links": [
+        "b8c4d0e6-f2g3-4h5i-6j7k-8l9m0n1o2p3q"
+      ],
+      "details": {
+        "title": "AI-Powered Second Brain",
+        "notes": "This project needs a compelling proof of concept to demonstrate value. The key insight is that the agent framework, not just the raw LLM, is what creates true assistant value.",
+        "parent_entity": "Knowledge Management Systems",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Develop an accessible AI-powered second brain application using agent frameworks",
+          "deadline": "",
+          "parent_project": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "inbox",
+        "related_items": [
+          "Future AI Project Ideas Collection"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "g3h9i5j1-k7l8-9m0n-1o2p-3q4r5s6t7u8v",
+      "session_id": "a7b9c3d1-e5f2-4g6h-8i9j-0k1l2m3n4o5p",
+      "para_type": "project",
+      "type": "idea",
+      "content": "Develop the 'Follow The Money' (FTFM) platform as an open-source, possibly Substack-hosted project. Create a system that allows users to contribute articles, URLs, and databases to build a comprehensive knowledge base. Consider implementing a Glenn Greenwald-inspired approach of analyzing podcasts for inconsistencies and creating visual knowledge maps to show relationships between entities. Could run on free models through OpenRouter or low-cost AWS infrastructure with user-provided API keys.",
+      "created_at": "2023-11-14T15:30:30Z",
+      "tags": [
+        "follow-the-money",
+        "financial-transparency",
+        "open-source",
+        "knowledge-mapping",
+        "collaborative-platform",
+        "substack"
+      ],
+      "links": [
+        "b8c4d0e6-f2g3-4h5i-6j7k-8l9m0n1o2p3q"
+      ],
+      "details": {
+        "title": "Follow The Money Platform",
+        "notes": "This platform would focus on transparency and relationship mapping, appealing to users who appreciate Obsidian's graph views but applied to real-world financial and influence networks.",
+        "parent_entity": "Financial Transparency Tools",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create an open-source platform for tracking financial relationships and influence networks",
+          "deadline": "",
+          "parent_project": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "inbox",
+        "related_items": [
+          "Future AI Project Ideas Collection"
+        ],
+        "collection": "Ideas for the future"
+      }
+    }
+  ],
+  "system_instructions": [
+    {
+      "instruction_id": "h4i0j6k2-l8m9-0n1o-2p3q-4r5s6t7u8v9w",
+      "command_type": "create_single_file",
+      "instruction_type": "structural",
+      "description": "Create a single markdown file containing all ideas without task lists or contents page",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "markdown",
+        "additional_info": {
+          "file_name": "Ideas for the future",
+          "project_name": "inbox",
+          "structure": "single_continuous_document"
+        }
+      },
+      "priority": "1",
+      "dependencies": []
+    }
+  ]
+}

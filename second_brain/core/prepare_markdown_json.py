@@ -16,14 +16,12 @@ def convert_json_to_blueprints(json_data):
         # Prepare the prompt for the LLM
         prompt = get_blueprint_conversion_prompt(json_data)
         
-        # Call the LLM API - use the same API endpoint and key as in main.py
-        api_url = "https://openrouter.ai/api/v1/chat/completions"  # Hardcoded URL
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {Config.OPENROUTER_API_KEY}",
-            "HTTP-Referer": "http://localhost:8000"
-        }
+        # Save the prompt to a file for inspection
+        with open("llm_prompt.txt", "w", encoding="utf-8") as f:
+            f.write(prompt)
+        print(f"Saved prompt ({len(prompt)} chars) to llm_prompt.txt")
         
+        # Save the payload to a file for inspection
         payload = {
             "model": Config.MODEL,  # Use the same model attribute as in main.py
             "messages": [
@@ -31,6 +29,18 @@ def convert_json_to_blueprints(json_data):
                 {"role": "user", "content": prompt}
             ],
             "temperature": 0.2
+        }
+        
+        with open("llm_payload.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2)
+        print(f"Saved complete payload to llm_payload.json")
+        
+        # Call the LLM API - use the same API endpoint and key as in main.py
+        api_url = "https://openrouter.ai/api/v1/chat/completions"  # Hardcoded URL
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {Config.OPENROUTER_API_KEY}",
+            "HTTP-Referer": "http://localhost:8000"
         }
         
         print("Sending request to LLM API")

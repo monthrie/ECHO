@@ -1,0 +1,334 @@
+
+# Instructions for Converting Second Brain JSON to Markdown Blueprints
+
+## JSON Data to Convert
+{
+  "session": {
+    "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+    "user_id": "default_user",
+    "started_at": "2023-11-12T15:10:23Z",
+    "summary": "The user shared various ideas for future AI-related projects, including a human rights due diligence tool, working with social media influencers using AI agents, building autonomous digital life forms, creating an AI-powered second brain application, and developing a financial tracking platform called 'Follow The Fucking Money'."
+  },
+  "records": [
+    {
+      "record_id": "b42a8f7e-d1c3-4f5d-b6e9-f2d9e8c7a1b3",
+      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "para_type": "resource",
+      "type": "idea",
+      "content": "Human Rights Due Diligence Tool with Dan Murphy could be developed in several ways: helping Dan structure and sell his existing data, or transforming his data into a model for AI fine-tuning. Potential collaboration with CLIM to execute this project.",
+      "created_at": "2023-11-12T15:11:05Z",
+      "tags": [
+        "AI",
+        "human rights",
+        "data structuring",
+        "collaboration",
+        "business idea",
+        "CLIM"
+      ],
+      "links": [
+        "c5d9e8f7-a6b5-4c3d-b2a1-e9f8d7c6b5a4",
+        "f7e6d5c4-b3a2-1d0e-9f8a-7b6c5d4e3f2a"
+      ],
+      "details": {
+        "title": "Human Rights Due Diligence Tool",
+        "notes": "This idea involves partnering with Dan Murphy to leverage existing data. Consider exploring the fine-tuning approach as it might yield higher value and uniqueness in the market.",
+        "parent_entity": "Ideas for the future",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "resource": {
+          "category": "Business Ideas",
+          "format": "note"
+        }
+      },
+      "relationships": {
+        "belongs_to": "Ideas for the future",
+        "related_items": [
+          "Working with Social Media Influencers",
+          "AI Second Brain Development"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "c5d9e8f7-a6b5-4c3d-b2a1-e9f8d7c6b5a4",
+      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "para_type": "resource",
+      "type": "idea",
+      "content": "Collaborate with Travis to scale his social media presence (currently 200k Instagram followers) by developing AI agents that function as virtual staff members. This could be developed into a marketable product or business that leverages Travis's audience and promotional capabilities.",
+      "created_at": "2023-11-12T15:11:45Z",
+      "tags": [
+        "AI agents",
+        "social media growth",
+        "influencer marketing",
+        "business development",
+        "automation"
+      ],
+      "links": [
+        "b42a8f7e-d1c3-4f5d-b6e9-f2d9e8c7a1b3",
+        "d4c3b2a1-9f8e-7d6c-5b4a-3e2d1f0e9d8c"
+      ],
+      "details": {
+        "title": "Working with Social Media Influencers",
+        "notes": "This approach could pioneer a new category of AI-powered influencer tools. Consider developing a prototype with Travis to demonstrate efficacy before scaling.",
+        "parent_entity": "Ideas for the future",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "resource": {
+          "category": "Business Ideas",
+          "format": "note"
+        }
+      },
+      "relationships": {
+        "belongs_to": "Ideas for the future",
+        "related_items": [
+          "Human Rights Due Diligence Tool",
+          "VITA Development",
+          "AI Agent Arena"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "d4c3b2a1-9f8e-7d6c-5b4a-3e2d1f0e9d8c",
+      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "para_type": "resource",
+      "type": "idea",
+      "content": "Develop VITA into the world's first autonomous digital life form, potentially creating an agent arena for testing and demonstration. This initiative could attract funding from early-stage investors in the AI space.",
+      "created_at": "2023-11-12T15:12:25Z",
+      "tags": [
+        "autonomous agents",
+        "digital life",
+        "VITA",
+        "agent arena",
+        "investor opportunity"
+      ],
+      "links": [
+        "c5d9e8f7-a6b5-4c3d-b2a1-e9f8d7c6b5a4",
+        "e3f2d1c0-b9a8-7f6e-5d4c-3b2a1f0e9d8c"
+      ],
+      "details": {
+        "title": "VITA Development",
+        "notes": "The concept of autonomous digital life forms is cutting-edge and could position the team at the forefront of AI development. The agent arena idea provides a practical testing ground and demonstration platform.",
+        "parent_entity": "Ideas for the future",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "resource": {
+          "category": "AI Development",
+          "format": "note"
+        }
+      },
+      "relationships": {
+        "belongs_to": "Ideas for the future",
+        "related_items": [
+          "Working with Social Media Influencers",
+          "AI Second Brain Development",
+          "AI Agent Arena"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "e3f2d1c0-b9a8-7f6e-5d4c-3b2a1f0e9d8c",
+      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "para_type": "resource",
+      "type": "idea",
+      "content": "Create an AI-powered second brain system, potentially using Obsidian as a front end. This addresses a significant market gap, especially as OpenAI is positioning high-end assistants at $20,000/month. The key differentiator would be the agent framework rather than just the underlying models.",
+      "created_at": "2023-11-12T15:13:05Z",
+      "tags": [
+        "second brain",
+        "AI assistant",
+        "Obsidian",
+        "knowledge management",
+        "agent framework"
+      ],
+      "links": [
+        "d4c3b2a1-9f8e-7d6c-5b4a-3e2d1f0e9d8c",
+        "f7e6d5c4-b3a2-1d0e-9f8a-7b6c5d4e3f2a"
+      ],
+      "details": {
+        "title": "AI Second Brain Development",
+        "notes": "This project requires a compelling proof of concept to attract partners or investors. The integration with existing tools like Obsidian could accelerate adoption and provide immediate user value.",
+        "parent_entity": "Ideas for the future",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "resource": {
+          "category": "AI Development",
+          "format": "note"
+        }
+      },
+      "relationships": {
+        "belongs_to": "Ideas for the future",
+        "related_items": [
+          "VITA Development",
+          "Follow The Fucking Money"
+        ],
+        "collection": "Ideas for the future"
+      }
+    },
+    {
+      "record_id": "f7e6d5c4-b3a2-1d0e-9f8a-7b6c5d4e3f2a",
+      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "para_type": "resource",
+      "type": "idea",
+      "content": "Develop 'Follow The Fucking Money' (FTFM) as an open-source platform that analyzes financial connections. This could be monetized as a Substack publication, operate as a free service using affordable models through Open Router, and allow users to contribute content. The system could visualize data connections similar to Obsidian's popular knowledge maps.",
+      "created_at": "2023-11-12T15:13:45Z",
+      "tags": [
+        "FTFM",
+        "financial analysis",
+        "data visualization",
+        "open source",
+        "Substack",
+        "knowledge mapping"
+      ],
+      "links": [
+        "b42a8f7e-d1c3-4f5d-b6e9-f2d9e8c7a1b3",
+        "e3f2d1c0-b9a8-7f6e-5d4c-3b2a1f0e9d8c"
+      ],
+      "details": {
+        "title": "Follow The Fucking Money",
+        "notes": "The 'Glenn Green World' approach of analyzing podcasts and revealing inconsistencies could create a compelling public record. The visualization component could be particularly appealing to users accustomed to knowledge graphs.",
+        "parent_entity": "Ideas for the future",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "resource": {
+          "category": "Financial Technology",
+          "format": "note"
+        }
+      },
+      "relationships": {
+        "belongs_to": "Ideas for the future",
+        "related_items": [
+          "Human Rights Due Diligence Tool",
+          "AI Second Brain Development"
+        ],
+        "collection": "Ideas for the future"
+      }
+    }
+  ]
+}
+
+## Structural Instructions to Apply
+These are special formatting and organization instructions that should guide your conversion process,
+but should NOT be converted into separate markdown files themselves:
+
+[
+  {
+    "instruction_id": "a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6",
+    "command_type": "create_single_file",
+    "instruction_type": "structural",
+    "description": "Create a single continuous file containing all ideas without task lists or a contents page",
+    "parameters": {
+      "target": "all_session_content",
+      "format": "single page",
+      "additional_info": {
+        "file_name": "Ideas for the future",
+        "project_name": "inbox",
+        "format_style": "continuous list"
+      }
+    },
+    "priority": "1",
+    "dependencies": []
+  }
+]
+
+## Hierarchical Organization Requirements
+1. Group ALL related notes under appropriate subdirectories
+2. NEVER place notes directly in root PARA folders without a subdirectory
+3. Files related to the same project, area, or topic MUST be placed in a dedicated subdirectory
+4. Example hierarchy:
+   - Projects/Investigation/Overview.md
+   - Projects/Investigation/Plan.md
+   - Projects/Investigation/MVP.md
+
+## Directory Organization
+- Projects must use: "Projects/<Project Name>/<filename>.md"
+- Areas must use: "Areas/<Area Name>/<filename>.md"
+- Resources must use: "Resources/<Topic Name>/<filename>.md"
+- Archives must use: "Archives/<Original Category>/<filename>.md"
+
+## Organizational Files
+For any collection with multiple files, create:
+1. A "Contents.md" file that serves as a Map of Contents (MOC)
+2. A "Tasks.md" file if there are multiple tasks or action items
+
+Example structure:
+- Projects/Investigation/Contents.md
+- Projects/Investigation/Tasks.md
+- Projects/Investigation/Overview.md
+- Projects/Investigation/Plan.md
+- Projects/Investigation/MVP.md
+
+## Naming and Formatting Requirements
+1. Use descriptive, concise filenames with spaces between words
+2. Ensure filenames match the content they contain
+3. Structure content with appropriate headings, lists, and formatting
+4. Preserve all important information from the original records
+
+## Note Types and Content Structure
+
+### Project Notes
+For each project:
+- Create a comprehensive main project note with overview, status, and key details
+- Include "Related Notes" section with links
+- Extract associated tasks into a checklist section or link to tasks file
+- Add context about the project's purpose, goals, and timeline
+- Include any dependencies or requirements
+
+### Implementation/Technical Notes
+For technical details:
+- Create separate notes focusing on architecture and technical aspects
+- Include diagrams for system relationships when appropriate
+- Use code blocks with appropriate syntax highlighting
+- Maintain technical accuracy while improving readability
+- Link to relevant external resources or documentation
+
+### Entity Notes
+For important entities (people, concepts, organizations):
+- Create dedicated notes for significant entities referenced across multiple records
+- Describe relationships to projects and other entities
+- Include relevant background information
+- Establish bidirectional links to related notes
+
+## Special Instructions
+1. Preserve ALL detailed information while reorganizing presentation
+2. For complex projects, suggest canvas files to visualize relationships
+3. Include direct quotes or critical content verbatim to maintain accuracy
+4. Look for narrative connections between JSON records and combine logically related content
+
+## Applying Structural Instructions
+When applying the structural instructions:
+1. Use them as guidance for how to organize and format the markdown content
+2. Follow any specific requirements about combining or separating notes
+3. Apply formatting instructions to the relevant content
+4. DO NOT create separate notes for the instructions themselves
+5. Prioritize instructions by their priority value if provided
+
+## OUTPUT FORMAT
+Instead of directly creating markdown files, you must output a JSON array of blueprint objects.
+Each blueprint should have this structure:
+
+{
+  "file_info": {
+    "directory": "The appropriate directory path (e.g., Projects/FTFM)",
+    "filename": "A descriptive filename (e.g., Technical Architecture)",
+    "record_id": "The original record_id from the source"
+  },
+  "frontmatter": {
+    "tags": ["tag1", "tag2"],
+    "record_ids": ["record_id1", "record_id2"],
+    "goal": "The project goal (only for projects)"
+  },
+  "content": {
+    "title": "The title for the note",
+    "body": "The fully formatted markdown content (without the title or frontmatter)"
+  }
+}
+
+IMPORTANT: Your response must be a valid JSON array of these blueprint objects, with no additional text or explanation.
+Make sure all strings in the JSON are properly escaped, especially when they contain newlines or special characters.
+DO NOT include actual newlines within JSON string values - use \n instead to represent newlines in content.
