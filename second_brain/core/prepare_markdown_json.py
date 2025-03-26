@@ -16,15 +16,16 @@ def convert_json_to_blueprints(json_data):
         # Prepare the prompt for the LLM
         prompt = get_blueprint_conversion_prompt(json_data)
         
-        # Call the LLM API
-        api_url = Config.LLM_API_URL
+        # Call the LLM API - use the same API endpoint and key as in main.py
+        api_url = "https://openrouter.ai/api/v1/chat/completions"  # Hardcoded URL
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {Config.LLM_API_KEY}"
+            "Authorization": f"Bearer {Config.OPENROUTER_API_KEY}",
+            "HTTP-Referer": "http://localhost:8000"
         }
         
         payload = {
-            "model": Config.LLM_MODEL,
+            "model": Config.MODEL,  # Use the same model attribute as in main.py
             "messages": [
                 {"role": "system", "content": "You are a helpful assistant that converts structured JSON data into markdown blueprint format."},
                 {"role": "user", "content": prompt}
@@ -35,20 +36,43 @@ def convert_json_to_blueprints(json_data):
         print("Sending request to LLM API")
         response = requests.post(api_url, headers=headers, json=payload)
         
+        # Log the response status and headers
+        print(f"Response status code: {response.status_code}")
+        
+        # Save the raw response to a file for inspection
+        with open("llm_response_raw.txt", "wb") as f:
+            f.write(response.content)
+        
         if response.status_code != 200:
             print(f"LLM API error: {response.status_code} - {response.text}")
             return create_basic_blueprints(json_data)
         
         # Parse the LLM response
-        response_data = response.json()
-        llm_response = response_data['choices'][0]['message']['content']
-        
-        # Extract JSON from the LLM response
-        print("Extracting blueprints from LLM response")
         try:
-            # Clean the response in case it contains markdown formatting
+            response_data = response.json()
+            llm_response = response_data['choices'][0]['message']['content']
+            
+            # Save the raw LLM response to a file
+            with open("llm_content_raw.txt", "w", encoding="utf-8") as f:
+                f.write(llm_response)
+            print(f"Saved raw LLM content ({len(llm_response)} chars) to llm_content_raw.txt")
+            
+            # Extract JSON from the LLM response
+            print("Extracting blueprints from LLM response")
             cleaned_response = clean_json_string(llm_response)
-            blueprints = json.loads(cleaned_response)
+            
+            # Save the cleaned response to a file
+            with open("llm_content_cleaned.txt", "w", encoding="utf-8") as f:
+                f.write(cleaned_response)
+            print(f"Saved cleaned LLM content ({len(cleaned_response)} chars) to llm_content_cleaned.txt")
+            
+            try:
+                blueprints = json.loads(cleaned_response)
+            except json.JSONDecodeError as e:
+                print(f"JSON decode error: {e}")
+                print(f"Error position: {e.pos}")
+                print(f"Cleaned response excerpt around error: {cleaned_response[max(0, e.pos-50):min(len(cleaned_response), e.pos+50)]}")
+                raise
             
             # Ensure we have a list of blueprints
             if not isinstance(blueprints, list):
@@ -64,16 +88,14 @@ def convert_json_to_blueprints(json_data):
             return blueprints
             
         except json.JSONDecodeError as e:
-            print(f"Error parsing LLM response: {e}")
-            print(f"LLM response: {llm_response[:500]}...")
-            return create_basic_blueprints(json_data)
+            print(f"JSON decode error: {e}")
+            print(f"Error position: {e.pos}")
+            print(f"Response excerpt around error: {response.text[max(0, e.pos-50):min(len(response.text), e.pos+50)]}")
+            raise
             
     except Exception as e:
-        print(f"Error in convert_json_to_blueprints: {str(e)}")
-        import traceback
-        print(f"Traceback: {traceback.format_exc()}")
-        # Fall back to basic blueprints if API call fails
-        return create_basic_blueprints(json_data)
+        print(f"Error in convert_json_to_blueprints: {e}")
+        raise
 
 def create_basic_blueprints(json_data):
     """
@@ -194,32 +216,24 @@ def process_json_to_blueprints(structured_json):
     return blueprints
 
 def clean_json_string(json_str):
-    """Clean and attempt to fix common JSON string issues."""
+    """Clean and extract JSON from text using json5."""
     # Remove any leading/trailing whitespace
     json_str = json_str.strip()
     
     # If it starts with a markdown code block, extract the content
     if json_str.startswith("```"):
-        parts = json_str.split("```")
-        if len(parts) >= 3:  # Proper code block with start and end markers
-            json_str = parts[1]
-        else:
-            json_str = parts[-1]  # Take the last part if splitting is weird
-            
-        # Remove the "json" language identifier if present
-        if json_str.startswith("json"):
-            json_str = json_str[4:].strip()
+        # Extract content between code block markers
+        pattern = r"```(?:json)?\s*([\s\S]*?)```"
+        matches = re.findall(pattern, json_str)
+        if matches:
+            json_str = matches[0].strip()
     
-    # Check for and fix common JSON syntax issues
-    # 1. Replace single quotes with double quotes (except in strings)
-    # This is a simplified approach - a more robust solution would use a proper parser
-    json_str = json_str.replace("'", "\"")
+    # Use json5 to parse the relaxed JSON syntax
+    import json5
+    parsed = json5.loads(json_str)
     
-    # 2. Remove trailing commas in arrays and objects
-    json_str = re.sub(r',\s*}', '}', json_str)
-    json_str = re.sub(r',\s*]', ']', json_str)
-    
-    return json_str
+    # Convert back to standard JSON
+    return json.dumps(parsed)
 
 if __name__ == "__main__":
     Config.initialize()

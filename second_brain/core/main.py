@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import os
 import csv
 import requests
-from archive.prompts import get_structuring_prompt
+from second_brain.prompts.prompts import get_structuring_prompt
 from archive.config import Config
 
 # --- Prompt & Schema ---
