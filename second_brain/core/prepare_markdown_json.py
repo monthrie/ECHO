@@ -4,11 +4,11 @@ import uuid
 from pathlib import Path
 from datetime import datetime
 import requests
-from archive.config import Config
+from second_brain.utils.config import Config
 from second_brain.prompts.blueprint_prompt import get_blueprint_conversion_prompt
 import re
 
-def convert_json_to_blueprints(json_data):
+def convert_json_to_blueprints(json_data, tracer=None):
     """Convert JSON data to blueprints using LLM."""
     try:
         print(f"convert_json_to_blueprints received data of type: {type(json_data)}")
@@ -23,7 +23,7 @@ def convert_json_to_blueprints(json_data):
         
         # Save the payload to a file for inspection
         payload = {
-            "model": Config.MODEL,  # Use the same model attribute as in main.py
+            "model": Config.MODEL,
             "messages": [
                 {"role": "system", "content": "You are a helpful assistant that converts structured JSON data into markdown blueprint format."},
                 {"role": "user", "content": prompt}
@@ -35,8 +35,15 @@ def convert_json_to_blueprints(json_data):
             json.dump(payload, f, indent=2)
         print(f"Saved complete payload to llm_payload.json")
         
-        # Call the LLM API - use the same API endpoint and key as in main.py
-        api_url = "https://openrouter.ai/api/v1/chat/completions"  # Hardcoded URL
+        # Add tracing metadata
+        metadata = {
+            "stage": "json_to_blueprints",
+            "json_size": len(str(json_data)),
+            "model": Config.MODEL
+        }
+        
+        # Call the LLM API
+        api_url = "https://openrouter.ai/api/v1/chat/completions"
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {Config.OPENROUTER_API_KEY}",
@@ -49,63 +56,38 @@ def convert_json_to_blueprints(json_data):
         # Log the response status and headers
         print(f"Response status code: {response.status_code}")
         
-        # Save the raw response to a file for inspection
-        with open("llm_response_raw.txt", "wb") as f:
-            f.write(response.content)
-        
         if response.status_code != 200:
-            print(f"LLM API error: {response.status_code} - {response.text}")
-            return create_basic_blueprints(json_data)
+            raise Exception(f"API call failed: {response.text}")
         
-        # Parse the LLM response
+        # Extract the response content
+        blueprint_text = response.json()["choices"][0]["message"]["content"]
+        
+        # Trace the API call if tracer is provided
+        if tracer:
+            tracer.trace_openrouter_call(
+                "json_to_blueprints", 
+                prompt, 
+                blueprint_text, 
+                metadata
+            )
+        
+        # Parse the blueprint text
+        # This depends on your expected format - adjust as needed
         try:
-            response_data = response.json()
-            llm_response = response_data['choices'][0]['message']['content']
-            
-            # Save the raw LLM response to a file
-            with open("llm_content_raw.txt", "w", encoding="utf-8") as f:
-                f.write(llm_response)
-            print(f"Saved raw LLM content ({len(llm_response)} chars) to llm_content_raw.txt")
-            
-            # Extract JSON from the LLM response
-            print("Extracting blueprints from LLM response")
-            cleaned_response = clean_json_string(llm_response)
-            
-            # Save the cleaned response to a file
-            with open("llm_content_cleaned.txt", "w", encoding="utf-8") as f:
-                f.write(cleaned_response)
-            print(f"Saved cleaned LLM content ({len(cleaned_response)} chars) to llm_content_cleaned.txt")
-            
-            try:
-                blueprints = json.loads(cleaned_response)
-            except json.JSONDecodeError as e:
-                print(f"JSON decode error: {e}")
-                print(f"Error position: {e.pos}")
-                print(f"Cleaned response excerpt around error: {cleaned_response[max(0, e.pos-50):min(len(cleaned_response), e.pos+50)]}")
-                raise
-            
-            # Ensure we have a list of blueprints
+            # Try to parse as JSON first
+            blueprints = json.loads(blueprint_text)
             if not isinstance(blueprints, list):
-                print(f"LLM returned non-list blueprints: {type(blueprints)}")
-                if isinstance(blueprints, dict):
-                    # If it's a single blueprint as a dict, wrap it in a list
-                    blueprints = [blueprints]
-                else:
-                    # If it's something else, fall back to basic blueprints
-                    return create_basic_blueprints(json_data)
-            
-            print(f"Successfully created {len(blueprints)} blueprints using LLM")
-            return blueprints
-            
-        except json.JSONDecodeError as e:
-            print(f"JSON decode error: {e}")
-            print(f"Error position: {e.pos}")
-            print(f"Response excerpt around error: {response.text[max(0, e.pos-50):min(len(response.text), e.pos+50)]}")
-            raise
-            
+                blueprints = [blueprints]
+        except json.JSONDecodeError:
+            # If not valid JSON, use a fallback parsing method
+            print("Response is not valid JSON, using fallback parsing")
+            blueprints = create_basic_blueprints(json_data, blueprint_text)
+        
+        return blueprints
     except Exception as e:
-        print(f"Error in convert_json_to_blueprints: {e}")
-        raise
+        print(f"Error in convert_json_to_blueprints: {str(e)}")
+        # Fall back to basic blueprint creation
+        return create_basic_blueprints(json_data)
 
 def create_basic_blueprints(json_data):
     """
@@ -187,43 +169,36 @@ def create_basic_blueprints(json_data):
     
     return blueprints
 
-def process_json_to_blueprints(structured_json):
-    """Process structured JSON into blueprint JSON files."""
-    from second_brain.utils.config import Config
-    
-    # Add logging to understand what's being received
-    print(f"process_json_to_blueprints received data of type: {type(structured_json)}")
-    if isinstance(structured_json, str):
-        print(f"structured_json is a string (first 100 chars): {structured_json[:100]}...")
-        try:
-            structured_json = json.loads(structured_json)
-            print(f"Successfully parsed string to dict with keys: {list(structured_json.keys())}")
-        except json.JSONDecodeError as e:
-            print(f"Error parsing structured_json string: {e}")
-    elif isinstance(structured_json, dict):
-        print(f"structured_json is a dict with keys: {list(structured_json.keys())}")
-    
-    # Create blueprints directory if it doesn't exist
-    os.makedirs(Config.BLUEPRINTS_DIR, exist_ok=True)
-    
-    # Convert JSON to blueprints
-    blueprints = convert_json_to_blueprints(structured_json)
-    
-    # Save blueprints to files
-    blueprint_files = []
-    for blueprint in blueprints:
-        # Generate a filename based on the record ID
-        record_id = blueprint.get("file_info", {}).get("record_id", str(uuid.uuid4()))
-        blueprint_path = os.path.join(Config.BLUEPRINTS_DIR, f"{record_id}_blueprint.json")
+def process_json_to_blueprints(json_data, tracer=None):
+    """Process JSON data to blueprint files."""
+    try:
+        # Create blueprints directory if it doesn't exist
+        blueprints_dir = Path(Config.BLUEPRINTS_DIR)
+        blueprints_dir.mkdir(parents=True, exist_ok=True)
         
-        # Save the blueprint to a file
-        with open(blueprint_path, 'w', encoding='utf-8') as f:
-            json.dump(blueprint, f, indent=2)
+        # Convert JSON to blueprints
+        blueprints = convert_json_to_blueprints(json_data, tracer)
         
-        blueprint_files.append(blueprint_path)
-    
-    print(f"Created {len(blueprint_files)} blueprint files in {Config.BLUEPRINTS_DIR}")
-    return blueprints
+        # Save each blueprint to a file
+        blueprint_files = []
+        for blueprint in blueprints:
+            # Generate a unique ID for the blueprint
+            blueprint_id = str(uuid.uuid4())
+            
+            # Create the blueprint file path
+            blueprint_file = blueprints_dir / f"{blueprint_id}_blueprint.json"
+            
+            # Save the blueprint to a file
+            with open(blueprint_file, 'w', encoding='utf-8') as f:
+                json.dump(blueprint, f, indent=2)
+            
+            blueprint_files.append(blueprint_file)
+        
+        print(f"Created {len(blueprint_files)} blueprint files")
+        return blueprints
+    except Exception as e:
+        print(f"Error in process_json_to_blueprints: {str(e)}")
+        return []
 
 def clean_json_string(json_str):
     """Clean and extract JSON from text using json5."""

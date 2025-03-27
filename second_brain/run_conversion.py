@@ -10,6 +10,7 @@ from second_brain.core.main import process_transcripts
 from second_brain.core.prepare_markdown_json import process_json_to_blueprints
 from second_brain.core.blueprint_to_markdown import process_blueprint_files
 from second_brain.utils.config import Config
+from second_brain.utils.langsmith_tracer import SecondBrainTracer
 
 
 def run_pipeline(transcript_file=None):
@@ -18,10 +19,13 @@ def run_pipeline(transcript_file=None):
     logger = Config.initialize(transcript_file)
     logger.info("Starting pipeline...")
     
+    # Initialize LangSmith tracer
+    tracer = SecondBrainTracer()
+    
     try:
         # Process transcripts
         print("Starting transcript processing...")
-        structured_json = process_transcripts()
+        structured_json = process_transcripts(tracer)
         
         if structured_json:
             # Add debugging output
@@ -33,7 +37,7 @@ def run_pipeline(transcript_file=None):
             
             # Convert JSON to blueprints
             print("Converting JSON to blueprints...")
-            blueprints = process_json_to_blueprints(structured_json)
+            blueprints = process_json_to_blueprints(structured_json, tracer)
             
             # Convert blueprints to markdown
             print("Converting blueprints to markdown...")

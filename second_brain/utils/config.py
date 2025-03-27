@@ -3,6 +3,7 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 from datetime import datetime
+import time
 
 # Load environment variables from .env file
 load_dotenv()
@@ -41,6 +42,11 @@ class Config:
     # Logging
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
     LOG_FILE = str(PROJECT_ROOT / "second_brain.log")
+
+    # Langsmith settings
+    LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY", "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")
+    LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT", "pr-complicated-component-1")
+
     
     @classmethod
     def setup_logging(cls):
@@ -119,7 +125,7 @@ class Config:
         cls.JSON_OUTPUT_DIR = str(cls.CURRENT_VAULT_DIR / "json")
         Path(cls.JSON_OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
         
-        cls.BLUEPRINTS_DIR = str(cls.CURRENT_VAULT_DIR / "blueprints")
+        cls.BLUEPRINTS_DIR = os.path.join(cls.CURRENT_VAULT_DIR, "blueprints")
         Path(cls.BLUEPRINTS_DIR).mkdir(parents=True, exist_ok=True)
         
         cls.MARKDOWN_OUTPUT_DIR = str(cls.CURRENT_VAULT_DIR / "markdown")
@@ -127,6 +133,9 @@ class Config:
         
         # Add this line to maintain compatibility with blueprint_to_markdown.py
         cls.VAULT_PATH = cls.MARKDOWN_OUTPUT_DIR
+        
+        # Log the LangSmith project being used
+        logger.info(f"LangSmith tracing enabled for project: {cls.LANGSMITH_PROJECT}")
         
         logger.info(f"Initialized with transcript: {cls.TRANSCRIPTS_PATH}")
         logger.info(f"Output directories: {cls.CURRENT_VAULT_DIR}")
