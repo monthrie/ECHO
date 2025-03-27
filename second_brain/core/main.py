@@ -8,12 +8,28 @@ import os
 import csv
 import requests
 from second_brain.prompts.prompts import get_structuring_prompt
-from archive.config import Config
+from second_brain.utils.config import Config
 
 # --- Prompt & Schema ---
-def get_structured_json(transcript, user_id="default_user"):
+def get_structured_json(transcript, user_id="default_user", tracer=None):
     prompt = get_structuring_prompt(transcript)
     try:
+        # Prepare API call payload
+        payload = {
+            "model": Config.MODEL,
+            "messages": [
+                {"role": "system", "content": "You structure transcripts into valid JSON. Always respond with properly formatted JSON only."},
+                {"role": "user", "content": prompt}
+            ]
+        }
+        
+        # Add tracing metadata
+        metadata = {
+            "stage": "transcript_to_json",
+            "transcript_length": len(transcript),
+            "model": Config.MODEL
+        }
+        
         # OpenRouter API call
         response = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
@@ -22,13 +38,7 @@ def get_structured_json(transcript, user_id="default_user"):
                 "HTTP-Referer": "http://localhost:8000",
                 "Content-Type": "application/json"
             },
-            json={
-                "model": Config.MODEL,
-                "messages": [
-                    {"role": "system", "content": "You structure transcripts into valid JSON. Always respond with properly formatted JSON only."},
-                    {"role": "user", "content": prompt}
-                ]
-            }
+            json=payload
         )
         
         if response.status_code != 200:
@@ -52,17 +62,21 @@ def get_structured_json(transcript, user_id="default_user"):
         # Add debug logging
         print("Cleaned JSON text:", json_text[:200] + "..." if len(json_text) > 200 else json_text)
         
-        try:
-            parsed_json = json.loads(json_text)
-            return parsed_json
-        except json.JSONDecodeError as e:
-            print(f"JSON parsing error: {str(e)}")
-            print(f"Problematic JSON text: {json_text}")
-            raise
-            
+        # Trace the API call if tracer is provided
+        if tracer:
+            tracer.trace_openrouter_call(
+                "transcript_to_json", 
+                prompt, 
+                json_text, 
+                metadata
+            )
+        
+        # Parse the JSON
+        return json.loads(json_text)
     except Exception as e:
         print(f"Error in get_structured_json: {str(e)}")
-        raise
+        # Return a basic structure if JSON parsing fails
+        return {"error": str(e), "partial_text": json_text[:500] if 'json_text' in locals() else "No response"}
 
 # --- Database Setup ---
 def init_db():
@@ -116,51 +130,43 @@ def save_json_output(data, transcript_id):
         json.dump(data, f, indent=2)
     print(f"Saved JSON output to {output_path}")
 
-def process_transcripts():
-    """Process the transcript from the configured CSV file."""
-    from second_brain.utils.config import Config
-    
-    # Load transcript from CSV
+def process_transcripts(tracer=None):
+    """Process transcript files and convert to structured JSON."""
     try:
-        print(f"Loading transcript from: {Config.TRANSCRIPTS_PATH}")
-        with open(Config.TRANSCRIPTS_PATH, 'r', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            transcript = next(reader)  # Just get the first row
+        # Read the transcript file
+        transcript_path = Config.TRANSCRIPTS_PATH
+        print(f"Reading transcript from: {transcript_path}")
+        
+        with open(transcript_path, 'r', encoding='utf-8') as f:
+            reader = csv.reader(f)
+            # Skip header if present
+            header = next(reader, None)
+            # Get first row of content
+            first_row = next(reader, None)
             
-        print(f"Loaded transcript from {Config.TRANSCRIPTS_PATH}")
-        
-        # Extract transcript details
-        transcript_id = transcript.get('transcript_id')
-        user_id = transcript.get('user_id', 'default_user')
-        content = transcript.get('content', '')
-        
-        # Process the transcript
-        structured_json = get_structured_json(content, user_id)
-        
-        # Verify structured_json is a dictionary
-        if isinstance(structured_json, str):
-            try:
-                structured_json = json.loads(structured_json)
-            except json.JSONDecodeError as e:
-                print(f"Error parsing JSON: {e}")
-                # Log the error and possibly the JSON string for debugging
+            if first_row:
+                # Extract content (assuming it's in the last column)
+                transcript_content = first_row[-1]
+                print(f"Extracted transcript content ({len(transcript_content)} chars)")
+                
+                # Get structured JSON
+                structured_json = get_structured_json(transcript_content, tracer=tracer)
+                
+                # Save to file
+                json_output_path = Path(Config.JSON_OUTPUT_DIR) / "structured.json"
+                with open(json_output_path, 'w', encoding='utf-8') as f:
+                    if isinstance(structured_json, str):
+                        f.write(structured_json)
+                    else:
+                        json.dump(structured_json, f, indent=2)
+                
+                print(f"Saved structured JSON to {json_output_path}")
+                return structured_json
+            else:
+                print("No content found in transcript file")
                 return None
-        
-        # Save JSON to file
-        json_output_path = os.path.join(Config.JSON_OUTPUT_DIR, f"{transcript_id}.json")
-        os.makedirs(os.path.dirname(json_output_path), exist_ok=True)
-        with open(json_output_path, 'w', encoding='utf-8') as f:
-            json.dump(structured_json, f, indent=2)
-        
-        print(f"Processed transcript {transcript_id}")
-        
-        # Return the structured JSON for further processing
-        return structured_json
-        
     except Exception as e:
         print(f"Error processing transcript: {str(e)}")
-        import traceback
-        traceback.print_exc()
         return None
 
 # --- Main Pipeline ---

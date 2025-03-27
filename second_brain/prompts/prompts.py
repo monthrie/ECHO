@@ -9,6 +9,8 @@ Your goal is to interpret, reorganize, and synthesize the user's thoughts into t
 
 Eventually these records will be taken and turned into notes for a second brain application. 
 
+Given that the input data you will be given is a transcript of an audio file, it may be necessary to make some assumptions about what the user said. What is written may not be exactly what the user said, but it should be close - it should at least sound close!
+
 ## Output JSON Structure
 ```json
 {{
@@ -87,9 +89,9 @@ Eventually these records will be taken and turned into notes for a second brain 
 
 ## Additional Categorization Guidelines
 
-1. Fully interpret the transcript, carefully extracting and rewriting key insights clearly and succinctly. Never copy raw transcript text directly; always rewrite into a clear, actionable format.
+1. Fully interpret the transcript, carefully extracting and rewriting key insights clearly and succinctly. Never copy raw transcript text directly; always rewrite into a clear and useful format.
 
-2. **IMPORTANT**: Actively identify and extract actionable tasks. Look for:
+2. **IMPORTANT**: Actively identify and extract actionable tasks for the user. Look for:
    - Any statement that implies something needs to be done
    - Phrases like "I need to", "I should", "I want to", "I have to"
    - Implied actions or next steps
