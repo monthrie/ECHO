@@ -115,6 +115,10 @@ def process_blueprint_files(blueprint, config=None):
         # Extract frontmatter
         frontmatter = blueprint.get("frontmatter", {})
         
+        # Move record_ids to a hidden property with underscore prefix
+        if 'record_ids' in frontmatter:
+            frontmatter['_record_ids'] = frontmatter.pop('record_ids')
+        
         # Extract content
         title = blueprint.get("content", {}).get("title", "")
         body = blueprint.get("content", {}).get("body", "")
@@ -128,7 +132,7 @@ def process_blueprint_files(blueprint, config=None):
             print("Warning: Neither Config.VAULT_PATH nor Config.MARKDOWN_OUTPUT_DIR found, using current directory")
             output_dir = "."
             
-        file_path = os.path.join(output_dir, directory, f"{filename}.md")
+        file_path = os.path.join(output_dir, directory, filename)
         
         # Create the directory if it doesn't exist
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
