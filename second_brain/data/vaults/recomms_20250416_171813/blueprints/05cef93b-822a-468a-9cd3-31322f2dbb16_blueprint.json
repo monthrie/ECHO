@@ -1,0 +1,20 @@
+{
+  "file_info": {
+    "directory": "Resources/Recommendations",
+    "filename": "Contents.md",
+    "record_id": "N/A"
+  },
+  "frontmatter": {
+    "tags": [
+      "recommendations",
+      "directory",
+      "moc"
+    ],
+    "record_ids": [],
+    "goal": ""
+  },
+  "content": {
+    "title": "Recommendations Directory Contents",
+    "body": "## Recommendations Directory\n\nThis directory serves as a collection of personal recommendations across various media types.\n\n### Categories\n- [[Books.md|Book Recommendations]]\n- [[Films.md|Film Recommendations]]\n- [[Games.md|Game Recommendations]]\n\n### Overview\nThis Map of Contents (MOC) provides quick access to categorized lists of recommendations for future reference. Each file contains detailed notes and related items for a comprehensive view of suggested media."
+  }
+}

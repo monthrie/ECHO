@@ -1,0 +1,23 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "The Case for a News Storage Layer",
+    "record_id": "6d5c4b3a-2e1f-0d9c-8a7b-6e5d4c3b2a1f"
+  },
+  "frontmatter": {
+    "tags": [
+      "information architecture",
+      "news storage",
+      "knowledge management",
+      "media theory"
+    ],
+    "record_ids": [
+      "6d5c4b3a-2e1f-0d9c-8a7b-6e5d4c3b2a1f"
+    ],
+    "goal": null
+  },
+  "content": {
+    "title": "The Case for a News Storage Layer",
+    "body": "## The Problem with Current Information Systems\n\nCurrent information systems fail to provide a comprehensive and queryable record of day-to-day reality. While Wikipedia offers static encyclopedic entries about important topics, it lacks the dynamic, structured tracking of ongoing events, statements, and changes that would enable true accountability.\n\n## Limitations of Existing Approaches\n\n### Wikipedia's Constraints\n- Focuses on established, notable topics rather than evolving events\n- Requires consensus editing that can obscure important details\n- Lacks structured data for sophisticated querying\n- Not designed for tracking statements and promises over time\n\n### Traditional News Media\n- Presents information in narrative form without structured data\n- Lacks persistent storage and easy retrieval of past statements\n- Often fails to connect related information across time\n- Rarely follows up systematically on past claims and promises\n\n### Social Media\n- Ephemeral by nature, with content that disappears or becomes hard to find\n- No verification or structured organization of information\n- Algorithm-driven presentation that prioritizes engagement over accuracy\n- Limited search capabilities for finding historical content\n\n## The Need for a Comprehensive Storage Layer\n\nA proper information storage layer for news and public discourse would:\n\n1. **Preserve Context**: Maintain the full context of statements and events\n2. **Structure Data**: Organize information in queryable, machine-readable formats\n3. **Track Changes**: Monitor how positions and statements evolve over time\n4. **Link Related Information**: Connect disparate pieces of information into a coherent whole\n5. **Enable Accountability**: Make it easy to verify whether past statements and promises were accurate or fulfilled\n\n## Philosophical Foundation for FTFM\n\nThe Follow The Money project addresses this fundamental gap in our information ecosystem. By creating a structured, queryable database of public statements and events, FTFM aims to serve as the missing storage layer for our collective reality.\n\nThis approach recognizes that accountability requires more than just access to information\u2014it requires information that is structured, connected, and queryable in ways that reveal patterns and contradictions over time.\n\n## Practical Applications\n\n- **Journalism**: Enabling reporters to quickly access accurate historical context\n- **Civic Engagement**: Empowering citizens to hold public figures accountable\n- **Research**: Supporting analysis of discourse patterns and policy evolution\n- **Education**: Providing students with reliable sources on contemporary issues\n\n## Related Concepts\n- [[Projects/Follow The Money/Proof of Concept Proposal|FTFM Proof of Concept Proposal]]\n- Information Architecture Principles"
+  }
+}

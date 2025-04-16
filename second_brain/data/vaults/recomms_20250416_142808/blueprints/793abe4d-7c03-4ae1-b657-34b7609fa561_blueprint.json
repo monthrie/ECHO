@@ -1,0 +1,23 @@
+{
+  "file_info": {
+    "directory": "Resources/Media Recommendations/Book Recommendations",
+    "filename": "Book Recommendation - Pachinko by Min Jin Lee",
+    "record_id": "b2c3d4e5-f6g7-5h4i-9j0k-1l2m3n4o5p6q"
+  },
+  "frontmatter": {
+    "tags": [
+      "books",
+      "fiction",
+      "historical fiction",
+      "Korean literature",
+      "recommendations"
+    ],
+    "record_ids": [
+      "b2c3d4e5-f6g7-5h4i-9j0k-1l2m3n4o5p6q"
+    ]
+  },
+  "content": {
+    "title": "Book Recommendation: Pachinko by Min Jin Lee",
+    "body": "Pachinko by Min Jin Lee is a captivating multi-generational saga following a Korean family living in Japan, offering deep historical and cultural insights.\n\n## Notes\nThe user's recommendation suggests they value narratives that explore cultural identity and family dynamics across generations.\n\n## Related Recommendations\n- [[Book Recommendation - The Road by Cormac McCarthy]]\n- [[Book Recommendation - Dune by Frank Herbert]]\n\n## Collection\n- [[recommendations/book_recommendations]]"
+  }
+}

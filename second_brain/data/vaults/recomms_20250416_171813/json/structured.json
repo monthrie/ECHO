@@ -1,0 +1,493 @@
+{
+  "session": {
+    "session_id": "550e8400-e29b-41d4-a716-446655440000",
+    "user_id": "default_user",
+    "started_at": "2023-10-05T14:30:00Z",
+    "summary": "This session focuses on compiling a list of personal recommendations across books, films, and games, organized into a structured directory for future reference."
+  },
+  "records": [
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174001",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Book Recommendation: The Road by Cormac McCarthy - A powerful post-apocalyptic story with sparse yet beautiful writing that captures desolation and hope.",
+      "created_at": "2023-10-05T14:30:05Z",
+      "tags": [
+        "books",
+        "post-apocalyptic",
+        "fiction",
+        "literature"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174002",
+        "123e4567-e89b-12d3-a456-426614174003"
+      ],
+      "details": {
+        "title": "Book Rec: The Road by Cormac McCarthy",
+        "notes": "Consider exploring other works by McCarthy for similar thematic depth.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Books",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Book Rec: Pachinko by Min Jin Lee",
+          "Book Rec: Dune by Frank Herbert"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174002",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Book Recommendation: Pachinko by Min Jin Lee - A captivating multi-generational Korean family saga set in Japan, exploring identity and resilience.",
+      "created_at": "2023-10-05T14:30:10Z",
+      "tags": [
+        "books",
+        "historical-fiction",
+        "family-saga",
+        "literature"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174001",
+        "123e4567-e89b-12d3-a456-426614174003"
+      ],
+      "details": {
+        "title": "Book Rec: Pachinko by Min Jin Lee",
+        "notes": "Might inspire interest in Korean-Japanese history and cultural dynamics.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Books",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Book Rec: The Road by Cormac McCarthy",
+          "Book Rec: Dune by Frank Herbert"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174003",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Book Recommendation: Dune by Frank Herbert - A sci-fi classic with incredible worldbuilding, living up to its iconic status.",
+      "created_at": "2023-10-05T14:30:15Z",
+      "tags": [
+        "books",
+        "sci-fi",
+        "classics",
+        "literature"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174001",
+        "123e4567-e89b-12d3-a456-426614174002"
+      ],
+      "details": {
+        "title": "Book Rec: Dune by Frank Herbert",
+        "notes": "Consider watching the recent film adaptation for a visual perspective.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Books",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Book Rec: The Road by Cormac McCarthy",
+          "Book Rec: Pachinko by Min Jin Lee"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174004",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Film Recommendation: Everything Everywhere All at Once - A mind-bending multiverse adventure with surprising emotional depth.",
+      "created_at": "2023-10-05T14:30:20Z",
+      "tags": [
+        "films",
+        "sci-fi",
+        "multiverse",
+        "drama"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174005",
+        "123e4567-e89b-12d3-a456-426614174006"
+      ],
+      "details": {
+        "title": "Film Rec: Everything Everywhere All at Once",
+        "notes": "Great for fans of imaginative storytelling and genre-blending.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Films",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Film Rec: Parasite",
+          "Film Rec: Arrival"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174005",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Film Recommendation: Parasite - Bong Joon-ho's masterpiece that brilliantly shifts genres while delivering sharp social commentary.",
+      "created_at": "2023-10-05T14:30:25Z",
+      "tags": [
+        "films",
+        "drama",
+        "social-commentary",
+        "thriller"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174004",
+        "123e4567-e89b-12d3-a456-426614174006"
+      ],
+      "details": {
+        "title": "Film Rec: Parasite",
+        "notes": "Explore other works by Bong Joon-ho for similar thematic explorations.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Films",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Film Rec: Everything Everywhere All at Once",
+          "Film Rec: Arrival"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174006",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Film Recommendation: Arrival - Thoughtful sci-fi focusing on language and communication rather than typical alien invasion tropes.",
+      "created_at": "2023-10-05T14:30:30Z",
+      "tags": [
+        "films",
+        "sci-fi",
+        "language",
+        "drama"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174004",
+        "123e4567-e89b-12d3-a456-426614174005"
+      ],
+      "details": {
+        "title": "Film Rec: Arrival",
+        "notes": "Might inspire interest in linguistics and Sci-Fi storytelling.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Films",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Film Rec: Everything Everywhere All at Once",
+          "Film Rec: Parasite"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174007",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Game Recommendation: Stardew Valley - An addictive farming simulator that's perfect for relaxation with its charming aesthetics.",
+      "created_at": "2023-10-05T14:30:35Z",
+      "tags": [
+        "games",
+        "simulation",
+        "relaxing",
+        "indie"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174008",
+        "123e4567-e89b-12d3-a456-426614174009"
+      ],
+      "details": {
+        "title": "Game Rec: Stardew Valley",
+        "notes": "Ideal for downtime; consider multiplayer mode for social gaming.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Games",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Game Rec: Disco Elysium",
+          "Game Rec: Hollow Knight"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174008",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Game Recommendation: Disco Elysium - A unique detective RPG with phenomenal writing, blending philosophy and humor.",
+      "created_at": "2023-10-05T14:30:40Z",
+      "tags": [
+        "games",
+        "rpg",
+        "detective",
+        "narrative"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174007",
+        "123e4567-e89b-12d3-a456-426614174009"
+      ],
+      "details": {
+        "title": "Game Rec: Disco Elysium",
+        "notes": "Highly recommended for fans of deep narrative experiences.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Games",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Game Rec: Stardew Valley",
+          "Game Rec: Hollow Knight"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174009",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Game Recommendation: Hollow Knight - A gorgeous metroidvania with challenging combat and an atmospheric world that invites exploration.",
+      "created_at": "2023-10-05T14:30:45Z",
+      "tags": [
+        "games",
+        "metroidvania",
+        "action",
+        "indie"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174007",
+        "123e4567-e89b-12d3-a456-426614174008"
+      ],
+      "details": {
+        "title": "Game Rec: Hollow Knight",
+        "notes": "Perfect for players who enjoy challenging gameplay and intricate worlds.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Games",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Game Rec: Stardew Valley",
+          "Game Rec: Disco Elysium"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    }
+  ],
+  "system_instructions": [
+    {
+      "instruction_id": "987fcdeb-51ae-4a44-9a36-0493b9a5d4e1",
+      "command_type": "Organize Recommendations",
+      "instruction_type": "structural",
+      "description": "Organize the provided recommendations into three separate files categorized by Books, Films, and Games within a directory named 'Recommendations'.",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "Three separate markdown files: Books.md, Films.md, Games.md",
+        "additional_info": "Directory name: Recommendations"
+      },
+      "priority": "3",
+      "dependencies": []
+    }
+  ]
+}

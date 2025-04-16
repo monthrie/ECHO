@@ -1,0 +1,27 @@
+{
+  "file_info": {
+    "directory": "recommendations",
+    "filename": "books.md",
+    "record_id": "multiple"
+  },
+  "frontmatter": {
+    "tags": [
+      "books",
+      "recommendation",
+      "fiction",
+      "post-apocalyptic",
+      "historical fiction",
+      "science fiction"
+    ],
+    "record_ids": [
+      "b1a234c5-6d7e-8f9a-1b2c-3d4e5f678901",
+      "c2d345e6-7f8a-9b1c-2d3e-4f5a6b789012",
+      "d3e456f7-8a9b-1c2d-3e4f-5a6b7c890123"
+    ],
+    "collection": "recommendations"
+  },
+  "content": {
+    "title": "Book Recommendations",
+    "body": "A curated collection of recommended books across various genres.\n\n## The Road by Cormac McCarthy\n\n*Post-apocalyptic fiction*\n\nA powerful post-apocalyptic novel with sparse but beautiful writing. Known for its bleak but poetic depiction of a post-apocalyptic world and the relationship between a father and son.\n\n**Related Books:**\n- Pachinko by Min Jin Lee\n- Dune by Frank Herbert\n\n## Pachinko by Min Jin Lee\n\n*Historical fiction, Family saga, Korean literature*\n\nA captivating multi-generational Korean family saga set in Japan. An epic historical novel following four generations of a Korean family who move to Japan. Explores themes of identity, sacrifice, and resilience.\n\n**Related Books:**\n- The Road by Cormac McCarthy\n- Dune by Frank Herbert\n\n## Dune by Frank Herbert\n\n*Science fiction, Worldbuilding, Classic*\n\nFeatures incredible worldbuilding and lives up to its status as a science fiction classic. A landmark of science fiction with complex political, religious, and ecological themes. Features an intricately constructed universe with unique cultural systems.\n\n**Related Books:**\n- The Road by Cormac McCarthy\n- Pachinko by Min Jin Lee"
+  }
+}

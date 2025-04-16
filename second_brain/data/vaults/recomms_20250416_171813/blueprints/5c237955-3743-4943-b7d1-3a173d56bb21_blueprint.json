@@ -1,0 +1,25 @@
+{
+  "file_info": {
+    "directory": "Resources/Recommendations",
+    "filename": "Films.md",
+    "record_id": "123e4567-e89b-12d3-a456-426614174004"
+  },
+  "frontmatter": {
+    "tags": [
+      "films",
+      "recommendations",
+      "drama",
+      "sci-fi"
+    ],
+    "record_ids": [
+      "123e4567-e89b-12d3-a456-426614174004",
+      "123e4567-e89b-12d3-a456-426614174005",
+      "123e4567-e89b-12d3-a456-426614174006"
+    ],
+    "goal": ""
+  },
+  "content": {
+    "title": "Film Recommendations",
+    "body": "## Film Recommendations\n\nThis file contains a curated list of film recommendations for personal reference.\n\n### Everything Everywhere All at Once\n- **Description**: A mind-bending multiverse adventure with surprising emotional depth.\n- **Notes**: Great for fans of imaginative storytelling and genre-blending.\n- **Tags**: #films #sci-fi #multiverse #drama\n- **Related**: [[Film Rec: Parasite]], [[Film Rec: Arrival]]\n\n### Parasite\n- **Description**: Bong Joon-ho's masterpiece that brilliantly shifts genres while delivering sharp social commentary.\n- **Notes**: Explore other works by Bong Joon-ho for similar thematic explorations.\n- **Tags**: #films #drama #social-commentary #thriller\n- **Related**: [[Film Rec: Everything Everywhere All at Once]], [[Film Rec: Arrival]]\n\n### Arrival\n- **Description**: Thoughtful sci-fi focusing on language and communication rather than typical alien invasion tropes.\n- **Notes**: Might inspire interest in linguistics and Sci-Fi storytelling.\n- **Tags**: #films #sci-fi #language #drama\n- **Related**: [[Film Rec: Everything Everywhere All at Once]], [[Film Rec: Parasite]]"
+  }
+}

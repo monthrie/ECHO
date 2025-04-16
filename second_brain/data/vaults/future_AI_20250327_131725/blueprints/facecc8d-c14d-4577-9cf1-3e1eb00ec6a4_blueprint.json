@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Promise Tracking.md",
+    "record_id": "c4d5e6f7-a8b9-4c0d-e1f2-g3h4i5j6k7l8"
+  },
+  "frontmatter": {
+    "tags": [
+      "promise tracking",
+      "politician accountability",
+      "pattern detection",
+      "political statements",
+      "automated flagging"
+    ],
+    "record_ids": [
+      "c4d5e6f7-a8b9-4c0d-e1f2-g3h4i5j6k7l8"
+    ],
+    "goal": "Develop an automated system to track promises made by public figures and flag fulfillment or non-fulfillment"
+  },
+  "content": {
+    "title": "Promise and Pattern Tracking Feature",
+    "body": "## Feature Overview\n\nThe FTFM system would detect and flag significant events, such as when a politician makes a promise (e.g., 'I will do X on my first day in office'). These would be tagged as events or promises, and the system would track whether those promises are fulfilled. This creates a mechanism for identifying patterns in behavior and statements over time.\n\n## Promise Detection\n\nThe system will identify several types of commitments:\n\n1. **Explicit promises**: Clear statements of intent (\"I will lower taxes\")\n2. **Conditional promises**: Commitments with conditions (\"If elected, I will...\")\n3. **Timebound commitments**: Promises with deadlines (\"Within my first 100 days...\")\n4. **Policy positions**: Stated stances on issues (\"I support/oppose X\")\n5. **Predictions**: Claims about future events (\"This policy will lead to...\")\n\n## Tracking Mechanisms\n\nFor each promise or commitment, the system will:\n\n- Record the exact statement with timestamp and source\n- Identify the speaker and relevant entities\n- Classify the type of commitment\n- Track subsequent statements about the same topic\n- Monitor for fulfillment events or contradictory statements\n- Calculate a \"consistency score\" for individuals over time\n\n## Pattern Recognition\n\nBy aggregating promises and tracking their outcomes, the system can identify patterns such as:\n\n- Politicians who consistently make promises they don't keep\n- Topics where positions frequently shift\n- Correlations between promise fulfillment and external factors\n- Cascading effects where one public figure's statements influence others\n\n## Implementation Approach\n\n1. Develop NLP models to identify commitment language\n2. Create a classification system for promise types\n3. Implement a tracking database with status fields\n4. Design algorithms to detect fulfillment or contradiction events\n5. Build visualization tools to display promise fulfillment rates\n\n## Use Cases\n\nThis feature would be particularly valuable during:\n\n- Election campaigns\n- First 100 days of new administrations\n- Legislative sessions\n- Crisis response situations\n- Policy implementation periods\n\n## Related Notes\n\n- [[Projects/Follow The Money/Project Overview|Project Overview]]\n- [[Projects/Follow The Money/Society Storage Layer|Society Storage Layer]]\n- [[Projects/Follow The Money/RAG Query System|RAG Query System]]"
+  }
+}

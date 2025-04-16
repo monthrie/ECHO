@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Contents",
+    "record_id": "7a12b45c-3e9f-4d87-a5e2-9f8c7b6d5e4a"
+  },
+  "frontmatter": {
+    "tags": [
+      "FTFM",
+      "MOC",
+      "project overview"
+    ],
+    "record_ids": [
+      "7a12b45c-3e9f-4d87-a5e2-9f8c7b6d5e4a"
+    ],
+    "goal": "Create a structured database of news and public statements to hold public figures accountable"
+  },
+  "content": {
+    "title": "Follow The Money Project - Contents",
+    "body": "## Project Overview\nThe Follow The Money (FTFM) project aims to create a structured database of news and public statements to hold public figures accountable. This system will extract entities and claims from media, track promises, identify pattern changes in statements, and create a searchable 'source of truth' system.\n\n## Project Components\n\n### Core Concepts\n- [[Projects/Follow The Money/Proof of Concept Proposal|Proof of Concept Proposal]]\n- [[Projects/Follow The Money/Promise Tracking System|Promise Tracking System]]\n- [[Projects/Follow The Money/Position Change Tracker|Position Change Tracker]]\n- [[Projects/Follow The Money/Source Credibility Framework|Source Credibility Framework]]\n- [[Projects/Follow The Money/The Case for a News Storage Layer|The Case for a News Storage Layer]]\n\n### Technical Implementation\n- [[Projects/Follow The Money/Technical Architecture Overview|Technical Architecture Overview]]\n- [[Projects/Follow The Money/RAG Query System|RAG Query System]]\n\n### Tasks and Implementation\n- [[Projects/Follow The Money/Tasks|Current Tasks]]\n- [[Projects/Follow The Money/Podcast Transcript Acquisition|Podcast Transcript Acquisition]]\n\n## Project Timeline\n- Initial Proof of Concept: Due January 15, 2024\n- Promise Tracking System: Due February 28, 2024\n- Position Change Tracker: Due March 31, 2024\n- Source Credibility Framework: Due April 15, 2024\n- RAG Query System: Due May 31, 2024\n\n## Related Projects\n- [[Projects/AI Dictation and Research System/AI Dictation and Research System|AI Dictation and Research System]]\n\n## Related Areas\n- [[Areas/Personal Knowledge Management/Daily Story Journaling Practice|Daily Story Journaling Practice]]"
+  }
+}

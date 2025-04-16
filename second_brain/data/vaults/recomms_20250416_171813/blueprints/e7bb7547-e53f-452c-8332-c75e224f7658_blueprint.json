@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "Resources/Recommendations",
+    "filename": "Books.md",
+    "record_id": "123e4567-e89b-12d3-a456-426614174001"
+  },
+  "frontmatter": {
+    "tags": [
+      "books",
+      "recommendations",
+      "literature"
+    ],
+    "record_ids": [
+      "123e4567-e89b-12d3-a456-426614174001",
+      "123e4567-e89b-12d3-a456-426614174002",
+      "123e4567-e89b-12d3-a456-426614174003"
+    ],
+    "goal": ""
+  },
+  "content": {
+    "title": "Book Recommendations",
+    "body": "## Book Recommendations\n\nThis file contains a curated list of book recommendations for personal reference.\n\n### The Road by Cormac McCarthy\n- **Description**: A powerful post-apocalyptic story with sparse yet beautiful writing that captures desolation and hope.\n- **Notes**: Consider exploring other works by McCarthy for similar thematic depth.\n- **Tags**: #books #post-apocalyptic #fiction #literature\n- **Related**: [[Book Rec: Pachinko by Min Jin Lee]], [[Book Rec: Dune by Frank Herbert]]\n\n### Pachinko by Min Jin Lee\n- **Description**: A captivating multi-generational Korean family saga set in Japan, exploring identity and resilience.\n- **Notes**: Might inspire interest in Korean-Japanese history and cultural dynamics.\n- **Tags**: #books #historical-fiction #family-saga #literature\n- **Related**: [[Book Rec: The Road by Cormac McCarthy]], [[Book Rec: Dune by Frank Herbert]]\n\n### Dune by Frank Herbert\n- **Description**: A sci-fi classic with incredible worldbuilding, living up to its iconic status.\n- **Notes**: Consider watching the recent film adaptation for a visual perspective.\n- **Tags**: #books #sci-fi #classics #literature\n- **Related**: [[Book Rec: The Road by Cormac McCarthy]], [[Book Rec: Pachinko by Min Jin Lee]]"
+  }
+}

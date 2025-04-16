@@ -1,0 +1,25 @@
+{
+  "file_info": {
+    "directory": "Resources/recommendations",
+    "filename": "games.md",
+    "record_id": "games_collection"
+  },
+  "frontmatter": {
+    "tags": [
+      "games",
+      "video games",
+      "gaming",
+      "recommendations"
+    ],
+    "record_ids": [
+      "7g9i1k3m-5e7g-9i1k-3c5e-7g9i1a3e5c7e",
+      "8h0j2l4n-6f8h-0j2l-4d6h-8j0l2b4f6d8a",
+      "9i1k3m5o-7g9i-1k3m-5e7g-9i1k3c5e7g9i"
+    ],
+    "category": "Game Recommendations"
+  },
+  "content": {
+    "title": "Game Recommendations",
+    "body": "A collection of recommended games with notes.\n\n## Stardew Valley\n\nA relaxing and charming farming simulation game with addictive gameplay loops.\n\n**Tags**: #farming-sim #relaxing #indie\n\n**Related Recommendations**:\n- Disco Elysium\n- Hollow Knight\n\n---\n\n## Disco Elysium\n\nA detective RPG with superb writing that expertly blends philosophical themes with humor.\n\n**Tags**: #RPG #detective #writing #philosophical\n\n**Related Recommendations**:\n- Stardew Valley\n- Hollow Knight\n\n---\n\n## Hollow Knight\n\nA visually stunning metroidvania game featuring challenging combat and a richly atmospheric world design.\n\n**Tags**: #metroidvania #challenging #atmospheric #exploration\n\n**Related Recommendations**:\n- Stardew Valley\n- Disco Elysium"
+  }
+}

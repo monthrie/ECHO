@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vaults/kichen_ting_20250323_184708/markdown/Projects/Home Improvement Projects/Kitchen Renovation Project Overview.md",
+                "file": "vaults/recomms_20250416_171813/markdown/Resources/Recommendations/Games.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kitchen Renovation Project Overview"
+              "title": "Games"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 354.5
   },
   "right": {
     "id": "8c5bda5e0854e0c8",
@@ -170,30 +170,41 @@
   },
   "active": "731056a0cfa5326d",
   "lastOpenFiles": [
-    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Modern Kitchen Design Research.md",
-    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Timeline.md",
-    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Tasks.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation/Open Floor Plan Design Inspiration.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation/Kitchen Renovation Contacts.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation/Child-Friendly Countertop Materials Research.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Resources/Kitchen Renovation",
-    "vaults/kichen_one_file_20250323_190758/markdown/Resources",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Kitchen Renovation Document Structure Plan.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Kitchen Renovation Budget Breakdown.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Kitchen Renovation 6-Week Timeline.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Demolition Options Analysis.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Create Kitchen Renovation Task Sequence.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation/Create Kitchen Renovation Master Document.md",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects/Kitchen Renovation",
-    "vaults/kichen_one_file_20250323_190758/markdown/Projects",
-    "vaults/kichen_one_file_20250323_190758/blueprints/g1h2i3j4-k5l6-m7n8-o9p0-q1r2s3t4u5v6_blueprint.json",
-    "vaults/kichen_one_file_20250323_190758/blueprints/f1e2d3c4-b5a6-7890-9876-5432fedcba98_blueprint.json",
-    "vaults/kichen_one_file_20250323_190758/blueprints/e1d2c3b4-a5f6-7e8d-9c0b-1a2f3e4d5c6b_blueprint.json",
-    "vaults/kichen_one_file_20250323_190758/blueprints/d1c2b3a4-e5f6-7g8h-9i0j-1k2l3m4n5o6p_blueprint.json",
-    "vaults/kichen_one_file_20250323_190758/blueprints/c1d2e3f4-a5b6-7c8d-9e0f-1a2b3c4d5e6f_blueprint.json",
-    "vaults/kichen_one_file_20250323_190758/blueprints/a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d_blueprint.json",
-    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Kitchen Renovation Budget.md",
-    "vaults/kichen_ting_20250323_184708/markdown/Projects/Kitchen Renovation/Demolition Method Decision.md",
-    "vaults/kichen_ting_20250323_184708/markdown/Projects/Home Improvement Projects/Kitchen Renovation Project Overview.md"
+    "vaults/recomms_20250416_171813/markdown/Resources/Recommendations/Films.md",
+    "vaults/recomms_20250416_171813/markdown/Resources/Recommendations/Contents.md",
+    "vaults/recomms_20250416_171813/markdown/Resources/Recommendations/Books.md",
+    "vaults/recomms_20250416_151835/markdown/recommendations/Book Recommendations.md",
+    "vaults/recomms_20250416_171813/markdown/Resources/Recommendations/Games.md",
+    "vaults/recomms_20250416_171813/markdown/Resources/Recommendations",
+    "vaults/recomms_20250416_171813/markdown/Resources",
+    "vaults/recomms_20250416_171813/blueprints/05cef93b-822a-468a-9cd3-31322f2dbb16_blueprint.json",
+    "vaults/recomms_20250416_171813/blueprints/23d9092f-269d-4554-a3cd-087b06989e75_blueprint.json",
+    "vaults/recomms_20250416_171813/blueprints/5c237955-3743-4943-b7d1-3a173d56bb21_blueprint.json",
+    "vaults/recomms_20250416_171813/blueprints/e7bb7547-e53f-452c-8332-c75e224f7658_blueprint.json",
+    "vaults/recomms_20250416_171813/json/structured.json",
+    "vaults/recomms_20250416_171813/markdown",
+    "vaults/recomms_20250416_171813/json",
+    "vaults/recomms_20250416_171813/blueprints",
+    "vaults/recomms_20250416_140409/markdown/Resources/recommendations/books.md",
+    "vaults/recomms_20250416_140409/markdown/Resources/recommendations/games.md",
+    "vaults/recomms_20250416_140409/markdown/Resources/recommendations/films.md",
+    "vaults/recomms_20250416_140409/markdown/Resources/recommendations/Contents.md",
+    "vaults/recomms_20250416_135833/markdown/Resources/recommendations/books.md",
+    "vaults/recomms_20250416_135833/markdown/Resources/recommendations/games.md",
+    "vaults/recomms_20250416_135833/markdown/Resources/recommendations/films.md",
+    "vaults/recomms_20250416_135833/markdown/Resources/recommendations/Contents.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/The Case for a News Storage Layer.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Technical Architecture Overview.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Tasks.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Source Credibility Framework.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/RAG Query System.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Proof of Concept Proposal.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Promise Tracking System.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Position Change Tracker.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Podcast Transcript Acquisition.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/Follow The Money/Contents.md",
+    "vaults/future_AI_20250416_115954/markdown/Projects/AI Dictation and Research System/AI Dictation and Research System.md",
+    "vaults/future_AI_20250416_115954/markdown/Areas/Personal Knowledge Management/Daily Story Journaling Practice.md",
+    "vaults/recomms_20250416_141730/markdown/recommendations/game_recommendations.md"
   ]
 }

@@ -2,7 +2,7 @@ import json
 
 def get_blueprint_conversion_prompt(json_data):
     """
-    Output JSON blueprints instead of markdown.
+    Output JSON blueprints.
     Based on the sophisticated logic in conversion_prompt.py.
     Handles structural instructions separately.
     Removes tool instructions completely.
@@ -70,7 +70,9 @@ Example structure:
 1. Use descriptive, concise filenames with spaces between words
 2. Ensure filenames match the content they contain
 3. Structure content with appropriate headings, lists, and formatting
-4. Preserve all important information from the original records
+4. DO NOT include the title as an H1 heading - Obsidian will use the filename as the title
+5. Start content with paragraph text or H2+ headings
+6. Preserve all important information from the original records
 
 ## Note Types and Content Structure
 
@@ -128,7 +130,7 @@ Each blueprint should have this structure:
   }},
   "content": {{
     "title": "The title for the note",
-    "body": "The fully formatted markdown content (without the title or frontmatter)"
+    "body": "The fully formatted markdown content WITHOUT an H1 heading - start with paragraph text or H2+ headings"
   }}
 }}
 

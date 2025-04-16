@@ -1,0 +1,23 @@
+{
+  "file_info": {
+    "directory": "Areas/Personal Knowledge Management",
+    "filename": "Daily Weekly Story Journaling.md",
+    "record_id": "h9i0j1k2-l3m4-4n5o-p6q7-r8s9t0u1v2w3"
+  },
+  "frontmatter": {
+    "tags": [
+      "journaling",
+      "daily stories",
+      "weekly stories",
+      "personal tracking"
+    ],
+    "record_ids": [
+      "h9i0j1k2-l3m4-4n5o-p6q7-r8s9t0u1v2w3"
+    ],
+    "responsibility": "Maintain a journaling practice with daily or weekly summaries"
+  },
+  "content": {
+    "title": "Daily/Weekly Story Journaling Concept",
+    "body": "## Concept Overview\n\nThe Daily/Weekly Story concept is a journaling approach that focuses on capturing concise summaries of daily or weekly events in a single sentence or short paragraph. This creates a lightweight, sustainable journaling practice that can be maintained over time without becoming burdensome.\n\n## Format\n\nEach entry follows a simple format:\n\n```\n[Date] - A [daily/weekly] story today is... [concise summary of memorable events]\n```\n\nExample:\n```\n2023-11-27 - A weekly story today is... cool with the Ralphie and a memorable video call with Jaz.\n```\n\n## Purpose\n\nThis journaling approach serves several purposes:\n\n1. **Memory Preservation**: Captures key moments that might otherwise be forgotten\n2. **Pattern Recognition**: Helps identify trends in activities and experiences over time\n3. **Reflection Prompt**: Encourages daily/weekly reflection on what was most meaningful\n4. **Low Friction**: Requires minimal time commitment, increasing sustainability\n5. **Future Context**: Provides future self with context about past experiences\n\n## Implementation\n\n### Manual Approach\n- Create a dedicated note for each month\n- Add daily/weekly entries as bullet points\n- Review at the end of each month\n\n### Automated Approach\n- Use the AI Dictation Project to capture verbal summaries\n- Convert dictation to structured entries\n- Automatically organize by date\n- Generate monthly and yearly summaries\n\n## Integration with Other Systems\n\nThis journaling practice could integrate with:\n\n- **Calendar**: Linking stories to scheduled events\n- **Task Management**: Connecting accomplishments to completed tasks\n- **Photo Library**: Attaching relevant images to entries\n- **Habit Tracker**: Correlating stories with habit consistency\n\n## Review Process\n\nTo maximize the value of these stories:\n\n1. **Weekly Review**: Read the past week's stories\n2. **Monthly Review**: Identify patterns and highlights from the month\n3. **Quarterly Review**: Extract insights about life direction and priorities\n4. **Annual Review**: Compile significant stories into a yearly narrative\n\n## Related Notes\n\n- [[Projects/AI Productivity Tools/AI Dictation Project|AI Dictation Project]]"
+  }
+}

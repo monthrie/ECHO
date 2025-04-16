@@ -1,0 +1,438 @@
+{
+  "session": {
+    "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+    "user_id": "default_user",
+    "started_at": "2023-11-27T10:15:00Z",
+    "summary": "The user outlines a project called 'Follow The Money' (FTFM) focused on creating a system to track, store, and analyze statements made in news and podcasts. The concept involves extracting entities and claims from media sources to create a structured record of public statements, promises, and contradictions to promote accountability. The user details technical implementation ideas including JSON structures, embeddings, and a RAG system."
+  },
+  "records": [
+    {
+      "record_id": "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "The 'Follow The Money' (FTFM) project aims to create a system that tracks and analyzes statements from news sources and podcasts. The core concept is building a fact-tracking database that serves as a source of truth, allowing easy verification of statements made by public figures and tracking how their positions evolve over time.",
+      "created_at": "2023-11-27T10:16:00Z",
+      "tags": [
+        "accountability",
+        "news tracking",
+        "fact checking",
+        "public figures",
+        "transparency"
+      ],
+      "links": [
+        "7e8f9a0b-c1d2-4e3f-a4b5-c6d7e8f9a0b1",
+        "b3c4d5e6-f7a8-4b9c-a0b1-c2d3e4f5a6b7"
+      ],
+      "details": {
+        "title": "Follow The Money Project Overview",
+        "notes": "This appears to be a core project concept that needs further refinement. The user seems particularly interested in creating transparency in media and politics.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a system that tracks and analyzes statements from media sources to promote accountability",
+          "deadline": "2024-06-30T00:00:00Z",
+          "parent_project": null
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "MVP Concept for FTFM",
+          "Technical Architecture"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "7e8f9a0b-c1d2-4e3f-a4b5-c6d7e8f9a0b1",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "For an MVP (Minimum Viable Product) of the FTFM project, consider mapping all episodes of Glenn Greenwald's podcasts over the last six months. This would involve extracting all named entities and claims, with references to the exact moment each claim was made. This approach could then be expanded to include additional media sources.",
+      "created_at": "2023-11-27T10:17:00Z",
+      "tags": [
+        "MVP",
+        "Glenn Greenwald",
+        "podcasts",
+        "entity extraction",
+        "proof of concept"
+      ],
+      "links": [
+        "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d"
+      ],
+      "details": {
+        "title": "MVP Concept for FTFM",
+        "notes": "Starting with a single podcast host would allow for testing the concept with a manageable dataset before scaling to additional sources.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a functioning prototype using Glenn Greenwald's podcasts as source material",
+          "deadline": "2024-03-31T00:00:00Z",
+          "parent_project": "Follow The Money"
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "Follow The Money Project Overview",
+          "Technical Architecture"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "b3c4d5e6-f7a8-4b9c-a0b1-c2d3e4f5a6b7",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "The FTFM system would function as society's 'storage layer' for tracking real-world events and statements - something currently missing from our information ecosystem. Unlike Wikipedia, which focuses on static, historical information, this system would track dynamic, evolving narratives and statements made by public figures.",
+      "created_at": "2023-11-27T10:18:00Z",
+      "tags": [
+        "information storage",
+        "public accountability",
+        "dynamic records",
+        "Wikipedia comparison",
+        "information ecosystem"
+      ],
+      "links": [
+        "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d"
+      ],
+      "details": {
+        "title": "FTFM as Society's Storage Layer",
+        "notes": "This concept positions the project as filling a significant gap in our information infrastructure. There's a philosophical dimension here about the nature of truth and record-keeping that might be worth exploring.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Develop a system that records and makes accessible dynamic real-world statements and events",
+          "deadline": "2024-12-31T00:00:00Z",
+          "parent_project": "Follow The Money"
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "Follow The Money Project Overview"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "c4d5e6f7-a8b9-4c0d-e1f2-g3h4i5j6k7l8",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "The FTFM system would detect and flag significant events, such as when a politician makes a promise (e.g., 'I will do X on my first day in office'). These would be tagged as events or promises, and the system would track whether those promises are fulfilled. This creates a mechanism for identifying patterns in behavior and statements over time.",
+      "created_at": "2023-11-27T10:19:00Z",
+      "tags": [
+        "promise tracking",
+        "politician accountability",
+        "pattern detection",
+        "political statements",
+        "automated flagging"
+      ],
+      "links": [
+        "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d",
+        "b3c4d5e6-f7a8-4b9c-a0b1-c2d3e4f5a6b7"
+      ],
+      "details": {
+        "title": "Promise and Pattern Tracking Feature",
+        "notes": "This functionality would be particularly valuable during election cycles and for long-term accountability of elected officials.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Develop an automated system to track promises made by public figures and flag fulfillment or non-fulfillment",
+          "deadline": "2024-08-31T00:00:00Z",
+          "parent_project": "Follow The Money"
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "Follow The Money Project Overview",
+          "FTFM as Society's Storage Layer"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "d5e6f7g8-h9i0-4j1k-l2m3-n4o5p6q7r8s9",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "The technical architecture for FTFM involves creating a model to batch process transcripts into structured JSON records containing entities (people, places, laws, events) and their relationships. Special attention would be paid to conflicts of interest, hypocrisies, and changes in stated positions. Each record would include embeddings for semantic search capabilities.",
+      "created_at": "2023-11-27T10:20:00Z",
+      "tags": [
+        "technical architecture",
+        "JSON structure",
+        "entity extraction",
+        "embeddings",
+        "NLP"
+      ],
+      "links": [
+        "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d",
+        "e6f7g8h9-i0j1-4k2l-m3n4-o5p6q7r8s9t0"
+      ],
+      "details": {
+        "title": "Technical Architecture",
+        "notes": "The technical implementation will require advanced NLP capabilities, particularly for identifying contradictions and changes in position over time.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Design and implement the technical architecture for the FTFM system",
+          "deadline": "2024-05-31T00:00:00Z",
+          "parent_project": "Follow The Money"
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "Follow The Money Project Overview",
+          "FTFM Integration with Obsidian"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "e6f7g8h9-i0j1-4k2l-m3n4-o5p6q7r8s9t0",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "The FTFM system would include a translation layer that converts JSON structures from the database into markdown notes and files that can be viewed and edited in Obsidian. This would require a syncing mechanism between the backend database and the front-end Obsidian notes to maintain consistency across both systems.",
+      "created_at": "2023-11-27T10:21:00Z",
+      "tags": [
+        "Obsidian integration",
+        "markdown",
+        "syncing mechanism",
+        "database",
+        "translation layer"
+      ],
+      "links": [
+        "d5e6f7g8-h9i0-4j1k-l2m3-n4o5p6q7r8s9",
+        "f7g8h9i0-j1k2-4l3m-n4o5-p6q7r8s9t0u1"
+      ],
+      "details": {
+        "title": "FTFM Integration with Obsidian",
+        "notes": "This integration would make the data more accessible to users familiar with note-taking tools while maintaining the structured database backend for more complex operations.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a bi-directional sync between JSON database and Obsidian markdown files",
+          "deadline": "2024-07-31T00:00:00Z",
+          "parent_project": "Follow The Money"
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "Technical Architecture",
+          "RAG Query System"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "f7g8h9i0-j1k2-4l3m-n4o5-p6q7r8s9t0u1",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "The final component of the FTFM system would be a RAG (Retrieval-Augmented Generation) pipeline that allows users to query the database. A generative AI would analyze the data, conduct research, and answer questions based on the information stored in the system, creating a powerful tool for fact-checking and analysis.",
+      "created_at": "2023-11-27T10:22:00Z",
+      "tags": [
+        "RAG",
+        "query system",
+        "generative AI",
+        "fact checking",
+        "information retrieval"
+      ],
+      "links": [
+        "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d",
+        "e6f7g8h9-i0j1-4k2l-m3n4-o5p6q7r8s9t0"
+      ],
+      "details": {
+        "title": "RAG Query System",
+        "notes": "This would be the user-facing component that makes the data actionable and useful for journalists, researchers, and the general public.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Build a RAG system to allow intuitive querying of the FTFM database",
+          "deadline": "2024-10-31T00:00:00Z",
+          "parent_project": "Follow The Money"
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "FTFM Integration with Obsidian",
+          "Follow The Money Project Overview"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "g8h9i0j1-k2l3-4m5n-o6p7-q8r9s0t1u2v3",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "task",
+      "content": "Obtain transcripts for one or two of Glenn Greenwald's podcasts as initial test data for the FTFM project.",
+      "created_at": "2023-11-27T10:23:00Z",
+      "tags": [
+        "data acquisition",
+        "Glenn Greenwald",
+        "podcast transcripts",
+        "test data"
+      ],
+      "links": [
+        "7e8f9a0b-c1d2-4e3f-a4b5-c6d7e8f9a0b1"
+      ],
+      "details": {
+        "title": "Acquire Glenn Greenwald Podcast Transcripts",
+        "notes": "This is a necessary first step to begin testing the entity extraction and JSON conversion process.",
+        "parent_entity": "Follow The Money",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Gather initial test data for FTFM prototype development",
+          "deadline": "2024-01-15T00:00:00Z",
+          "parent_project": "Follow The Money"
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Follow The Money",
+        "related_items": [
+          "MVP Concept for FTFM"
+        ],
+        "collection": "Follow The Money Project"
+      }
+    },
+    {
+      "record_id": "h9i0j1k2-l3m4-4n5o-p6q7-r8s9t0u1v2w3",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "area",
+      "type": "idea",
+      "content": "The user mentions a 'daily story' or 'weekly story' concept as a new category to store in their database, suggesting a journal-like function that summarizes daily events in a sentence. Example given: 'A weekly story today is... cool with the Ralphie and a memorable video call with Jaz.'",
+      "created_at": "2023-11-27T10:24:00Z",
+      "tags": [
+        "journaling",
+        "daily stories",
+        "weekly stories",
+        "personal tracking"
+      ],
+      "links": [],
+      "details": {
+        "title": "Daily/Weekly Story Journaling Concept",
+        "notes": "This appears to be a separate idea from FTFM, focused on personal journaling in a concise format. Could be integrated with the AI dictation project mentioned.",
+        "parent_entity": "Personal Knowledge Management",
+        "entity_type": "area"
+      },
+      "para_metadata": {
+        "project": {},
+        "area": {
+          "responsibility": "Maintain a journaling practice with daily or weekly summaries",
+          "review_frequency": "7"
+        },
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "Personal Knowledge Management",
+        "related_items": [
+          "AI Dictation Project"
+        ],
+        "collection": "Personal Journaling"
+      }
+    },
+    {
+      "record_id": "i0j1k2l3-m4n5-4o6p-q7r8-s9t0u1v2w3x4",
+      "session_id": "63d8e56c-f122-4df4-bb12-c9ab1bd8e9a1",
+      "para_type": "project",
+      "type": "idea",
+      "content": "The user mentions an 'AI dictation project' or 'AI system project' that would allow them to dictate commands like 'make a piece of research and turn it into JavaScript object notification [JSON]', and the LLM would conduct the research and return structured data.",
+      "created_at": "2023-11-27T10:25:00Z",
+      "tags": [
+        "AI dictation",
+        "voice commands",
+        "research automation",
+        "JSON generation"
+      ],
+      "links": [],
+      "details": {
+        "title": "AI Dictation Project",
+        "notes": "This appears to be a separate project from FTFM, focused on voice-controlled AI research and data structuring.",
+        "parent_entity": "AI Productivity Tools",
+        "entity_type": "project"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "Create a voice-controlled AI system that can conduct research and structure data based on verbal commands",
+          "deadline": "2024-04-30T00:00:00Z",
+          "parent_project": null
+        },
+        "area": {},
+        "resource": {},
+        "archive": {}
+      },
+      "relationships": {
+        "belongs_to": "AI Productivity Tools",
+        "related_items": [
+          "Daily/Weekly Story Journaling Concept"
+        ],
+        "collection": "AI Productivity Tools"
+      }
+    }
+  ],
+  "system_instructions": [
+    {
+      "instruction_id": "j1k2l3m4-n5o6-4p7q-r8s9-t0u1v2w3x4y5",
+      "command_type": "create_structured_document",
+      "instruction_type": "structural",
+      "description": "Organize all transcript content into a single structured file for the 'Follow The Money' project",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "markdown",
+        "additional_info": "User requested a structured file with the organization determined by the AI"
+      },
+      "priority": "1",
+      "dependencies": []
+    }
+  ]
+}

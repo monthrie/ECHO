@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Tasks",
+    "record_id": "9d8c7b6a-5f4e-3d2c-1b0a-9e8d7f6a5b4c"
+  },
+  "frontmatter": {
+    "tags": [
+      "FTFM",
+      "tasks",
+      "implementation"
+    ],
+    "record_ids": [
+      "9d8c7b6a-5f4e-3d2c-1b0a-9e8d7f6a5b4c"
+    ],
+    "goal": "Track and manage implementation tasks for the FTFM project"
+  },
+  "content": {
+    "title": "Follow The Money - Tasks",
+    "body": "## Current Tasks\n\n- [ ] Obtain transcripts from one or two Glenn Greenwald podcasts for initial test data (Due: Nov 30, 2023)\n- [ ] Define complete technical stack and data flow for the FTFM system (Due: Dec 15, 2023)\n- [ ] Create a minimal viable proof of concept for the FTFM accountability system (Due: Jan 15, 2024)\n- [ ] Develop an automated system for tracking and verifying public promises (Due: Feb 28, 2024)\n- [ ] Develop algorithms to identify and highlight changes in public positions over time (Due: Mar 31, 2024)\n- [ ] Create a transparent system for evaluating and displaying source credibility (Due: Apr 15, 2024)\n- [ ] Develop an AI-powered query system for the FTFM database (Due: May 31, 2024)\n\n## Task Details\n\n### Podcast Transcript Acquisition\n**Due: November 30, 2023**\n\nObtain transcripts from one or two Glenn Greenwald podcasts to use as initial test data for the FTFM model development.\n\n**Notes:**\n- Choose episodes that contain significant political claims or discussions of public figures to make the initial test meaningful\n- May need to use a transcription service if existing transcripts aren't available\n- This will serve as the foundation for entity extraction model testing\n\n**Related Items:**\n- [[Projects/Follow The Money/Proof of Concept Proposal|Proof of Concept Proposal]]\n- Data Processing Pipeline\n\n### Technical Architecture Definition\n**Due: December 15, 2023**\n\nDefine the complete technical stack and data flow for the FTFM system.\n\n**Notes:**\n- Refer to [[Projects/Follow The Money/Technical Architecture Overview|Technical Architecture Overview]] for initial design\n- Focus on database schema design and Obsidian integration module\n- Consider implementation approach for bidirectional syncing"
+  }
+}

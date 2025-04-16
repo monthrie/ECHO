@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Source Credibility Framework",
+    "record_id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+  },
+  "frontmatter": {
+    "tags": [
+      "source credibility",
+      "information quality",
+      "transparency",
+      "FTFM",
+      "trust metrics"
+    ],
+    "record_ids": [
+      "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+    ],
+    "goal": "Create a transparent system for evaluating and displaying source credibility"
+  },
+  "content": {
+    "title": "FTFM Source Credibility Framework",
+    "body": "## Overview\nThe Source Credibility Framework will provide transparency about information quality within the FTFM system. Sources will be weighted based on reliability metrics, with conflicts of interest documented and multiple perspectives available on controversial topics. This creates a system with variable truth weights while maintaining a single database structure.\n\n## Key Components\n\n### Credibility Metrics\n- Historical accuracy assessment of information sources\n- Expertise evaluation for specialized topics\n- Transparency about methodologies and data collection practices\n- Conflict of interest documentation\n\n### Weighting System\n- Algorithmic credibility scoring based on objective factors\n- User-configurable trust preferences\n- Transparency about how weights are calculated\n- Regular reassessment of source reliability\n\n### Multiple Perspective Integration\n- Presentation of diverse viewpoints on controversial topics\n- Clear labeling of opinion versus factual content\n- Cross-referencing between conflicting accounts\n- Highlighting of consensus views where they exist\n\n### User Interface Considerations\n- Visual indicators of source credibility\n- Easy access to credibility justifications\n- User control over which sources they prioritize\n- Clear distinction between verified and unverified information\n\n## Implementation Challenges\n- Balancing algorithmic weighting with user choice about which sources they trust\n- Avoiding political or ideological bias in credibility assessments\n- Maintaining usability while providing nuanced credibility information\n- Potential integration with existing fact-checking organizations\n\n## Timeline\n- Framework design: January - February 2024\n- Initial implementation: March 2024\n- Testing and refinement: April 2024\n- Completion deadline: April 15, 2024\n\n## Related Components\n- [[Projects/Follow The Money/Proof of Concept Proposal|Proof of Concept Proposal]]\n- Trust Algorithm Design\n- User Source Preferences Interface"
+  }
+}
