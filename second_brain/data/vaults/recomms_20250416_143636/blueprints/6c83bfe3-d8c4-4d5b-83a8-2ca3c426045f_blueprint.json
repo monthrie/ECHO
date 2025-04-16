@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "recommendations",
+    "filename": "film_recommendations.md",
+    "record_id": "multiple"
+  },
+  "frontmatter": {
+    "tags": [
+      "films",
+      "movies",
+      "cinema",
+      "recommendations"
+    ],
+    "record_ids": [
+      "def4567b-890a-41b2-c345-678901e23f45",
+      "fgh7890c-123d-45e6-f789-012345g67h89",
+      "ijk1234d-567e-89f0-g123-456789h0i12"
+    ]
+  },
+  "content": {
+    "title": "Film Recommendations",
+    "body": "A collection of recommended films with brief descriptions and personal notes.\n\n## Everything Everywhere All at Once - Film Recommendation\n\nEverything Everywhere All at Once offers mind-bending multiverse storytelling with surprising emotional depth.\n\n**Notes:** A middle-aged Chinese immigrant is swept up in an insane adventure, where she alone can save the world by exploring other universes and connecting with the lives she could have led.\n\n**Tags:** #films #science-fiction #multiverse #recommendation\n\n**Related Recommendations:**\n- [Parasite Film Recommendation](#parasite---film-recommendation)\n- [Arrival Film Recommendation](#arrival---film-recommendation)\n\n---\n\n## Parasite - Film Recommendation\n\nParasite, Bong Joon-ho's masterpiece, brilliantly shifts genres while delivering sharp social commentary.\n\n**Notes:** A poor family, the Kims, con their way into becoming the servants of a rich family, the Parks. But their easy life gets complicated when their deception is threatened with exposure.\n\n**Tags:** #films #social-commentary #thriller #recommendation\n\n**Related Recommendations:**\n- [Everything Everywhere All at Once Film Recommendation](#everything-everywhere-all-at-once---film-recommendation)\n- [Arrival Film Recommendation](#arrival---film-recommendation)\n\n---\n\n## Arrival - Film Recommendation\n\nArrival is thoughtful science fiction that focuses on language and communication rather than typical alien invasion scenarios.\n\n**Notes:** When mysterious spacecraft touch down across the globe, an elite team led by linguist Louise Banks is brought together to investigate.\n\n**Tags:** #films #science-fiction #linguistics #recommendation\n\n**Related Recommendations:**\n- [Everything Everywhere All at Once Film Recommendation](#everything-everywhere-all-at-once---film-recommendation)\n- [Parasite Film Recommendation](#parasite---film-recommendation)"
+  }
+}

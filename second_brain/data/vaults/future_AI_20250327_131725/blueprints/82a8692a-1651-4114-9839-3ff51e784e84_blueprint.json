@@ -1,0 +1,25 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Project Overview.md",
+    "record_id": "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d"
+  },
+  "frontmatter": {
+    "tags": [
+      "accountability",
+      "news tracking",
+      "fact checking",
+      "public figures",
+      "transparency"
+    ],
+    "record_ids": [
+      "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d",
+      "b3c4d5e6-f7a8-4b9c-a0b1-c2d3e4f5a6b7"
+    ],
+    "goal": "Create a system that tracks and analyzes statements from media sources to promote accountability"
+  },
+  "content": {
+    "title": "Follow The Money Project Overview",
+    "body": "## Project Description\n\nThe 'Follow The Money' (FTFM) project aims to create a system that tracks and analyzes statements from news sources and podcasts. The core concept is building a fact-tracking database that serves as a source of truth, allowing easy verification of statements made by public figures and tracking how their positions evolve over time.\n\n## Purpose\n\nThis system would function as society's 'storage layer' for tracking real-world events and statements - something currently missing from our information ecosystem. Unlike Wikipedia, which focuses on static, historical information, this system would track dynamic, evolving narratives and statements made by public figures.\n\n## Key Objectives\n\n1. Create a structured database of public statements and claims\n2. Track the evolution of positions over time\n3. Identify contradictions, hypocrisies, and conflicts of interest\n4. Provide a searchable record of promises and their fulfillment status\n5. Offer a reliable source of truth for fact-checking\n\n## Differentiators\n\nUnlike existing fact-checking services or news aggregators, FTFM would:\n\n- Focus on structured data rather than narrative articles\n- Track statements over time to identify patterns and changes\n- Create a comprehensive, searchable database of claims\n- Provide direct links to original sources with timestamps\n- Offer both human-readable and machine-readable formats\n\n## Project Timeline\n\n- Initial concept development: Q4 2023\n- MVP development: Q1 2024\n- Technical architecture: Q2 2024\n- Core system implementation: Q2-Q3 2024\n- Advanced features: Q3-Q4 2024\n- Full system launch: End of 2024\n\n## Related Notes\n\n- [[Projects/Follow The Money/MVP Concept|MVP Concept]]\n- [[Projects/Follow The Money/Society Storage Layer|Society Storage Layer]]\n- [[Projects/Follow The Money/Technical Architecture|Technical Architecture]]\n- [[Projects/Follow The Money/Promise Tracking|Promise Tracking]]\n- [[Projects/Follow The Money/Tasks|Project Tasks]]"
+  }
+}

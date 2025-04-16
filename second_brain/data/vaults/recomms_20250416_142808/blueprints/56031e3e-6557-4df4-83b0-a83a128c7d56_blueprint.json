@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "recommendations",
+    "filename": "film_recommendations",
+    "record_id": "d4e5f6g7-h8i9-7j6k-1l2m-3n4o5p6q7r8s"
+  },
+  "frontmatter": {
+    "tags": [
+      "films",
+      "movies",
+      "cinema",
+      "recommendations"
+    ],
+    "record_ids": [
+      "d4e5f6g7-h8i9-7j6k-1l2m-3n4o5p6q7r8s",
+      "e5f6g7h8-i9j0-8k7l-2m3n-4o5p6q7r8s9t",
+      "f6g7h8i9-j0k1-9l8m-3n4o-5p6q7r8s9t0u"
+    ]
+  },
+  "content": {
+    "title": "Film Recommendations",
+    "body": "A collection of personally recommended films with brief descriptions of their appealing qualities.\n\n## Everything Everywhere All at Once\nOffers mind-bending multiverse exploration while delivering surprising emotional depth and family narrative.\n\n**Tags**: #multiverse #science-fiction #family-drama\n\n## Parasite\nDirected by Bong Joon-ho, masterfully shifts between genres while delivering sharp social commentary on class inequality.\n\n**Tags**: #Korean-cinema #social-commentary #thriller\n\n## Arrival\nA thoughtful science fiction film that focuses on language and communication rather than conventional alien invasion tropes, offering a more cerebral approach to first contact.\n\n**Tags**: #science-fiction #linguistics #first-contact"
+  }
+}

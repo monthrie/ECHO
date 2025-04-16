@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "recommendations",
+    "filename": "game_recommendations.md",
+    "record_id": "multiple"
+  },
+  "frontmatter": {
+    "tags": [
+      "games",
+      "video games",
+      "gaming",
+      "recommendations"
+    ],
+    "record_ids": [
+      "lmn5678e-901f-23g4-h567-890123i4j56",
+      "opq9012f-345g-67h8-i901-234567j8k90",
+      "rst3456g-789h-01i2-j345-678901k2l34"
+    ]
+  },
+  "content": {
+    "title": "Game Recommendations",
+    "body": "A collection of recommended video games with brief descriptions and personal notes.\n\n## Stardew Valley - Game Recommendation\n\nStardew Valley is an addictive farming simulation game that's perfect for relaxation with its charming aesthetic and gameplay.\n\n**Notes:** A country-life RPG where you inherit your grandfather's old farm plot and start a new life cultivating crops, raising animals, and building relationships with the townspeople.\n\n**Tags:** #games #farming-sim #relaxing #recommendation\n\n**Related Recommendations:**\n- [Disco Elysium Game Recommendation](#disco-elysium---game-recommendation)\n- [Hollow Knight Game Recommendation](#hollow-knight---game-recommendation)\n\n---\n\n## Disco Elysium - Game Recommendation\n\nDisco Elysium is a unique detective RPG with phenomenal writing that balances philosophical themes with humor.\n\n**Notes:** An open-world RPG where you play as a detective with a unique skill system at your disposal and a whole city to carve your path across.\n\n**Tags:** #games #RPG #detective #philosophical #recommendation\n\n**Related Recommendations:**\n- [Stardew Valley Game Recommendation](#stardew-valley---game-recommendation)\n- [Hollow Knight Game Recommendation](#hollow-knight---game-recommendation)\n\n---\n\n## Hollow Knight - Game Recommendation\n\nHollow Knight is a gorgeous metroidvania with challenging combat and an atmospheric world that encourages exploration.\n\n**Notes:** A 2D action-adventure game set in Hallownest, a vast and ancient kingdom inhabited by bugs, where you play as a silent knight exploring the depths.\n\n**Tags:** #games #metroidvania #challenging #atmospheric #recommendation\n\n**Related Recommendations:**\n- [Stardew Valley Game Recommendation](#stardew-valley---game-recommendation)\n- [Disco Elysium Game Recommendation](#disco-elysium---game-recommendation)"
+  }
+}

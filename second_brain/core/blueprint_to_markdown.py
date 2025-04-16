@@ -5,17 +5,17 @@ from pathlib import Path
 import yaml
 from second_brain.utils.config import Config
 
-def sanitize_filename(filename):
-    """
-    Sanitize a filename to ensure it's valid for the file system.
-    """
-    # Replace invalid characters with underscores
-    sanitized = re.sub(r'[\\/*?:"<>|]', '_', filename)
-    # Remove leading/trailing whitespace
-    sanitized = sanitized.strip()
+def sanitize_filename(name):
+    """Sanitize a string to be used as a filename or directory name."""
+    # Replace only truly invalid characters with underscores
+    # Keep spaces intact for better Obsidian titles
+    sanitized = re.sub(r'[\\/*?:"<>|]', "_", name)
+    
     # Ensure we have a valid filename
+    sanitized = sanitized.strip()
     if not sanitized:
         sanitized = "Untitled"
+    
     return sanitized
 
 def ensure_directory_exists(directory_path):

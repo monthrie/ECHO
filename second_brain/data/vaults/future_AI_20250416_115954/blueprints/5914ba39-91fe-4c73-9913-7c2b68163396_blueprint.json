@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Proof of Concept Proposal",
+    "record_id": "7a12b45c-3e9f-4d87-a5e2-9f8c7b6d5e4a"
+  },
+  "frontmatter": {
+    "tags": [
+      "FTFM",
+      "proof of concept",
+      "accountability",
+      "data extraction",
+      "media analysis"
+    ],
+    "record_ids": [
+      "7a12b45c-3e9f-4d87-a5e2-9f8c7b6d5e4a"
+    ],
+    "goal": "Create a minimal viable proof of concept for the FTFM accountability system"
+  },
+  "content": {
+    "title": "FTFM Proof of Concept Proposal",
+    "body": "## Overview\nThis proposal outlines a proof of concept for the Follow The Money (FTFM) project by mapping entities and claims from Glenn Greenwald's podcasts over a six-month period. The goal is to extract all named entities, claims, and evidence, linking each to the exact moment when statements were made to create a verifiable 'source of truth'.\n\n## Approach\n1. **Data Source Selection**: Start with Glenn Greenwald's podcasts as the initial dataset\n2. **Entity Extraction**: Identify and catalog all named entities (people, organizations, places)\n3. **Claim Identification**: Document specific claims, promises, and statements\n4. **Evidence Linking**: Connect each claim to its source with precise timestamps\n5. **Structured Database**: Organize all extracted information in a queryable format\n\n## Implementation Plan\n- Begin with a small sample of podcast episodes to refine the extraction methodology\n- Develop a structured data model that captures statements and their context\n- Create a system for verifying the accuracy of extracted information\n- Build a basic search interface to demonstrate the concept's utility\n\n## Expected Outcomes\n- A functioning prototype that demonstrates the core FTFM concept\n- A database of entities and claims from the selected podcast episodes\n- Documentation of the extraction methodology for future scaling\n- Insights into challenges and opportunities for the full FTFM implementation\n\n## Timeline\n- **Data Acquisition**: November 2023\n- **Model Development**: December 2023\n- **Proof of Concept Completion**: January 15, 2024\n\n## Related Components\n- [[Projects/Follow The Money/Promise Tracking System|Promise Tracking System]]\n- [[Projects/Follow The Money/Position Change Tracker|Position Change Tracker]]\n- [[Projects/Follow The Money/Technical Architecture Overview|Technical Architecture Overview]]\n- [[Projects/Follow The Money/Podcast Transcript Acquisition|Podcast Transcript Acquisition]]\n\n## Next Steps\nAfter successful proof of concept, the project can potentially expand to other media sources and implement more advanced features like the promise tracking and position change detection systems."
+  }
+}

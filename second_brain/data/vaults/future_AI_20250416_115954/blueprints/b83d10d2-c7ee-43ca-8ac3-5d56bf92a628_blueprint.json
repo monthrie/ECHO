@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Position Change Tracker",
+    "record_id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+  },
+  "frontmatter": {
+    "tags": [
+      "position tracking",
+      "consistency analysis",
+      "transparency",
+      "FTFM",
+      "accountability"
+    ],
+    "record_ids": [
+      "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+    ],
+    "goal": "Develop algorithms to identify and highlight changes in public positions over time"
+  },
+  "content": {
+    "title": "FTFM Position Change Tracker",
+    "body": "## Overview\nThe Position Change Tracker will detect when public figures change their positions or contradict previous statements. This system creates transparency around inconsistencies and enables citizens to easily verify how someone's stated positions have evolved over time.\n\n## Key Features\n\n### Position Statement Identification\n- Extract clear position statements on specific topics\n- Categorize statements by subject matter and stance\n- Link statements to their full context for accurate interpretation\n\n### Contradiction Detection\n- Compare new statements against historical positions\n- Identify logical inconsistencies between statements\n- Distinguish between evolution of thought and direct contradictions\n\n### Consistency Scoring\n- Develop metrics for measuring position consistency over time\n- Generate consistency scores for individuals on specific topics\n- Provide transparency about methodology behind consistency assessments\n\n### Timeline Visualization\n- Create visual representations of position changes\n- Enable users to explore the evolution of positions chronologically\n- Provide direct access to source material for each position statement\n\n## Technical Challenges\n- Will require sophisticated natural language understanding to detect subtle shifts in position versus outright contradictions\n- Need to account for legitimate context changes that might justify position shifts\n- Must balance algorithmic assessment with human judgment\n\n## Implementation Approach\n- Begin with clear-cut position statements on well-defined topics\n- Gradually increase sophistication to handle nuanced position changes\n- Incorporate user feedback to improve detection accuracy\n\n## Timeline\n- Algorithm development: January - February 2024\n- Testing with historical data: March 2024\n- Refinement and optimization: March 2024\n- Completion deadline: March 31, 2024\n\n## Related Components\n- [[Projects/Follow The Money/Proof of Concept Proposal|Proof of Concept Proposal]]\n- [[Projects/Follow The Money/Promise Tracking System|Promise Tracking System]]"
+  }
+}

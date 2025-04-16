@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "recommendations",
+    "filename": "book_recommendations",
+    "record_id": "a1b2c3d4-e5f6-4g3h-8i9j-0k1l2m3n4o5p"
+  },
+  "frontmatter": {
+    "tags": [
+      "books",
+      "fiction",
+      "recommendations",
+      "literature"
+    ],
+    "record_ids": [
+      "a1b2c3d4-e5f6-4g3h-8i9j-0k1l2m3n4o5p",
+      "b2c3d4e5-f6g7-5h4i-9j0k-1l2m3n4o5p6q",
+      "c3d4e5f6-g7h8-6i5j-0k1l-2m3n4o5p6q7r"
+    ]
+  },
+  "content": {
+    "title": "Book Recommendations",
+    "body": "A collection of personally recommended books with brief descriptions of their appealing qualities.\n\n## The Road by Cormac McCarthy\nA powerful post-apocalyptic novel featuring sparse but beautiful writing that creates an unforgettable atmosphere.\n\n**Tags**: #fiction #post-apocalyptic #literature\n\n## Pachinko by Min Jin Lee\nA captivating multi-generational saga following a Korean family living in Japan, offering deep historical and cultural insights.\n\n**Tags**: #fiction #historical-fiction #Korean-literature\n\n## Dune by Frank Herbert\nFeatures exceptional worldbuilding that justifies its status as a science fiction classic, creating a complex universe with political, religious, and ecological dimensions.\n\n**Tags**: #science-fiction #worldbuilding #classics"
+  }
+}

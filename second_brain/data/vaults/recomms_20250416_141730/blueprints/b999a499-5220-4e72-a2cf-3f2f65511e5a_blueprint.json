@@ -1,0 +1,26 @@
+{
+  "file_info": {
+    "directory": "recommendations",
+    "filename": "film_recommendations.md",
+    "record_id": "combined_film_recommendations"
+  },
+  "frontmatter": {
+    "tags": [
+      "films",
+      "movies",
+      "sci-fi",
+      "recommendations",
+      "watch list"
+    ],
+    "record_ids": [
+      "7e8f9d0c-5b6a-4c3d-8e2f-1a0b9c7d6e5f",
+      "3b2c1d0e-9f8a-4e7d-6b5c-4a3b2c1d0e9f",
+      "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p"
+    ],
+    "category": "Film Recommendations"
+  },
+  "content": {
+    "title": "Film Recommendations",
+    "body": "A collection of recommended films with brief descriptions highlighting what makes each one special.\n\n## Everything Everywhere All at Once\n\nMind-bending multiverse exploration with surprising emotional depth.\n\n**Tags**: #sci-fi #multiverse #emotional\n\n**Notes**: The balance between high-concept sci-fi and emotional storytelling makes this film stand out.\n\n---\n\n## Parasite\n\nDirected by Bong Joon-ho, this masterpiece brilliantly shifts between genres while delivering sharp social commentary.\n\n**Tags**: #Korean-cinema #social-commentary #genre-bending\n\n**Notes**: Both the artistic execution and social messaging of this film are exceptional.\n\n---\n\n## Arrival\n\nA thoughtful science fiction film that focuses on language and communication rather than typical alien invasion tropes.\n\n**Tags**: #sci-fi #linguistics #thoughtful\n\n**Notes**: The film's focus on communication and departure from standard sci-fi conventions makes it unique.\n\n---\n\n## Related Collections\n\n- [Book Recommendations](book_recommendations.md)\n- [Game Recommendations](game_recommendations.md)"
+  }
+}

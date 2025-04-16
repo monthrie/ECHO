@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Resources/recommendations",
+    "filename": "Contents.md",
+    "record_id": "0a1b2c3d-4e5f-6789-abcd-ef0123456789"
+  },
+  "frontmatter": {
+    "tags": [
+      "MOC",
+      "media",
+      "recommendations",
+      "index"
+    ],
+    "record_ids": [
+      "0a1b2c3d-4e5f-6789-abcd-ef0123456789"
+    ]
+  },
+  "content": {
+    "title": "Media Recommendations - Map of Contents",
+    "body": "This is a collection of personal media recommendations across three categories: books, films, and games, each with brief descriptions highlighting their unique qualities and appeal.\n\n## Categories\n\n### [Book Recommendations](books.md)\n- [The Road by Cormac McCarthy](books.md#the-road-by-cormac-mccarthy)\n- [Pachinko by Min Jin Lee](books.md#pachinko-by-min-jin-lee)\n- [Dune by Frank Herbert](books.md#dune-by-frank-herbert)\n\n### [Film Recommendations](films.md)\n- [Everything Everywhere All at Once](films.md#everything-everywhere-all-at-once)\n- [Parasite](films.md#parasite)\n- [Arrival](films.md#arrival)\n\n### [Game Recommendations](games.md)\n- [Stardew Valley](games.md#stardew-valley)\n- [Disco Elysium](games.md#disco-elysium)\n- [Hollow Knight](games.md#hollow-knight)"
+  }
+}

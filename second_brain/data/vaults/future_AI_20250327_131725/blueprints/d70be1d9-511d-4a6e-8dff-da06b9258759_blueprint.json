@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Tasks.md",
+    "record_id": "g8h9i0j1-k2l3-4m5n-o6p7-q8r9s0t1u2v3"
+  },
+  "frontmatter": {
+    "tags": [
+      "tasks",
+      "action items",
+      "project management",
+      "Follow The Money"
+    ],
+    "record_ids": [
+      "g8h9i0j1-k2l3-4m5n-o6p7-q8r9s0t1u2v3"
+    ]
+  },
+  "content": {
+    "title": "Follow The Money Project Tasks",
+    "body": "## Initial Setup Tasks\n\n- [ ] Obtain transcripts for one or two of Glenn Greenwald's podcasts as initial test data\n- [ ] Set up project repository and documentation\n- [ ] Define JSON schema for entities and claims\n- [ ] Research available NLP tools for entity extraction\n\n## MVP Development\n\n- [ ] Develop transcript processing pipeline\n- [ ] Implement basic entity extraction\n- [ ] Create claim identification algorithm\n- [ ] Build initial database structure\n- [ ] Develop simple search functionality\n\n## Technical Architecture\n\n- [ ] Design complete system architecture\n- [ ] Select appropriate database technologies\n- [ ] Implement embedding generation for semantic search\n- [ ] Develop entity relationship mapping\n- [ ] Create contradiction detection algorithms\n\n## Obsidian Integration\n\n- [ ] Design markdown templates for different entity types\n- [ ] Develop JSON to markdown conversion logic\n- [ ] Create bidirectional sync mechanism\n- [ ] Build Obsidian plugin for seamless integration\n\n## RAG System Development\n\n- [ ] Set up vector database for embeddings\n- [ ] Implement retrieval mechanisms\n- [ ] Develop context building for LLM\n- [ ] Create response generation pipeline\n- [ ] Build user interface for queries\n\n## Testing and Validation\n\n- [ ] Test entity extraction accuracy\n- [ ] Validate claim identification\n- [ ] Verify contradiction detection\n- [ ] Test bidirectional sync with Obsidian\n- [ ] Evaluate RAG system response quality\n\n## Timeline\n\n### Q1 2024\n- Initial data acquisition\n- MVP development\n- Basic entity extraction\n\n### Q2 2024\n- Complete technical architecture\n- Expand data processing capabilities\n- Implement core database functionality\n\n### Q3 2024\n- Develop Obsidian integration\n- Create promise tracking features\n- Expand to additional data sources\n\n### Q4 2024\n- Build RAG query system\n- Implement advanced analytics\n- Launch full system\n\n## Related Notes\n\n- [[Projects/Follow The Money/Project Overview|Project Overview]]\n- [[Projects/Follow The Money/MVP Concept|MVP Concept]]\n- [[Projects/Follow The Money/Technical Architecture|Technical Architecture]]"
+  }
+}

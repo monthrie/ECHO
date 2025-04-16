@@ -1,0 +1,23 @@
+{
+  "file_info": {
+    "directory": "Resources/Media Recommendations/Book Recommendations",
+    "filename": "Book Recommendation - The Road by Cormac McCarthy",
+    "record_id": "a1b2c3d4-e5f6-4g3h-8i9j-0k1l2m3n4o5p"
+  },
+  "frontmatter": {
+    "tags": [
+      "books",
+      "fiction",
+      "post-apocalyptic",
+      "recommendations",
+      "literature"
+    ],
+    "record_ids": [
+      "a1b2c3d4-e5f6-4g3h-8i9j-0k1l2m3n4o5p"
+    ]
+  },
+  "content": {
+    "title": "Book Recommendation: The Road by Cormac McCarthy",
+    "body": "The Road by Cormac McCarthy is a powerful post-apocalyptic novel featuring sparse but beautiful writing that creates an unforgettable atmosphere.\n\n## Notes\nThis recommendation highlights the user's appreciation for McCarthy's minimalist yet evocative prose style in portraying a bleak post-apocalyptic world.\n\n## Related Recommendations\n- [[Book Recommendation - Pachinko by Min Jin Lee]]\n- [[Book Recommendation - Dune by Frank Herbert]]\n\n## Collection\n- [[recommendations/book_recommendations]]"
+  }
+}

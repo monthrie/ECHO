@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "Resources/recommendations",
+    "filename": "books.md",
+    "record_id": "a1b2c3d4-e5f6-7890-a1b2-c3d4e5f67890"
+  },
+  "frontmatter": {
+    "tags": [
+      "books",
+      "fiction",
+      "recommendations",
+      "reading list"
+    ],
+    "record_ids": [
+      "a1b2c3d4-e5f6-7890-a1b2-c3d4e5f67890",
+      "b2c3d4e5-f6a7-8901-b2c3-d4e5f6a78901",
+      "c3d4e5f6-a7b8-9012-c3d4-e5f6a7b89012"
+    ]
+  },
+  "content": {
+    "title": "Book Recommendations",
+    "body": "A collection of recommended books with brief descriptions and personal notes.\n\n## The Road by Cormac McCarthy\n\nA powerful post-apocalyptic story with sparse but beautiful writing.\n\n**Notes:** McCarthy's minimalist style creates a stark, haunting atmosphere that perfectly complements the post-apocalyptic setting.\n\n**Tags:** #fiction #post-apocalyptic #literature\n\n---\n\n## Pachinko by Min Jin Lee\n\nA multi-generational Korean family saga set in Japan that is completely captivating.\n\n**Notes:** This epic historical novel follows four generations of a Korean family through their struggles and triumphs in 20th century Japan.\n\n**Tags:** #fiction #historical-fiction #korean #japanese #family-saga\n\n---\n\n## Dune by Frank Herbert\n\nFeatures incredible worldbuilding that lives up to its classic status.\n\n**Notes:** Herbert's rich universe blends politics, religion, ecology, and technology in a way that established new standards for science fiction worldbuilding.\n\n**Tags:** #science-fiction #classic #worldbuilding"
+  }
+}

@@ -4,209 +4,478 @@
 ## JSON Data to Convert
 {
   "session": {
-    "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+    "session_id": "550e8400-e29b-41d4-a716-446655440000",
     "user_id": "default_user",
-    "started_at": "2023-11-12T15:10:23Z",
-    "summary": "The user shared various ideas for future AI-related projects, including a human rights due diligence tool, working with social media influencers using AI agents, building autonomous digital life forms, creating an AI-powered second brain application, and developing a financial tracking platform called 'Follow The Fucking Money'."
+    "started_at": "2023-10-05T14:30:00Z",
+    "summary": "This session focuses on compiling a list of personal recommendations across books, films, and games, organized into a structured directory for future reference."
   },
   "records": [
     {
-      "record_id": "b42a8f7e-d1c3-4f5d-b6e9-f2d9e8c7a1b3",
-      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "record_id": "123e4567-e89b-12d3-a456-426614174001",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
-      "type": "idea",
-      "content": "Human Rights Due Diligence Tool with Dan Murphy could be developed in several ways: helping Dan structure and sell his existing data, or transforming his data into a model for AI fine-tuning. Potential collaboration with CLIM to execute this project.",
-      "created_at": "2023-11-12T15:11:05Z",
+      "type": "recommendation",
+      "content": "Book Recommendation: The Road by Cormac McCarthy - A powerful post-apocalyptic story with sparse yet beautiful writing that captures desolation and hope.",
+      "created_at": "2023-10-05T14:30:05Z",
       "tags": [
-        "AI",
-        "human rights",
-        "data structuring",
-        "collaboration",
-        "business idea",
-        "CLIM"
+        "books",
+        "post-apocalyptic",
+        "fiction",
+        "literature"
       ],
       "links": [
-        "c5d9e8f7-a6b5-4c3d-b2a1-e9f8d7c6b5a4",
-        "f7e6d5c4-b3a2-1d0e-9f8a-7b6c5d4e3f2a"
+        "123e4567-e89b-12d3-a456-426614174002",
+        "123e4567-e89b-12d3-a456-426614174003"
       ],
       "details": {
-        "title": "Human Rights Due Diligence Tool",
-        "notes": "This idea involves partnering with Dan Murphy to leverage existing data. Consider exploring the fine-tuning approach as it might yield higher value and uniqueness in the market.",
-        "parent_entity": "Ideas for the future",
+        "title": "Book Rec: The Road by Cormac McCarthy",
+        "notes": "Consider exploring other works by McCarthy for similar thematic depth.",
+        "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
       "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
         "resource": {
-          "category": "Business Ideas",
-          "format": "note"
+          "category": "Books",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
         }
       },
       "relationships": {
-        "belongs_to": "Ideas for the future",
+        "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Working with Social Media Influencers",
-          "AI Second Brain Development"
+          "Book Rec: Pachinko by Min Jin Lee",
+          "Book Rec: Dune by Frank Herbert"
         ],
-        "collection": "Ideas for the future"
+        "collection": "Recommendations Directory"
       }
     },
     {
-      "record_id": "c5d9e8f7-a6b5-4c3d-b2a1-e9f8d7c6b5a4",
-      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "record_id": "123e4567-e89b-12d3-a456-426614174002",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
-      "type": "idea",
-      "content": "Collaborate with Travis to scale his social media presence (currently 200k Instagram followers) by developing AI agents that function as virtual staff members. This could be developed into a marketable product or business that leverages Travis's audience and promotional capabilities.",
-      "created_at": "2023-11-12T15:11:45Z",
+      "type": "recommendation",
+      "content": "Book Recommendation: Pachinko by Min Jin Lee - A captivating multi-generational Korean family saga set in Japan, exploring identity and resilience.",
+      "created_at": "2023-10-05T14:30:10Z",
       "tags": [
-        "AI agents",
-        "social media growth",
-        "influencer marketing",
-        "business development",
-        "automation"
+        "books",
+        "historical-fiction",
+        "family-saga",
+        "literature"
       ],
       "links": [
-        "b42a8f7e-d1c3-4f5d-b6e9-f2d9e8c7a1b3",
-        "d4c3b2a1-9f8e-7d6c-5b4a-3e2d1f0e9d8c"
+        "123e4567-e89b-12d3-a456-426614174001",
+        "123e4567-e89b-12d3-a456-426614174003"
       ],
       "details": {
-        "title": "Working with Social Media Influencers",
-        "notes": "This approach could pioneer a new category of AI-powered influencer tools. Consider developing a prototype with Travis to demonstrate efficacy before scaling.",
-        "parent_entity": "Ideas for the future",
+        "title": "Book Rec: Pachinko by Min Jin Lee",
+        "notes": "Might inspire interest in Korean-Japanese history and cultural dynamics.",
+        "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
       "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
         "resource": {
-          "category": "Business Ideas",
-          "format": "note"
+          "category": "Books",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
         }
       },
       "relationships": {
-        "belongs_to": "Ideas for the future",
+        "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Human Rights Due Diligence Tool",
-          "VITA Development",
-          "AI Agent Arena"
+          "Book Rec: The Road by Cormac McCarthy",
+          "Book Rec: Dune by Frank Herbert"
         ],
-        "collection": "Ideas for the future"
+        "collection": "Recommendations Directory"
       }
     },
     {
-      "record_id": "d4c3b2a1-9f8e-7d6c-5b4a-3e2d1f0e9d8c",
-      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "record_id": "123e4567-e89b-12d3-a456-426614174003",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
-      "type": "idea",
-      "content": "Develop VITA into the world's first autonomous digital life form, potentially creating an agent arena for testing and demonstration. This initiative could attract funding from early-stage investors in the AI space.",
-      "created_at": "2023-11-12T15:12:25Z",
+      "type": "recommendation",
+      "content": "Book Recommendation: Dune by Frank Herbert - A sci-fi classic with incredible worldbuilding, living up to its iconic status.",
+      "created_at": "2023-10-05T14:30:15Z",
       "tags": [
-        "autonomous agents",
-        "digital life",
-        "VITA",
-        "agent arena",
-        "investor opportunity"
+        "books",
+        "sci-fi",
+        "classics",
+        "literature"
       ],
       "links": [
-        "c5d9e8f7-a6b5-4c3d-b2a1-e9f8d7c6b5a4",
-        "e3f2d1c0-b9a8-7f6e-5d4c-3b2a1f0e9d8c"
+        "123e4567-e89b-12d3-a456-426614174001",
+        "123e4567-e89b-12d3-a456-426614174002"
       ],
       "details": {
-        "title": "VITA Development",
-        "notes": "The concept of autonomous digital life forms is cutting-edge and could position the team at the forefront of AI development. The agent arena idea provides a practical testing ground and demonstration platform.",
-        "parent_entity": "Ideas for the future",
+        "title": "Book Rec: Dune by Frank Herbert",
+        "notes": "Consider watching the recent film adaptation for a visual perspective.",
+        "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
       "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
         "resource": {
-          "category": "AI Development",
-          "format": "note"
+          "category": "Books",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
         }
       },
       "relationships": {
-        "belongs_to": "Ideas for the future",
+        "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Working with Social Media Influencers",
-          "AI Second Brain Development",
-          "AI Agent Arena"
+          "Book Rec: The Road by Cormac McCarthy",
+          "Book Rec: Pachinko by Min Jin Lee"
         ],
-        "collection": "Ideas for the future"
+        "collection": "Recommendations Directory"
       }
     },
     {
-      "record_id": "e3f2d1c0-b9a8-7f6e-5d4c-3b2a1f0e9d8c",
-      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "record_id": "123e4567-e89b-12d3-a456-426614174004",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
-      "type": "idea",
-      "content": "Create an AI-powered second brain system, potentially using Obsidian as a front end. This addresses a significant market gap, especially as OpenAI is positioning high-end assistants at $20,000/month. The key differentiator would be the agent framework rather than just the underlying models.",
-      "created_at": "2023-11-12T15:13:05Z",
+      "type": "recommendation",
+      "content": "Film Recommendation: Everything Everywhere All at Once - A mind-bending multiverse adventure with surprising emotional depth.",
+      "created_at": "2023-10-05T14:30:20Z",
       "tags": [
-        "second brain",
-        "AI assistant",
-        "Obsidian",
-        "knowledge management",
-        "agent framework"
+        "films",
+        "sci-fi",
+        "multiverse",
+        "drama"
       ],
       "links": [
-        "d4c3b2a1-9f8e-7d6c-5b4a-3e2d1f0e9d8c",
-        "f7e6d5c4-b3a2-1d0e-9f8a-7b6c5d4e3f2a"
+        "123e4567-e89b-12d3-a456-426614174005",
+        "123e4567-e89b-12d3-a456-426614174006"
       ],
       "details": {
-        "title": "AI Second Brain Development",
-        "notes": "This project requires a compelling proof of concept to attract partners or investors. The integration with existing tools like Obsidian could accelerate adoption and provide immediate user value.",
-        "parent_entity": "Ideas for the future",
+        "title": "Film Rec: Everything Everywhere All at Once",
+        "notes": "Great for fans of imaginative storytelling and genre-blending.",
+        "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
       "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
         "resource": {
-          "category": "AI Development",
-          "format": "note"
+          "category": "Films",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
         }
       },
       "relationships": {
-        "belongs_to": "Ideas for the future",
+        "belongs_to": "Personal Recommendations",
         "related_items": [
-          "VITA Development",
-          "Follow The Fucking Money"
+          "Film Rec: Parasite",
+          "Film Rec: Arrival"
         ],
-        "collection": "Ideas for the future"
+        "collection": "Recommendations Directory"
       }
     },
     {
-      "record_id": "f7e6d5c4-b3a2-1d0e-9f8a-7b6c5d4e3f2a",
-      "session_id": "27f8a4d9-e41b-4c8c-a9ca-8e5734cdc413",
+      "record_id": "123e4567-e89b-12d3-a456-426614174005",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
-      "type": "idea",
-      "content": "Develop 'Follow The Fucking Money' (FTFM) as an open-source platform that analyzes financial connections. This could be monetized as a Substack publication, operate as a free service using affordable models through Open Router, and allow users to contribute content. The system could visualize data connections similar to Obsidian's popular knowledge maps.",
-      "created_at": "2023-11-12T15:13:45Z",
+      "type": "recommendation",
+      "content": "Film Recommendation: Parasite - Bong Joon-ho's masterpiece that brilliantly shifts genres while delivering sharp social commentary.",
+      "created_at": "2023-10-05T14:30:25Z",
       "tags": [
-        "FTFM",
-        "financial analysis",
-        "data visualization",
-        "open source",
-        "Substack",
-        "knowledge mapping"
+        "films",
+        "drama",
+        "social-commentary",
+        "thriller"
       ],
       "links": [
-        "b42a8f7e-d1c3-4f5d-b6e9-f2d9e8c7a1b3",
-        "e3f2d1c0-b9a8-7f6e-5d4c-3b2a1f0e9d8c"
+        "123e4567-e89b-12d3-a456-426614174004",
+        "123e4567-e89b-12d3-a456-426614174006"
       ],
       "details": {
-        "title": "Follow The Fucking Money",
-        "notes": "The 'Glenn Green World' approach of analyzing podcasts and revealing inconsistencies could create a compelling public record. The visualization component could be particularly appealing to users accustomed to knowledge graphs.",
-        "parent_entity": "Ideas for the future",
+        "title": "Film Rec: Parasite",
+        "notes": "Explore other works by Bong Joon-ho for similar thematic explorations.",
+        "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
       "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
         "resource": {
-          "category": "Financial Technology",
-          "format": "note"
+          "category": "Films",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
         }
       },
       "relationships": {
-        "belongs_to": "Ideas for the future",
+        "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Human Rights Due Diligence Tool",
-          "AI Second Brain Development"
+          "Film Rec: Everything Everywhere All at Once",
+          "Film Rec: Arrival"
         ],
-        "collection": "Ideas for the future"
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174006",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Film Recommendation: Arrival - Thoughtful sci-fi focusing on language and communication rather than typical alien invasion tropes.",
+      "created_at": "2023-10-05T14:30:30Z",
+      "tags": [
+        "films",
+        "sci-fi",
+        "language",
+        "drama"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174004",
+        "123e4567-e89b-12d3-a456-426614174005"
+      ],
+      "details": {
+        "title": "Film Rec: Arrival",
+        "notes": "Might inspire interest in linguistics and Sci-Fi storytelling.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Films",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Film Rec: Everything Everywhere All at Once",
+          "Film Rec: Parasite"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174007",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Game Recommendation: Stardew Valley - An addictive farming simulator that's perfect for relaxation with its charming aesthetics.",
+      "created_at": "2023-10-05T14:30:35Z",
+      "tags": [
+        "games",
+        "simulation",
+        "relaxing",
+        "indie"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174008",
+        "123e4567-e89b-12d3-a456-426614174009"
+      ],
+      "details": {
+        "title": "Game Rec: Stardew Valley",
+        "notes": "Ideal for downtime; consider multiplayer mode for social gaming.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Games",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Game Rec: Disco Elysium",
+          "Game Rec: Hollow Knight"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174008",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Game Recommendation: Disco Elysium - A unique detective RPG with phenomenal writing, blending philosophy and humor.",
+      "created_at": "2023-10-05T14:30:40Z",
+      "tags": [
+        "games",
+        "rpg",
+        "detective",
+        "narrative"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174007",
+        "123e4567-e89b-12d3-a456-426614174009"
+      ],
+      "details": {
+        "title": "Game Rec: Disco Elysium",
+        "notes": "Highly recommended for fans of deep narrative experiences.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Games",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Game Rec: Stardew Valley",
+          "Game Rec: Hollow Knight"
+        ],
+        "collection": "Recommendations Directory"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174009",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Game Recommendation: Hollow Knight - A gorgeous metroidvania with challenging combat and an atmospheric world that invites exploration.",
+      "created_at": "2023-10-05T14:30:45Z",
+      "tags": [
+        "games",
+        "metroidvania",
+        "action",
+        "indie"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174007",
+        "123e4567-e89b-12d3-a456-426614174008"
+      ],
+      "details": {
+        "title": "Game Rec: Hollow Knight",
+        "notes": "Perfect for players who enjoy challenging gameplay and intricate worlds.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Games",
+          "format": "Note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Game Rec: Stardew Valley",
+          "Game Rec: Disco Elysium"
+        ],
+        "collection": "Recommendations Directory"
       }
     }
   ]
@@ -218,20 +487,16 @@ but should NOT be converted into separate markdown files themselves:
 
 [
   {
-    "instruction_id": "a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6",
-    "command_type": "create_single_file",
+    "instruction_id": "987fcdeb-51ae-4a44-9a36-0493b9a5d4e1",
+    "command_type": "Organize Recommendations",
     "instruction_type": "structural",
-    "description": "Create a single continuous file containing all ideas without task lists or a contents page",
+    "description": "Organize the provided recommendations into three separate files categorized by Books, Films, and Games within a directory named 'Recommendations'.",
     "parameters": {
       "target": "all_session_content",
-      "format": "single page",
-      "additional_info": {
-        "file_name": "Ideas for the future",
-        "project_name": "inbox",
-        "format_style": "continuous list"
-      }
+      "format": "Three separate markdown files: Books.md, Films.md, Games.md",
+      "additional_info": "Directory name: Recommendations"
     },
-    "priority": "1",
+    "priority": "3",
     "dependencies": []
   }
 ]
@@ -267,7 +532,9 @@ Example structure:
 1. Use descriptive, concise filenames with spaces between words
 2. Ensure filenames match the content they contain
 3. Structure content with appropriate headings, lists, and formatting
-4. Preserve all important information from the original records
+4. DO NOT include the title as an H1 heading - Obsidian will use the filename as the title
+5. Start content with paragraph text or H2+ headings
+6. Preserve all important information from the original records
 
 ## Note Types and Content Structure
 
@@ -325,7 +592,7 @@ Each blueprint should have this structure:
   },
   "content": {
     "title": "The title for the note",
-    "body": "The fully formatted markdown content (without the title or frontmatter)"
+    "body": "The fully formatted markdown content WITHOUT an H1 heading - start with paragraph text or H2+ headings"
   }
 }
 

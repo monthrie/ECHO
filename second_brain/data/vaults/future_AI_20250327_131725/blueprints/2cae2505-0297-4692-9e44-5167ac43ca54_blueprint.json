@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Projects/Follow The Money",
+    "filename": "Contents.md",
+    "record_id": "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d"
+  },
+  "frontmatter": {
+    "tags": [
+      "MOC",
+      "Follow The Money",
+      "accountability",
+      "fact checking"
+    ],
+    "record_ids": [
+      "a1b2c3d4-e5f6-4a5b-8c7d-9e0f1a2b3c4d"
+    ]
+  },
+  "content": {
+    "title": "Follow The Money - Map of Contents",
+    "body": "## Project Overview\nThe 'Follow The Money' (FTFM) project aims to create a system that tracks and analyzes statements from news sources and podcasts, building a fact-tracking database that serves as a source of truth for public accountability.\n\n## Project Components\n\n- [[Projects/Follow The Money/Project Overview|Project Overview]] - Core concept and goals\n- [[Projects/Follow The Money/MVP Concept|MVP Concept]] - Initial implementation using Glenn Greenwald podcasts\n- [[Projects/Follow The Money/Society Storage Layer|Society Storage Layer]] - Philosophical foundation\n- [[Projects/Follow The Money/Promise Tracking|Promise Tracking]] - Feature for tracking political promises\n- [[Projects/Follow The Money/Technical Architecture|Technical Architecture]] - System design and implementation\n- [[Projects/Follow The Money/Obsidian Integration|Obsidian Integration]] - Markdown translation layer\n- [[Projects/Follow The Money/RAG Query System|RAG Query System]] - AI-powered information retrieval\n\n## Tasks\n\n- [[Projects/Follow The Money/Tasks|Project Tasks]]\n\n## Project Timeline\n\n- MVP Development: Complete by March 31, 2024\n- Technical Architecture: Complete by May 31, 2024\n- Core System: Complete by June 30, 2024\n- Obsidian Integration: Complete by July 31, 2024\n- Promise Tracking Feature: Complete by August 31, 2024\n- RAG Query System: Complete by October 31, 2024\n- Full System: Complete by December 31, 2024"
+  }
+}
