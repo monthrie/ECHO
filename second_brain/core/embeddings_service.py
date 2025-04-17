@@ -11,20 +11,18 @@ from openai import OpenAI
 try:
     from second_brain.utils.config import Config
     BASE_DIR = Config.BASE_DIR
-    # Use vault path from config if available
-    if hasattr(Config, 'CURRENT_VAULT_DIR') and Config.CURRENT_VAULT_DIR:
-        INPUT_DIR = Config.CURRENT_VAULT_DIR
-    else:
-        INPUT_DIR = str(BASE_DIR / "data" / "vaults" / "recomms_20250416_173815" / "markdown")
+    # Override INPUT_DIR for testing
+    INPUT_DIR = "/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250416_171813/markdown/Resources/Recommendations"
 except ImportError:
     # Fallback if config import fails
     BASE_DIR = Path(__file__).parent.parent
-    INPUT_DIR = str(BASE_DIR / "data" / "vaults" / "recomms_20250416_173815" / "markdown")
+    # Override INPUT_DIR for testing
+    INPUT_DIR = "/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250416_171813/markdown/Resources/Recommendations"
 
 # Create embeddings directory under data
 EMBEDDINGS_DIR = BASE_DIR / "data" / "embeddings"
-METADATA_FILE = EMBEDDINGS_DIR / "metadata.json"
-EMBEDDINGS_FILE = EMBEDDINGS_DIR / "embeddings.json"
+# Replace separate files with a single consolidated file
+CONSOLIDATED_FILE = EMBEDDINGS_DIR / "consolidated_embeddings.json"
 EMBEDDING_MODEL = "text-embedding-3-small"
 
 # Initialize OpenAI client
@@ -65,22 +63,19 @@ def prepare_text_for_embedding(frontmatter: Dict, content: str) -> str:
     
     return f"Title: {title}\n\nTags: {tags_text}\n\nContent: {content}"
 
-def process_markdown_files() -> Tuple[Dict, Dict]:
-    """Process all markdown files in the input directory."""
+def process_markdown_files() -> Dict:
+    """Process all markdown files in the input directory and store in consolidated format."""
     # Create output directory if it doesn't exist
     EMBEDDINGS_DIR.mkdir(parents=True, exist_ok=True)
     
-    # Load existing metadata and embeddings if they exist
-    metadata = {}
-    embeddings = {}
+    # Load existing consolidated data if it exists
+    consolidated_data = {"documents": {}}
     
-    if METADATA_FILE.exists():
-        with open(METADATA_FILE, 'r') as f:
-            metadata = json.load(f)
-    
-    if EMBEDDINGS_FILE.exists():
-        with open(EMBEDDINGS_FILE, 'r') as f:
-            embeddings = json.load(f)
+    if CONSOLIDATED_FILE.exists():
+        with open(CONSOLIDATED_FILE, 'r') as f:
+            consolidated_data = json.load(f)
+            if "documents" not in consolidated_data:
+                consolidated_data["documents"] = {}
     
     # Scan input directory for markdown files
     input_dir = Path(INPUT_DIR)
@@ -91,20 +86,20 @@ def process_markdown_files() -> Tuple[Dict, Dict]:
         # Get file modification time
         mod_time = os.path.getmtime(file_path)
         
-        # Check if file exists in metadata and has been modified
-        file_metadata = metadata.get("files", {}).get(relative_path, {})
-        file_id = file_metadata.get("id")
-        last_mod_time = file_metadata.get("last_modified", 0)
+        # Check if file exists in consolidated data and has been modified
+        file_data = consolidated_data["documents"].get(relative_path, {})
+        last_mod_time = file_data.get("last_modified", 0)
         
-        if not file_id or mod_time > last_mod_time:
+        if not file_data or mod_time > last_mod_time:
             print(f"Processing: {relative_path}")
             
             # Extract content and frontmatter
             frontmatter, content = extract_markdown_content(file_path)
             
             # Generate a unique ID if needed
+            file_id = file_data.get("id")
             if not file_id:
-                file_id = f"doc_{len(metadata.get('files', {})) + 1}"
+                file_id = f"doc_{len(consolidated_data['documents']) + 1}"
             
             # Prepare text for embedding
             full_text = prepare_text_for_embedding(frontmatter, content)
@@ -112,83 +107,33 @@ def process_markdown_files() -> Tuple[Dict, Dict]:
             # Generate embedding
             embedding = generate_embedding(full_text)
             
-            # Update metadata
-            if "files" not in metadata:
-                metadata["files"] = {}
-                
-            metadata["files"][relative_path] = {
+            # Update consolidated data
+            consolidated_data["documents"][relative_path] = {
                 "id": file_id,
                 "last_modified": mod_time,
                 "title": frontmatter.get("title", relative_path),
-                "tags": frontmatter.get("tags", [])
+                "tags": frontmatter.get("tags", []),
+                "content": content,  # Store the actual content
+                "embedding": embedding
             }
-            
-            # Update embeddings
-            embeddings[file_id] = embedding
             
             print(f"Generated embedding for: {relative_path}")
         else:
             print(f"Skipping unchanged file: {relative_path}")
     
-    # Save metadata and embeddings
-    with open(METADATA_FILE, 'w') as f:
-        json.dump(metadata, f, indent=2)
+    # Save consolidated data
+    with open(CONSOLIDATED_FILE, 'w') as f:
+        json.dump(consolidated_data, f, indent=2)
     
-    with open(EMBEDDINGS_FILE, 'w') as f:
-        json.dump(embeddings, f, indent=2)
+    print(f"Saved {len(consolidated_data['documents'])} documents with embeddings to {CONSOLIDATED_FILE}")
     
-    print(f"Saved {len(metadata.get('files', {}))} file metadata entries and {len(embeddings)} embeddings")
-    
-    return metadata, embeddings
-
-def find_similar_documents(query_text: str, metadata: Dict, embeddings: Dict, threshold: float = 0.85) -> List[Dict]:
-    """Find similar documents to the query text."""
-    import numpy as np
-    
-    # Generate embedding for query text
-    query_embedding = generate_embedding(query_text)
-    
-    similar_docs = []
-    
-    # Calculate similarity with all stored embeddings
-    for file_path, file_info in metadata.get("files", {}).items():
-        doc_id = file_info["id"]
-        doc_embedding = embeddings.get(doc_id)
-        
-        if doc_embedding:
-            # Calculate cosine similarity
-            a = np.array(query_embedding)
-            b = np.array(doc_embedding)
-            similarity = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
-            
-            if similarity >= threshold:
-                similar_docs.append({
-                    "file_path": file_path,
-                    "title": file_info.get("title", ""),
-                    "similarity": similarity,
-                    "id": doc_id
-                })
-    
-    # Sort by similarity (highest first)
-    similar_docs.sort(key=lambda x: x["similarity"], reverse=True)
-    
-    return similar_docs
+    return consolidated_data
 
 if __name__ == "__main__":
     print(f"Processing markdown files in: {INPUT_DIR}")
     start_time = time.time()
     
-    metadata, embeddings = process_markdown_files()
+    consolidated_data = process_markdown_files()
     
     elapsed = time.time() - start_time
     print(f"Processing completed in {elapsed:.2f} seconds")
-    
-    # Optional: Test similarity search
-    # If you want to test a search, uncomment the following lines:
-    """
-    test_query = "Your search query here"
-    similar = find_similar_documents(test_query, metadata, embeddings)
-    print("\nSimilar documents:")
-    for doc in similar[:5]:  # Top 5 results
-        print(f"- {doc['title']} ({doc['file_path']}): {doc['similarity']:.4f}")
-    """
