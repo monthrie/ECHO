@@ -17,46 +17,28 @@ client = OpenAI()
 
 # Configuration
 BASE_DIR = Path(__file__).parent.parent
-EMBEDDINGS_FILE = BASE_DIR / "data" / "embeddings" / "embeddings.json"
+CONSOLIDATED_EMBEDDINGS_FILE = BASE_DIR / "data" / "embeddings" / "consolidated_embeddings.json"
 MARKDOWN_DIR = str(BASE_DIR / "data" / "vaults" / "recomms_20250416_173815" / "markdown")  # Directory containing existing markdown files
-SIMILARITY_THRESHOLD = 0.85  # Minimum similarity score to consider updating
+SIMILARITY_THRESHOLD = 0.50  # Minimum similarity score to consider updating
 
-# Set this to your blueprints directory
-BLUEPRINTS_DIR = BASE_DIR / "data" / "vaults" / "recomms_20250416_171813" / "blueprints"
+# Set this to your blueprints directory for testing
+BLUEPRINTS_DIR = Path("/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250417_150701/blueprints")
 
-def load_document_embeddings() -> Dict[str, List[float]]:
-    """Load document embeddings from storage."""
-    metadata_file = BASE_DIR / "data" / "embeddings" / "metadata.json"
-    embeddings_file = EMBEDDINGS_FILE
+def load_consolidated_embeddings() -> Dict:
+    """Load consolidated document embeddings from storage."""
+    embeddings_file = CONSOLIDATED_EMBEDDINGS_FILE
     
-    result = {}
+    logger.info(f"Loading consolidated embeddings from {embeddings_file}")
     
-    logger.info(f"Loading document embeddings from {embeddings_file}")
-    logger.info(f"Using metadata from {metadata_file}")
-    
-    if embeddings_file.exists() and metadata_file.exists():
-        with open(metadata_file, 'r') as mf:
-            metadata = json.load(mf)
+    if embeddings_file.exists():
+        with open(embeddings_file, 'r') as f:
+            consolidated_data = json.load(f)
         
-        with open(embeddings_file, 'r') as ef:
-            embeddings = json.load(ef)
-        
-        logger.info(f"Found {len(metadata.get('files', {}))} files in metadata")
-        logger.info(f"Found {len(embeddings)} embeddings")
-        
-        for file_path, file_info in metadata.get("files", {}).items():
-            doc_id = file_info["id"]
-            if doc_id in embeddings:
-                result[file_path] = embeddings[doc_id]
-    
-    logger.info(f"Loaded {len(result)} document embeddings")
-    return result
-
-def save_document_embeddings(embeddings: Dict[str, List[float]]):
-    """Save document embeddings to storage."""
-    logger.info(f"Saving {len(embeddings)} document embeddings to {EMBEDDINGS_FILE}")
-    with open(EMBEDDINGS_FILE, 'w') as f:
-        json.dump(embeddings, f)
+        logger.info(f"Found {len(consolidated_data.get('documents', {}))} documents in consolidated embeddings")
+        return consolidated_data
+    else:
+        logger.warning(f"Consolidated embeddings file not found: {embeddings_file}")
+        return {"documents": {}}
 
 def generate_embedding(text: str) -> List[float]:
     """Generate embedding for text using OpenAI API."""
@@ -75,36 +57,47 @@ def cosine_similarity(a: List[float], b: List[float]) -> float:
     return np.dot(a_array, b_array) / (np.linalg.norm(a_array) * np.linalg.norm(b_array))
 
 def find_similar_documents(embedding: List[float], 
-                          doc_embeddings: Dict[str, List[float]], 
-                          threshold: float = SIMILARITY_THRESHOLD) -> List[Tuple[str, float]]:
+                          consolidated_data: Dict, 
+                          threshold: float = SIMILARITY_THRESHOLD) -> List[Tuple[str, float, str]]:
     """Find similar documents based on embedding similarity."""
     similar_docs = []
     
-    logger.info(f"Finding similar documents among {len(doc_embeddings)} documents with threshold {threshold}")
+    documents = consolidated_data.get("documents", {})
+    logger.info(f"Finding similar documents among {len(documents)} documents with threshold {threshold}")
     
-    for doc_path, doc_embedding in doc_embeddings.items():
-        similarity = cosine_similarity(embedding, doc_embedding)
-        logger.info(f"Document: {doc_path} - Similarity: {similarity:.4f}")
-        if similarity >= threshold:
-            similar_docs.append((doc_path, similarity))
-            logger.info(f"  ✓ Match found above threshold: {doc_path} - {similarity:.4f}")
+    for doc_path, doc_data in documents.items():
+        doc_embedding = doc_data.get("embedding")
+        if doc_embedding:
+            similarity = cosine_similarity(embedding, doc_embedding)
+            logger.info(f"Document: {doc_path} - Similarity: {similarity:.4f}")
+            if similarity >= threshold:
+                # Include content in the result for easier access
+                content = doc_data.get("content", "")
+                similar_docs.append((doc_path, similarity, content))
+                logger.info(f"  ✓ Match found above threshold: {doc_path} - {similarity:.4f}")
     
     # Sort by similarity (highest first)
     similar_docs.sort(key=lambda x: x[1], reverse=True)
     logger.info(f"Found {len(similar_docs)} similar documents above threshold {threshold}")
     
     # Print top matches for debugging
-    for i, (doc_path, similarity) in enumerate(similar_docs[:5]):
+    for i, (doc_path, similarity, _) in enumerate(similar_docs[:5]):
         logger.info(f"  Top match #{i+1}: {doc_path} - Similarity: {similarity:.4f}")
     
     return similar_docs
 
-def get_document_content(doc_path: str) -> str:
-    """Get the content of a document."""
-    # Convert relative path to absolute path
+def get_document_content(doc_path: str, consolidated_data: Dict) -> str:
+    """Get the content of a document from consolidated data or file system."""
+    # First try to get content from consolidated data
+    doc_data = consolidated_data.get("documents", {}).get(doc_path)
+    if doc_data and "content" in doc_data:
+        logger.info(f"Retrieved content for {doc_path} from consolidated data")
+        return doc_data["content"]
+    
+    # Fallback to reading from file system
     full_path = os.path.join(MARKDOWN_DIR, doc_path)
     
-    logger.info(f"Getting content for document: {doc_path}")
+    logger.info(f"Getting content for document from file system: {doc_path}")
     logger.info(f"Full path: {full_path}")
     
     try:
@@ -134,7 +127,7 @@ def blueprint_to_text(blueprint: Dict[str, Any]) -> str:
     return result
 
 def determine_integration_strategy(blueprint: Dict[str, Any], 
-                                  similar_docs: List[Tuple[str, float]]) -> Dict[str, Any]:
+                                  similar_docs: List[Tuple[str, float, str]]) -> Dict[str, Any]:
     """Use LLM to determine integration strategy."""
     # Prepare context with blueprint and similar documents
     blueprint_text = blueprint_to_text(blueprint)
@@ -144,10 +137,9 @@ def determine_integration_strategy(blueprint: Dict[str, Any],
     logger.info(f"Similar documents count: {len(similar_docs)}")
     
     similar_docs_context = ""
-    for doc_path, similarity in similar_docs[:3]:  # Limit to top 3 for simplicity
-        logger.info(f"Getting content for similar document: {doc_path} (Similarity: {similarity:.4f})")
-        doc_content = get_document_content(doc_path)
-        similar_docs_context += f"\n\n--- Document: {doc_path} (Similarity: {similarity:.2f}) ---\n{doc_content}"
+    for doc_path, similarity, content in similar_docs[:3]:  # Limit to top 3 for simplicity
+        logger.info(f"Using content for similar document: {doc_path} (Similarity: {similarity:.4f})")
+        similar_docs_context += f"\n\n--- Document: {doc_path} (Similarity: {similarity:.2f}) ---\n{content}"
     
     # Simple prompt for the LLM
     prompt = f"""
@@ -201,7 +193,8 @@ def determine_integration_strategy(blueprint: Dict[str, Any],
         }
 
 def execute_integration(blueprint: Dict[str, Any], 
-                       integration_strategy: Dict[str, Any]) -> str:
+                       integration_strategy: Dict[str, Any],
+                       consolidated_data: Dict) -> str:
     """Execute the integration strategy using LLM to perform the actual integration."""
     decision = integration_strategy["decision"]
     target_document = integration_strategy["target_document"]
@@ -251,7 +244,7 @@ def execute_integration(blueprint: Dict[str, Any],
     
     elif decision == "update" or decision == "merge":
         # Get existing document content
-        existing_content = get_document_content(target_document)
+        existing_content = get_document_content(target_document, consolidated_data)
         
         # IMPORTANT: Convert target_document to full path for writing
         full_target_path = os.path.join(MARKDOWN_DIR, target_document)
@@ -317,28 +310,24 @@ def process_blueprint(blueprint_path: str) -> str:
     logger.info(f"Blueprint directory: {blueprint.get('file_info', {}).get('directory', '')}")
     logger.info(f"Blueprint filename: {blueprint.get('file_info', {}).get('filename', '')}")
     
-    # Load existing document embeddings
-    doc_embeddings = load_document_embeddings()
+    # Load consolidated embeddings
+    consolidated_data = load_consolidated_embeddings()
     
     # Generate embedding for blueprint
     blueprint_text = blueprint_to_text(blueprint)
     blueprint_embedding = generate_embedding(blueprint_text)
     
     # Find similar documents
-    similar_docs = find_similar_documents(blueprint_embedding, doc_embeddings)
+    similar_docs = find_similar_documents(blueprint_embedding, consolidated_data)
     
     # Determine integration strategy
     integration_strategy = determine_integration_strategy(blueprint, similar_docs)
     
     # Execute integration
-    result_path = execute_integration(blueprint, integration_strategy)
+    result_path = execute_integration(blueprint, integration_strategy, consolidated_data)
     
-    # Update embeddings if needed
-    if integration_strategy["decision"] == "new":
-        # Add new document embedding
-        logger.info(f"Adding new document embedding for: {result_path}")
-        doc_embeddings[result_path] = blueprint_embedding
-        save_document_embeddings(doc_embeddings)
+    # Update embeddings if needed (this would be handled by the embeddings service)
+    # We don't update embeddings here anymore since that's the responsibility of the embeddings service
     
     logger.info(f"Blueprint processing complete. Result: {result_path}")
     return result_path
