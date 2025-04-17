@@ -147,7 +147,7 @@ def process_blueprint_files(blueprint, config=None):
         markdown_content += "---\n\n"
         
         # Add the title and body
-        markdown_content += f"# {title}\n\n{body}"
+        markdown_content += body
         
         # Write the file
         with open(file_path, 'w') as f:
