@@ -134,8 +134,9 @@ class Config:
         # Add this line to maintain compatibility with blueprint_to_markdown.py
         cls.VAULT_PATH = cls.MARKDOWN_OUTPUT_DIR
         
-        # Log the LangSmith project being used
-        logger.info(f"LangSmith tracing enabled for project: {cls.LANGSMITH_PROJECT}")
+        # Set up LangSmith project name with timestamp for uniqueness
+        if not os.getenv("LANGSMITH_PROJECT"):
+            cls.LANGSMITH_PROJECT = f"second-brain-{time.strftime('%Y%m%d-%H%M%S')}"
         
         logger.info(f"Initialized with transcript: {cls.TRANSCRIPTS_PATH}")
         logger.info(f"Output directories: {cls.CURRENT_VAULT_DIR}")

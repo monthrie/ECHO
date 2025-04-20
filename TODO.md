@@ -1,0 +1,6 @@
+- use the metadata embeddings / indexing for matching
+- ingestion of different data types and sources
+- full flow with proper file paths
+- sort out the titling issues
+- make the links work well
+- make it clear that this is for obsidian
