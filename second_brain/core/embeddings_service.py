@@ -7,22 +7,15 @@ from typing import Dict, List, Optional, Tuple
 import yaml
 from openai import OpenAI
 
-# Get the base directory from utils.config if possible
-try:
-    from second_brain.utils.config import Config
-    BASE_DIR = Config.BASE_DIR
-    # Override INPUT_DIR for testing
-    INPUT_DIR = "/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250416_171813/markdown/Resources/Recommendations"
-except ImportError:
-    # Fallback if config import fails
-    BASE_DIR = Path(__file__).parent.parent
-    # Override INPUT_DIR for testing
-    INPUT_DIR = "/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250416_171813/markdown/Resources/Recommendations"
+# Simple input directory definition
+INPUT_DIR = "/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250420_180619/markdown"
 
-# Create embeddings directory under data
-EMBEDDINGS_DIR = BASE_DIR / "data" / "embeddings"
-# Replace separate files with a single consolidated file
-CONSOLIDATED_FILE = EMBEDDINGS_DIR / "consolidated_embeddings.json"
+# Extract datetime part for embeddings filename
+datetime_part = re.search(r'recomms_(\d+_\d+)', INPUT_DIR).group(1)
+
+# Create embeddings directory and filename with datetime
+EMBEDDINGS_DIR = Path(__file__).parent.parent / "data" / "embeddings"
+CONSOLIDATED_FILE = EMBEDDINGS_DIR / f"consolidated_embeddings_{datetime_part}.json"
 EMBEDDING_MODEL = "text-embedding-3-small"
 
 # Initialize OpenAI client
@@ -60,8 +53,10 @@ def prepare_text_for_embedding(frontmatter: Dict, content: str) -> str:
     title = frontmatter.get("title", "")
     tags = frontmatter.get("tags", [])
     tags_text = ", ".join(tags) if isinstance(tags, list) else str(tags)
+    description = frontmatter.get("description", "")
     
-    return f"Title: {title}\n\nTags: {tags_text}\n\nContent: {content}"
+    # Prioritize metadata by repeating it and adding weight to these elements
+    return f"Title: {title}\nTitle: {title}\nTitle: {title}\n\nDescription: {description}\nDescription: {description}\n\nTags: {tags_text}\nTags: {tags_text}\n\nContent: {content}"
 
 def process_markdown_files() -> Dict:
     """Process all markdown files in the input directory and store in consolidated format."""

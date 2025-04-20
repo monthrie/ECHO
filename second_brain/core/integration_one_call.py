@@ -56,13 +56,13 @@ tracer = SecondBrainTracer()
 
 # Configuration
 BASE_DIR = Path(__file__).parent.parent
-CONSOLIDATED_EMBEDDINGS_FILE = BASE_DIR / "data" / "embeddings" / "consolidated_embeddings.json"
-MARKDOWN_DIR = str(BASE_DIR / "data" / "vaults" / "recomms_20250416_173815" / "markdown")
+CONSOLIDATED_EMBEDDINGS_FILE = BASE_DIR / "data" / "embeddings" / "consolidated_embeddings_20250420_180619.json"
+MARKDOWN_DIR = str(BASE_DIR / "data" / "vaults" / "recomms_20250420_180619" / "markdown")
 SIMILARITY_THRESHOLD = 0.50  # Minimum similarity score to consider for comparison
 PROMPT_FILE = BASE_DIR / "prompts" / "integration_prompt.txt"
 
 # Set this to your blueprints directory for testing
-BLUEPRINTS_DIR = Path("/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250417_150701/blueprints")
+BLUEPRINTS_DIR = Path("/Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250416_173815/blueprints")
 
 def load_prompt() -> str:
     """Load the integration prompt from file."""
