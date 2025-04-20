@@ -10,11 +10,20 @@ import requests
 from second_brain.utils.config import Config
 import langsmith
 from langsmith import Client as LangSmithClient
-from langsmith.run_helpers import traceable
+from second_brain.utils.langsmith_tracer import SecondBrainTracer
 
 # Set up logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log_file = "integration.log"
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()  # Keep console output too
+    ]
+)
 logger = logging.getLogger(__name__)
+logger.info("Starting integration process with logging to file")
 
 # Initialize OpenAI client
 client = OpenAI()
@@ -23,9 +32,27 @@ client = OpenAI()
 try:
     langsmith_client = LangSmithClient()
     langsmith_tracing_enabled = True
+    
+    # Log LangSmith configuration details
+    logger.info("LangSmith tracing enabled")
+    logger.info(f"LangSmith API URL: {os.environ.get('LANGCHAIN_ENDPOINT', 'Not set')}")
+    logger.info(f"LangSmith Project: {os.environ.get('LANGCHAIN_PROJECT', 'Not set')}")
+    logger.info(f"LangSmith API Key: {'Set (redacted)' if os.environ.get('LANGCHAIN_API_KEY') else 'Not set'}")
+    
+    # Test LangSmith connection
+    try:
+        # Try to list projects to verify connection
+        projects = langsmith_client.list_projects()
+        project_names = [p.name for p in projects]
+        logger.info(f"Successfully connected to LangSmith. Available projects: {project_names}")
+    except Exception as e:
+        logger.error(f"LangSmith connection test failed: {e}")
 except Exception as e:
     logger.warning(f"LangSmith client initialization failed: {e}")
     langsmith_tracing_enabled = False
+
+# Initialize SecondBrainTracer
+tracer = SecondBrainTracer()
 
 # Configuration
 BASE_DIR = Path(__file__).parent.parent
@@ -63,6 +90,9 @@ def load_prompt() -> str:
         
         IMPORTANT FORMATTING GUIDELINES FOR OBSIDIAN:
         - Do NOT include an H1 heading with the title - Obsidian already displays the title from frontmatter
+        - Start document content with H2 headings
+        - Maintain consistent heading hierarchy (H2 > H3 > H4)
+        - Preserve existing document structure when updating
         - Remove any duplicate headings
         
         FORMAT YOUR RESPONSE AS FOLLOWS:
@@ -83,7 +113,7 @@ def load_prompt() -> str:
         [Repeat for additional documents if needed]
         """
 
-def load_consolidated_embeddings() -> Dict:
+def load_consolidated_embeddings(tracer) -> Dict:
     """Load consolidated document embeddings from storage."""
     embeddings_file = CONSOLIDATED_EMBEDDINGS_FILE
     
@@ -99,7 +129,7 @@ def load_consolidated_embeddings() -> Dict:
         logger.warning(f"Consolidated embeddings file not found: {embeddings_file}")
         return {"documents": {}}
 
-def generate_embedding(text: str) -> List[float]:
+def generate_embedding(text: str, tracer) -> List[float]:
     """Generate embedding for text using OpenAI API."""
     logger.info(f"Generating embedding for text of length {len(text)}")
     response = client.embeddings.create(
@@ -115,7 +145,7 @@ def cosine_similarity(a: List[float], b: List[float]) -> float:
     b_array = np.array(b)
     return np.dot(a_array, b_array) / (np.linalg.norm(a_array) * np.linalg.norm(b_array))
 
-def find_similar_documents(embedding: List[float], consolidated_data: Dict, threshold: float = SIMILARITY_THRESHOLD) -> List[Dict]:
+def find_similar_documents(embedding: List[float], consolidated_data: Dict, tracer, threshold: float = SIMILARITY_THRESHOLD) -> List[Dict]:
     """Find similar documents based on embedding similarity."""
     similar_docs = []
     
@@ -146,7 +176,7 @@ def find_similar_documents(embedding: List[float], consolidated_data: Dict, thre
     
     return similar_docs[:3]  # Return top 3 similar documents
 
-def blueprint_to_text(blueprint: Dict[str, Any]) -> str:
+def blueprint_to_text(blueprint: Dict[str, Any], tracer) -> str:
     """Convert blueprint to text for embedding generation and LLM context."""
     title = blueprint.get("content", {}).get("title", "")
     body = blueprint.get("content", {}).get("body", "")
@@ -170,14 +200,15 @@ def blueprint_to_text(blueprint: Dict[str, Any]) -> str:
     logger.info(f"Blueprint title: {title}")
     logger.info(f"Blueprint tags: {tags}")
     logger.info(f"Blueprint filepath: {filepath}")
+    
     return result
 
-@traceable(name="integration_decision")
-def call_llm(prompt: str) -> str:
+def call_llm(prompt: str, tracer) -> str:
     """Call LLM using OpenRouter API with LangSmith tracing."""
-    logger.info(f"Calling LLM with model: {Config.MODEL}")
+    logger.info(f"Calling LLM using OpenRouter with model: {Config.MODEL}")
     
     try:
+        # Make the API call
         response = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
             headers={
@@ -199,13 +230,25 @@ def call_llm(prompt: str) -> str:
             return "ERROR: Failed to get response from LLM"
         
         response_json = response.json()
-        return response_json["choices"][0]["message"]["content"].strip()
+        result = response_json["choices"][0]["message"]["content"].strip()
+        
+        # Trace the call using trace_openrouter_call
+        logger.info("Tracing LLM call with tracer.trace_openrouter_call")
+        metadata = {
+            "model": Config.MODEL,
+            "temperature": 0.7,
+            "source": "integration_one_call.py"
+        }
+        trace_result = tracer.trace_openrouter_call("integration_decision", prompt, result, metadata)
+        logger.info(f"Trace result: {trace_result}")
+        
+        return result
     
     except Exception as e:
         logger.error(f"Error calling LLM: {e}")
         return f"ERROR: {str(e)}"
 
-def process_blueprint(blueprint_path: str) -> List[str]:
+def process_blueprint(blueprint_path: str, tracer) -> List[str]:
     """Process a single blueprint file for smart integration."""
     logger.info(f"Processing blueprint: {blueprint_path}")
     
@@ -219,14 +262,14 @@ def process_blueprint(blueprint_path: str) -> List[str]:
     logger.info(f"Blueprint filename: {blueprint.get('file_info', {}).get('filename', '')}")
     
     # Load consolidated embeddings
-    consolidated_data = load_consolidated_embeddings()
+    consolidated_data = load_consolidated_embeddings(tracer)
     
     # Generate embedding for blueprint
-    blueprint_text = blueprint_to_text(blueprint)
-    blueprint_embedding = generate_embedding(blueprint_text)
+    blueprint_text = blueprint_to_text(blueprint, tracer)
+    blueprint_embedding = generate_embedding(blueprint_text, tracer)
     
     # Find similar documents
-    similar_docs = find_similar_documents(blueprint_embedding, consolidated_data)
+    similar_docs = find_similar_documents(blueprint_embedding, consolidated_data, tracer)
     
     # Prepare context for LLM
     similar_docs_context = ""
@@ -259,7 +302,7 @@ def process_blueprint(blueprint_path: str) -> List[str]:
     
     # Call LLM API
     logger.info(f"Calling LLM using OpenRouter with model: {Config.MODEL}")
-    llm_response = call_llm(prompt)
+    llm_response = call_llm(prompt, tracer)
     
     # Log LLM response
     logger.info("LLM Response:")
@@ -334,7 +377,7 @@ def process_all_blueprints():
     
     for blueprint_path in blueprint_files:
         logger.info(f"\nProcessing blueprint: {blueprint_path.name}")
-        created_files = process_blueprint(str(blueprint_path))
+        created_files = process_blueprint(str(blueprint_path), tracer)
         logger.info(f"Integration result: {created_files}")
         all_created_files.extend(created_files)
     
@@ -357,7 +400,7 @@ def main():
     if args.all:
         process_all_blueprints()
     elif args.blueprint:
-        created_files = process_blueprint(args.blueprint)
+        created_files = process_blueprint(args.blueprint, tracer)
         logger.info(f"Integration complete. Files created/updated: {created_files}")
     else:
         logger.error("Please specify either --blueprint or --all")
