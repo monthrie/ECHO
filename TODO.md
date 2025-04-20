@@ -1,4 +1,4 @@
-- use the metadata embeddings / indexing for matching
+- use separate metadata embeddings so we can do proper weightings
 - ingestion of different data types and sources
 - full flow with proper file paths
 - sort out the titling issues
