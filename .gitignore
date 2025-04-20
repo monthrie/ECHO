@@ -1,0 +1,45 @@
+# Environment and configuration
+.env
+*.env
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Logs and temporary files
+*.log
+integration.log
+second_brain.log
+llm_prompt.txt
+llm_payload.json
+*.tmp
+
+# Database files
+*.db
+second_brain.db
+*.sqlite
+*.sqlite3
+
+# Output directories and generated content
+**/data/vaults/*/
+**/data/embeddings/
+**/data/output/
+**/data/json/
+**/data/blueprints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store

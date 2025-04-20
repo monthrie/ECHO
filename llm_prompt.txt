@@ -6,8 +6,8 @@
   "session": {
     "session_id": "550e8400-e29b-41d4-a716-446655440000",
     "user_id": "default_user",
-    "started_at": "2023-10-05T14:30:00Z",
-    "summary": "This session focuses on compiling a list of personal recommendations across books, films, and games, organized into a structured directory for future reference."
+    "started_at": "2023-10-05T10:00:00Z",
+    "summary": "This session focuses on organizing personal recommendations for books, films, and games into a structured format for future reference."
   },
   "records": [
     {
@@ -15,21 +15,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Book Recommendation: The Road by Cormac McCarthy - A powerful post-apocalyptic story with sparse yet beautiful writing that captures desolation and hope.",
-      "created_at": "2023-10-05T14:30:05Z",
+      "content": "The Night Circus by Erin Morgenstern is a mesmerizing tale of magic and competition, characterized by lush, dreamlike prose.",
+      "created_at": "2023-10-05T10:01:00Z",
       "tags": [
-        "books",
-        "post-apocalyptic",
+        "book",
         "fiction",
-        "literature"
+        "magic",
+        "competition"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174002",
         "123e4567-e89b-12d3-a456-426614174003"
       ],
       "details": {
-        "title": "Book Rec: The Road by Cormac McCarthy",
-        "notes": "Consider exploring other works by McCarthy for similar thematic depth.",
+        "title": "Book Recommendation: The Night Circus",
+        "notes": "Consider exploring other works by Erin Morgenstern for similar thematic elements.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -45,7 +45,7 @@
         },
         "resource": {
           "category": "Books",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -56,10 +56,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Book Rec: Pachinko by Min Jin Lee",
-          "Book Rec: Dune by Frank Herbert"
+          "Book Recommendation: Project Hail Mary",
+          "Book Recommendation: The Shadow of the Wind"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -67,21 +67,20 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Book Recommendation: Pachinko by Min Jin Lee - A captivating multi-generational Korean family saga set in Japan, exploring identity and resilience.",
-      "created_at": "2023-10-05T14:30:10Z",
+      "content": "Project Hail Mary by Andy Weir is a gripping sci-fi novel blending humor, science, and heart-warming moments.",
+      "created_at": "2023-10-05T10:01:10Z",
       "tags": [
-        "books",
-        "historical-fiction",
-        "family-saga",
-        "literature"
+        "book",
+        "sci-fi",
+        "humor"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174001",
         "123e4567-e89b-12d3-a456-426614174003"
       ],
       "details": {
-        "title": "Book Rec: Pachinko by Min Jin Lee",
-        "notes": "Might inspire interest in Korean-Japanese history and cultural dynamics.",
+        "title": "Book Recommendation: Project Hail Mary",
+        "notes": "Highly engaging for fans of science fiction with emotional depth.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -97,7 +96,7 @@
         },
         "resource": {
           "category": "Books",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -108,10 +107,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Book Rec: The Road by Cormac McCarthy",
-          "Book Rec: Dune by Frank Herbert"
+          "Book Recommendation: The Night Circus",
+          "Book Recommendation: The Shadow of the Wind"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -119,21 +118,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Book Recommendation: Dune by Frank Herbert - A sci-fi classic with incredible worldbuilding, living up to its iconic status.",
-      "created_at": "2023-10-05T14:30:15Z",
+      "content": "The Shadow of the Wind by Carlos Ruiz Zaf\u00f3n is an atmospheric literary mystery set in Barcelona that captivates with its immersive world.",
+      "created_at": "2023-10-05T10:01:20Z",
       "tags": [
-        "books",
-        "sci-fi",
-        "classics",
-        "literature"
+        "book",
+        "mystery",
+        "literary",
+        "Barcelona"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174001",
         "123e4567-e89b-12d3-a456-426614174002"
       ],
       "details": {
-        "title": "Book Rec: Dune by Frank Herbert",
-        "notes": "Consider watching the recent film adaptation for a visual perspective.",
+        "title": "Book Recommendation: The Shadow of the Wind",
+        "notes": "Perfect for readers who enjoy intricate plots and rich settings.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -149,7 +148,7 @@
         },
         "resource": {
           "category": "Books",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -160,10 +159,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Book Rec: The Road by Cormac McCarthy",
-          "Book Rec: Pachinko by Min Jin Lee"
+          "Book Recommendation: The Night Circus",
+          "Book Recommendation: Project Hail Mary"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -171,21 +170,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Film Recommendation: Everything Everywhere All at Once - A mind-bending multiverse adventure with surprising emotional depth.",
-      "created_at": "2023-10-05T14:30:20Z",
+      "content": "The Grand Budapest Hotel by Wes Anderson is a visually stunning comedy with incredible attention to detail and a surprising emotional core.",
+      "created_at": "2023-10-05T10:01:30Z",
       "tags": [
-        "films",
-        "sci-fi",
-        "multiverse",
-        "drama"
+        "film",
+        "comedy",
+        "visual",
+        "Wes Anderson"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174005",
         "123e4567-e89b-12d3-a456-426614174006"
       ],
       "details": {
-        "title": "Film Rec: Everything Everywhere All at Once",
-        "notes": "Great for fans of imaginative storytelling and genre-blending.",
+        "title": "Film Recommendation: The Grand Budapest Hotel",
+        "notes": "Explore other Wes Anderson films for similar stylistic elements.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -201,7 +200,7 @@
         },
         "resource": {
           "category": "Films",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -212,10 +211,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Film Rec: Parasite",
-          "Film Rec: Arrival"
+          "Film Recommendation: Drive My Car",
+          "Film Recommendation: Portrait of a Lady on Fire"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -223,21 +222,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Film Recommendation: Parasite - Bong Joon-ho's masterpiece that brilliantly shifts genres while delivering sharp social commentary.",
-      "created_at": "2023-10-05T14:30:25Z",
+      "content": "Drive My Car is a beautifully patient Japanese drama about grief, art, and human connection that leaves a lasting impression.",
+      "created_at": "2023-10-05T10:01:40Z",
       "tags": [
-        "films",
+        "film",
         "drama",
-        "social-commentary",
-        "thriller"
+        "Japanese",
+        "grief"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174004",
         "123e4567-e89b-12d3-a456-426614174006"
       ],
       "details": {
-        "title": "Film Rec: Parasite",
-        "notes": "Explore other works by Bong Joon-ho for similar thematic explorations.",
+        "title": "Film Recommendation: Drive My Car",
+        "notes": "Highly recommended for deep emotional narratives.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -253,7 +252,7 @@
         },
         "resource": {
           "category": "Films",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -264,10 +263,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Film Rec: Everything Everywhere All at Once",
-          "Film Rec: Arrival"
+          "Film Recommendation: The Grand Budapest Hotel",
+          "Film Recommendation: Portrait of a Lady on Fire"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -275,21 +274,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Film Recommendation: Arrival - Thoughtful sci-fi focusing on language and communication rather than typical alien invasion tropes.",
-      "created_at": "2023-10-05T14:30:30Z",
+      "content": "Portrait of a Lady on Fire is an exquisite period romance with breathtaking cinematography and powerful performances.",
+      "created_at": "2023-10-05T10:01:50Z",
       "tags": [
-        "films",
-        "sci-fi",
-        "language",
-        "drama"
+        "film",
+        "romance",
+        "period",
+        "cinematography"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174004",
         "123e4567-e89b-12d3-a456-426614174005"
       ],
       "details": {
-        "title": "Film Rec: Arrival",
-        "notes": "Might inspire interest in linguistics and Sci-Fi storytelling.",
+        "title": "Film Recommendation: Portrait of a Lady on Fire",
+        "notes": "A visually stunning piece ideal for fans of artistic cinema.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -305,7 +304,7 @@
         },
         "resource": {
           "category": "Films",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -316,10 +315,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Film Rec: Everything Everywhere All at Once",
-          "Film Rec: Parasite"
+          "Film Recommendation: The Grand Budapest Hotel",
+          "Film Recommendation: Drive My Car"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -327,21 +326,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Game Recommendation: Stardew Valley - An addictive farming simulator that's perfect for relaxation with its charming aesthetics.",
-      "created_at": "2023-10-05T14:30:35Z",
+      "content": "Hades is a roguelike masterpiece featuring tight combat, incredible character work, and Greek mythology brought brilliantly to life.",
+      "created_at": "2023-10-05T10:02:00Z",
       "tags": [
-        "games",
-        "simulation",
-        "relaxing",
-        "indie"
+        "game",
+        "roguelike",
+        "Greek mythology",
+        "combat"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174008",
         "123e4567-e89b-12d3-a456-426614174009"
       ],
       "details": {
-        "title": "Game Rec: Stardew Valley",
-        "notes": "Ideal for downtime; consider multiplayer mode for social gaming.",
+        "title": "Game Recommendation: Hades",
+        "notes": "Highly engaging for fans of action games with narrative depth.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -357,7 +356,7 @@
         },
         "resource": {
           "category": "Games",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -368,10 +367,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Game Rec: Disco Elysium",
-          "Game Rec: Hollow Knight"
+          "Game Recommendation: Outer Wilds",
+          "Game Recommendation: Celeste"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -379,21 +378,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Game Recommendation: Disco Elysium - A unique detective RPG with phenomenal writing, blending philosophy and humor.",
-      "created_at": "2023-10-05T14:30:40Z",
+      "content": "Outer Wilds is a unique space exploration game built around curiosity and discovery, featuring an unforgettable time loop mechanic.",
+      "created_at": "2023-10-05T10:02:10Z",
       "tags": [
-        "games",
-        "rpg",
-        "detective",
-        "narrative"
+        "game",
+        "space",
+        "exploration",
+        "time loop"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174007",
         "123e4567-e89b-12d3-a456-426614174009"
       ],
       "details": {
-        "title": "Game Rec: Disco Elysium",
-        "notes": "Highly recommended for fans of deep narrative experiences.",
+        "title": "Game Recommendation: Outer Wilds",
+        "notes": "Perfect for players who enjoy narrative-driven exploration experiences.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -409,7 +408,7 @@
         },
         "resource": {
           "category": "Games",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -420,10 +419,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Game Rec: Stardew Valley",
-          "Game Rec: Hollow Knight"
+          "Game Recommendation: Hades",
+          "Game Recommendation: Celeste"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     },
     {
@@ -431,21 +430,21 @@
       "session_id": "550e8400-e29b-41d4-a716-446655440000",
       "para_type": "resource",
       "type": "recommendation",
-      "content": "Game Recommendation: Hollow Knight - A gorgeous metroidvania with challenging combat and an atmospheric world that invites exploration.",
-      "created_at": "2023-10-05T14:30:45Z",
+      "content": "Celeste is a challenging platformer with gorgeous pixel art that weaves mental health themes into both story and gameplay.",
+      "created_at": "2023-10-05T10:02:20Z",
       "tags": [
-        "games",
-        "metroidvania",
-        "action",
-        "indie"
+        "game",
+        "platformer",
+        "mental health",
+        "pixel art"
       ],
       "links": [
         "123e4567-e89b-12d3-a456-426614174007",
         "123e4567-e89b-12d3-a456-426614174008"
       ],
       "details": {
-        "title": "Game Rec: Hollow Knight",
-        "notes": "Perfect for players who enjoy challenging gameplay and intricate worlds.",
+        "title": "Game Recommendation: Celeste",
+        "notes": "A meaningful game for those interested in stories about personal struggles.",
         "parent_entity": "Personal Recommendations",
         "entity_type": "resource"
       },
@@ -461,7 +460,7 @@
         },
         "resource": {
           "category": "Games",
-          "format": "Note"
+          "format": "note"
         },
         "archive": {
           "archived_date": "",
@@ -472,10 +471,10 @@
       "relationships": {
         "belongs_to": "Personal Recommendations",
         "related_items": [
-          "Game Rec: Stardew Valley",
-          "Game Rec: Disco Elysium"
+          "Game Recommendation: Hades",
+          "Game Recommendation: Outer Wilds"
         ],
-        "collection": "Recommendations Directory"
+        "collection": "Recommendations"
       }
     }
   ]
@@ -487,16 +486,16 @@ but should NOT be converted into separate markdown files themselves:
 
 [
   {
-    "instruction_id": "987fcdeb-51ae-4a44-9a36-0493b9a5d4e1",
+    "instruction_id": "987fcdeb-51a2-4b8c-8791-abc123456789",
     "command_type": "Organize Recommendations",
     "instruction_type": "structural",
-    "description": "Organize the provided recommendations into three separate files categorized by Books, Films, and Games within a directory named 'Recommendations'.",
+    "description": "Organize the recommendations into three separate files for books, films, and games within a directory named 'Recommendations'.",
     "parameters": {
       "target": "all_session_content",
-      "format": "Three separate markdown files: Books.md, Films.md, Games.md",
+      "format": "three files: Books.md, Films.md, Games.md",
       "additional_info": "Directory name: Recommendations"
     },
-    "priority": "3",
+    "priority": "2",
     "dependencies": []
   }
 ]
@@ -588,7 +587,7 @@ Each blueprint should have this structure:
   "frontmatter": {
     "tags": ["tag1", "tag2"],
     "record_ids": ["record_id1", "record_id2"],
-    "goal": "The project goal (only for projects)"
+    "description": "A short but densely informative description of the note - this will be used for cosine similarity search"
   },
   "content": {
     "title": "The title for the note",

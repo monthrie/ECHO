@@ -126,7 +126,7 @@ Each blueprint should have this structure:
   "frontmatter": {{
     "tags": ["tag1", "tag2"],
     "record_ids": ["record_id1", "record_id2"],
-    "goal": "The project goal (only for projects)"
+    "description": "A short but densely informative description of the note - this will be used for cosine similarity search"
   }},
   "content": {{
     "title": "The title for the note",
