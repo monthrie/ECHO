@@ -114,26 +114,32 @@ class Config:
         # Extract the base name without extension for vault naming
         cls.CURRENT_TRANSCRIPT_NAME = transcript_file.stem
         
-        # Create the base vaults directory if it doesn't exist
-        Path(cls.VAULTS_BASE_DIR).mkdir(parents=True, exist_ok=True)
+        # Create permanent Obsidian vault directory (not timestamped)
+        cls.OBSIDIAN_VAULT_PATH = cls.BASE_DIR / "data" / "obsidian_vault"
+        cls.OBSIDIAN_VAULT_PATH.mkdir(parents=True, exist_ok=True)
         
         # Create a vault directory for this transcript
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         cls.CURRENT_VAULT_DIR = Path(cls.VAULTS_BASE_DIR) / f"{cls.CURRENT_TRANSCRIPT_NAME}_{timestamp}"
         cls.CURRENT_VAULT_DIR.mkdir(parents=True, exist_ok=True)
         
-        # Set up the directory structure for this run
+        # Set up the directory structure for this run's artifacts
         cls.JSON_OUTPUT_DIR = str(cls.CURRENT_VAULT_DIR / "json")
         Path(cls.JSON_OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
         
         cls.BLUEPRINTS_DIR = os.path.join(cls.CURRENT_VAULT_DIR, "blueprints")
         Path(cls.BLUEPRINTS_DIR).mkdir(parents=True, exist_ok=True)
         
+        # Add log directory for complete run information
+        cls.RUN_LOG_DIR = cls.CURRENT_VAULT_DIR / "logs"
+        Path(cls.RUN_LOG_DIR).mkdir(parents=True, exist_ok=True)
+        
+        # For backward compatibility
         cls.MARKDOWN_OUTPUT_DIR = str(cls.CURRENT_VAULT_DIR / "markdown")
         Path(cls.MARKDOWN_OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
         
-        # Add this line to maintain compatibility with blueprint_to_markdown.py
-        cls.VAULT_PATH = cls.MARKDOWN_OUTPUT_DIR
+        # THIS IS THE KEY CHANGE: Point VAULT_PATH to the permanent vault
+        cls.VAULT_PATH = str(cls.OBSIDIAN_VAULT_PATH)
         
         # Set up LangSmith project name with timestamp for uniqueness
         if not os.getenv("LANGSMITH_PROJECT"):
