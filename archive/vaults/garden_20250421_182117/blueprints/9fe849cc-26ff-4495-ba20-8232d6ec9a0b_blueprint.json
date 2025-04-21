@@ -1,0 +1,19 @@
+{
+  "file_info": {
+    "directory": "Gardening",
+    "filename": "Vegetable Planting Calendar for Zone 7b",
+    "record_id": "rec2-planting-calendar"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "planting-calendar",
+      "zone-7b"
+    ],
+    "description": "A reference calendar for planting times of various vegetables in a Zone 7b climate."
+  },
+  "content": {
+    "title": "Vegetable Planting Calendar for Zone 7b",
+    "body": "## Planting Schedule\n- [ ] Tomatoes: Start seeds indoors in late February to early March, transplant outdoors in late April to early May.\n- [ ] Lettuce: Direct sow seeds in early spring (March-April) or fall (August-September).\n- [ ] Carrots: Direct sow seeds from March to June for a continuous harvest.\n- [ ] Beans: Direct sow seeds after the last frost, typically mid to late April.\n- [ ] Cucumbers: Start seeds indoors in early April or direct sow in late April to early May.\n\n**Note:** Adjust planting dates based on exact weather conditions and last frost date (typically mid-April in Zone 7b).\n\n## Related Notes\n- [[Beginner Vegetable Garden Plan]]"
+  }
+}

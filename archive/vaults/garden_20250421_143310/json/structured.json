@@ -1,0 +1,138 @@
+{
+  "session": {
+    "session_id": "550e8400-e29b-41d4-a716-446655440000",
+    "user_id": "default_user",
+    "started_at": "2023-10-05T12:00:00Z",
+    "summary": "User is planning a beginner vegetable garden in their backyard, focusing on suitable vegetables, supplies, layout, planting schedule, and pest control for a zone 7b climate."
+  },
+  "records": [
+    {
+      "record_id": "rec1-uuid-1234-5678",
+      "title": "Beginner Vegetable Garden Project Plan",
+      "content": "This record outlines the plan for starting a small vegetable garden in the backyard, including layout, supplies, and initial thoughts on planting and pest control.",
+      "created_at": "2023-10-05T12:05:00Z",
+      "tags": [
+        "gardening",
+        "vegetable garden",
+        "beginner",
+        "zone 7b"
+      ],
+      "related_records": [
+        "rec2-uuid-1234-5679"
+      ],
+      "description": "A comprehensive project plan for a beginner's vegetable garden with sections for layout, supplies, and initial planning.",
+      "sections": [
+        {
+          "heading": "Garden Layout",
+          "content": "Planning a small garden bed of 4 feet by 8 feet, as it's considered a good size for beginners. The selected location receives about 6 hours of sunlight daily, which needs verification for sufficiency for most vegetables.",
+          "type": "text"
+        },
+        {
+          "heading": "Supplies Needed",
+          "content": "- Soil\n- Containers or raised bed materials\n- Seeds (tomatoes, lettuce, others TBD)\n- Basic gardening tools\n- Watering system (considering simple drip irrigation)",
+          "type": "checklist"
+        },
+        {
+          "heading": "Initial Planting Thoughts",
+          "content": "Considering tomatoes and lettuce as they are beginner-friendly. Interested in companion planting, such as basil near tomatoes. Aiming to have everything planted by early May.",
+          "type": "text"
+        },
+        {
+          "heading": "Pest Control",
+          "content": "Concerned about pests like rabbits in the neighborhood. Planning to explore fencing options and natural pest deterrents instead of chemicals.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "Vegetable Garden Planning",
+        "status": "In Progress",
+        "priority": "medium"
+      }
+    },
+    {
+      "record_id": "rec2-uuid-1234-5679",
+      "title": "Planting Calendar for Vegetable Garden",
+      "content": "A reference calendar for planting schedules of various vegetables in the garden, to be updated with specific dates and vegetables based on zone 7b climate.",
+      "created_at": "2023-10-05T12:10:00Z",
+      "tags": [
+        "gardening",
+        "planting schedule",
+        "zone 7b"
+      ],
+      "related_records": [
+        "rec1-uuid-1234-5678"
+      ],
+      "description": "A dedicated reference for the planting calendar to track when to plant each vegetable throughout the season.",
+      "sections": [
+        {
+          "heading": "Planting Schedule",
+          "content": "To be populated with specific vegetables and planting dates for zone 7b climate. Aiming for completion by early May.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "Planting Calendar",
+        "status": "Pending Research",
+        "priority": "medium"
+      }
+    }
+  ],
+  "system_instructions": [
+    {
+      "instruction_id": "inst1-uuid-9012-3456",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research vegetables that grow best in a zone 7b climate for a beginner vegetable garden.",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "text_summary",
+        "query": "best vegetables for beginners in zone 7b climate",
+        "additional_info": "Focus on ease of growth and suitability for the climate."
+      },
+      "priority": "3",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "inst2-uuid-9012-3457",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research ideal dimensions for a beginner's raised bed garden.",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "text_summary",
+        "query": "ideal dimensions for beginner raised bed garden",
+        "additional_info": "Focus on practical sizes for ease of management."
+      },
+      "priority": "2",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "inst3-uuid-9012-3458",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research if 6 hours of sunlight is sufficient for most vegetables.",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "text_summary",
+        "query": "is 6 hours of sunlight enough for vegetables",
+        "additional_info": "Specify which vegetables can thrive under these conditions."
+      },
+      "priority": "3",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "inst4-uuid-9012-3459",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research companion planting for vegetables, particularly for tomatoes and basil.",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "text_summary",
+        "query": "companion planting for vegetables tomatoes basil",
+        "additional_info": "Include benefits and other compatible plants."
+      },
+      "priority": "2",
+      "dependencies": []
+    }
+  ]
+}

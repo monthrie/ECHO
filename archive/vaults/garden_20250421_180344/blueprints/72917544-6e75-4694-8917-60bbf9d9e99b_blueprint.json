@@ -1,0 +1,19 @@
+{
+  "file_info": {
+    "directory": "Gardening",
+    "filename": "Planting Calendar for Vegetable Garden",
+    "record_id": "rec2-planting-calendar"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "planting-calendar",
+      "zone-7b"
+    ],
+    "description": "A seasonal calendar detailing when to plant each vegetable in a beginner's garden for zone 7b."
+  },
+  "content": {
+    "title": "Planting Calendar for Vegetable Garden",
+    "body": "# Planting Calendar for Vegetable Garden\n\nA dedicated reference for the planting schedule of vegetables in the beginner's garden, to be referred to throughout the season.\n\n## Calendar Overview\n\nTo be populated with specific planting dates for selected vegetables suitable for zone 7b climate. Research results on appropriate vegetables and timing will be integrated here.\n\n## Related Notes\n\n- [[Vegetable Garden Project Plan]]"
+  }
+}

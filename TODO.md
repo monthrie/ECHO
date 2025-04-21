@@ -2,7 +2,4 @@
 - consider other tools that we could make available...
 - use separate metadata embeddings so we can do proper weightings
 - ingestion of different data types and sources
-- full flow with proper file paths
-- sort out the titling issues
-- make the links work well
-- make it clear that this is for obsidian
+- proper file paths and saving

@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Projects/Backyard Vegetable Garden",
+    "filename": "Garden Location Sunlight Assessment.md",
+    "record_id": "rec05-sunlight-check"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "sunlight",
+      "task"
+    ],
+    "record_ids": [
+      "rec05-sunlight-check"
+    ],
+    "description": "Task to verify sunlight exposure for the Backyard Vegetable Garden location."
+  },
+  "content": {
+    "title": "Garden Location Sunlight Assessment",
+    "body": "This note focuses on verifying the suitability of the garden location based on sunlight exposure.\n\n## Task Details\n- **Content**: Verify if the garden location receiving 6 hours of sunlight daily is sufficient for most vegetables.\n- **Goal**: Confirm suitability of garden location based on sunlight exposure.\n- **Deadline**: 2023-04-01\n- **Notes**: Consider measuring sunlight over a few days for accuracy. Adjust location if sunlight is insufficient.\n\n## Related Notes\n- [[Backyard Vegetable Garden Overview]]"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Projects/Backyard Vegetable Garden",
+    "filename": "Garden Supplies List.md",
+    "record_id": "rec03-supplies-list"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "supplies",
+      "task"
+    ],
+    "record_ids": [
+      "rec03-supplies-list"
+    ],
+    "description": "Task to compile a list of necessary supplies for the Backyard Vegetable Garden project."
+  },
+  "content": {
+    "title": "Garden Supplies List",
+    "body": "This note details the task of compiling a list of necessary supplies for the vegetable garden.\n\n## Task Details\n- **Content**: Compile a list of necessary supplies including soil, containers or raised bed materials, seeds, basic gardening tools, and a watering system (consider drip irrigation).\n- **Goal**: Gather all necessary materials for starting the garden.\n- **Deadline**: 2023-04-15\n- **Notes**: Ensure all items are suitable for a small-scale beginner garden. Research cost-effective options for drip irrigation.\n\n## Related Notes\n- [[Backyard Vegetable Garden Overview]]"
+  }
+}

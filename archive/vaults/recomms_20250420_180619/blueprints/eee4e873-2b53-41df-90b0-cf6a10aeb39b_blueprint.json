@@ -1,0 +1,31 @@
+{
+  "file_info": {
+    "directory": "Resources/Recommendations",
+    "filename": "Films.md",
+    "record_id": "123e4567-e89b-12d3-a456-426614174004"
+  },
+  "frontmatter": {
+    "tags": [
+      "film",
+      "comedy",
+      "visual",
+      "Wes Anderson",
+      "drama",
+      "Japanese",
+      "grief",
+      "romance",
+      "period",
+      "cinematography"
+    ],
+    "record_ids": [
+      "123e4567-e89b-12d3-a456-426614174004",
+      "123e4567-e89b-12d3-a456-426614174005",
+      "123e4567-e89b-12d3-a456-426614174006"
+    ],
+    "description": "A collection of personal film recommendations spanning comedy, drama, and romance genres."
+  },
+  "content": {
+    "title": "Film Recommendations",
+    "body": "## Film Recommendations\n\nThis file contains a curated list of film recommendations for personal reference.\n\n### The Grand Budapest Hotel by Wes Anderson\n- **Description**: A visually stunning comedy with incredible attention to detail and a surprising emotional core.\n- **Notes**: Explore other Wes Anderson films for similar stylistic elements.\n- **Tags**: #film #comedy #visual #WesAnderson\n- **Related**: [[Film Recommendation: Drive My Car]], [[Film Recommendation: Portrait of a Lady on Fire]]\n\n### Drive My Car\n- **Description**: A beautifully patient Japanese drama about grief, art, and human connection that leaves a lasting impression.\n- **Notes**: Highly recommended for deep emotional narratives.\n- **Tags**: #film #drama #Japanese #grief\n- **Related**: [[Film Recommendation: The Grand Budapest Hotel]], [[Film Recommendation: Portrait of a Lady on Fire]]\n\n### Portrait of a Lady on Fire\n- **Description**: An exquisite period romance with breathtaking cinematography and powerful performances.\n- **Notes**: A visually stunning piece ideal for fans of artistic cinema.\n- **Tags**: #film #romance #period #cinematography\n- **Related**: [[Film Recommendation: The Grand Budapest Hotel]], [[Film Recommendation: Drive My Car]]"
+  }
+}

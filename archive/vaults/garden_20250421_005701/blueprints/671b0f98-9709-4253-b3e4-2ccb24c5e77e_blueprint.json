@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Resources/Gardening Techniques",
+    "filename": "Companion Planting Notes.md",
+    "record_id": "rec06-companion-planting"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "companion-planting",
+      "research"
+    ],
+    "record_ids": [
+      "rec06-companion-planting"
+    ],
+    "description": "Research on companion planting strategies to enhance vegetable growth and pest resistance."
+  },
+  "content": {
+    "title": "Companion Planting Notes",
+    "body": "This research note explores companion planting strategies for the vegetable garden.\n\n## Research Details\n- **Content**: Explore companion planting strategies, such as planting basil near tomatoes, to enhance vegetable growth and pest resistance.\n- **Category**: Gardening Techniques\n- **Format**: Research note\n- **Notes**: Document beneficial plant pairings and avoid detrimental combinations for optimal garden health.\n\n## Related Notes\n- [[Backyard Vegetable Garden Overview]]"
+  }
+}

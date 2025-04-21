@@ -1,0 +1,181 @@
+{
+  "session": {
+    "session_id": "550e8400-e29b-41d4-a716-446655440000",
+    "user_id": "default_user",
+    "started_at": "2023-10-05T12:00:00Z",
+    "summary": "User shared recommendations for books, films, and games, requesting them to be organized into three files in a directory named 'Recommendations'."
+  },
+  "records": [
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174001",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "The Night Circus by Erin Morgenstern: A mesmerizing tale of magic and competition with lush, dreamlike prose. Project Hail Mary by Andy Weir: Gripping sci-fi with a perfect blend of humor, science, and heart-warming moments. The Shadow of the Wind by Carlos Ruiz Zaf\u00f3n: Atmospheric literary mystery set in Barcelona that pulls you into its world completely.",
+      "created_at": "2023-10-05T12:01:00Z",
+      "tags": [
+        "books",
+        "reading",
+        "fiction",
+        "recommendations"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174002",
+        "123e4567-e89b-12d3-a456-426614174003"
+      ],
+      "details": {
+        "title": "Book Recommendations",
+        "notes": "Consider exploring these books for leisure reading or book club discussions.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Literature",
+          "format": "note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Film Recommendations",
+          "Game Recommendations"
+        ],
+        "collection": "Recommendations"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174002",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "The Grand Budapest Hotel by Wes Anderson: Visually stunning comedy with incredible attention to detail and a surprising emotional core. Drive My Car: Beautifully patient Japanese drama about grief, art, and human connection that stays with you. Portrait of a Lady on Fire: Exquisite period romance with breathtaking cinematography and powerful performances.",
+      "created_at": "2023-10-05T12:02:00Z",
+      "tags": [
+        "films",
+        "movies",
+        "cinema",
+        "recommendations"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174001",
+        "123e4567-e89b-12d3-a456-426614174003"
+      ],
+      "details": {
+        "title": "Film Recommendations",
+        "notes": "These films offer a range of genres and emotional depth, perfect for movie nights or thematic analysis.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Cinema",
+          "format": "note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Book Recommendations",
+          "Game Recommendations"
+        ],
+        "collection": "Recommendations"
+      }
+    },
+    {
+      "record_id": "123e4567-e89b-12d3-a456-426614174003",
+      "session_id": "550e8400-e29b-41d4-a716-446655440000",
+      "para_type": "resource",
+      "type": "recommendation",
+      "content": "Hades: Roguelike masterpiece with tight combat, incredible character work, and Greek mythology brought brilliantly to life. Outer Wilds: Unique space exploration game built around curiosity and discovery with an unforgettable time loop mechanic. Celeste: Challenging platformer with gorgeous pixel art that weaves mental health themes into both story and gameplay.",
+      "created_at": "2023-10-05T12:03:00Z",
+      "tags": [
+        "games",
+        "video games",
+        "gaming",
+        "recommendations"
+      ],
+      "links": [
+        "123e4567-e89b-12d3-a456-426614174001",
+        "123e4567-e89b-12d3-a456-426614174002"
+      ],
+      "details": {
+        "title": "Game Recommendations",
+        "notes": "These games offer diverse genres and themes, suitable for both casual and dedicated gaming sessions.",
+        "parent_entity": "Personal Recommendations",
+        "entity_type": "resource"
+      },
+      "para_metadata": {
+        "project": {
+          "goal": "",
+          "deadline": "",
+          "parent_project": ""
+        },
+        "area": {
+          "responsibility": "",
+          "review_frequency": ""
+        },
+        "resource": {
+          "category": "Gaming",
+          "format": "note"
+        },
+        "archive": {
+          "archived_date": "",
+          "original_para_type": "",
+          "reason": ""
+        }
+      },
+      "relationships": {
+        "belongs_to": "Personal Recommendations",
+        "related_items": [
+          "Book Recommendations",
+          "Film Recommendations"
+        ],
+        "collection": "Recommendations"
+      }
+    }
+  ],
+  "system_instructions": [
+    {
+      "instruction_id": "987fcdeb-51a2-4d3e-9f1a-abcde1234567",
+      "command_type": "Organize Content into Files",
+      "instruction_type": "structural",
+      "description": "Organize the provided recommendations into three separate files categorized by books, films, and games, stored in a directory called 'Recommendations'.",
+      "parameters": {
+        "target": "all_session_content",
+        "format": "three separate files: Books.md, Films.md, Games.md",
+        "additional_info": "Directory name: Recommendations"
+      },
+      "priority": "2",
+      "dependencies": []
+    }
+  ]
+}

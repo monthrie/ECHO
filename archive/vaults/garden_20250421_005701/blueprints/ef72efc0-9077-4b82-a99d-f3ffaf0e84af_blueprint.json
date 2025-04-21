@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Areas/Gardening in Zone 7b",
+    "filename": "Contents.md",
+    "record_id": "rec-123e4567-e89b-12d3-a456-426614174001"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "zone-7b",
+      "beginner-gardening"
+    ],
+    "record_ids": [
+      "rec-123e4567-e89b-12d3-a456-426614174001"
+    ],
+    "description": "Map of contents for Gardening in Zone 7b, linking to climate overviews, vegetable profiles, and tips."
+  },
+  "content": {
+    "title": "Gardening in Zone 7b - Contents",
+    "body": "## Overview\nThis file serves as the Map of Contents (MOC) for Gardening in Zone 7b, providing links to all related notes and resources.\n\n## Area Notes\n- [[Zone 7b Climate and Beginner Gardening Overview]]\n\n## Resources\n- [[Beginner Vegetable Profile for Zone 7b]]\n- [[General Gardening Tips for Zone 7b]]\n\n## Tasks\n- [[Zone 7b Gardening Tasks]]"
+  }
+}

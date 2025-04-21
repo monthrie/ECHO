@@ -1,0 +1,154 @@
+{
+  "session": {
+    "session_id": "session-123e4567-e89b-12d3-a456-426614174000",
+    "user_id": "default_user",
+    "started_at": "2023-10-05T14:30:00Z",
+    "summary": "User is planning a beginner's vegetable garden in their backyard, seeking guidance on suitable vegetables, supplies, garden layout, planting schedules, and pest control for a zone 7b climate."
+  },
+  "records": [
+    {
+      "record_id": "rec-123e4567-e89b-12d3-a456-426614174001",
+      "title": "Beginner's Vegetable Garden Project Plan",
+      "content": "This record serves as the central plan for starting a small vegetable garden in the backyard, targeting a 4x8 feet raised bed with a focus on beginner-friendly vegetables and manageable steps for completion by early May.",
+      "created_at": "2023-10-05T14:30:00Z",
+      "tags": [
+        "gardening",
+        "vegetable garden",
+        "beginner",
+        "project plan",
+        "zone 7b"
+      ],
+      "related_records": [
+        "rec-123e4567-e89b-12d3-a456-426614174002"
+      ],
+      "description": "A comprehensive project plan for a beginner's vegetable garden with detailed sections on layout, supplies, and schedules.",
+      "sections": [
+        {
+          "heading": "Garden Layout",
+          "content": "Planning a raised bed of 4 feet by 8 feet in a backyard location that receives about 6 hours of sunlight daily. Need to confirm if 6 hours of sunlight is sufficient for most vegetables. Research ideal dimensions for beginner raised beds.",
+          "type": "text"
+        },
+        {
+          "heading": "Supplies Needed",
+          "content": "- Soil\n- Containers or raised bed materials (for 4x8 feet bed)\n- Seeds (tomatoes, lettuce, others TBD)\n- Basic gardening tools\n- Watering system (consider simple drip irrigation)\n- Fencing or natural pest deterrents (to protect against rabbits and other pests)",
+          "type": "checklist"
+        },
+        {
+          "heading": "Planting Schedule",
+          "content": "Target planting completion by early May. Specific planting calendar to be detailed in a separate note for reference throughout the season.",
+          "type": "text"
+        },
+        {
+          "heading": "Additional Considerations",
+          "content": "- Research companion planting (e.g., basil near tomatoes for mutual benefit).\n- Address pest control with a preference for natural deterrents over chemicals.\n- Confirm suitability of vegetables for zone 7b climate.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "Vegetable Garden Planning",
+        "status": "In Progress",
+        "priority": "high"
+      }
+    },
+    {
+      "record_id": "rec-123e4567-e89b-12d3-a456-426614174002",
+      "title": "Vegetable Planting Calendar",
+      "content": "A reference guide for the planting schedule of selected vegetables to ensure timely planting and harvesting throughout the season, targeting completion by early May.",
+      "created_at": "2023-10-05T14:30:00Z",
+      "tags": [
+        "gardening",
+        "planting calendar",
+        "vegetable garden",
+        "schedule"
+      ],
+      "related_records": [
+        "rec-123e4567-e89b-12d3-a456-426614174001"
+      ],
+      "description": "A standalone reference note for the planting calendar of vegetables in the beginner's garden.",
+      "sections": [
+        {
+          "heading": "Calendar Placeholder",
+          "content": "Detailed planting dates for each vegetable to be added after research on zone 7b suitability and specific vegetable needs. Target completion by early May.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "Planting Schedule",
+        "status": "Pending Research",
+        "priority": "medium"
+      }
+    }
+  ],
+  "system_instructions": [
+    {
+      "instruction_id": "instr-123e4567-e89b-12d3-a456-426614174003",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research vegetables suitable for beginners and specific to zone 7b climate.",
+      "parameters": {
+        "target": "Vegetable suitability for zone 7b",
+        "format": "text summary",
+        "query": "best vegetables for beginners in zone 7b climate",
+        "additional_info": "Focus on ease of growth and seasonal compatibility."
+      },
+      "priority": "3",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "instr-123e4567-e89b-12d3-a456-426614174004",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research ideal dimensions for a beginner's raised bed garden.",
+      "parameters": {
+        "target": "Raised bed dimensions",
+        "format": "text summary",
+        "query": "ideal dimensions for beginner raised bed garden",
+        "additional_info": "Focus on manageable sizes for new gardeners."
+      },
+      "priority": "2",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "instr-123e4567-e89b-12d3-a456-426614174005",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research companion planting strategies for vegetables, especially pairings like basil and tomatoes.",
+      "parameters": {
+        "target": "Companion planting",
+        "format": "text summary",
+        "query": "companion planting for vegetables especially basil and tomatoes",
+        "additional_info": "Focus on beneficial pairings and pest control benefits."
+      },
+      "priority": "3",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "instr-123e4567-e89b-12d3-a456-426614174006",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research natural pest deterrents for garden vegetables, focusing on rabbit protection.",
+      "parameters": {
+        "target": "Natural pest control",
+        "format": "text summary",
+        "query": "natural pest deterrents for vegetable gardens rabbits",
+        "additional_info": "Avoid chemical solutions, prioritize natural and DIY methods."
+      },
+      "priority": "3",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "instr-123e4567-e89b-12d3-a456-426614174007",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research if 6 hours of sunlight is sufficient for most vegetables.",
+      "parameters": {
+        "target": "Sunlight requirements",
+        "format": "text summary",
+        "query": "is 6 hours of sunlight enough for vegetables",
+        "additional_info": "Focus on common vegetables like tomatoes and lettuce."
+      },
+      "priority": "2",
+      "dependencies": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+---
+tags: ["accountability", "public-data", "ai-analysis", "news-storage", "transparency"]
+description: Detailed concept and architecture for Follow The Fucking Money (FTFM), a public accountability system using AI-driven data structuring.
+---
+
+## Overview
+This note outlines the concept and potential implementation of 'Follow The Fucking Money (FTFM)', a system designed to track and analyze public statements and actions for accountability. The goal is to create a transparent 'source of truth' by mapping and structuring data from various sources like podcasts, news, and public records using AI.
+
+## Core Concept
+FTFM aims to hold public figures accountable by tracking their statements, promises, and actions over time. It identifies patterns, contradictions, and changes in stance by mapping data from sources like podcasts (e.g., Glenn Greenwald's podcasts over the last 6 months), news, and public records. The system flags events such as promises made by politicians and checks if they are fulfilled.
+
+## Minimal Viable Proof of Concept
+The initial proof of concept could involve transcribing and analyzing one or two of Glenn Greenwald's podcasts. A model would extract entities (people, places, laws, events), create detailed JSON structures, and note conflicts of interest, hypocrisies, or changes in mind. Additional sources could be added later to expand the dataset.
+
+## Purpose and Impact
+This system addresses the lack of a storage layer for day-to-day reality in news and public discourse. Unlike Wikipedia, which stores static, encyclopedic information, FTFM would record dynamic, evolving details of what matters. It serves as a backend for news, making obfuscation transparent.
+
+## Technical Architecture
+The system would use AI to process text data into structured JSON records with embeddings for indexing. These records would be stored in a database with a translation layer converting them into markdown notes or files for tools like Obsidian. A sync mechanism between frontend and backend databases is needed, along with a generative AI for analysis, research, and querying (forming a giant RAG pipeline).
+
+### Potential Architecture Diagram
+```mermaid
+flowchart TD
+    A[Data Sources] -->|Podcasts, News, Records| B[AI Processing]
+    B -->|Entity Extraction| C[Structured JSON Records]
+    C -->|Embeddings & Indexing| D[Database Storage]
+    D -->|Translation Layer| E[Markdown Notes in Obsidian]
+    D -->|Sync Mechanism| F[Frontend Interface]
+    F -->|Generative AI Queries| G[RAG Pipeline for Analysis]
+```
+
+## Related Notes
+- [[AI Dictation System Project]]

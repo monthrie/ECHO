@@ -1,0 +1,23 @@
+{
+  "file_info": {
+    "directory": "Projects/Beginner Garden Setup",
+    "filename": "Assess Personal Needs for Raised Bed Dimensions.md",
+    "record_id": "rec-123e4567-e89b-12d3-a456-426614174002"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "raised-bed",
+      "task",
+      "garden-planning"
+    ],
+    "record_ids": [
+      "rec-123e4567-e89b-12d3-a456-426614174002"
+    ],
+    "description": "Task to evaluate personal gardening needs for raised bed dimensions based on research."
+  },
+  "content": {
+    "title": "Assess Personal Needs for Raised Bed Dimensions",
+    "body": "This note outlines the task of evaluating personal gardening needs to determine suitable raised bed dimensions.\n\n## Task Details\n- **Content**: Evaluate personal gardening needs to determine if a 4x8 foot raised bed with 12-inch depth is suitable, considering specific crops, soil type, climate, and accessibility requirements.\n- **Goal**: Set up an optimal raised bed garden for beginner needs.\n- **Deadline**: 2023-11-05\n- **Notes**: Use the research findings as a baseline but tailor the garden bed size to individual constraints or goals. Consider consulting additional resources if planning for unique crops or accessibility modifications.\n\n## Related Notes\n- [[Optimal Dimensions for Beginners Raised Bed Garden]]"
+  }
+}
