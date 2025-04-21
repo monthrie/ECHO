@@ -13,90 +13,107 @@ A JSON object containing:
 ## Input JSON Data
 {
   "session": {
-    "session_id": "session-uuid-1234",
+    "session_id": "uuid-session-1234-5678-9012-3456",
     "user_id": "default_user",
-    "started_at": "2023-10-05T14:30:00Z",
-    "summary": "User is planning a beginner vegetable garden in their backyard, focusing on suitable vegetables for zone 7b, garden setup, supplies, planting schedules, and pest management."
+    "started_at": "2023-10-01T10:00:00Z",
+    "summary": "User ideation session focused on developing a proof of concept for 'Follow The Fucking Money (FTFM)', a system to track public statements and accountability using AI and structured data, alongside a side note on personal journaling and AI dictation projects."
   },
   "records": [
     {
-      "record_id": "rec-uuid-1001",
-      "title": "Beginner Vegetable Garden Project Plan",
-      "content": "This record outlines the comprehensive plan for starting a small vegetable garden in a backyard with a focus on beginner-friendly vegetables, garden layout, supplies, and other considerations.",
-      "created_at": "2023-10-05T14:35:00Z",
+      "record_id": "uuid-record-1234-5678-9012-0001",
+      "title": "Follow The Fucking Money (FTFM) Proof of Concept",
+      "content": "This record outlines the concept and potential implementation of 'Follow The Fucking Money (FTFM)', a system designed to track and analyze public statements and actions for accountability. The goal is to create a transparent 'source of truth' by mapping and structuring data from various sources like podcasts, news, and public records using AI.",
+      "created_at": "2023-10-01T10:05:00Z",
       "tags": [
-        "gardening",
-        "vegetable garden",
-        "beginner",
-        "zone 7b"
+        "accountability",
+        "public data",
+        "AI analysis",
+        "news storage",
+        "transparency"
       ],
       "related_records": [
-        "rec-uuid-1002"
+        "uuid-record-1234-5678-9012-0002",
+        "uuid-record-1234-5678-9012-0003"
       ],
-      "description": "A detailed project plan for initiating a beginner vegetable garden with specific sections for layout, supplies, and other planning aspects.",
+      "description": "Exploration of a system to track public statements and actions for accountability using AI-driven data structuring.",
       "sections": [
         {
-          "heading": "Garden Layout",
-          "content": "Planning a small garden bed of 4 feet by 8 feet, which is a recommended size for beginners. The chosen location receives about 6 hours of sunlight daily, which is generally sufficient for most vegetables like tomatoes and lettuce. Confirmation needed if 6 hours is optimal for selected crops.",
+          "heading": "Core Concept",
+          "content": "FTFM aims to hold public figures accountable by tracking their statements, promises, and actions over time. It identifies patterns, contradictions, and changes in stance by mapping data from sources like podcasts (e.g., Glenn Greenwald's podcasts over the last 6 months), news, and public records. The system flags events such as promises made by politicians and checks if they are fulfilled.",
           "type": "text"
         },
         {
-          "heading": "Supplies Needed",
-          "content": "- Soil\n- Containers or materials for raised bed (4ft x 8ft)\n- Seeds (tomatoes, lettuce, others TBD)\n- Basic gardening tools (shovel, trowel, gloves)\n- Watering system (considering simple drip irrigation)",
-          "type": "checklist"
-        },
-        {
-          "heading": "General Planting Considerations",
-          "content": "Aim to have everything planted by early May. Research companion planting options, such as planting basil near tomatoes for mutual benefit. Address pest concerns, especially rabbits, by exploring fencing options and natural pest deterrents instead of chemicals.",
+          "heading": "Minimal Viable Proof of Concept",
+          "content": "The initial proof of concept could involve transcribing and analyzing one or two of Glenn Greenwald's podcasts. A model would extract entities (people, places, laws, events), create detailed JSON structures, and note conflicts of interest, hypocrisies, or changes in mind. Additional sources could be added later to expand the dataset.",
           "type": "text"
         },
         {
-          "heading": "Vegetables for Beginners in Zone 7b",
-          "content": "Suitable vegetables for beginner gardeners in USDA Hardiness Zone 7b (average minimum winter temperatures of 5 to 10\u00b0F) include:\n- Tomatoes: Easy to grow, require full sun (6+ hours), plant after last frost (typically mid-April in 7b).\n- Lettuce: Quick-growing, can be planted early spring or fall, tolerates partial shade.\n- Radishes: Very easy and fast-growing, ideal for beginners, plant in early spring.\n- Carrots: Simple to grow, plant in loose soil in spring or fall.\n- Beans: Easy to cultivate, plant after last frost for summer harvest.\nZone 7b has a growing season from mid-April to mid-October, allowing for multiple plantings of fast-growing crops.",
+          "heading": "Purpose and Impact",
+          "content": "This system addresses the lack of a storage layer for day-to-day reality in news and public discourse. Unlike Wikipedia, which stores static, encyclopedic information, FTFM would record dynamic, evolving details of what matters. It serves as a backend for news, making obfuscation transparent.",
+          "type": "text"
+        },
+        {
+          "heading": "Technical Architecture",
+          "content": "The system would use AI to process text data into structured JSON records with embeddings for indexing. These records would be stored in a database with a translation layer converting them into markdown notes or files for tools like Obsidian. A sync mechanism between frontend and backend databases is needed, along with a generative AI for analysis, research, and querying (forming a giant RAG pipeline).",
           "type": "text"
         }
       ],
       "metadata": {
-        "primary_topic": "Vegetable Garden Planning",
-        "status": "In Progress",
+        "primary_topic": "Public Accountability System",
+        "status": " ideation",
         "priority": "high"
       }
     },
     {
-      "record_id": "rec-uuid-1002",
-      "title": "Planting Calendar for Zone 7b Vegetable Garden",
-      "content": "This record provides a seasonal planting schedule for vegetables in a zone 7b garden to ensure timely planting and harvesting.",
-      "created_at": "2023-10-05T14:40:00Z",
+      "record_id": "uuid-record-1234-5678-9012-0002",
+      "title": "Personal Journaling - Daily Story Entry",
+      "content": "A brief entry for a daily story or journal, capturing a memorable moment in a single sentence as part of a new personal database category.",
+      "created_at": "2023-10-01T10:10:00Z",
       "tags": [
-        "gardening",
-        "planting calendar",
-        "zone 7b",
-        "vegetable schedule"
+        "personal",
+        "journal",
+        "daily story"
       ],
-      "related_records": [
-        "rec-uuid-1001"
-      ],
-      "description": "A dedicated calendar for planting and harvesting times for a beginner vegetable garden in zone 7b.",
+      "related_records": [],
+      "description": "A short personal note capturing a memorable daily moment for a journaling database.",
       "sections": [
         {
-          "heading": "Spring Planting (March - April)",
-          "content": "- Early March: Lettuce, Radishes (indoors or under protection)\n- Mid-April (after last frost): Tomatoes (transplants), Beans, Carrots",
-          "type": "checklist"
-        },
-        {
-          "heading": "Summer Planting (May - June)",
-          "content": "- May: Second planting of Lettuce for continuous harvest\n- June: Beans for late summer harvest",
-          "type": "checklist"
-        },
-        {
-          "heading": "Fall Planting (August - September)",
-          "content": "- August: Lettuce, Radishes for fall harvest\n- September: Carrots for late fall or early winter harvest",
-          "type": "checklist"
+          "heading": "Daily Story Entry",
+          "content": "Today was cool with Ralphie and included a memorable video call with Jaz.",
+          "type": "text"
         }
       ],
       "metadata": {
-        "primary_topic": "Planting Schedule",
-        "status": "Draft",
+        "primary_topic": "Personal Journal",
+        "status": "complete",
+        "priority": "low"
+      }
+    },
+    {
+      "record_id": "uuid-record-1234-5678-9012-0003",
+      "title": "AI Dictation System Project",
+      "content": "An idea for a separate AI dictation system project where users can request research or data structuring via voice commands, with results formatted into JSON or other structures.",
+      "created_at": "2023-10-01T10:15:00Z",
+      "tags": [
+        "AI",
+        "dictation",
+        "automation",
+        "research"
+      ],
+      "related_records": [
+        "uuid-record-1234-5678-9012-0001"
+      ],
+      "description": "Proposal for an AI system that processes voice commands to conduct research and structure data.",
+      "sections": [
+        {
+          "heading": "Project Concept",
+          "content": "This project envisions an AI system where users can dictate commands such as 'make a piece of research and turn it into a JavaScript Object Notation (JSON)'. The AI would conduct the research and return structured data outputs accordingly.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "AI Dictation Tool",
+        "status": "ideation",
         "priority": "medium"
       }
     }
@@ -106,20 +123,18 @@ A JSON object containing:
 ## Structural Instructions to Apply
 [
   {
-    "instruction_id": "instr-uuid-2001",
-    "command_type": "create_separate_note",
+    "instruction_id": "uuid-instruction-1234-5678-9012-0001",
+    "command_type": "create_consolidated_notes",
     "instruction_type": "structural",
-    "description": "Create a separate note just for the planting calendar",
+    "description": "Make this into just one or two notes - maybe include some kind of diagram if possible about how the architecture could work out.",
     "parameters": {
-      "target": "Planting Calendar for Zone 7b Vegetable Garden",
-      "format": "Dedicated record with seasonal sections",
+      "target": "all_session_content",
+      "format": "consolidated notes with potential diagram",
       "query": "",
-      "additional_info": "User requested a standalone reference for planting times throughout the season"
+      "additional_info": "Focus on consolidating the FTFM concept into a primary note with supporting notes for side topics."
     },
     "priority": "3",
-    "dependencies": [
-      "rec-uuid-1001"
-    ]
+    "dependencies": []
   }
 ]
 

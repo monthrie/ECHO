@@ -1,0 +1,121 @@
+{
+  "session": {
+    "session_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "user_id": "default_user",
+    "started_at": "2023-10-05T14:30:00Z",
+    "summary": "User planning a beginner's vegetable garden, focusing on suitable vegetables, supplies, layout, and planting schedules for zone 7b, with research needs on climate-specific vegetables and garden dimensions."
+  },
+  "records": [
+    {
+      "record_id": "rec1-vegetable-garden-project",
+      "title": "Vegetable Garden Project Plan",
+      "content": "Comprehensive plan for starting a small vegetable garden in the backyard, tailored for beginners with a focus on zone 7b climate.",
+      "created_at": "2023-10-05T14:35:00Z",
+      "tags": [
+        "gardening",
+        "vegetables",
+        "beginner",
+        "zone7b"
+      ],
+      "related_records": [
+        "rec2-planting-calendar"
+      ],
+      "description": "A detailed project plan for a beginner's vegetable garden with sections for layout, supplies, and schedule.",
+      "sections": [
+        {
+          "heading": "Garden Layout",
+          "content": "Planning a beginner-friendly garden bed of 4ft x 8ft, in a location receiving about 6 hours of sunlight daily. Need to confirm if 6 hours of sunlight is sufficient for most vegetables. Research needed on ideal dimensions for beginner raised bed gardens.",
+          "type": "text"
+        },
+        {
+          "heading": "Supplies Needed",
+          "content": "List of required supplies includes soil, containers or raised bed materials, seeds, basic gardening tools, watering system (considering simple drip irrigation), and potential fencing for pest control (rabbits spotted in neighborhood). Exploring natural pest deterrents as an alternative to chemicals.",
+          "type": "checklist"
+        },
+        {
+          "heading": "Planting Schedule",
+          "content": "Aim to have everything planted by early May. Specific planting times for each vegetable to be detailed in a separate planting calendar note. Interest in companion planting, such as basil near tomatoes, to be explored.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "Vegetable Garden Planning",
+        "status": "In Progress",
+        "priority": "medium"
+      }
+    },
+    {
+      "record_id": "rec2-planting-calendar",
+      "title": "Planting Calendar for Vegetable Garden",
+      "content": "A dedicated reference for the planting schedule of vegetables in the beginner's garden, to be referred to throughout the season.",
+      "created_at": "2023-10-05T14:40:00Z",
+      "tags": [
+        "gardening",
+        "planting calendar",
+        "zone7b"
+      ],
+      "related_records": [
+        "rec1-vegetable-garden-project"
+      ],
+      "description": "A seasonal calendar detailing when to plant each vegetable in the garden.",
+      "sections": [
+        {
+          "heading": "Calendar Overview",
+          "content": "To be populated with specific planting dates for selected vegetables suitable for zone 7b climate. Research results on appropriate vegetables and timing will be integrated here.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "Planting Schedule",
+        "status": "Pending Research",
+        "priority": "medium"
+      }
+    }
+  ],
+  "system_instructions": [
+    {
+      "instruction_id": "inst1-research-zone7b-veggies",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research vegetables that grow best in zone 7b climate and their planting schedules.",
+      "parameters": {
+        "target": "rec1-vegetable-garden-project, rec2-planting-calendar",
+        "format": "text summary with planting dates",
+        "query": "best vegetables for beginners in zone 7b climate and planting schedules",
+        "additional_info": "Include beginner-friendly vegetables like tomatoes and lettuce if applicable."
+      },
+      "priority": "3",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "inst2-research-garden-dimensions",
+      "command_type": "research_web_search",
+      "instruction_type": "tool",
+      "description": "Research ideal dimensions for a beginner's raised bed garden.",
+      "parameters": {
+        "target": "rec1-vegetable-garden-project",
+        "format": "text summary with recommended dimensions",
+        "query": "ideal dimensions for beginner raised bed garden",
+        "additional_info": "Confirm if 4ft x 8ft is suitable and include any other beginner tips."
+      },
+      "priority": "2",
+      "dependencies": []
+    },
+    {
+      "instruction_id": "inst3-create-separate-note",
+      "command_type": "create_separate_note",
+      "instruction_type": "structural",
+      "description": "Create a separate note just for the planting calendar.",
+      "parameters": {
+        "target": "planting calendar content",
+        "format": "dedicated record",
+        "query": "",
+        "additional_info": "User requested a standalone reference for planting dates throughout the season."
+      },
+      "priority": "1",
+      "dependencies": [
+        "rec1-vegetable-garden-project"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "file_info": {
+    "directory": "Resources",
+    "filename": "Untitled",
+    "record_id": "a1b2c3d4-5e6f-7g8h-9i0j-klmnopqrstuv"
+  },
+  "frontmatter": {
+    "tags": [
+      "journalism",
+      "data structures",
+      "information systems",
+      "transparency",
+      "media innovation",
+      "computational journalism"
+    ],
+    "record_ids": [
+      "a1b2c3d4-5e6f-7g8h-9i0j-klmnopqrstuv"
+    ]
+  },
+  "content": {
+    "title": "Untitled",
+    "body": "Journalism is uniquely disadvantaged among modern systems - it lacks a structured back end for organizing the information it produces. While we have front-end journalism (articles, reports, investigations), we have no computational database organizing the underlying facts, connections, and relationships that would enable deeper analysis and understanding of world events."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "file_info": {
+    "directory": "Gardening",
+    "filename": "Vegetable Garden Project Plan",
+    "record_id": "rec1-vegetable-garden-project"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "vegetables",
+      "beginner",
+      "zone-7b"
+    ],
+    "description": "A detailed project plan for a beginner's vegetable garden in zone 7b, including layout, supplies, and schedule."
+  },
+  "content": {
+    "title": "Vegetable Garden Project Plan",
+    "body": "# Vegetable Garden Project Plan\n\nA comprehensive plan for starting a small vegetable garden in the backyard, tailored for beginners with a focus on zone 7b climate.\n\n## Garden Layout\n\nPlanning a beginner-friendly garden bed of 4ft x 8ft, in a location receiving about 6 hours of sunlight daily. Need to confirm if 6 hours of sunlight is sufficient for most vegetables. Research needed on ideal dimensions for beginner raised bed gardens.\n\n## Supplies Needed\n\n- Soil\n- Containers or raised bed materials\n- Seeds\n- Basic gardening tools\n- Watering system (considering simple drip irrigation)\n- Potential fencing for pest control (rabbits spotted in neighborhood)\n\nExploring natural pest deterrents as an alternative to chemicals.\n\n## Planting Schedule\n\nAim to have everything planted by early May. Specific planting times for each vegetable are detailed in the [[Planting Calendar for Vegetable Garden]]. Interest in companion planting, such as basil near tomatoes, to be explored.\n\n## Related Notes\n\n- [[Planting Calendar for Vegetable Garden]]"
+  }
+}

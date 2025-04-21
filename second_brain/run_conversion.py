@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import sys
 import argparse
+from dotenv import load_dotenv
 
 # Add the parent directory to sys.path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -15,9 +16,24 @@ from second_brain.utils.langsmith_tracer import SecondBrainTracer
 
 def run_pipeline(transcript_file=None):
     """Run the full pipeline from transcript to markdown."""
-    # Initialize configuration - MUST be called first
+    # Add immediate model debugging
+    print("\n===== MODEL CONFIGURATION DEBUG =====")
+    # Check what's in environment before any initialization
+    load_dotenv(override=True)
+    env_model = os.getenv("MODEL", "Not set in environment")
+    print(f"MODEL from environment: {env_model}")
+    
+    # Initialize configuration
     logger = Config.initialize(transcript_file)
     logger.info("Starting pipeline...")
+    
+    # Log model after initialization
+    print(f"MODEL after Config.initialize(): {Config.MODEL}")
+    
+    # Try refreshing model settings and log the result
+    refreshed_model = Config.refresh_model_settings()
+    print(f"MODEL after Config.refresh_model_settings(): {refreshed_model}")
+    print("===== END MODEL DEBUG =====\n")
     
     # Initialize LangSmith tracer
     tracer = SecondBrainTracer()

@@ -1,0 +1,21 @@
+{
+  "file_info": {
+    "directory": "Resources/Recommendations",
+    "filename": "Contents.md",
+    "record_id": "N/A"
+  },
+  "frontmatter": {
+    "tags": [
+      "recommendations",
+      "books",
+      "films",
+      "games"
+    ],
+    "record_ids": [],
+    "description": "Map of Contents for personal recommendations across books, films, and games."
+  },
+  "content": {
+    "title": "Recommendations Contents",
+    "body": "## Recommendations Map of Contents\n\nThis directory contains curated lists of personal recommendations organized by category.\n\n- [[Books.md]]: A collection of recommended books spanning various genres like fiction, sci-fi, and literary mystery.\n- [[Films.md]]: A selection of films covering comedy, drama, and romance with detailed notes.\n- [[Games.md]]: A list of video games including roguelike, exploration, and platformer genres with insights."
+  }
+}

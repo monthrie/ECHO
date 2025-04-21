@@ -1,0 +1,22 @@
+{
+  "file_info": {
+    "directory": "Resources/Recommendations",
+    "filename": "Books.md",
+    "record_id": "123e4567-e89b-12d3-a456-426614174001"
+  },
+  "frontmatter": {
+    "tags": [
+      "books",
+      "recommendations",
+      "literature"
+    ],
+    "record_ids": [
+      "123e4567-e89b-12d3-a456-426614174001"
+    ],
+    "goal": ""
+  },
+  "content": {
+    "title": "Book Recommendations",
+    "body": "## Overview\n\nThese books span various genres, including post-apocalyptic, historical fiction, and science fiction. Consider creating summaries or key takeaways for each after reading.\n\n## Recommended Books\n\n- **The Road by Cormac McCarthy** - A powerful post-apocalyptic story with sparse yet beautiful writing.\n- **Pachinko by Min Jin Lee** - A captivating multi-generational Korean family saga set in Japan.\n- **Dune by Frank Herbert** - Incredible worldbuilding in a classic sci-fi novel that lives up to its reputation.\n\n## Related Notes\n\n- [[Film Recommendations]]\n- [[Game Recommendations]]"
+  }
+}

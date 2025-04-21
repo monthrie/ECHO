@@ -1,0 +1,19 @@
+{
+  "file_info": {
+    "directory": "Gardening",
+    "filename": "Beginner Vegetable Garden Plan",
+    "record_id": "rec-123e4567-e89b-12d3-a456-426614174001"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "vegetable-garden",
+      "beginner"
+    ],
+    "description": "A project plan for starting a beginner vegetable garden with detailed sections on layout and supplies."
+  },
+  "content": {
+    "title": "Beginner Vegetable Garden Plan",
+    "body": "## Garden Layout\n\nPlanning a small garden bed of 4 feet by 8 feet, which is considered a good size for beginners. The chosen location receives about 6 hours of sunlight daily, and the user needs to verify if this is sufficient for most vegetables.\n\n## Supplies Needed\n\n- [ ] Soil\n- [ ] Containers or raised bed materials\n- [ ] Seeds\n- [ ] Basic gardening tools\n- [ ] Simple drip irrigation system for watering\n\n## Additional Considerations\n\nConcerns include pest management, especially rabbits, with a preference for natural deterrents over chemicals. The user also mentions companion planting (e.g., basil near tomatoes) and aims to have everything planted by early May to avoid feeling overwhelmed."
+  }
+}

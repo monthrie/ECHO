@@ -11,14 +11,10 @@
             "id": "731056a0cfa5326d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vaults/garden_20250421_143310/markdown/Gardening/Beginner Vegetable Garden Plan.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Beginner Vegetable Garden Plan"
+              "title": "New tab"
             }
           }
         ]
@@ -168,21 +164,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4ce313294c6f3cb9",
+  "active": "731056a0cfa5326d",
   "lastOpenFiles": [
-    "vaults/garden_20250421_181317/markdown/Gardening/Planting Calendar for Zone 7b Vegetable Garden",
-    "vaults/garden_20250421_181317/markdown/Gardening/Beginner Vegetable Garden Plan",
-    "vaults/garden_20250421_181317/markdown/Gardening",
-    "vaults/garden_20250421_181317/blueprints/7be1c132-d25e-431c-b890-d938e1eb543f_blueprint.json",
-    "vaults/garden_20250421_181317/blueprints/a298221b-d717-40b0-ad07-0cfd9572353d_blueprint.json",
-    "vaults/garden_20250421_181317/json/structured.json",
-    "vaults/garden_20250421_181317/markdown",
-    "vaults/garden_20250421_181317/json",
-    "vaults/garden_20250421_181317/blueprints",
-    "vaults/garden_20250421_181317",
-    "vaults/garden_20250421_180344/markdown/Gardening/Vegetable Garden Project Plan",
-    "vaults/recomms_20250420_180619/markdown/Resources/Recommendations/Films.md",
+    "vaults",
+    "vaults/ftfm_20250421_193142/markdown/Projects/AI Tools/AI Dictation System Project.md",
+    "vaults/ftfm_20250421_193142/markdown/Projects/FTFM/Follow The Fucking Money (FTFM) Concept.md",
+    "vaults/ai_possibilities_20250421_192717/markdown/AI Projects/AI Project Ideas Overview.md",
+    "vaults/ftfm_20250421_193142/markdown/Personal/Journal/Daily Story Entry - 2023-10-01.md",
+    "vaults/ftfm_20250421_193142/markdown/Personal/Journal",
+    "vaults/ftfm_20250421_193142/markdown/Personal",
+    "vaults/ftfm_20250421_193142/markdown/Projects/AI Tools",
+    "vaults/ftfm_20250421_193142/markdown/Projects/FTFM",
+    "vaults/ftfm_20250421_193142/markdown/Projects",
+    "vaults/ftfm_20250421_193142/blueprints/eff4cb58-2dca-41ec-a718-6a4bd351877b_blueprint.json",
+    "vaults/ftfm_20250421_193142/blueprints/0b82feec-9635-4941-ae09-2e8636eb1668_blueprint.json",
+    "vaults/ftfm_20250421_193142/blueprints/bc5163a7-6c55-4eeb-b924-6099df254443_blueprint.json",
+    "vaults/ftfm_20250421_193142/json/structured.json",
+    "vaults/ftfm_20250421_193142/markdown",
+    "vaults/ftfm_20250421_192119/markdown/Journalism Concepts/Structured Fact Database for Journalism.md",
+    "vaults/garden_20250421_182117/markdown/Gardening/Beginner Vegetable Garden Plan.md",
+    "vaults/ftfm_20250421_191859/markdown/Resources/Untitled.md",
+    "vaults/ftfm_20250421_184443/markdown/Journalism Concepts/Structured Database Backend for Journalism.md",
     "vaults/garden_20250421_143310/markdown/Gardening/Beginner Vegetable Garden Plan.md",
+    "vaults/garden_20250421_182117/markdown/Gardening/Vegetable Planting Calendar for Zone 7b.md",
+    "vaults/recomms_20250420_180619/markdown/Resources/Recommendations/Films.md",
     "vaults/garden_20250421_005701/markdown/Areas/Gardening in Zone 7b/Zone 7b Gardening Tasks.md",
     "vaults/garden_20250421_005701/markdown/Areas/Gardening in Zone 7b/Zone 7b Climate and Beginner Gardening Overview.md",
     "vaults/garden_20250421_005701/markdown/Areas/Gardening in Zone 7b/General Gardening Tips for Zone 7b.md",
@@ -196,15 +201,6 @@
     "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Planting Calendar.md",
     "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Pest Control Strategies.md",
     "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Garden Supplies List.md",
-    "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Garden Location Sunlight Assessment.md",
-    "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Contents.md",
-    "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Backyard Vegetable Garden Tasks.md",
-    "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Backyard Vegetable Garden Overview.md",
-    "2023-10-01.md",
-    "vaults/recomms_20250420_180619/markdown/Resources/Recommendations/Games.md",
-    "vaults/recomms_20250416_173815/markdown/Books.md",
-    "vaults/recomms_20250416_173815/markdown/Resources/Recommendations/Books.md",
-    "vaults/recomms_20250416_173815/markdown/Games.md",
-    "vaults/recomms_20250416_173815/markdown/Films.md"
+    "vaults/garden_20250421_005701/markdown/Projects/Backyard Vegetable Garden/Garden Location Sunlight Assessment.md"
   ]
 }

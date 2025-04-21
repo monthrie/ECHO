@@ -1,0 +1,23 @@
+{
+  "file_info": {
+    "directory": "Resources/Recommendations",
+    "filename": "Games.md",
+    "record_id": "123e4567-e89b-12d3-a456-426614174003"
+  },
+  "frontmatter": {
+    "tags": [
+      "games",
+      "video games",
+      "gaming",
+      "recommendations"
+    ],
+    "record_ids": [
+      "123e4567-e89b-12d3-a456-426614174003"
+    ],
+    "goal": ""
+  },
+  "content": {
+    "title": "Game Recommendations",
+    "body": "These games offer diverse genres and themes, suitable for both casual and dedicated gaming sessions.\n\n## Recommended Games\n- **Hades**: Roguelike masterpiece with tight combat, incredible character work, and Greek mythology brought brilliantly to life.\n- **Outer Wilds**: Unique space exploration game built around curiosity and discovery with an unforgettable time loop mechanic.\n- **Celeste**: Challenging platformer with gorgeous pixel art that weaves mental health themes into both story and gameplay.\n\n## Related Notes\n- [[Books]]\n- [[Films]]"
+  }
+}

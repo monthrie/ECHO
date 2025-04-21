@@ -1,0 +1,19 @@
+{
+  "file_info": {
+    "directory": "Personal/Journal",
+    "filename": "Daily Story Entry - 2023-10-01",
+    "record_id": "uuid-record-1234-5678-9012-0002"
+  },
+  "frontmatter": {
+    "tags": [
+      "personal",
+      "journal",
+      "daily-story"
+    ],
+    "description": "A short personal note capturing a memorable daily moment for a journaling database."
+  },
+  "content": {
+    "title": "Daily Story Entry - 2023-10-01",
+    "body": "# Daily Story Entry - 2023-10-01\n\n## Entry\nToday was cool with Ralphie and included a memorable video call with Jaz."
+  }
+}

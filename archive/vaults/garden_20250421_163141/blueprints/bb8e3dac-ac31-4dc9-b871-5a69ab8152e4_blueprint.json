@@ -1,0 +1,20 @@
+{
+  "file_info": {
+    "directory": "Gardening",
+    "filename": "Beginner Vegetable Garden Plan",
+    "record_id": "rec1-vegetable-garden-project"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "vegetable-garden",
+      "beginner",
+      "zone-7b"
+    ],
+    "description": "Comprehensive plan for starting a beginner vegetable garden in zone 7b, including layout, supplies, planting schedule, and pest control."
+  },
+  "content": {
+    "title": "Beginner Vegetable Garden Plan",
+    "body": "## Garden Layout\nPlan for a small beginner garden bed of 4 feet by 8 feet, located in a spot receiving approximately 6 hours of sunlight daily. Need to confirm if this sunlight duration is sufficient for most vegetables.\n\n## Supplies Needed\n- [ ] Soil\n- [ ] Containers or raised bed materials\n- [ ] Seeds (tomatoes, lettuce, others TBD)\n- [ ] Basic gardening tools\n- [ ] Watering system (consider simple drip irrigation)\n\n## Planting Schedule Overview\nTarget to have everything planted by early May. Detailed planting calendar to be referenced below for specific timing of each vegetable.\n\n### Vegetable Planting Calendar\nSpecific planting dates for vegetables such as tomatoes and lettuce to be researched and added based on zone 7b climate recommendations.\n\n## Additional Considerations\n- Research companion planting (e.g., basil near tomatoes for better growth).\n- Address pest control, especially for rabbits observed in the neighborhood; explore natural pest deterrents and fencing options."
+  }
+}

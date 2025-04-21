@@ -1,0 +1,20 @@
+{
+  "file_info": {
+    "directory": "Gardening",
+    "filename": "Vegetable Planting Calendar",
+    "record_id": "rec-123e4567-e89b-12d3-a456-426614174002"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "planting-calendar",
+      "vegetable-garden",
+      "schedule"
+    ],
+    "description": "Reference guide for the planting schedule of vegetables in a beginner's garden for zone 7b."
+  },
+  "content": {
+    "title": "Vegetable Planting Calendar",
+    "body": "# Vegetable Planting Calendar\n\nA reference guide for the planting schedule of selected vegetables to ensure timely planting and harvesting throughout the season, targeting completion by early May.\n\n## Calendar Placeholder\n\nDetailed planting dates for each vegetable to be added after research on zone 7b suitability and specific vegetable needs. Target completion by early May.\n\n## Related Notes\n\n- [[Beginner's Vegetable Garden Plan]]"
+  }
+}

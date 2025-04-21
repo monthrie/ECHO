@@ -1,0 +1,23 @@
+{
+  "file_info": {
+    "directory": "Resources/Gardening Techniques",
+    "filename": "Vegetable Selection Research for Zone 7b.md",
+    "record_id": "rec02-research-zone7b"
+  },
+  "frontmatter": {
+    "tags": [
+      "gardening",
+      "zone7b",
+      "vegetables",
+      "research"
+    ],
+    "record_ids": [
+      "rec02-research-zone7b"
+    ],
+    "description": "Research on suitable vegetables for a zone 7b climate for a beginner garden."
+  },
+  "content": {
+    "title": "Vegetable Selection Research for Zone 7b",
+    "body": "This research note focuses on identifying suitable vegetables for a zone 7b climate, tailored for a beginner garden.\n\n## Research Details\n- **Content**: Research suitable vegetables for a zone 7b climate to determine the best options for a beginner garden.\n- **Category**: Gardening Climate Data\n- **Format**: Research note\n- **Notes**: Focus on beginner-friendly vegetables and their compatibility with local climate conditions.\n\n## Related Notes\n- [[Backyard Vegetable Garden Overview]]"
+  }
+}

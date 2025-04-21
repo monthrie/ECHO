@@ -35,3 +35,33 @@
 2025-04-21 18:13:17,746 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
 2025-04-21 18:13:17,746 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250421_181317
 2025-04-21 18:13:17,746 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 18:21:17,709 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 18:21:17,709 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-21 18:21:17,709 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-21 18:21:17,709 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250421_182117
+2025-04-21 18:21:17,709 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 18:44:43,833 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 18:44:43,833 - SecondBrain - INFO - No transcript specified, using: ftfm.txt
+2025-04-21 18:44:43,834 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm.txt
+2025-04-21 18:44:43,834 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_20250421_184443
+2025-04-21 18:44:43,834 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 19:18:59,202 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 19:18:59,202 - SecondBrain - INFO - No transcript specified, using: ftfm.txt
+2025-04-21 19:18:59,202 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm.txt
+2025-04-21 19:18:59,202 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_20250421_191859
+2025-04-21 19:18:59,202 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 19:21:19,353 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 19:21:19,354 - SecondBrain - INFO - No transcript specified, using: ftfm.txt
+2025-04-21 19:21:19,354 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm.txt
+2025-04-21 19:21:19,354 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_20250421_192119
+2025-04-21 19:21:19,354 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 19:27:17,309 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 19:27:17,310 - SecondBrain - INFO - No transcript specified, using: ai_possibilities.txt
+2025-04-21 19:27:17,310 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ai_possibilities.txt
+2025-04-21 19:27:17,310 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ai_possibilities_20250421_192717
+2025-04-21 19:27:17,310 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 19:31:42,013 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 19:31:42,014 - SecondBrain - INFO - No transcript specified, using: ftfm.txt
+2025-04-21 19:31:42,014 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm.txt
+2025-04-21 19:31:42,014 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_20250421_193142
+2025-04-21 19:31:42,014 - SecondBrain - INFO - Starting pipeline...

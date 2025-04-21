@@ -1,0 +1,169 @@
+Okay, I think this voicemail is going to be primarily about my ideas for
+
+FTFM (follow the fucking money) and how we could build an interesting proof of concept. What's the
+
+minimal viable proof of concept? Is it taking and mapping all of Glenn Green
+
+Awards podcasts over the last six months? Is it that and then adding in somebody
+
+else's podcasts with every named entity in every piece of evidence
+
+referenced to a moment when that claim was made? This doubles as a source of
+
+truth, whereupon someone can easily find out what was said about a particular
+
+topic. For example, every time politician X says, "I will do this thing on my first
+
+day in office" and they say that ten times and then the first day in office they
+
+fail to do that thing. A flag will have been raised in the back end when that
+
+politician initially says, "I will do X." This is an event, it's a promise, it's a
+
+suggestion and if it starts to form a pattern then that becomes a pattern.
+
+Nobody is recording the news in this way. Ordinary citizens can't check what's
+
+been said about a topic easily. Can't check quickly how someone's changed their
+
+mind or when someone appears to have changed their mind or when someone starts
+
+saying something different to what they used to say. This is purely the idea of
+
+holding everyone in public life to account. It's making transparent that
+
+which can otherwise be obfuscated. So what is it? It takes sources, which you
+
+might even be able to define yourself, you might be able to tell it what it
+
+might be that each person has their own version of the facts. Although I think
+
+it would be nicer if we had one source of truth with competing versions of the
+
+truth. If you are interested in seeing them with a waiting based on the strength
+
+of the source, this waiting could come from open-weight metrics.
+
+Quite hard to do all of those objectively. I suppose the facts in a sense are that
+
+somebody said something or that somebody wrote something. So there's two layers.
+
+There's what happened and then there's what's said about what evidence there is
+
+around what happened. And if you've got reliable video evidence, let's say, from a
+
+highly reliable source and you've got a thousand people who witnessed the thing
+
+happening. Then you can be fairly sure that the thing that was reported indeed
+
+happened and similarly the opposite if the opposite is true. Anyway we're getting
+
+a bit into the weeds actually. As a side note for a daily story, which is a new
+
+category of things that I want to store inside my database.
+
+This is like a journal but done just in a sentence. A weekly story today is...
+
+cool with the Ralphie and a memorable video call with Jaz.
+
+We'll stop back to the idea. So one thing that we need to do is probably just get
+
+the transcript for one or two of Glenn Greenroads podcasts. Then create a model
+
+which has the job of batching it and turning it into
+
+JSONs of things that were reported.
+
+It should also be the case that I can ask in one of the dictations. Sorry this is
+
+for a different project which is the AI dictation project. Also known as the AI
+
+system project. It should be that I can say
+
+something like...
+
+make a piece of research and turn it into JavaScript object notification.
+
+And then the LLM could go away and do that research.
+
+And coming back to the Glenn Greenworld, the idea would be to run a model, extract
+
+all of the entities, people, places, laws, events, create highly detailed JSON
+
+structures, making special note of any conflict of interest or
+
+hypocrisies or changes of mind. And what those changes in mind consisted of, what
+
+did someone say at one time and then change another time.
+
+How did somebody vote? Who was somebody paid by?
+
+Where did somebody used to work?
+
+When I tell us about... tell us the people they seem to think it's quite niche. I just think it's...
+
+it's actually how the news should be. It's the back end of the news.
+
+News needs a storage layer. Reality, day-to-day reality needs a storage layer.
+
+That it doesn't yet have. Wikipedia stores very static information. Births, deaths, gigantic events.
+
+It's not a store of information about stuff that happened.
+
+It's an encyclopedic entry about something or someone that was important or this
+
+important.
+
+No one's recording everything.
+
+Some people argue you can't possibly record everything. That's true.
+
+We're not trying to record everything. We're trying to record or make a record of
+
+everything that matters. And given that this is largely going to be text-based, this is the perfect application of AI.
+
+As inference gets better, matching will get better, updating will get better, inference and compute will get better, insights will get better, graph DBs will be
+
+better put together, more intricate levels of detail.
+
+One of the fields in each JSON will be
+
+embeddings data. So we will create embeddings of each transcript, which we will turn into
+
+something that we're currently calling records.
+
+Maybe their memories. I don't know what they are, but they get embedded.
+
+They get indexed.
+
+They get catched. No, they don't get categorized.
+
+They go to a kind of translation layer.
+
+And that layer takes them from JSON structures in a database, on a server, to notes in markdown, and files and possibly images.
+
+In other specified directories, which are then openable in obsidian and editable in obsidian. We'd also need a way of
+
+syncing the two databases, the front end and the back end.
+
+And then I guess this is where the magic happens a little bit.
+
+We would have
+
+a Gentic AI, making analyses, doing research, answering questions about
+
+the database as it stood in the back end.
+
+Ideally, we can talk to
+
+the system whilst looking at the notes and whilst the system is also looking at the notes.
+
+Yeah, there's something about that. I don't know what it is yet.
+
+So what things can you do with this system?
+
+I guess it becomes a giant rag pipeline, RAG.
+
+Which can be queried.
+
+make this into just one or two notes - maybe inlclude some kind of diagram if possible about how the architecture could work out. 
