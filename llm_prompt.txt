@@ -13,17 +13,17 @@ A JSON object containing:
 ## Input JSON Data
 {
   "session": {
-    "session_id": "550e8400-e29b-41d4-a716-446655440000",
+    "session_id": "session-uuid-1234",
     "user_id": "default_user",
-    "started_at": "2023-10-05T12:00:00Z",
-    "summary": "User is planning a beginner vegetable garden in their backyard, focusing on suitable vegetables, supplies, layout, planting schedule, and pest control for a zone 7b climate."
+    "started_at": "2023-10-05T14:30:00Z",
+    "summary": "User is planning a beginner vegetable garden in their backyard, focusing on suitable vegetables for zone 7b, garden setup, supplies, planting schedules, and pest management."
   },
   "records": [
     {
-      "record_id": "rec1-uuid-1234-5678",
+      "record_id": "rec-uuid-1001",
       "title": "Beginner Vegetable Garden Project Plan",
-      "content": "This record outlines the plan for starting a small vegetable garden in the backyard, including layout, supplies, and initial thoughts on planting and pest control.",
-      "created_at": "2023-10-05T12:05:00Z",
+      "content": "This record outlines the comprehensive plan for starting a small vegetable garden in a backyard with a focus on beginner-friendly vegetables, garden layout, supplies, and other considerations.",
+      "created_at": "2023-10-05T14:35:00Z",
       "tags": [
         "gardening",
         "vegetable garden",
@@ -31,265 +31,72 @@ A JSON object containing:
         "zone 7b"
       ],
       "related_records": [
-        "rec2-uuid-1234-5679"
+        "rec-uuid-1002"
       ],
-      "description": "A comprehensive project plan for a beginner's vegetable garden with sections for layout, supplies, and initial planning.",
+      "description": "A detailed project plan for initiating a beginner vegetable garden with specific sections for layout, supplies, and other planning aspects.",
       "sections": [
         {
           "heading": "Garden Layout",
-          "content": "Planning a small garden bed of 4 feet by 8 feet, as it's considered a good size for beginners. The selected location receives about 6 hours of sunlight daily, which needs verification for sufficiency for most vegetables.",
+          "content": "Planning a small garden bed of 4 feet by 8 feet, which is a recommended size for beginners. The chosen location receives about 6 hours of sunlight daily, which is generally sufficient for most vegetables like tomatoes and lettuce. Confirmation needed if 6 hours is optimal for selected crops.",
           "type": "text"
         },
         {
           "heading": "Supplies Needed",
-          "content": "- Soil\n- Containers or raised bed materials\n- Seeds (tomatoes, lettuce, others TBD)\n- Basic gardening tools\n- Watering system (considering simple drip irrigation)",
+          "content": "- Soil\n- Containers or materials for raised bed (4ft x 8ft)\n- Seeds (tomatoes, lettuce, others TBD)\n- Basic gardening tools (shovel, trowel, gloves)\n- Watering system (considering simple drip irrigation)",
           "type": "checklist"
         },
         {
-          "heading": "Initial Planting Thoughts",
-          "content": "Considering tomatoes and lettuce as they are beginner-friendly. Interested in companion planting, such as basil near tomatoes. Aiming to have everything planted by early May.",
+          "heading": "General Planting Considerations",
+          "content": "Aim to have everything planted by early May. Research companion planting options, such as planting basil near tomatoes for mutual benefit. Address pest concerns, especially rabbits, by exploring fencing options and natural pest deterrents instead of chemicals.",
           "type": "text"
         },
         {
-          "heading": "Pest Control",
-          "content": "Concerned about pests like rabbits in the neighborhood. Planning to explore fencing options and natural pest deterrents instead of chemicals.",
+          "heading": "Vegetables for Beginners in Zone 7b",
+          "content": "Suitable vegetables for beginner gardeners in USDA Hardiness Zone 7b (average minimum winter temperatures of 5 to 10\u00b0F) include:\n- Tomatoes: Easy to grow, require full sun (6+ hours), plant after last frost (typically mid-April in 7b).\n- Lettuce: Quick-growing, can be planted early spring or fall, tolerates partial shade.\n- Radishes: Very easy and fast-growing, ideal for beginners, plant in early spring.\n- Carrots: Simple to grow, plant in loose soil in spring or fall.\n- Beans: Easy to cultivate, plant after last frost for summer harvest.\nZone 7b has a growing season from mid-April to mid-October, allowing for multiple plantings of fast-growing crops.",
           "type": "text"
         }
       ],
       "metadata": {
         "primary_topic": "Vegetable Garden Planning",
         "status": "In Progress",
-        "priority": "medium"
+        "priority": "high"
       }
     },
     {
-      "record_id": "rec2-uuid-1234-5679",
-      "title": "Planting Calendar for Vegetable Garden",
-      "content": "A reference calendar for planting schedules of various vegetables in the garden, to be updated with specific dates and vegetables based on zone 7b climate.",
-      "created_at": "2023-10-05T12:10:00Z",
+      "record_id": "rec-uuid-1002",
+      "title": "Planting Calendar for Zone 7b Vegetable Garden",
+      "content": "This record provides a seasonal planting schedule for vegetables in a zone 7b garden to ensure timely planting and harvesting.",
+      "created_at": "2023-10-05T14:40:00Z",
       "tags": [
         "gardening",
-        "planting schedule",
-        "zone 7b"
+        "planting calendar",
+        "zone 7b",
+        "vegetable schedule"
       ],
       "related_records": [
-        "rec1-uuid-1234-5678"
+        "rec-uuid-1001"
       ],
-      "description": "A dedicated reference for the planting calendar to track when to plant each vegetable throughout the season.",
+      "description": "A dedicated calendar for planting and harvesting times for a beginner vegetable garden in zone 7b.",
       "sections": [
         {
-          "heading": "Planting Schedule",
-          "content": "To be populated with specific vegetables and planting dates for zone 7b climate. Aiming for completion by early May.",
-          "type": "text"
-        }
-      ],
-      "metadata": {
-        "primary_topic": "Planting Calendar",
-        "status": "Pending Research",
-        "priority": "medium"
-      }
-    },
-    {
-      "record_id": "rec-123e4567-e89b-12d3-a456-426614174001",
-      "title": "Beginner Vegetable Gardening in Zone 7b",
-      "content": "This record provides a comprehensive guide for beginners looking to start a vegetable garden in a Zone 7b climate, including climate characteristics, recommended vegetables, planting tips, and resources for further learning.",
-      "created_at": "2023-10-05T14:35:00Z",
-      "tags": [
-        "gardening",
-        "vegetables",
-        "Zone 7b",
-        "beginner guide"
-      ],
-      "related_records": [],
-      "description": "A detailed guide on selecting and growing vegetables for a beginner garden in Zone 7b climate.",
-      "sections": [
-        {
-          "heading": "Understanding Zone 7b Climate",
-          "content": "Zone 7b features an average minimum winter temperature of 5 to 10\u00b0F (-15 to -12\u00b0C), with a growing season from mid-April to mid-October. This moderate climate supports both cool-season and warm-season crops. Beginners should note frost dates for optimal planting.",
-          "type": "text"
-        },
-        {
-          "heading": "Key Considerations for Beginners",
-          "content": "1. Soil Preparation: Aim for well-drained, fertile soil with a pH of 6.0-7.0, amending with compost if needed.\n2. Sunlight: Ensure 6-8 hours of direct sunlight daily for most vegetables.\n3. Watering: Maintain consistent moisture, especially in hot summers.\n4. Frost Protection: Use row covers or mulch to protect plants from unexpected frosts.",
+          "heading": "Spring Planting (March - April)",
+          "content": "- Early March: Lettuce, Radishes (indoors or under protection)\n- Mid-April (after last frost): Tomatoes (transplants), Beans, Carrots",
           "type": "checklist"
         },
         {
-          "heading": "Recommended Cool-Season Vegetables",
-          "content": "These crops are ideal for early spring (March-April) or fall (August-September) planting:\n1. Lettuce: Quick-growing, harvest in 30-60 days.\n2. Spinach: Hardy, harvest in 40-50 days.\n3. Radishes: Fastest-growing, harvest in 20-30 days.\n4. Peas: Easy and productive, harvest in 60-70 days.\n5. Broccoli: Hardy but needs space, harvest in 60-100 days.",
-          "type": "text"
-        },
-        {
-          "heading": "Recommended Warm-Season Vegetables",
-          "content": "Plant these after the last frost (mid-April to early May) for summer harvest:\n1. Tomatoes: Popular and rewarding, harvest in 60-85 days.\n2. Zucchini/Summer Squash: Prolific, harvest in 40-60 days.\n3. Beans: Easy and soil-enriching, harvest in 50-60 days.\n4. Cucumbers: Fast-growing, harvest in 50-70 days.\n5. Peppers: Relatively easy, harvest in 60-90 days.",
-          "type": "text"
-        },
-        {
-          "heading": "Additional Tips for Success",
-          "content": "- Succession Planting: Rotate cool and warm-season crops to maximize yield.\n- Frost Protection: Use covers or mulch to extend the season.\n- Pest Management: Monitor for pests and use organic solutions.\n- Companion Planting: Pair crops like tomatoes with basil for better results.\n- Start Small: Begin with 3-5 vegetables to avoid overwhelm.",
+          "heading": "Summer Planting (May - June)",
+          "content": "- May: Second planting of Lettuce for continuous harvest\n- June: Beans for late summer harvest",
           "type": "checklist"
         },
         {
-          "heading": "Vegetables to Avoid as a Beginner",
-          "content": "Avoid challenging crops like cauliflower, eggplant, and sweet potatoes due to specific care needs or long growing seasons that may not suit all Zone 7b microclimates.",
-          "type": "text"
-        },
-        {
-          "heading": "Uncertainties and Further Research",
-          "content": "Factors like microclimates, soil conditions, and water availability vary by location. Consult local extension services for precise planting dates and soil testing. Specific garden setups (e.g., raised beds) may require tailored advice.",
-          "type": "text"
-        },
-        {
-          "heading": "Resources for Further Learning",
-          "content": "- USDA Plant Hardiness Zone Map: Confirm zone and access resources.\n- Local Cooperative Extension Services: Free advice and planting calendars.\n- Gardening Books: 'The Vegetable Gardener\u2019s Bible' by Edward C. Smith.\n- Online Tools: Old Farmer\u2019s Almanac or Johnny\u2019s Selected Seeds for planting guides.",
-          "type": "reference"
-        }
-      ],
-      "metadata": {
-        "primary_topic": "Vegetable Gardening in Zone 7b",
-        "status": "complete",
-        "priority": "medium"
-      }
-    },
-    {
-      "record_id": "rec-123e4567-e89b-12d3-a456-426614174001",
-      "title": "Ideal Dimensions for a Beginner's Raised Bed Garden",
-      "content": "This record provides comprehensive guidance on designing a raised bed garden for beginners, covering ideal dimensions, design considerations, and practical tips for success. The recommendations are based on widely accepted gardening practices and aim to balance usability, cost, and plant needs.",
-      "created_at": "2023-10-05T10:05:00Z",
-      "tags": [
-        "gardening",
-        "raised bed",
-        "beginner tips",
-        "garden design"
-      ],
-      "related_records": [],
-      "description": "A detailed guide on the ideal dimensions and considerations for a beginner's raised bed garden.",
-      "sections": [
-        {
-          "heading": "Ideal Dimensions",
-          "content": "1. **Width: 3 to 4 feet** - Allows comfortable reach from either side without stepping into the bed, preventing soil compaction. Reduce to 2-2.5 feet if accessible from only one side.\n2. **Length: 4 to 8 feet** - Manageable for beginners, balancing space for crops and ease of navigation. Avoid exceeding 10 feet for accessibility.\n3. **Height/Depth: 6 to 12 inches** - Sufficient for most beginner crops like lettuce and herbs. Opt for 18-24 inches for deeper roots or accessibility needs.",
-          "type": "text"
-        },
-        {
-          "heading": "Additional Design Considerations",
-          "content": "- **Shape**: Rectangular or square (e.g., 4x4 feet) for ease of planning and maximizing space.\n- **Pathways**: Allow 2-3 feet between beds for easy access.\n- **Material Costs**: Smaller beds (e.g., 3x6 feet) are budget-friendly for beginners.\n- **Plant Spacing**: A 4x4-foot bed supports square foot gardening for diverse crops.",
-          "type": "text"
-        },
-        {
-          "heading": "Factors Influencing Dimensions",
-          "content": "- **Available Space**: Adjust size for small areas (e.g., 2x4 feet).\n- **Physical Ability**: Taller or narrower beds for accessibility.\n- **Climate/Location**: Smaller beds for short seasons or shade needs.\n- **Crop Choice**: Larger/deeper beds for bigger plants like tomatoes.",
-          "type": "text"
-        },
-        {
-          "heading": "Example Starter Layout",
-          "content": "A 4x4-foot bed with a height of 12 inches offers 16 square feet of growing space, ideal for dividing into 16 one-foot squares for varied crops (e.g., lettuce, carrots, tomatoes).",
-          "type": "text"
-        },
-        {
-          "heading": "Areas of Uncertainty",
-          "content": "While these guidelines are based on widely accepted recommendations (e.g., university extension programs, Square Foot Gardening), local conditions like soil quality or climate may require tailored advice from local gardening groups.",
-          "type": "text"
-        },
-        {
-          "heading": "Additional Tips for Beginners",
-          "content": "- **Start Small**: Focus on one manageable bed to avoid overwhelm.\n- **Soil Mix**: Use a 1:1:1 ratio of topsoil, compost, and peat moss or coir for drainage and fertility.\n- **Location**: Choose a spot with 6-8 hours of sunlight, away from shade or tree roots, near water.\n- **Materials**: Opt for untreated wood (cedar or pine), concrete blocks, or galvanized metal to avoid chemical leaching.",
+          "heading": "Fall Planting (August - September)",
+          "content": "- August: Lettuce, Radishes for fall harvest\n- September: Carrots for late fall or early winter harvest",
           "type": "checklist"
         }
       ],
       "metadata": {
-        "primary_topic": "Raised Bed Gardening for Beginners",
-        "status": "complete",
-        "priority": "medium"
-      }
-    },
-    {
-      "record_id": "rec-123e4567-e89b-12d3-a456-426614174001",
-      "title": "Sunlight Requirements for Vegetable Growth",
-      "content": "Research confirms that 6 hours of sunlight is generally sufficient for most vegetables, as it meets the criteria for full sun exposure, ideal for crops like tomatoes, peppers, and zucchini. However, some vegetables can grow in partial shade with 3-6 hours of sunlight, though yields may be suboptimal compared to full sun conditions. Further details on specific vegetables that may require more than 6 hours of sunlight are needed for a comprehensive understanding.",
-      "created_at": "2023-10-05T14:35:00Z",
-      "tags": [
-        "gardening",
-        "vegetable growth",
-        "sunlight requirements"
-      ],
-      "related_records": [],
-      "description": "Overview of sunlight needs for vegetables, confirming 6 hours as sufficient for most.",
-      "sections": [
-        {
-          "heading": "General Sunlight Needs",
-          "content": "Most vegetables require at least 6 hours of direct sunlight, classified as full sun, to thrive. Examples include tomatoes, peppers, and zucchini.",
-          "type": "text"
-        },
-        {
-          "heading": "Partial Shade Tolerance",
-          "content": "Some vegetables can grow with 3-6 hours of sunlight but may not produce optimal yields.",
-          "type": "text"
-        },
-        {
-          "heading": "Sources",
-          "content": "- Vegetable Light Requirements Chart (Evergreen Seeds)\n- Is 6 Hours Of Sun Enough For A Garden? (Green Packs)",
-          "type": "reference"
-        }
-      ],
-      "metadata": {
-        "primary_topic": "Vegetable Sunlight Requirements",
-        "status": "incomplete",
-        "priority": "medium"
-      }
-    },
-    {
-      "record_id": "record-123e4567-e89b-12d3-a456-426614174001",
-      "title": "Companion Planting for Vegetables: Tomatoes and Basil",
-      "content": "This record provides a comprehensive overview of companion planting, with a specific focus on the mutually beneficial relationship between tomatoes and basil. It includes general principles of companion planting for vegetables, detailed benefits and considerations for the tomato-basil pairing, other compatible plants, practical gardening tips, and limitations of current knowledge.",
-      "created_at": "2023-10-05T14:35:00Z",
-      "tags": [
-        "gardening",
-        "companion planting",
-        "tomatoes",
-        "basil",
-        "vegetables"
-      ],
-      "related_records": [],
-      "description": "A detailed guide on companion planting for vegetables, emphasizing the benefits and practicalities of growing tomatoes and basil together.",
-      "sections": [
-        {
-          "heading": "What is Companion Planting?",
-          "content": "Companion planting involves strategically placing plants near each other to achieve beneficial outcomes such as pest control, pollination, nutrient enhancement, space optimization, and flavor enhancement. It is rooted in traditional knowledge with increasing scientific validation.",
-          "type": "text"
-        },
-        {
-          "heading": "General Principles of Companion Planting for Vegetables",
-          "content": "1. Pairing for Pest Control: Marigolds repel nematodes near tomatoes; nasturtiums act as trap crops for aphids; garlic and onions deter pests near lettuce.\n2. Nutrient Sharing: Legumes like beans fix nitrogen for heavy feeders like corn.\n3. Shade and Support: Corn shades lettuce; pole beans use corn as trellises.\n4. Avoiding Negative Interactions: Onions may stunt beans due to competition or allelopathy.",
-          "type": "text"
-        },
-        {
-          "heading": "Companion Planting for Tomatoes and Basil",
-          "content": "Tomatoes and basil are a classic companion pair with mutual benefits:\n- Pest Repellent: Basil deters tomato hornworms, aphids, and whiteflies (limited scientific evidence).\n- Flavor Enhancement: Anecdotal belief that basil improves tomato flavor, unproven scientifically.\n- Growth Benefits: Basil thrives in tomato shade; attracts pollinators.\n- Soil and Environmental Benefits: Basil suppresses weeds; both thrive in similar conditions.\n- Drawbacks: Overplanting can cause competition for resources.\n- Scientific Evidence: Some studies (e.g., 2010 Journal of Economic Entomology) show reduced pest incidence, but more research is needed.",
-          "type": "text"
-        },
-        {
-          "heading": "Other Companion Plants",
-          "content": "- For Tomatoes: Marigolds (pest control), carrots (soil loosening), onions/garlic (pest repellent), borage (pollinators). Avoid potatoes, eggplants, peppers, and brassicas.\n- For Basil: Peppers (pest control), oregano/chamomile (oil content improvement). Avoid rue and sage.",
-          "type": "text"
-        },
-        {
-          "heading": "Practical Tips for Planting Tomatoes and Basil",
-          "content": "1. Spacing: Plant basil 12-18 inches from tomatoes.\n2. Timing: Start basil after last frost, later than tomatoes.\n3. Soil: Use well-drained, fertile soil (pH 6.0-7.0) with compost.\n4. Watering: Deep water tomatoes; less for basil; mulch to retain moisture.\n5. Harvesting: Pinch basil to prevent flowering; harvest tomatoes as they ripen.",
-          "type": "checklist"
-        },
-        {
-          "heading": "Limitations and Areas of Uncertainty",
-          "content": "Many benefits like flavor enhancement are anecdotal. Pest repellency effectiveness varies by region and cultivar. Large-scale studies are lacking. Consult local agricultural extensions for region-specific data.",
-          "type": "text"
-        },
-        {
-          "heading": "Conclusion",
-          "content": "Companion planting, especially tomatoes with basil, offers pest control, space efficiency, and cultural synergy. While some benefits are unproven, the pairing is supported by traditional knowledge and preliminary research. Experimentation with spacing and additional companions is recommended.",
-          "type": "text"
-        }
-      ],
-      "metadata": {
-        "primary_topic": "Companion Planting for Tomatoes and Basil",
-        "status": "complete",
+        "primary_topic": "Planting Schedule",
+        "status": "Draft",
         "priority": "medium"
       }
     }
@@ -297,7 +104,24 @@ A JSON object containing:
 }
 
 ## Structural Instructions to Apply
-[]
+[
+  {
+    "instruction_id": "instr-uuid-2001",
+    "command_type": "create_separate_note",
+    "instruction_type": "structural",
+    "description": "Create a separate note just for the planting calendar",
+    "parameters": {
+      "target": "Planting Calendar for Zone 7b Vegetable Garden",
+      "format": "Dedicated record with seasonal sections",
+      "query": "",
+      "additional_info": "User requested a standalone reference for planting times throughout the season"
+    },
+    "priority": "3",
+    "dependencies": [
+      "rec-uuid-1001"
+    ]
+  }
+]
 
 ## Output
 An array of blueprint objects, each representing a markdown file:
