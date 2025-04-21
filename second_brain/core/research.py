@@ -124,14 +124,63 @@ def get_answer_from_llm(query: str, search_results: List[Dict[str, str]], tracer
     # Get the answer from the LLM
     return call_llm(prompt, tracer)
 
+def evaluate_query_needs_search(query: str, tracer=None) -> bool:
+    """
+    Have the LLM evaluate whether the query requires a web search
+    or can be answered from its existing knowledge.
+    """
+    prompt = f"""
+    Consider the following research question:
+    
+    "{query}"
+    
+    Determine whether this question:
+    1. Can be answered using your existing knowledge (general knowledge, facts, concepts, etc.)
+    2. Requires a web search for up-to-date information, specific data, recent events, etc.
+    
+    Reply with ONLY "NEEDS_SEARCH" or "CAN_ANSWER_DIRECTLY".
+    """
+    
+    print(f"Evaluating if query needs web search: {query}")
+    response = call_llm(prompt, tracer)
+    
+    # Look for the decision in the response
+    needs_search = "NEEDS_SEARCH" in response.upper()
+    print(f"Evaluation result: {'Needs search' if needs_search else 'Can answer directly'}")
+    
+    return needs_search
+
+def get_direct_answer_from_llm(query: str, tracer=None) -> str:
+    """
+    Get an answer directly from the LLM without performing a web search.
+    """
+    prompt = f"""
+    Research Question: {query}
+    
+    Please provide a comprehensive answer to this question based on your knowledge.
+    If you're unsure about any specific details, please indicate that.
+    """
+    
+    print(f"Getting direct answer from LLM for: {query}")
+    return call_llm(prompt, tracer)
+
 def research_query(query: str, tracer=None) -> str:
     """
     Main function to handle the research process.
-    Takes a query, searches for it, and gets an answer from the LLM.
+    Takes a query, evaluates if it needs searching, and gets an answer from the LLM.
     """
     print(f"Researching: {query}")
     
-    # Search for information
+    # First, evaluate if this query requires a web search
+    needs_search = evaluate_query_needs_search(query, tracer)
+    
+    if not needs_search:
+        # Get answer directly from LLM if no search is needed
+        print("Query can be answered directly, skipping web search")
+        return get_direct_answer_from_llm(query, tracer)
+    
+    # If we get here, we need to search
+    print("Query requires web search for accurate information")
     search_results = search_duckduckgo(query)
     
     if not search_results:

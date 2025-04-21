@@ -87,7 +87,8 @@ class Config:
         
         # If no transcript file is specified, list available transcripts
         if transcript_file is None:
-            transcript_files = list(Path(cls.INPUT_DIR).glob("*.csv"))
+            # Look for both .txt and .csv files
+            transcript_files = list(Path(cls.INPUT_DIR).glob("*.txt")) + list(Path(cls.INPUT_DIR).glob("*.csv"))
             if not transcript_files:
                 logger.error(f"No transcript files found in {cls.INPUT_DIR}")
                 raise FileNotFoundError(f"No transcript files found in {cls.INPUT_DIR}")

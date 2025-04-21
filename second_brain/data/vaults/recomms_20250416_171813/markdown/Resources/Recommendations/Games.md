@@ -4,9 +4,6 @@ goal:
 _record_ids: ["123e4567-e89b-12d3-a456-426614174007", "123e4567-e89b-12d3-a456-426614174008", "123e4567-e89b-12d3-a456-426614174009"]
 ---
 
-# Game Recommendations
-
-## Game Recommendations
 
 This file contains a curated list of game recommendations for personal reference.
 
