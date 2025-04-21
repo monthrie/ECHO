@@ -7,7 +7,7 @@ import argparse
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from second_brain.core.main import process_transcripts
-from second_brain.core.prepare_markdown_json import process_json_to_blueprints
+from second_brain.core.prepare_markdown_json import process_json_to_blueprints, process_research_requests
 from second_brain.core.blueprint_to_markdown import process_blueprint_files
 from second_brain.utils.config import Config
 from second_brain.utils.langsmith_tracer import SecondBrainTracer
@@ -35,9 +35,13 @@ def run_pipeline(transcript_file=None):
             else:
                 print(f"structured_json is not a dictionary: {structured_json[:100]}...")
             
+            # Process research requests
+            print("Processing research requests...")
+            enriched_json = process_research_requests(structured_json, tracer)
+            
             # Convert JSON to blueprints
             print("Converting JSON to blueprints...")
-            blueprints = process_json_to_blueprints(structured_json, tracer)
+            blueprints = process_json_to_blueprints(enriched_json, tracer)
             
             # Convert blueprints to markdown
             print("Converting blueprints to markdown...")
@@ -57,7 +61,7 @@ def run_pipeline(transcript_file=None):
 if __name__ == "__main__":
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="Convert transcripts to markdown knowledge base")
-    parser.add_argument("--transcript", "-t", help="Path to transcript CSV file")
+    parser.add_argument("--transcript", "-t", help="Path to transcript text file")
     args = parser.parse_args()
     
     # Run the pipeline

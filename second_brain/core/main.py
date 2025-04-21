@@ -138,33 +138,23 @@ def process_transcripts(tracer=None):
         print(f"Reading transcript from: {transcript_path}")
         
         with open(transcript_path, 'r', encoding='utf-8') as f:
-            reader = csv.reader(f)
-            # Skip header if present
-            header = next(reader, None)
-            # Get first row of content
-            first_row = next(reader, None)
+            # Read entire file as transcript instead of CSV
+            transcript_content = f.read()
+            print(f"Extracted transcript content ({len(transcript_content)} chars)")
             
-            if first_row:
-                # Extract content (assuming it's in the last column)
-                transcript_content = first_row[-1]
-                print(f"Extracted transcript content ({len(transcript_content)} chars)")
-                
-                # Get structured JSON
-                structured_json = get_structured_json(transcript_content, tracer=tracer)
-                
-                # Save to file
-                json_output_path = Path(Config.JSON_OUTPUT_DIR) / "structured.json"
-                with open(json_output_path, 'w', encoding='utf-8') as f:
-                    if isinstance(structured_json, str):
-                        f.write(structured_json)
-                    else:
-                        json.dump(structured_json, f, indent=2)
-                
-                print(f"Saved structured JSON to {json_output_path}")
-                return structured_json
-            else:
-                print("No content found in transcript file")
-                return None
+            # Get structured JSON
+            structured_json = get_structured_json(transcript_content, tracer=tracer)
+            
+            # Save to file
+            json_output_path = Path(Config.JSON_OUTPUT_DIR) / "structured.json"
+            with open(json_output_path, 'w', encoding='utf-8') as f:
+                if isinstance(structured_json, str):
+                    f.write(structured_json)
+                else:
+                    json.dump(structured_json, f, indent=2)
+            
+            print(f"Saved structured JSON to {json_output_path}")
+            return structured_json
     except Exception as e:
         print(f"Error processing transcript: {str(e)}")
         return None

@@ -6,7 +6,9 @@ from datetime import datetime
 import requests
 from second_brain.utils.config import Config
 from second_brain.prompts.blueprint_prompt import get_blueprint_conversion_prompt
+from second_brain.prompts.prompts import get_structuring_prompt
 import re
+from second_brain.core.research import research_query
 
 def convert_json_to_blueprints(json_data, tracer=None):
     """Convert JSON data to blueprints using LLM."""
@@ -219,6 +221,149 @@ def clean_json_string(json_str):
     
     # Convert back to standard JSON
     return json.dumps(parsed)
+
+def process_research_requests(json_data, tracer=None):
+    """
+    Process any research tool instructions in the JSON data and add results as new records.
+    """
+    # Make a copy of the JSON data to avoid modifying the original
+    enriched_json = json_data.copy()
+    
+    # Check if we have system_instructions and records
+    if not isinstance(enriched_json, dict) or "system_instructions" not in enriched_json or "records" not in enriched_json:
+        print("JSON data does not contain required fields for research processing")
+        return enriched_json
+    
+    research_instructions = []
+    other_instructions = []
+    
+    # Separate research instructions from other instructions
+    for instruction in enriched_json.get("system_instructions", []):
+        if (instruction.get("instruction_type") == "tool" and 
+            "research" in instruction.get("command_type", "").lower()):
+            research_instructions.append(instruction)
+        else:
+            other_instructions.append(instruction)
+    
+    print(f"Found {len(research_instructions)} research instructions to process")
+    
+    # Process each research instruction
+    for instruction in research_instructions:
+        try:
+            # Extract the research query
+            query = instruction.get("description", "")
+            parameters = instruction.get("parameters", {})
+            if not query and "query" in parameters:
+                query = parameters.get("query", "")
+            
+            if not query:
+                print(f"Skipping research instruction - no query found: {instruction}")
+                continue
+            
+            print(f"Processing research query: {query[:100]}...")
+            
+            # Execute the research query
+            result = research_query(query, tracer)
+            
+            if not result:
+                print(f"Research query returned no results: {query[:100]}...")
+                continue
+            
+            # Create a research transcript format that combines the query and result
+            research_transcript = f"""
+Research Request: {query}
+
+Research Results:
+{result}
+"""
+            
+            # Get user ID from the original JSON data
+            user_id = enriched_json.get("session", {}).get("user_id", "default_user")
+            
+            # Use the existing structuring prompt to convert research results to records
+            structuring_prompt = get_structuring_prompt(research_transcript, user_id)
+            
+            # Call the LLM to structure the research results into records
+            research_records = call_llm_for_records(structuring_prompt, tracer)
+            
+            if research_records and "records" in research_records:
+                # Add the research records to the existing records
+                print(f"Adding {len(research_records['records'])} research records")
+                enriched_json["records"].extend(research_records["records"])
+            else:
+                print("No valid research records were generated")
+            
+        except Exception as e:
+            print(f"Error processing research instruction: {str(e)}")
+            import traceback
+            traceback.print_exc()
+    
+    # Update the system_instructions to only include non-research instructions
+    enriched_json["system_instructions"] = other_instructions
+    
+    return enriched_json
+
+def call_llm_for_records(prompt, tracer=None):
+    """
+    Call the LLM to structure content into records.
+    Similar to how the main transcript processing works.
+    """
+    try:
+        # Make the API call
+        print(f"Calling LLM using OpenRouter with model: {Config.MODEL}")
+        
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {Config.OPENROUTER_API_KEY}",
+                "HTTP-Referer": "http://localhost:8000",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": Config.MODEL,
+                "messages": [
+                    {"role": "system", "content": "You structure content into PARA methodology records."},
+                    {"role": "user", "content": prompt}
+                ],
+                "temperature": 0.2
+            }
+        )
+        
+        if response.status_code != 200:
+            print(f"OpenRouter API error: {response.status_code} - {response.text}")
+            return None
+        
+        response_json = response.json()
+        result = response_json["choices"][0]["message"]["content"].strip()
+        
+        # Trace the call if tracer is available
+        if tracer:
+            metadata = {
+                "model": Config.MODEL,
+                "temperature": 0.2,
+                "source": "research_to_records"
+            }
+            tracer.trace_openrouter_call("research_to_records", prompt, result, metadata)
+        
+        # Extract JSON from the result
+        json_match = re.search(r'```json\s*([\s\S]*?)\s*```', result)
+        if json_match:
+            json_str = json_match.group(1)
+        else:
+            # Try to find JSON without code block markers
+            json_str = result
+        
+        # Clean and parse the JSON
+        records_data = clean_json_string(json_str)
+        records = json.loads(records_data)
+        
+        return records
+    
+    except Exception as e:
+        print(f"Error calling LLM for records: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return None
 
 if __name__ == "__main__":
     Config.initialize()

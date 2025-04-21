@@ -3,3 +3,10 @@
 2025-04-20 18:06:19,372 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/recomms.csv
 2025-04-20 18:06:19,372 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/recomms_20250420_180619
 2025-04-20 18:06:19,372 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 00:54:56,263 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 00:54:56,263 - SecondBrain - ERROR - No transcript files found in /Users/wilmon/Documents/projects/ECHO/second_brain/data/input
+2025-04-21 00:57:01,143 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 00:57:01,143 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-21 00:57:01,144 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-21 00:57:01,144 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250421_005701
+2025-04-21 00:57:01,144 - SecondBrain - INFO - Starting pipeline...

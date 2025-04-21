@@ -4,9 +4,6 @@ goal:
 _record_ids: []
 ---
 
-# Recommendations Directory Contents
-
-## Recommendations Directory
 
 This directory serves as a collection of personal recommendations across various media types.
 
