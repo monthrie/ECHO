@@ -2,10 +2,8 @@ import json
 
 def get_blueprint_conversion_prompt(json_data):
     """
-    Output JSON blueprints.
-    Based on the sophisticated logic in conversion_prompt.py.
-    Handles structural instructions separately.
-    Removes tool instructions completely.
+    Output JSON blueprints using the new Blueprint Maker approach.
+    Takes input JSON data and returns a prompt string.
     """
     # Extract only structural instructions for reference in the prompt
     structural_instructions = []
@@ -28,114 +26,109 @@ def get_blueprint_conversion_prompt(json_data):
     structural_instructions_str = json.dumps(structural_instructions, indent=2) if structural_instructions else "[]"
     
     prompt = f"""
-# Instructions for Converting Second Brain JSON to Markdown Blueprints
+# Blueprint Creation Prompt
 
-## JSON Data to Convert
+## Purpose
+Transform structured JSON records into a concise set of Obsidian markdown files. Your primary goal is to avoid unnecessary fragmentation of information while creating an intuitive, practical knowledge organization.
+
+## Input
+A JSON object containing:
+- A `session` object with metadata
+- A `records` array containing knowledge entries
+- A `system_instructions` array containing any organizational directives
+
+## Input JSON Data
 {json_str}
 
 ## Structural Instructions to Apply
-These are special formatting and organization instructions that should guide your conversion process,
-but should NOT be converted into separate markdown files themselves:
-
 {structural_instructions_str}
 
-## Hierarchical Organization Requirements
-1. Group ALL related notes under appropriate subdirectories
-2. NEVER place notes directly in root PARA folders without a subdirectory
-3. Files related to the same project, area, or topic MUST be placed in a dedicated subdirectory
-4. Example hierarchy:
-   - Projects/Investigation/Overview.md
-   - Projects/Investigation/Plan.md
-   - Projects/Investigation/MVP.md
+## Output
+An array of blueprint objects, each representing a markdown file:
 
-## Directory Organization
-- Projects must use: "Projects/<Project Name>/<filename>.md"
-- Areas must use: "Areas/<Area Name>/<filename>.md"
-- Resources must use: "Resources/<Topic Name>/<filename>.md"
-- Archives must use: "Archives/<Original Category>/<filename>.md"
-
-## Organizational Files
-For any collection with multiple files, create:
-1. A "Contents.md" file that serves as a Map of Contents (MOC)
-2. A "Tasks.md" file if there are multiple tasks or action items
-
-Example structure:
-- Projects/Investigation/Contents.md
-- Projects/Investigation/Tasks.md
-- Projects/Investigation/Overview.md
-- Projects/Investigation/Plan.md
-- Projects/Investigation/MVP.md
-
-## Naming and Formatting Requirements
-1. Use descriptive, concise filenames with spaces between words
-2. Ensure filenames match the content they contain
-3. Structure content with appropriate headings, lists, and formatting
-4. DO NOT include the title as an H1 heading - Obsidian will use the filename as the title
-5. Start content with paragraph text or H2+ headings
-6. Preserve all important information from the original records
-
-## Note Types and Content Structure
-
-### Project Notes
-For each project:
-- Create a comprehensive main project note with overview, status, and key details
-- Include "Related Notes" section with links
-- Extract associated tasks into a checklist section or link to tasks file
-- Add context about the project's purpose, goals, and timeline
-- Include any dependencies or requirements
-
-### Implementation/Technical Notes
-For technical details:
-- Create separate notes focusing on architecture and technical aspects
-- Include diagrams for system relationships when appropriate
-- Use code blocks with appropriate syntax highlighting
-- Maintain technical accuracy while improving readability
-- Link to relevant external resources or documentation
-
-### Entity Notes
-For important entities (people, concepts, organizations):
-- Create dedicated notes for significant entities referenced across multiple records
-- Describe relationships to projects and other entities
-- Include relevant background information
-- Establish bidirectional links to related notes
-
-## Special Instructions
-1. Preserve ALL detailed information while reorganizing presentation
-2. For complex projects, suggest canvas files to visualize relationships
-3. Include direct quotes or critical content verbatim to maintain accuracy
-4. Look for narrative connections between JSON records and combine logically related content
-
-## Applying Structural Instructions
-When applying the structural instructions:
-1. Use them as guidance for how to organize and format the markdown content
-2. Follow any specific requirements about combining or separating notes
-3. Apply formatting instructions to the relevant content
-4. DO NOT create separate notes for the instructions themselves
-5. Prioritize instructions by their priority value if provided
-
-## OUTPUT FORMAT
-Instead of directly creating markdown files, you must output a JSON array of blueprint objects.
-Each blueprint should have this structure:
-
+```json
 {{
   "file_info": {{
-    "directory": "The appropriate directory path (e.g., Projects/FTFM)",
-    "filename": "A descriptive filename (e.g., Technical Architecture)",
-    "record_id": "The original record_id from the source"
+    "directory": "Appropriate directory path based on content",
+    "filename": "Descriptive filename with spaces",
+    "record_id": "Original record_id if available"
   }},
   "frontmatter": {{
-    "tags": ["tag1", "tag2"],
-    "record_ids": ["record_id1", "record_id2"],
-    "description": "A short but densely informative description of the note - this will be used for cosine similarity search"
+    "tags": ["relevant", "tags"],
+    "description": "Concise description of the note's purpose"
   }},
   "content": {{
-    "title": "The title for the note",
-    "body": "The fully formatted markdown content WITHOUT an H1 heading - start with paragraph text or H2+ headings"
+    "title": "Note title",
+    "body": "Fully formatted markdown content"
   }}
 }}
+```
 
-IMPORTANT: Your response must be a valid JSON array of these blueprint objects, with no additional text or explanation.
-Make sure all strings in the JSON are properly escaped, especially when they contain newlines or special characters.
-DO NOT include actual newlines within JSON string values - use \\n instead to represent newlines in content.
+## Core Principles
+
+### Strong Consolidation Preference
+- By default, aim for a maximum of one note per record in the input
+- Look for opportunities to further consolidate records into fewer notes when content is closely related
+- Only create multiple notes from a single record when there is a compelling reason (such as explicit user instructions)
+- Prioritize comprehensive, well-structured notes over numerous smaller notes
+
+### Content-Driven Organization
+- Organize content primarily by topic, not by record structure
+- Place conceptually related information together, even if it spans multiple records
+- Use clear section headings within notes to delineate different components
+- Consider how the user would naturally think about and access the information
+
+### Minimal File Structure
+- Create the smallest number of files that effectively organizes the content
+- For small to medium amounts of content (under ~2000 words total), consider using a single note with clear sections
+- Only create separate directory structures when dealing with clearly distinct topic areas
+- Avoid creating "special" files (like Contents.md) for small collections
+
+### Explicit Instruction Priority
+- Only create separate notes for specific structural directives from the user
+- When a user explicitly requests a separate note, honor that request
+- Otherwise, default to consolidation and simplicity
+- Interpret ambiguous instructions in favor of fewer, more comprehensive notes
+
+## Markdown Best Practices
+
+### Effective Internal Structure
+- Use clear heading hierarchy (H2 and below) to organize content within notes
+- Create logical sections that group related information
+- For longer notes, consider adding a brief table of contents at the beginning
+- Use formatting (lists, emphasis, etc.) to enhance readability
+
+### Knowledge Connections
+- Create links between separate notes using Obsidian's `[[File Name]]` syntax
+- For content within the same note, use heading links with Obsidian's syntax: `[[File Name#Section Heading]]`
+- Add a "Related Notes" section only when there are actual separate notes to link to
+- Maintain the semantic connections present in the original records
+
+### Task Management
+- Format actionable items as markdown task lists: `- [ ] Task description`
+- Keep tasks with their relevant context rather than extracting to separate files
+- Only create a dedicated tasks file if explicitly requested or if there are many tasks spanning multiple distinct topics
+- Ensure tasks maintain clear association with their parent topics
+
+## Frontmatter Guidelines
+- Include meaningful tags that aid in finding and categorizing the note
+- Provide a concise, informative description that captures the note's essence
+- Keep frontmatter simple and focused on user-relevant metadata
+- Use consistent tag formatting (lowercase, hyphenated multi-word tags)
+
+## Implementation Strategy
+
+1. Start by assuming each record will become at most one note
+2. Look for opportunities to consolidate records into even fewer notes based on topic relationships
+3. Only create separate notes when:
+   - Explicitly directed by user instructions
+   - The content represents truly distinct topic areas that would be unnaturally combined
+   - Combining would create an excessively long note (>3000 words) that covers multiple major topics
+4. Create a simple, logical directory structure, avoiding unnecessary nesting
+5. Implement a clear internal structure within each note using headings, lists, and formatting
+
+Remember: The goal is to create a concise, well-organized knowledge structure that avoids unnecessary fragmentation. A small number of comprehensive, well-structured notes is generally preferable to many small notes.
+
+Output only valid JSON with nothing before AND nothing after
 """
     return prompt
