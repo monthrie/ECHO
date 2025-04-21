@@ -38,6 +38,11 @@ def convert_blueprint_to_markdown(blueprint, base_path):
         title = blueprint.get('content', {}).get('title', 'Untitled')
         body = blueprint.get('content', {}).get('body', '')
         
+        # Remove any H1 heading that duplicates the title
+        import re
+        title_pattern = re.compile(f"^# {re.escape(title)}\\s*\n", re.MULTILINE)
+        body = title_pattern.sub("", body)
+        
         # Extract frontmatter
         frontmatter = blueprint.get('frontmatter', {})
         
@@ -61,7 +66,7 @@ def convert_blueprint_to_markdown(blueprint, base_path):
         frontmatter_yaml = yaml.dump(frontmatter, default_flow_style=False)
         
         # Combine frontmatter and body into a complete markdown document
-        # Do NOT add the title as an H1 heading - the body should already include it
+        # Do NOT add the title as an H1 heading since Obsidian shows the filename as title
         markdown_content = f"---\n{frontmatter_yaml}---\n\n{body}"
         
         # Write to file
@@ -112,6 +117,10 @@ def process_blueprint_files(blueprint, config=None):
         directory = blueprint.get("file_info", {}).get("directory", "")
         filename = blueprint.get("file_info", {}).get("filename", "")
         
+        # Ensure filename has .md extension
+        if not filename.endswith('.md'):
+            filename += '.md'
+        
         # Extract frontmatter
         frontmatter = blueprint.get("frontmatter", {})
         
@@ -122,6 +131,12 @@ def process_blueprint_files(blueprint, config=None):
         # Extract content
         title = blueprint.get("content", {}).get("title", "")
         body = blueprint.get("content", {}).get("body", "")
+        
+        # Remove any H1 heading that duplicates the title
+        # This pattern matches "# Title" at the beginning of the content
+        import re
+        title_pattern = re.compile(f"^# {re.escape(title)}\\s*\n", re.MULTILINE)
+        body = title_pattern.sub("", body)
         
         # Use VAULT_PATH as the primary output directory
         if hasattr(config, 'VAULT_PATH'):
@@ -146,7 +161,7 @@ def process_blueprint_files(blueprint, config=None):
                 markdown_content += f"{key}: {value}\n"
         markdown_content += "---\n\n"
         
-        # Add the title and body
+        # Add the body without duplicating the title
         markdown_content += body
         
         # Write the file
