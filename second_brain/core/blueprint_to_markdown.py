@@ -4,6 +4,8 @@ import re
 from pathlib import Path
 import yaml
 from second_brain.utils.config import Config
+import shutil
+from datetime import datetime
 
 def sanitize_filename(name):
     """Sanitize a string to be used as a filename or directory name."""
@@ -138,7 +140,7 @@ def process_blueprint_files(blueprint, config=None):
         title_pattern = re.compile(f"^# {re.escape(title)}\\s*\n", re.MULTILINE)
         body = title_pattern.sub("", body)
         
-        # Use VAULT_PATH as the primary output directory
+        # Use VAULT_PATH as the primary output directory (now points to permanent vault)
         if hasattr(config, 'VAULT_PATH'):
             output_dir = config.VAULT_PATH
         elif hasattr(config, 'MARKDOWN_OUTPUT_DIR'):
@@ -209,6 +211,28 @@ def create_index_file(created_files, output_dir=None):
     
     print(f"Created index file: {index_path}")
     return str(index_path)
+
+def save_run_logs(original_input, json_output, blueprints, created_files, config):
+    """Save artifacts from this run for debugging/reference."""
+    # Create a log file with run information
+    log_file = config.RUN_LOG_DIR / "run_summary.json"
+    
+    log_data = {
+        "timestamp": datetime.now().isoformat(),
+        "input_file": str(original_input) if isinstance(original_input, Path) else "direct_input",
+        "json_file": str(json_output) if isinstance(json_output, Path) else None,
+        "blueprints": [str(b) if isinstance(b, Path) else b.get("file_info", {}) for b in blueprints],
+        "created_files": [str(f) for f in created_files]
+    }
+    
+    with open(log_file, 'w', encoding='utf-8') as f:
+        json.dump(log_data, f, indent=2)
+        
+    # Copy the original input if it's a file
+    if isinstance(original_input, Path) and original_input.exists():
+        shutil.copy(original_input, config.RUN_LOG_DIR / original_input.name)
+    
+    return str(log_file)
 
 if __name__ == "__main__":
     from second_brain.utils.config import Config
