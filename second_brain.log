@@ -10,3 +10,8 @@
 2025-04-21 00:57:01,144 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
 2025-04-21 00:57:01,144 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250421_005701
 2025-04-21 00:57:01,144 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 14:33:10,083 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 14:33:10,083 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-21 14:33:10,083 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-21 14:33:10,083 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250421_143310
+2025-04-21 14:33:10,083 - SecondBrain - INFO - Starting pipeline...
