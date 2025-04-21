@@ -143,3 +143,14 @@ class Config:
         logger.info(f"Output directories: {cls.CURRENT_VAULT_DIR}")
         
         return logger
+
+    @classmethod
+    def refresh_model_settings(cls):
+        """Refresh model settings from environment variables."""
+        # Reload from environment
+        load_dotenv(override=True)
+        cls.MODEL = os.getenv("MODEL", "anthropic/claude-3.7-sonnet")
+        cls.TEMPERATURE = float(os.getenv("TEMPERATURE", "0.3"))
+        logger = logging.getLogger("second_brain")
+        logger.info(f"Model settings refreshed: {cls.MODEL}, temp={cls.TEMPERATURE}")
+        return cls.MODEL

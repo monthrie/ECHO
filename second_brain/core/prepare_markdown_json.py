@@ -224,82 +224,23 @@ def clean_json_string(json_str):
 
 def process_research_requests(json_data, tracer=None):
     """
-    Process any research tool instructions in the JSON data and add results as new records.
+    Process any research tool instructions in the JSON data.
+    Only processes very specialized or real-time data needs.
     """
     # Make a copy of the JSON data to avoid modifying the original
     enriched_json = json_data.copy()
     
     # Check if we have system_instructions and records
-    if not isinstance(enriched_json, dict) or "system_instructions" not in enriched_json or "records" not in enriched_json:
-        print("JSON data does not contain required fields for research processing")
+    if not isinstance(enriched_json, dict) or "system_instructions" not in enriched_json:
         return enriched_json
     
-    research_instructions = []
-    other_instructions = []
-    
-    # Separate research instructions from other instructions
-    for instruction in enriched_json.get("system_instructions", []):
-        if (instruction.get("instruction_type") == "tool" and 
-            "research" in instruction.get("command_type", "").lower()):
-            research_instructions.append(instruction)
-        else:
-            other_instructions.append(instruction)
-    
-    print(f"Found {len(research_instructions)} research instructions to process")
-    
-    # Process each research instruction
-    for instruction in research_instructions:
-        try:
-            # Extract the research query
-            query = instruction.get("description", "")
-            parameters = instruction.get("parameters", {})
-            if not query and "query" in parameters:
-                query = parameters.get("query", "")
-            
-            if not query:
-                print(f"Skipping research instruction - no query found: {instruction}")
-                continue
-            
-            print(f"Processing research query: {query[:100]}...")
-            
-            # Execute the research query
-            result = research_query(query, tracer)
-            
-            if not result:
-                print(f"Research query returned no results: {query[:100]}...")
-                continue
-            
-            # Create a research transcript format that combines the query and result
-            research_transcript = f"""
-Research Request: {query}
-
-Research Results:
-{result}
-"""
-            
-            # Get user ID from the original JSON data
-            user_id = enriched_json.get("session", {}).get("user_id", "default_user")
-            
-            # Use the existing structuring prompt to convert research results to records
-            structuring_prompt = get_structuring_prompt(research_transcript, user_id)
-            
-            # Call the LLM to structure the research results into records
-            research_records = call_llm_for_records(structuring_prompt, tracer)
-            
-            if research_records and "records" in research_records:
-                # Add the research records to the existing records
-                print(f"Adding {len(research_records['records'])} research records")
-                enriched_json["records"].extend(research_records["records"])
-            else:
-                print("No valid research records were generated")
-            
-        except Exception as e:
-            print(f"Error processing research instruction: {str(e)}")
-            import traceback
-            traceback.print_exc()
-    
-    # Update the system_instructions to only include non-research instructions
-    enriched_json["system_instructions"] = other_instructions
+    # Filter out research instructions - we're not processing them anymore
+    # Keep only structural instructions
+    enriched_json["system_instructions"] = [
+        instruction for instruction in enriched_json.get("system_instructions", [])
+        if instruction.get("instruction_type") != "tool" or 
+        "research" not in instruction.get("command_type", "").lower()
+    ]
     
     return enriched_json
 
