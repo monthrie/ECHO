@@ -10,13 +10,13 @@ from second_brain.prompts.prompts import get_structuring_prompt
 import re
 from second_brain.core.research import research_query
 
-def convert_json_to_blueprints(json_data, tracer=None):
+def convert_json_to_blueprints(json_data, tracer=None, vault_structure=None):
     """Convert JSON data to blueprints using LLM."""
     try:
         print(f"convert_json_to_blueprints received data of type: {type(json_data)}")
         
         # Prepare the prompt for the LLM
-        prompt = get_blueprint_conversion_prompt(json_data)
+        prompt = get_blueprint_conversion_prompt(json_data, vault_structure)
         
         # Save the prompt to a file for inspection
         with open("llm_prompt.txt", "w", encoding="utf-8") as f:
@@ -171,36 +171,39 @@ def create_basic_blueprints(json_data):
     
     return blueprints
 
-def process_json_to_blueprints(json_data, tracer=None):
-    """Process JSON data to blueprint files."""
-    try:
-        # Create blueprints directory if it doesn't exist
-        blueprints_dir = Path(Config.BLUEPRINTS_DIR)
-        blueprints_dir.mkdir(parents=True, exist_ok=True)
+def process_json_to_blueprints(json_data, tracer=None, vault_structure=None):
+    """
+    Process JSON data to blueprint format.
+    
+    Args:
+        json_data: JSON data to convert
+        tracer: Optional tracer for LangSmith
+        vault_structure: Optional vault structure information
         
-        # Convert JSON to blueprints
-        blueprints = convert_json_to_blueprints(json_data, tracer)
-        
-        # Save each blueprint to a file
-        blueprint_files = []
-        for blueprint in blueprints:
-            # Generate a unique ID for the blueprint
-            blueprint_id = str(uuid.uuid4())
-            
-            # Create the blueprint file path
-            blueprint_file = blueprints_dir / f"{blueprint_id}_blueprint.json"
-            
-            # Save the blueprint to a file
-            with open(blueprint_file, 'w', encoding='utf-8') as f:
-                json.dump(blueprint, f, indent=2)
-            
-            blueprint_files.append(blueprint_file)
-        
-        print(f"Created {len(blueprint_files)} blueprint files")
-        return blueprints
-    except Exception as e:
-        print(f"Error in process_json_to_blueprints: {str(e)}")
-        return []
+    Returns:
+        Blueprint JSON data
+    """
+    # Process any research instructions that might be in the system_instructions
+    if isinstance(json_data, dict) and "system_instructions" in json_data:
+        for instruction in json_data.get("system_instructions", []):
+            if instruction.get("instruction_type") == "tool" and instruction.get("command_type") == "research_web_search":
+                query = instruction.get("parameters", {}).get("query", "")
+                if query:
+                    print(f"Processing research query: {query}")
+                    research_results = research_query(query)
+                    # Add research results to the JSON data
+                    if "research_results" not in json_data:
+                        json_data["research_results"] = []
+                    json_data["research_results"].append({
+                        "query": query,
+                        "results": research_results,
+                        "instruction_id": instruction.get("instruction_id", "")
+                    })
+    
+    # Then convert to blueprints
+    blueprints = convert_json_to_blueprints(json_data, tracer, vault_structure)
+    
+    return blueprints
 
 def clean_json_string(json_str):
     """Clean and extract JSON from text using json5."""
