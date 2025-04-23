@@ -65,3 +65,99 @@
 2025-04-21 19:31:42,014 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm.txt
 2025-04-21 19:31:42,014 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_20250421_193142
 2025-04-21 19:31:42,014 - SecondBrain - INFO - Starting pipeline...
+2025-04-21 22:04:35,917 - SecondBrain - INFO - Logger initialized successfully
+2025-04-21 22:04:35,918 - SecondBrain - INFO - No transcript specified, using: ftfm.txt
+2025-04-21 22:04:35,918 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm.txt
+2025-04-21 22:04:35,918 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_20250421_220435
+2025-04-21 22:04:35,918 - SecondBrain - INFO - Starting pipeline...
+2025-04-22 00:15:56,746 - SecondBrain - INFO - Logger initialized successfully
+2025-04-22 00:15:56,746 - SecondBrain - INFO - No transcript specified, using: ai_possibilities.txt
+2025-04-22 00:15:56,747 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ai_possibilities.txt
+2025-04-22 00:15:56,747 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ai_possibilities_20250422_001556
+2025-04-22 00:15:56,747 - SecondBrain - INFO - Starting pipeline...
+2025-04-22 00:47:42,779 - SecondBrain - INFO - Logger initialized successfully
+2025-04-22 00:47:42,779 - SecondBrain - INFO - No transcript specified, using: ai_possibilities.txt
+2025-04-22 00:47:42,780 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ai_possibilities.txt
+2025-04-22 00:47:42,780 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ai_possibilities_20250422_004742
+2025-04-22 13:43:46,403 - SecondBrain - INFO - Logger initialized successfully
+2025-04-22 13:43:46,404 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-22 13:43:46,404 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-22 13:43:46,404 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250422_134346
+2025-04-23 09:25:35,955 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:25:35,956 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:25:35,957 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:25:35,957 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_092535
+2025-04-23 09:27:01,258 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:27:01,258 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:27:01,259 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:27:01,259 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_092701
+2025-04-23 09:27:20,662 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:27:20,662 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:27:20,663 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:27:20,663 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:27:20,663 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:27:20,663 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:27:20,663 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_092720
+2025-04-23 09:27:20,663 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_092720
+2025-04-23 09:27:20,663 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 09:27:20,663 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 09:27:41,624 - SecondBrain - ERROR - Pipeline error: 'Projects/FTFM' is not in the subpath of '/Users/wilmon/Documents/projects/ECHO/second_brain/data/obsidian_vault' OR one path is relative and the other is absolute.
+2025-04-23 09:27:41,624 - SecondBrain - ERROR - Pipeline error: 'Projects/FTFM' is not in the subpath of '/Users/wilmon/Documents/projects/ECHO/second_brain/data/obsidian_vault' OR one path is relative and the other is absolute.
+2025-04-23 09:35:21,201 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:35:21,201 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:35:21,202 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:35:21,202 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_093521
+2025-04-23 09:35:36,478 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:35:36,478 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:35:36,478 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:35:36,478 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:35:36,479 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:35:36,479 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:35:36,479 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_093536
+2025-04-23 09:35:36,479 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_093536
+2025-04-23 09:35:36,479 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 09:35:36,479 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 09:36:04,995 - SecondBrain - ERROR - Pipeline error: 'Projects/FTFM' is not in the subpath of '/Users/wilmon/Documents/projects/ECHO/second_brain/data/obsidian_vault' OR one path is relative and the other is absolute.
+2025-04-23 09:36:04,995 - SecondBrain - ERROR - Pipeline error: 'Projects/FTFM' is not in the subpath of '/Users/wilmon/Documents/projects/ECHO/second_brain/data/obsidian_vault' OR one path is relative and the other is absolute.
+2025-04-23 09:48:26,139 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:48:26,139 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:48:26,140 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:48:26,140 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_094826
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:48:44,255 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:48:44,255 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_094844
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_094844
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 09:48:44,255 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 09:53:22,771 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:53:22,772 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:53:22,774 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:53:22,775 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_095322
+2025-04-23 09:53:39,483 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:53:39,483 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 09:53:39,483 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:53:39,483 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 09:53:39,483 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:53:39,483 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 09:53:39,484 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_095339
+2025-04-23 09:53:39,484 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_095339
+2025-04-23 09:53:39,484 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 09:53:39,484 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 10:00:39,707 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:00:39,707 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 10:00:39,708 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 10:00:39,708 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_100039
+2025-04-23 10:01:18,368 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:01:18,368 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:01:18,369 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 10:01:18,369 - SecondBrain - INFO - No transcript specified, using: ftfm_update.txt
+2025-04-23 10:01:18,369 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 10:01:18,369 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/ftfm_update.txt
+2025-04-23 10:01:18,369 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_100118
+2025-04-23 10:01:18,369 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_100118
+2025-04-23 10:01:18,369 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 10:01:18,369 - SecondBrain - INFO - Starting pipeline...

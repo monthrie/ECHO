@@ -1,0 +1,53 @@
+[
+  {
+    "filepath": "index.md",
+    "description": "",
+    "tags": [],
+    "directory": "."
+  },
+  {
+    "filepath": "Personal/Personal Journaling - Daily and Weekly Stories.md",
+    "description": "A side note on creating a personal journaling system for brief daily and weekly memorable moments.",
+    "tags": [
+      "personal",
+      "journal",
+      "daily-story",
+      "weekly-story"
+    ],
+    "directory": "Personal"
+  },
+  {
+    "filepath": "Projects/AI/AI Dictation System Project.md",
+    "description": "A quick note on a separate AI dictation system for processing spoken input and generating structured research outputs.",
+    "tags": [
+      "ai",
+      "dictation",
+      "research",
+      "automation"
+    ],
+    "directory": "Projects/AI"
+  },
+  {
+    "filepath": "Projects/AI/AI Project Brainstorming Session.md",
+    "description": "Summary of brainstorming session for multiple AI-related professional projects.",
+    "tags": [
+      "ai",
+      "projects",
+      "brainstorming",
+      "ideation"
+    ],
+    "directory": "Projects/AI"
+  },
+  {
+    "filepath": "Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
+    "description": "A detailed brainstorm on building 'Follow The Fucking Money' (FTFM), a system to track and analyze public statements for accountability using AI and structured data.",
+    "tags": [
+      "accountability",
+      "transparency",
+      "news-storage",
+      "public-statements",
+      "ai-analysis"
+    ],
+    "directory": "Projects/FTFM"
+  }
+]

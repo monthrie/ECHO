@@ -13,107 +13,35 @@ A JSON object containing:
 ## Input JSON Data
 {
   "session": {
-    "session_id": "uuid-session-1234-5678-9012-3456",
+    "session_id": "550e8400-e29b-41d4-a716-446655440000",
     "user_id": "default_user",
-    "started_at": "2023-10-01T10:00:00Z",
-    "summary": "User ideation session focused on developing a proof of concept for 'Follow The Fucking Money (FTFM)', a system to track public statements and accountability using AI and structured data, alongside a side note on personal journaling and AI dictation projects."
+    "started_at": "2023-10-05T12:00:00Z",
+    "summary": "This session focuses on defining the 'Follow the Fucking Money' (FTFM) project philosophy, emphasizing a non-judgmental approach to recording events and assessing the likelihood of their accuracy."
   },
   "records": [
     {
-      "record_id": "uuid-record-1234-5678-9012-0001",
-      "title": "Follow The Fucking Money (FTFM) Proof of Concept",
-      "content": "This record outlines the concept and potential implementation of 'Follow The Fucking Money (FTFM)', a system designed to track and analyze public statements and actions for accountability. The goal is to create a transparent 'source of truth' by mapping and structuring data from various sources like podcasts, news, and public records using AI.",
-      "created_at": "2023-10-01T10:05:00Z",
+      "record_id": "123e4567-e89b-12d3-a456-426614174001",
+      "title": "FTFM Manifesto",
+      "content": "The 'Follow the Fucking Money' (FTFM) project is a philosophy and methodology for recording events and information without normative judgments. It focuses on documenting what has happened and assessing the confidence level in the accuracy of those records.",
+      "created_at": "2023-10-05T12:05:00Z",
       "tags": [
-        "accountability",
-        "public data",
-        "AI analysis",
-        "news storage",
-        "transparency"
-      ],
-      "related_records": [
-        "uuid-record-1234-5678-9012-0002",
-        "uuid-record-1234-5678-9012-0003"
-      ],
-      "description": "Exploration of a system to track public statements and actions for accountability using AI-driven data structuring.",
-      "sections": [
-        {
-          "heading": "Core Concept",
-          "content": "FTFM aims to hold public figures accountable by tracking their statements, promises, and actions over time. It identifies patterns, contradictions, and changes in stance by mapping data from sources like podcasts (e.g., Glenn Greenwald's podcasts over the last 6 months), news, and public records. The system flags events such as promises made by politicians and checks if they are fulfilled.",
-          "type": "text"
-        },
-        {
-          "heading": "Minimal Viable Proof of Concept",
-          "content": "The initial proof of concept could involve transcribing and analyzing one or two of Glenn Greenwald's podcasts. A model would extract entities (people, places, laws, events), create detailed JSON structures, and note conflicts of interest, hypocrisies, or changes in mind. Additional sources could be added later to expand the dataset.",
-          "type": "text"
-        },
-        {
-          "heading": "Purpose and Impact",
-          "content": "This system addresses the lack of a storage layer for day-to-day reality in news and public discourse. Unlike Wikipedia, which stores static, encyclopedic information, FTFM would record dynamic, evolving details of what matters. It serves as a backend for news, making obfuscation transparent.",
-          "type": "text"
-        },
-        {
-          "heading": "Technical Architecture",
-          "content": "The system would use AI to process text data into structured JSON records with embeddings for indexing. These records would be stored in a database with a translation layer converting them into markdown notes or files for tools like Obsidian. A sync mechanism between frontend and backend databases is needed, along with a generative AI for analysis, research, and querying (forming a giant RAG pipeline).",
-          "type": "text"
-        }
-      ],
-      "metadata": {
-        "primary_topic": "Public Accountability System",
-        "status": " ideation",
-        "priority": "high"
-      }
-    },
-    {
-      "record_id": "uuid-record-1234-5678-9012-0002",
-      "title": "Personal Journaling - Daily Story Entry",
-      "content": "A brief entry for a daily story or journal, capturing a memorable moment in a single sentence as part of a new personal database category.",
-      "created_at": "2023-10-01T10:10:00Z",
-      "tags": [
-        "personal",
-        "journal",
-        "daily story"
+        "FTFM",
+        "philosophy",
+        "documentation",
+        "non-judgmental"
       ],
       "related_records": [],
-      "description": "A short personal note capturing a memorable daily moment for a journaling database.",
+      "description": "Outlines the core principles of the FTFM project as a non-judgmental documentation philosophy.",
       "sections": [
         {
-          "heading": "Daily Story Entry",
-          "content": "Today was cool with Ralphie and included a memorable video call with Jaz.",
+          "heading": "Core Principles",
+          "content": "- **Non-Judgmental Recording**: Only document what has happened without labeling actions as good or bad. For example, record that 'this person did this thing' rather than 'the bad man did a bad thing'.\n- **Confidence Assessment**: Include the degree of certainty about the accuracy of recorded events.\n- **Sophisticated Storage**: Store information in a way that allows retrieval of detailed timelines, such as how someone has talked or voted on a topic.\n- **Reputable Sources**: If reputable sources have reported on a subject, it is likely to be documented by FTFM.\n- **No Claim to Absolute Truth**: FTFM does not claim to provide a single source of truth, only a record of events and the likelihood of their accuracy.\n- **Focus on Relevance**: Judgments are limited to deciding what is worth recording.",
           "type": "text"
         }
       ],
       "metadata": {
-        "primary_topic": "Personal Journal",
-        "status": "complete",
-        "priority": "low"
-      }
-    },
-    {
-      "record_id": "uuid-record-1234-5678-9012-0003",
-      "title": "AI Dictation System Project",
-      "content": "An idea for a separate AI dictation system project where users can request research or data structuring via voice commands, with results formatted into JSON or other structures.",
-      "created_at": "2023-10-01T10:15:00Z",
-      "tags": [
-        "AI",
-        "dictation",
-        "automation",
-        "research"
-      ],
-      "related_records": [
-        "uuid-record-1234-5678-9012-0001"
-      ],
-      "description": "Proposal for an AI system that processes voice commands to conduct research and structure data.",
-      "sections": [
-        {
-          "heading": "Project Concept",
-          "content": "This project envisions an AI system where users can dictate commands such as 'make a piece of research and turn it into a JavaScript Object Notation (JSON)'. The AI would conduct the research and return structured data outputs accordingly.",
-          "type": "text"
-        }
-      ],
-      "metadata": {
-        "primary_topic": "AI Dictation Tool",
-        "status": "ideation",
+        "primary_topic": "FTFM Philosophy",
+        "status": "draft",
         "priority": "medium"
       }
     }
@@ -123,17 +51,17 @@ A JSON object containing:
 ## Structural Instructions to Apply
 [
   {
-    "instruction_id": "uuid-instruction-1234-5678-9012-0001",
-    "command_type": "create_consolidated_notes",
+    "instruction_id": "789abcde-f123-4567-89ab-cdef01234567",
+    "command_type": "format_as_list",
     "instruction_type": "structural",
-    "description": "Make this into just one or two notes - maybe include some kind of diagram if possible about how the architecture could work out.",
+    "description": "make this into one note, call it manifesto, - make it a list of principles",
     "parameters": {
-      "target": "all_session_content",
-      "format": "consolidated notes with potential diagram",
+      "target": "current_content",
+      "format": "list",
       "query": "",
-      "additional_info": "Focus on consolidating the FTFM concept into a primary note with supporting notes for side topics."
+      "additional_info": "Format the FTFM project content into a single note titled 'FTFM Manifesto' with principles listed."
     },
-    "priority": "3",
+    "priority": "2",
     "dependencies": []
   }
 ]
@@ -223,5 +151,70 @@ An array of blueprint objects, each representing a markdown file:
 5. Implement a clear internal structure within each note using headings, lists, and formatting
 
 Remember: The goal is to create a concise, well-organized knowledge structure that avoids unnecessary fragmentation. A small number of comprehensive, well-structured notes is generally preferable to many small notes.
+
+When deciding where to place new notes:
+1. Look for directories with similar tags or descriptions to the new content
+2. Prefer using existing directories over creating new ones when appropriate
+3. Maintain consistency with the current organizational structure
+4. Only create new directories when content doesn't fit well into existing categories
+
+
+## Current Vault Structure
+The Obsidian vault already contains the following structure. Use this information to place new notes in appropriate existing directories when possible.
+
+[
+  {
+    "filepath": "index.md",
+    "description": "",
+    "tags": [],
+    "directory": "."
+  },
+  {
+    "filepath": "Personal/Personal Journaling - Daily and Weekly Stories.md",
+    "description": "A side note on creating a personal journaling system for brief daily and weekly memorable moments.",
+    "tags": [
+      "personal",
+      "journal",
+      "daily-story",
+      "weekly-story"
+    ],
+    "directory": "Personal"
+  },
+  {
+    "filepath": "Projects/AI/AI Dictation System Project.md",
+    "description": "A quick note on a separate AI dictation system for processing spoken input and generating structured research outputs.",
+    "tags": [
+      "ai",
+      "dictation",
+      "research",
+      "automation"
+    ],
+    "directory": "Projects/AI"
+  },
+  {
+    "filepath": "Projects/AI/AI Project Brainstorming Session.md",
+    "description": "Summary of brainstorming session for multiple AI-related professional projects.",
+    "tags": [
+      "ai",
+      "projects",
+      "brainstorming",
+      "ideation"
+    ],
+    "directory": "Projects/AI"
+  },
+  {
+    "filepath": "Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
+    "description": "A detailed brainstorm on building 'Follow The Fucking Money' (FTFM), a system to track and analyze public statements for accountability using AI and structured data.",
+    "tags": [
+      "accountability",
+      "transparency",
+      "news-storage",
+      "public-statements",
+      "ai-analysis"
+    ],
+    "directory": "Projects/FTFM"
+  }
+]
+
 
 Output only valid JSON with nothing before AND nothing after

@@ -1,6 +1,6 @@
 import json
 
-def get_blueprint_conversion_prompt(json_data):
+def get_blueprint_conversion_prompt(json_data, vault_structure=None):
     """
     Output JSON blueprints using the new Blueprint Maker approach.
     Takes input JSON data and returns a prompt string.
@@ -24,6 +24,17 @@ def get_blueprint_conversion_prompt(json_data):
     
     json_str = json.dumps(clean_json, indent=2)
     structural_instructions_str = json.dumps(structural_instructions, indent=2) if structural_instructions else "[]"
+    
+    # Format the vault structure section if provided
+    vault_structure_section = ""
+    if vault_structure:
+        vault_structure_str = json.dumps(vault_structure, indent=2)
+        vault_structure_section = f"""
+## Current Vault Structure
+The Obsidian vault already contains the following structure. Use this information to place new notes in appropriate existing directories when possible.
+
+{vault_structure_str}
+"""
     
     prompt = f"""
 # Blueprint Creation Prompt
@@ -128,6 +139,14 @@ An array of blueprint objects, each representing a markdown file:
 5. Implement a clear internal structure within each note using headings, lists, and formatting
 
 Remember: The goal is to create a concise, well-organized knowledge structure that avoids unnecessary fragmentation. A small number of comprehensive, well-structured notes is generally preferable to many small notes.
+
+When deciding where to place new notes:
+1. Look for directories with similar tags or descriptions to the new content
+2. Prefer using existing directories over creating new ones when appropriate
+3. Maintain consistency with the current organizational structure
+4. Only create new directories when content doesn't fit well into existing categories
+
+{vault_structure_section}
 
 Output only valid JSON with nothing before AND nothing after
 """

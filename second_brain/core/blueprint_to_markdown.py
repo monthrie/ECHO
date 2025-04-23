@@ -6,6 +6,7 @@ import yaml
 from second_brain.utils.config import Config
 import shutil
 from datetime import datetime
+import logging
 
 def sanitize_filename(name):
     """Sanitize a string to be used as a filename or directory name."""
@@ -82,97 +83,108 @@ def convert_blueprint_to_markdown(blueprint, base_path):
         print(f"Error converting blueprint to markdown: {str(e)}")
         return None
 
-def process_blueprint_files(blueprint, config=None):
+def process_blueprint_files(blueprint, output_dir=None, config=None):
     """
     Process a single blueprint file and convert it to markdown files.
     
     Args:
         blueprint: Blueprint object or a string path to a JSON file
+        output_dir: Explicit output directory (overrides config settings)
         config: Configuration object (optional)
     
     Returns:
         List of created markdown files
     """
+    logger = logging.getLogger("second_brain")
+    logger.info("Starting process_blueprint_files")
     created_files = []
     
-    # Use provided config or import the global one
-    if config is None:
-        from second_brain.utils.config import Config
-        config = Config
+    # If output_dir is explicitly provided, use it
+    if output_dir:
+        logger.info(f"Using explicitly provided output directory: {output_dir}")
+    # Otherwise use config
+    else:
+        # Use provided config or import the global one
+        if config is None:
+            from second_brain.utils.config import Config
+            config = Config
+            
+            # Ensure config is initialized
+            if not hasattr(config, 'VAULT_PATH') and not hasattr(config, 'MARKDOWN_OUTPUT_DIR'):
+                config.initialize()
         
-        # Ensure config is initialized
-        if not hasattr(config, 'VAULT_PATH') and not hasattr(config, 'MARKDOWN_OUTPUT_DIR'):
-            config.initialize()
+        # Determine output directory from config
+        if hasattr(config, 'VAULT_PATH') and config.VAULT_PATH:
+            output_dir = config.VAULT_PATH
+            logger.info(f"Using Config.VAULT_PATH as output directory: {output_dir}")
+        elif hasattr(config, 'MARKDOWN_OUTPUT_DIR') and config.MARKDOWN_OUTPUT_DIR:
+            output_dir = config.MARKDOWN_OUTPUT_DIR
+            logger.info(f"Using Config.MARKDOWN_OUTPUT_DIR as output directory: {output_dir}")
+    
+    # If we still don't have an output directory, use current directory
+    if not output_dir:
+        output_dir = os.getcwd()
+        logger.warning(f"No output directory configured, using current directory: {output_dir}")
     
     # Check if blueprint is a string (file path)
     if isinstance(blueprint, str):
+        logger.info(f"Blueprint is a file path: {blueprint}")
         try:
             with open(blueprint, 'r') as f:
                 blueprint = json.load(f)
+            logger.info(f"Loaded blueprint JSON from file, containing {len(blueprint) if isinstance(blueprint, list) else 1} entries")
         except Exception as e:
-            print(f"Error loading blueprint from file: {e}")
+            logger.error(f"Error loading blueprint from file: {e}")
             return []
     
-    # Now process the blueprint
-    for blueprint in blueprint:
-        # Extract file info
-        directory = blueprint.get("file_info", {}).get("directory", "")
-        filename = blueprint.get("file_info", {}).get("filename", "")
-        
-        # Ensure filename has .md extension
-        if not filename.endswith('.md'):
-            filename += '.md'
-        
-        # Extract frontmatter
-        frontmatter = blueprint.get("frontmatter", {})
-        
-        # Move record_ids to a hidden property with underscore prefix
-        if 'record_ids' in frontmatter:
-            frontmatter['_record_ids'] = frontmatter.pop('record_ids')
-        
-        # Extract content
-        title = blueprint.get("content", {}).get("title", "")
-        body = blueprint.get("content", {}).get("body", "")
-        
-        # Remove any H1 heading that duplicates the title
-        # This pattern matches "# Title" at the beginning of the content
-        import re
-        title_pattern = re.compile(f"^# {re.escape(title)}\\s*\n", re.MULTILINE)
-        body = title_pattern.sub("", body)
-        
-        # Use VAULT_PATH as the primary output directory (now points to permanent vault)
-        if hasattr(config, 'VAULT_PATH'):
-            output_dir = config.VAULT_PATH
-        elif hasattr(config, 'MARKDOWN_OUTPUT_DIR'):
-            output_dir = config.MARKDOWN_OUTPUT_DIR
-        else:
-            print("Warning: Neither Config.VAULT_PATH nor Config.MARKDOWN_OUTPUT_DIR found, using current directory")
-            output_dir = "."
-            
-        file_path = os.path.join(output_dir, directory, filename)
-        
-        # Create the directory if it doesn't exist
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        
-        # Create the markdown content with frontmatter
-        markdown_content = "---\n"
-        for key, value in frontmatter.items():
-            if isinstance(value, list):
-                markdown_content += f"{key}: {json.dumps(value)}\n"
-            else:
-                markdown_content += f"{key}: {value}\n"
-        markdown_content += "---\n\n"
-        
-        # Add the body without duplicating the title
-        markdown_content += body
-        
-        # Write the file
-        with open(file_path, 'w') as f:
-            f.write(markdown_content)
-        
-        created_files.append(file_path)
-        print(f"Created markdown file: {file_path}")
+    # Ensure blueprint is a list
+    if not isinstance(blueprint, list):
+        blueprint = [blueprint]
+        logger.info("Converted blueprint to list format")
     
+    logger.info(f"Processing {len(blueprint)} blueprint entries")
+    
+    # Process each blueprint
+    for idx, bp in enumerate(blueprint):
+        try:
+            # Extract file info
+            file_info = bp.get("file_info", {})
+            directory = file_info.get("directory", "")
+            filename = file_info.get("filename", "Untitled")
+            
+            logger.info(f"Blueprint #{idx+1}: directory='{directory}', filename='{filename}'")
+            
+            # Ensure filename has .md extension
+            if not filename.endswith(".md"):
+                filename += ".md"
+                logger.info(f"Added .md extension to filename: {filename}")
+            
+            # Create directory path
+            directory_path = os.path.join(output_dir, directory)
+            logger.info(f"Full directory path: {directory_path}")
+            
+            # Create directory if it doesn't exist
+            if not os.path.exists(directory_path):
+                logger.info(f"Creating directory: {directory_path}")
+                os.makedirs(directory_path, exist_ok=True)
+            
+            # Create full file path
+            file_path = os.path.join(directory_path, filename)
+            logger.info(f"Full file path: {file_path}")
+            
+            # Generate markdown content
+            logger.info("Generating markdown content")
+            file_path = convert_blueprint_to_markdown(bp, output_dir)
+            
+            # Just add the created file path to our list if it was created successfully
+            if file_path:
+                created_files.append(file_path)
+                logger.info(f"Added file to created_files list: {file_path}")
+            
+        except Exception as e:
+            logger.error(f"Error processing blueprint entry #{idx+1}: {str(e)}", exc_info=True)
+    
+    logger.info(f"Completed process_blueprint_files with {len(created_files)} files created")
     return created_files
 
 def create_index_file(created_files, output_dir=None):
