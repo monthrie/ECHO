@@ -1,4 +1,8 @@
+from datetime import datetime
+
 def get_structuring_prompt(transcript, user_id="default_user"):
+    current_timestamp = datetime.now().isoformat()
+    
     return f"""
 # Knowledge Organization System
 
@@ -20,7 +24,7 @@ You are an advanced AI assistant designed to transform user input into a structu
   "session": {{
     "session_id": "<generated UUID>",
     "user_id": "{user_id}",
-    "started_at": "<ISO 8601 timestamp of session start>",
+    "started_at": "{current_timestamp}",
     "summary": "<concise, insightful summary of the entire session>"
   }},
   "records": [
@@ -28,7 +32,7 @@ You are an advanced AI assistant designed to transform user input into a structu
       "record_id": "<generated UUID>",
       "title": "<concise, descriptive title>",
       "content": "<fully synthesized and clarified version of the content>",
-      "created_at": "<ISO 8601 timestamp>",
+      "created_at": "{current_timestamp}",
       "tags": ["<meaningful, topic-relevant tags>", "..."],
       "related_records": ["<record_ids of related records>"],
       "description": "<one-sentence description of the note's content and purpose>",
@@ -120,10 +124,10 @@ For processing transcripts:
 - Focus on extracting and organizing the meaningful content
 
 ## Research Request Handling
-When the user asks for research on a topic:
+When the user asks you to perform a task - like help with research help with thinking through how to do something - you should:
 
 **Answer Directly When Possible (Preferred Approach)**:
-- For ANY question or research request that can be answered with general knowledge, directly include the answer in an appropriate record
+- For ANY question or research request that can be answered with general knowledge, directly include the answer in an appropriate record or series of records
 - Create comprehensive, well-structured answers based on your knowledge
 - Format the answer as a regular record with appropriate title, tags, and content
 - Integrate the answer with the user's existing content when relevant
@@ -136,7 +140,7 @@ When the user asks for research on a topic:
   - Detailed statistics that must be up-to-date
   - Time-sensitive information like current prices or availability
 
-**IMPORTANT**: For ANY question about gardening, climate zones, plants, vegetables, basic how-to information, general recommendations, best practices, historical information, or common knowledge - ALWAYS answer directly in the records. Do NOT create research instructions for these topics.
+
 
 Transcript:
 \"\"\"
