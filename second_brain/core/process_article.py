@@ -36,7 +36,7 @@ from second_brain.utils.simple_file_index import create_vault_index
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-def process_article(text: str, vault_path: str = None, tracer=None) -> Dict:
+def process_article(text: str, vault_path: str = None, tracer=None, source_link: str = None) -> Dict:
     """
     Process an article using LLM, handling any instructions within the text.
     
@@ -44,6 +44,7 @@ def process_article(text: str, vault_path: str = None, tracer=None) -> Dict:
         text: The complete text (which may include instructions)
         vault_path: Path to the Obsidian vault for context
         tracer: Optional tracer for langsmith
+        source_link: Path to the source file for linking
     
     Returns:
         Blueprint dict ready for conversion to markdown
@@ -74,6 +75,7 @@ IMPORTANT GUIDELINES:
 2. If there are instructions, follow them exactly.
 3. If no instructions are found, DEFAULT TO SUMMARIZING the content and extracting key concepts.
 4. ALWAYS place the note in a "Research/" directory structure.
+5. ALWAYS include a reference to the source at the bottom of the note.
 
 TEXT:
 {text}
@@ -85,6 +87,7 @@ Please convert this into a blueprint for an Obsidian markdown file. The blueprin
 3. Extract key concepts and insights
 4. Link to related topics when appropriate
 5. Organize the content logically
+6. Include a "Source" section at the bottom with a link to the original source
 
 Return a SINGLE blueprint in this JSON format:
 
@@ -108,6 +111,10 @@ DIRECTORY STRUCTURE REQUIREMENTS:
 - ALL notes MUST be placed in the "Research/" directory or a subdirectory of Research
 - Choose an appropriate subdirectory based on content topic (e.g., Research/AI, Research/Economics)
 - Always include "research" as the first tag in the frontmatter
+
+SOURCE REFERENCE REQUIREMENTS:
+- At the end of the note, include a section titled "## Source"
+- Link to the original source using this Obsidian link syntax: [[{source_link}]]
 """
 
     # Add vault structure context if available
@@ -200,13 +207,34 @@ DIRECTORY STRUCTURE REQUIREMENTS:
 def process_input_file(file_path, vault_path, tracer):
     """Process a single input file and create markdown."""
     logger.info(f"Processing input file: {file_path}")
+    
     # Read the input file
     with open(file_path, 'r', encoding='utf-8') as f:
         text = f.read()
         logger.info(f"Read {len(text)} characters from {file_path}")
     
-    # Process the article to get blueprint
-    blueprint = process_article(text, vault_path, tracer)
+    # Generate a timestamp for unique source identification
+    timestamp = get_current_datetime_str()
+    source_filename = f"source_{timestamp}.md"
+    
+    # Create the source file in the Sources/Articles directory
+    sources_dir = os.path.join(vault_path, "Sources", "Articles")
+    if not os.path.exists(sources_dir):
+        os.makedirs(sources_dir, exist_ok=True)
+        logger.info(f"Created Sources/Articles directory: {sources_dir}")
+    
+    # Save the original text to the source file
+    source_file_path = os.path.join(sources_dir, source_filename)
+    with open(source_file_path, 'w', encoding='utf-8') as f:
+        f.write(f"# Original Source {timestamp}\n\n{text}")
+    
+    logger.info(f"Saved original text to source file: {source_file_path}")
+    
+    # Get the relative path for linking in Obsidian
+    source_link_path = f"Sources/Articles/{source_filename}"
+    
+    # Process the article to get blueprint, passing the source link
+    blueprint = process_article(text, vault_path, tracer, source_link_path)
     
     # Convert blueprint to markdown
     created_files = process_blueprint_files(blueprint, vault_path)

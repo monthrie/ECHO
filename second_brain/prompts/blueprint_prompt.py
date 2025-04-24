@@ -57,21 +57,20 @@ A JSON object containing:
 ## Output
 An array of blueprint objects, each representing a markdown file:
 
-```json
-{{
-  "file_info": {{
-    "directory": "Appropriate directory path based on content",
-    "filename": "Descriptive filename with spaces",
-    "record_id": "Original record_id if available"
-  }},
-  "frontmatter": {{
-    "tags": ["relevant", "tags"],
-    "description": "Concise description of the note's purpose"
-  }},
-  "content": {{
-    "title": "Note title",
-    "body": "Fully formatted markdown content"
-  }}
+```{{
+"file_info": {{
+"directory": "Appropriate directory path based on content",
+"filename": "Descriptive filename with spaces",
+"record_id": "Original record_id if available"
+}},
+"frontmatter": {{
+"tags": ["relevant", "tags"],
+"description": "Concise description of the note's purpose"
+}},
+"content": {{
+"title": "Note title",
+"body": "This is a simple demonstration file showing Obsidian's linking capabilities.\\n\\n## Quick Reference\\n| Link Type | Syntax | Example |\\n| --------- | ------ | ------- |\\n| File link | [[filename]] | [[File_1]] |\\n| Section link | [[filename#section]] | [[#section_3]] |\\n| Alias link | [[filename\\|alias]] | [[File_1\\|See related content]] |\\n\\n## section_1\\nSome content here.\\n\\n## section_2\\nMore information.\\n\\n## section_3\\nThis is the section we're linking to from above.\\n\\n### Sub-section\\n- You can also combine different link types\\n- For example: [[File_1#some_section\\|Named link to specific section]]\\n\\n![[File_1]] \\n<!-- This syntax embeds the entire content of File_1 -->"
+}}
 }}
 ```
 
