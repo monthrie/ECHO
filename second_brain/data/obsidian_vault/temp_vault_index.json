@@ -17,6 +17,29 @@
     "directory": "Personal"
   },
   {
+    "filepath": "Personal/Daily Tasks - April 23 2025.md",
+    "description": "Comprehensive task list for personal and logistical duties on April 23, 2025, including shopping items, ordered by estimated completion time.",
+    "tags": [
+      "daily-tasks",
+      "personal",
+      "logistics",
+      "apr-2025",
+      "shopping",
+      "groceries"
+    ],
+    "directory": "Personal"
+  },
+  {
+    "filepath": "Cooking/Olive Oil Recipe Ideas.md",
+    "description": "Collection of recipe ideas to make the most of a large quantity of premium olive oil.",
+    "tags": [
+      "cooking",
+      "olive-oil",
+      "recipes"
+    ],
+    "directory": "Cooking"
+  },
+  {
     "filepath": "Projects/AI/AI Dictation System Project.md",
     "description": "A quick note on a separate AI dictation system for processing spoken input and generating structured research outputs.",
     "tags": [
@@ -49,5 +72,39 @@
       "ai-analysis"
     ],
     "directory": "Projects/FTFM"
+  },
+  {
+    "filepath": "Projects/FTFM/FTFM Manifesto.md",
+    "description": "Outlines the core principles of the FTFM project as a non-judgmental documentation philosophy.",
+    "tags": [
+      "ftfm",
+      "philosophy",
+      "documentation",
+      "non-judgmental"
+    ],
+    "directory": "Projects/FTFM"
+  },
+  {
+    "filepath": "Projects/Supply Chain Data/Supply Chain Data Strategy and Options.md",
+    "description": "Comprehensive overview of strategic business options for leveraging supply chain forced labor data.",
+    "tags": [
+      "supply-chain",
+      "forced-labor",
+      "data-strategy",
+      "business-development",
+      "partnerships"
+    ],
+    "directory": "Projects/Supply Chain Data"
+  },
+  {
+    "filepath": "Projects/Supply Chain Data/Strategic Recommendations for Supply Chain Data.md",
+    "description": "Request for external recommendations on strategic use of supply chain forced labor data.",
+    "tags": [
+      "supply-chain",
+      "forced-labor",
+      "strategic-advice",
+      "business-development"
+    ],
+    "directory": "Projects/Supply Chain Data"
   }
 ]

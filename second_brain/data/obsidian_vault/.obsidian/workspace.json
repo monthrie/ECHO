@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "b51e2c93a75bc24a",
+    "type": "split",
+    "children": [
+      {
+        "id": "714e613213fb2138",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c1eef208dc26c94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Follow The Fucking Money - Proof of Concept"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f282698d2d1c5743",
+    "type": "split",
+    "children": [
+      {
+        "id": "18efa6f47275525f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd9439370b8767ff",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "dd72319f0fea2324",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d94dcdeefb408c35",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e293a753d6b4f6fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "45cdd22ad46ecb03",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "519a2258c76a080a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Follow The Fucking Money - Proof of Concept"
+            }
+          },
+          {
+            "id": "0c7616aa8d087c13",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Follow The Fucking Money - Proof of Concept"
+            }
+          },
+          {
+            "id": "35e6429d5174c70a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b913d1efd69d3bad",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Follow The Fucking Money - Proof of Concept"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5c1eef208dc26c94",
+  "lastOpenFiles": [
+    "Projects/FTFM/FTFM Manifesto.md"
+  ]
+}
