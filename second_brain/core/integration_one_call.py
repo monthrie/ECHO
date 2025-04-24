@@ -11,6 +11,7 @@ from second_brain.utils.config import Config
 import langsmith
 from langsmith import Client as LangSmithClient
 from second_brain.utils.langsmith_tracer import SecondBrainTracer
+from second_brain.utils.date_utils import get_current_datetime_str
 
 # Set up logging
 log_file = "integration.log"
@@ -208,6 +209,10 @@ def call_llm(prompt: str, tracer) -> str:
     logger.info(f"Calling LLM using OpenRouter with model: {Config.MODEL}")
     
     try:
+        # Add current date and time
+        date_str = get_current_datetime_str()
+        prompt_with_date = f"The current date and time is: {date_str}\n\n{prompt}"
+        
         # Make the API call
         response = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
@@ -220,7 +225,7 @@ def call_llm(prompt: str, tracer) -> str:
                 "model": Config.MODEL,
                 "messages": [
                     {"role": "system", "content": "You are a knowledge management assistant."},
-                    {"role": "user", "content": prompt}
+                    {"role": "user", "content": prompt_with_date}
                 ]
             }
         )
@@ -239,7 +244,7 @@ def call_llm(prompt: str, tracer) -> str:
             "temperature": 0.7,
             "source": "integration_one_call.py"
         }
-        trace_result = tracer.trace_openrouter_call("integration_decision", prompt, result, metadata)
+        trace_result = tracer.trace_openrouter_call("integration_decision", prompt_with_date, result, metadata)
         logger.info(f"Trace result: {trace_result}")
         
         return result
