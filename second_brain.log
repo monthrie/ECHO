@@ -161,3 +161,127 @@
 2025-04-23 10:01:18,369 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/ftfm_update_20250423_100118
 2025-04-23 10:01:18,369 - SecondBrain - INFO - Starting pipeline...
 2025-04-23 10:01:18,369 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 10:16:29,280 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:16:29,280 - SecondBrain - INFO - No transcript specified, using: dailytodo.txt
+2025-04-23 10:16:29,281 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/dailytodo.txt
+2025-04-23 10:16:29,281 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/dailytodo_20250423_101629
+2025-04-23 10:16:44,655 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:16:44,655 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:16:44,655 - SecondBrain - INFO - No transcript specified, using: dailytodo.txt
+2025-04-23 10:16:44,655 - SecondBrain - INFO - No transcript specified, using: dailytodo.txt
+2025-04-23 10:16:44,656 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/dailytodo.txt
+2025-04-23 10:16:44,656 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/dailytodo.txt
+2025-04-23 10:16:44,656 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/dailytodo_20250423_101644
+2025-04-23 10:16:44,656 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/dailytodo_20250423_101644
+2025-04-23 10:16:44,656 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 10:16:44,656 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 10:51:56,405 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:51:56,406 - SecondBrain - INFO - No transcript specified, using: dailytodo.txt
+2025-04-23 10:51:56,406 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/dailytodo.txt
+2025-04-23 10:51:56,406 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/dailytodo_20250423_105156
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 10:52:21,429 - SecondBrain - INFO - No transcript specified, using: dailytodo.txt
+2025-04-23 10:52:21,429 - SecondBrain - INFO - No transcript specified, using: dailytodo.txt
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/dailytodo.txt
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/dailytodo.txt
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/dailytodo_20250423_105221
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/dailytodo_20250423_105221
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 10:52:21,429 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 13:58:16,460 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 13:58:16,460 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 13:58:16,460 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 13:58:16,461 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_135816
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 13:58:50,696 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 13:58:50,696 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_135850
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_135850
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 13:58:50,696 - SecondBrain - INFO - Starting pipeline...
+2025-04-23 14:06:50,112 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:06:50,113 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:06:50,113 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:06:50,113 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_140650
+2025-04-23 14:26:23,907 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:26:23,909 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_142623
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:26:23,909 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:26:23,909 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_142623
+2025-04-23 14:26:23,909 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_142623
+2025-04-23 14:29:40,029 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:29:40,030 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:29:40,030 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:29:40,030 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_142940
+2025-04-23 14:29:40,031 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:29:40,031 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:29:40,031 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:29:40,031 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:29:40,031 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:29:40,031 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:29:40,031 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_142940
+2025-04-23 14:29:40,031 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_142940
+2025-04-23 14:32:09,657 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:32:09,658 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:32:09,658 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:32:09,658 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_143209
+2025-04-23 14:32:09,658 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:32:09,658 - SecondBrain - INFO - Logger initialized successfully
+2025-04-23 14:32:09,658 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:32:09,658 - SecondBrain - INFO - No transcript specified, using: moretodo.txt
+2025-04-23 14:32:09,659 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:32:09,659 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/moretodo.txt
+2025-04-23 14:32:09,659 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_143209
+2025-04-23 14:32:09,659 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/moretodo_20250423_143209
+2025-04-24 11:16:57,204 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 11:16:57,205 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 11:16:57,205 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 11:16:57,205 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_111657
+2025-04-24 11:17:44,431 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 11:17:44,431 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 11:17:44,431 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 11:17:44,431 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 11:17:44,432 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 11:17:44,432 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 11:17:44,432 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_111744
+2025-04-24 11:17:44,432 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_111744
+2025-04-24 11:17:44,432 - SecondBrain - INFO - Starting pipeline...
+2025-04-24 11:17:44,432 - SecondBrain - INFO - Starting pipeline...
+2025-04-24 15:37:35,504 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 15:37:35,505 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 15:37:35,505 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 15:37:35,505 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_153735
+2025-04-24 15:37:35,505 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 15:37:35,505 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 15:37:35,505 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 15:37:35,505 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 15:37:35,505 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 15:37:35,505 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 15:37:35,506 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_153735
+2025-04-24 15:37:35,506 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_153735
+2025-04-24 15:38:23,296 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 15:38:23,296 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 15:38:23,296 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 15:38:23,296 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_153823
+2025-04-24 15:44:12,585 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 15:44:12,585 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 15:44:12,585 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 15:44:12,586 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_154412
+2025-04-24 15:44:12,586 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 15:44:12,586 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 15:44:12,586 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 15:44:12,586 - SecondBrain - INFO - No transcript specified, using: pamir_next_steps.txt
+2025-04-24 15:44:12,586 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 15:44:12,586 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/pamir_next_steps.txt
+2025-04-24 15:44:12,586 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_154412
+2025-04-24 15:44:12,586 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_154412

@@ -13,36 +13,77 @@ A JSON object containing:
 ## Input JSON Data
 {
   "session": {
-    "session_id": "550e8400-e29b-41d4-a716-446655440000",
+    "session_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "user_id": "default_user",
-    "started_at": "2023-10-05T12:00:00Z",
-    "summary": "This session focuses on defining the 'Follow the Fucking Money' (FTFM) project philosophy, emphasizing a non-judgmental approach to recording events and assessing the likelihood of their accuracy."
+    "started_at": "2023-10-05T10:00:00Z",
+    "summary": "This session focuses on strategizing business options for leveraging valuable supply chain data related to forced labor, with a focus on partnerships, direct brand approaches, and potential investments or sales."
   },
   "records": [
     {
-      "record_id": "123e4567-e89b-12d3-a456-426614174001",
-      "title": "FTFM Manifesto",
-      "content": "The 'Follow the Fucking Money' (FTFM) project is a philosophy and methodology for recording events and information without normative judgments. It focuses on documenting what has happened and assessing the confidence level in the accuracy of those records.",
-      "created_at": "2023-10-05T12:05:00Z",
+      "record_id": "r1-uuid-1234-5678-9012-3456",
+      "title": "Supply Chain Data Strategy and Options",
+      "content": "This record outlines the strategic options for utilizing a unique dataset and methodology related to forced labor in supply chains, aimed at generating revenue and building partnerships. The goal is to clarify the situation and options for discussion with a business partner.",
+      "created_at": "2023-10-05T10:05:00Z",
       "tags": [
-        "FTFM",
-        "philosophy",
-        "documentation",
-        "non-judgmental"
+        "supply chain",
+        "forced labor",
+        "data strategy",
+        "business development",
+        "partnerships"
       ],
-      "related_records": [],
-      "description": "Outlines the core principles of the FTFM project as a non-judgmental documentation philosophy.",
+      "related_records": [
+        "r2-uuid-9012-3456-7890-1234"
+      ],
+      "description": "Comprehensive overview of strategic business options for leveraging supply chain forced labor data.",
       "sections": [
         {
-          "heading": "Core Principles",
-          "content": "- **Non-Judgmental Recording**: Only document what has happened without labeling actions as good or bad. For example, record that 'this person did this thing' rather than 'the bad man did a bad thing'.\n- **Confidence Assessment**: Include the degree of certainty about the accuracy of recorded events.\n- **Sophisticated Storage**: Store information in a way that allows retrieval of detailed timelines, such as how someone has talked or voted on a topic.\n- **Reputable Sources**: If reputable sources have reported on a subject, it is likely to be documented by FTFM.\n- **No Claim to Absolute Truth**: FTFM does not claim to provide a single source of truth, only a record of events and the likelihood of their accuracy.\n- **Focus on Relevance**: Judgments are limited to deciding what is worth recording.",
+          "heading": "Background and Assets",
+          "content": "Over the past 18 months, extensive investigations into supply chains have uncovered evidence of forced labor implicating dozens of brands across 60 different cases. A unique methodology for identifying these issues has been developed, with potential for automation using artificial intelligence. Currently, the process is manual, but there is a pathway to automation. The data and methodology are highly valuable to brands and supply chain due diligence firms.",
+          "type": "text"
+        },
+        {
+          "heading": "Strategic Options",
+          "content": "1. **Direct Approach to Brands**: Contact brands directly to inform them of risks in their supply chains, offering valuable insights to mitigate exposure under regulations like the UFLPA. This targets low-hanging fruit with immediate revenue potential.\n2. **Partnership with Supply Chain Due Diligence Firms**: Collaborate with established firms to provide an additional layer of detailed evidence and value to their existing client base. This could involve sharing data or co-developing services, positioning us as a complementary rather than competitive entity.\n3. **Third-Party Collaboration for Quick Revenue**: Work with a trusted third-party supply chain due diligence firm to approach clients on our behalf, sharing data and providing extra services for quick revenue generation and credibility with larger players.\n4. **Sell Data Directly**: Sell the current dataset to a supply chain due diligence firm to raise immediate funds, potentially reinvesting into further development.\n5. **Raise Investment**: Seek investment to build a comprehensive product, though this is less realistic currently due to the lack of a fully developed product. Options include partial equity investments or funding from supply chain firms.\n6. **Partial Equity Investment**: As part of payment or collaboration, explore taking partial equity in partner firms as a long-term strategy.",
+          "type": "text"
+        },
+        {
+          "heading": "Constraints and Considerations",
+          "content": "Key constraints include limited financial resources to expand operations or build a comprehensive product. While there is an AI engineer on the team, scaling would require a larger team. The uniqueness of the data and methodology must be protected to avoid direct competition with larger firms offering broader services, as large corporates prefer consolidated providers. The focus should be on carving a niche with a unique offering.",
           "type": "text"
         }
       ],
       "metadata": {
-        "primary_topic": "FTFM Philosophy",
+        "primary_topic": "Supply Chain Data Strategy",
         "status": "draft",
-        "priority": "medium"
+        "priority": "high"
+      }
+    },
+    {
+      "record_id": "r2-uuid-9012-3456-7890-1234",
+      "title": "Request for Strategic Recommendations",
+      "content": "This record captures the request for external advice and insights on the strategic options for utilizing supply chain data related to forced labor. The aim is to gather thoughts and recommendations to complement the outlined strategy.",
+      "created_at": "2023-10-05T10:10:00Z",
+      "tags": [
+        "supply chain",
+        "forced labor",
+        "strategic advice",
+        "business development"
+      ],
+      "related_records": [
+        "r1-uuid-1234-5678-9012-3456"
+      ],
+      "description": "Request for external recommendations on strategic use of supply chain forced labor data.",
+      "sections": [
+        {
+          "heading": "Request Context",
+          "content": "Given the outlined\u60c5\u51b5 involving valuable data on forced labor in supply chains, a unique methodology, and various strategic options (direct brand approach, partnerships, data sales, investment), I seek your insights and recommendations on the best path forward. The focus is on maximizing value while navigating constraints like limited funding and the need to avoid direct competition with larger firms.",
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "primary_topic": "Strategic Advice",
+        "status": "pending input",
+        "priority": "high"
       }
     }
   ]
@@ -51,15 +92,31 @@ A JSON object containing:
 ## Structural Instructions to Apply
 [
   {
-    "instruction_id": "789abcde-f123-4567-89ab-cdef01234567",
-    "command_type": "format_as_list",
+    "instruction_id": "i1-uuid-5678-9012-3456-7890",
+    "command_type": "create_separate_note",
     "instruction_type": "structural",
-    "description": "make this into one note, call it manifesto, - make it a list of principles",
+    "description": "Create a separate note for strategic recommendations and advice.",
     "parameters": {
-      "target": "current_content",
-      "format": "list",
+      "target": "strategic recommendations",
+      "format": "separate record",
       "query": "",
-      "additional_info": "Format the FTFM project content into a single note titled 'FTFM Manifesto' with principles listed."
+      "additional_info": "User explicitly requested one note for their thoughts and a separate note for advice and recommendations."
+    },
+    "priority": "3",
+    "dependencies": [
+      "r1-uuid-1234-5678-9012-3456"
+    ]
+  },
+  {
+    "instruction_id": "i2-uuid-9012-3456-7890-1234",
+    "command_type": "structure_content",
+    "instruction_type": "structural",
+    "description": "Organize content into a maximum of three well-structured notes.",
+    "parameters": {
+      "target": "all_session_content",
+      "format": "structured records without task lists",
+      "query": "",
+      "additional_info": "User requested well-structured notes to help understand and present options to a business partner."
     },
     "priority": "2",
     "dependencies": []
@@ -181,6 +238,29 @@ The Obsidian vault already contains the following structure. Use this informatio
     "directory": "Personal"
   },
   {
+    "filepath": "Personal/Daily Tasks - April 23 2025.md",
+    "description": "Comprehensive task list for personal and logistical duties on April 23, 2025, including shopping items, ordered by estimated completion time.",
+    "tags": [
+      "daily-tasks",
+      "personal",
+      "logistics",
+      "apr-2025",
+      "shopping",
+      "groceries"
+    ],
+    "directory": "Personal"
+  },
+  {
+    "filepath": "Cooking/Olive Oil Recipe Ideas.md",
+    "description": "Collection of recipe ideas to make the most of a large quantity of premium olive oil.",
+    "tags": [
+      "cooking",
+      "olive-oil",
+      "recipes"
+    ],
+    "directory": "Cooking"
+  },
+  {
     "filepath": "Projects/AI/AI Dictation System Project.md",
     "description": "A quick note on a separate AI dictation system for processing spoken input and generating structured research outputs.",
     "tags": [
@@ -211,6 +291,17 @@ The Obsidian vault already contains the following structure. Use this informatio
       "news-storage",
       "public-statements",
       "ai-analysis"
+    ],
+    "directory": "Projects/FTFM"
+  },
+  {
+    "filepath": "Projects/FTFM/FTFM Manifesto.md",
+    "description": "Outlines the core principles of the FTFM project as a non-judgmental documentation philosophy.",
+    "tags": [
+      "ftfm",
+      "philosophy",
+      "documentation",
+      "non-judgmental"
     ],
     "directory": "Projects/FTFM"
   }

@@ -14,7 +14,7 @@ This note captures ideas from a brainstorming session on 2023-10-01 focused on A
 - **Potential Approaches**:
   - [ ] Assist in selling or structuring Dan's existing data.
   - [ ] Develop the data into a model for AI fine-tuning.
-- **Partnerships**: Potential collaboration with CLIM on this initiative.
+- **Partnerships**: Potential collaboration with KLIM on this initiative.
 - **Status**: Ideation
 - **Priority**: Medium
 
@@ -40,7 +40,7 @@ This note captures ideas from a brainstorming session on 2023-10-01 focused on A
 - **Market Gap**: Identifying a gap in the market for a proper AI second brain.
 - **Industry Context**: OpenAI's $20,000/month PhD-level assistants highlight the value of agent frameworks over raw compute power.
 - **Development Plan**:
-  - [ ] Collaborate with CLIM for development.
+  - [ ] Collaborate with KLIM for development.
   - [ ] Use Obsidian (or a custom version) as the frontend.
   - [ ] Create a compelling proof of concept for pitching.
 - **Status**: Ideation
