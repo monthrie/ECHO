@@ -1,3 +1,5 @@
+The current date and time is: 2025-04-24T16:49:18.733723
+
 
 # Blueprint Creation Prompt
 
@@ -13,77 +15,35 @@ A JSON object containing:
 ## Input JSON Data
 {
   "session": {
-    "session_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "session_id": "session-2025-04-24-001",
     "user_id": "default_user",
-    "started_at": "2023-10-05T10:00:00Z",
-    "summary": "This session focuses on strategizing business options for leveraging valuable supply chain data related to forced labor, with a focus on partnerships, direct brand approaches, and potential investments or sales."
+    "started_at": "2025-04-24T16:49:10.250431",
+    "summary": "A simple to-do list for daily tasks dated April 24, 2025."
   },
   "records": [
     {
-      "record_id": "r1-uuid-1234-5678-9012-3456",
-      "title": "Supply Chain Data Strategy and Options",
-      "content": "This record outlines the strategic options for utilizing a unique dataset and methodology related to forced labor in supply chains, aimed at generating revenue and building partnerships. The goal is to clarify the situation and options for discussion with a business partner.",
-      "created_at": "2023-10-05T10:05:00Z",
+      "record_id": "record-2025-04-24-001",
+      "title": "To-Do List - April 24, 2025",
+      "content": "A list of tasks to be completed on April 24, 2025.",
+      "created_at": "2025-04-24T16:49:10.250431",
       "tags": [
-        "supply chain",
-        "forced labor",
-        "data strategy",
-        "business development",
-        "partnerships"
+        "daily tasks",
+        "to-do",
+        "personal"
       ],
-      "related_records": [
-        "r2-uuid-9012-3456-7890-1234"
-      ],
-      "description": "Comprehensive overview of strategic business options for leveraging supply chain forced labor data.",
+      "related_records": [],
+      "description": "A checklist of daily tasks for April 24, 2025.",
       "sections": [
         {
-          "heading": "Background and Assets",
-          "content": "Over the past 18 months, extensive investigations into supply chains have uncovered evidence of forced labor implicating dozens of brands across 60 different cases. A unique methodology for identifying these issues has been developed, with potential for automation using artificial intelligence. Currently, the process is manual, but there is a pathway to automation. The data and methodology are highly valuable to brands and supply chain due diligence firms.",
-          "type": "text"
-        },
-        {
-          "heading": "Strategic Options",
-          "content": "1. **Direct Approach to Brands**: Contact brands directly to inform them of risks in their supply chains, offering valuable insights to mitigate exposure under regulations like the UFLPA. This targets low-hanging fruit with immediate revenue potential.\n2. **Partnership with Supply Chain Due Diligence Firms**: Collaborate with established firms to provide an additional layer of detailed evidence and value to their existing client base. This could involve sharing data or co-developing services, positioning us as a complementary rather than competitive entity.\n3. **Third-Party Collaboration for Quick Revenue**: Work with a trusted third-party supply chain due diligence firm to approach clients on our behalf, sharing data and providing extra services for quick revenue generation and credibility with larger players.\n4. **Sell Data Directly**: Sell the current dataset to a supply chain due diligence firm to raise immediate funds, potentially reinvesting into further development.\n5. **Raise Investment**: Seek investment to build a comprehensive product, though this is less realistic currently due to the lack of a fully developed product. Options include partial equity investments or funding from supply chain firms.\n6. **Partial Equity Investment**: As part of payment or collaboration, explore taking partial equity in partner firms as a long-term strategy.",
-          "type": "text"
-        },
-        {
-          "heading": "Constraints and Considerations",
-          "content": "Key constraints include limited financial resources to expand operations or build a comprehensive product. While there is an AI engineer on the team, scaling would require a larger team. The uniqueness of the data and methodology must be protected to avoid direct competition with larger firms offering broader services, as large corporates prefer consolidated providers. The focus should be on carving a niche with a unique offering.",
-          "type": "text"
+          "heading": "Tasks",
+          "content": "- Take out bottles\n- See Ralph\n- Do a journal note\n- Press ups\n- Clear table\n- Air the bedding\n- Get into the ocean\n- Eat lunch\n- Put bags away",
+          "type": "checklist"
         }
       ],
       "metadata": {
-        "primary_topic": "Supply Chain Data Strategy",
-        "status": "draft",
-        "priority": "high"
-      }
-    },
-    {
-      "record_id": "r2-uuid-9012-3456-7890-1234",
-      "title": "Request for Strategic Recommendations",
-      "content": "This record captures the request for external advice and insights on the strategic options for utilizing supply chain data related to forced labor. The aim is to gather thoughts and recommendations to complement the outlined strategy.",
-      "created_at": "2023-10-05T10:10:00Z",
-      "tags": [
-        "supply chain",
-        "forced labor",
-        "strategic advice",
-        "business development"
-      ],
-      "related_records": [
-        "r1-uuid-1234-5678-9012-3456"
-      ],
-      "description": "Request for external recommendations on strategic use of supply chain forced labor data.",
-      "sections": [
-        {
-          "heading": "Request Context",
-          "content": "Given the outlined\u60c5\u51b5 involving valuable data on forced labor in supply chains, a unique methodology, and various strategic options (direct brand approach, partnerships, data sales, investment), I seek your insights and recommendations on the best path forward. The focus is on maximizing value while navigating constraints like limited funding and the need to avoid direct competition with larger firms.",
-          "type": "text"
-        }
-      ],
-      "metadata": {
-        "primary_topic": "Strategic Advice",
-        "status": "pending input",
-        "priority": "high"
+        "primary_topic": "Daily Tasks",
+        "status": "pending",
+        "priority": "medium"
       }
     }
   ]
@@ -92,31 +52,15 @@ A JSON object containing:
 ## Structural Instructions to Apply
 [
   {
-    "instruction_id": "i1-uuid-5678-9012-3456-7890",
-    "command_type": "create_separate_note",
+    "instruction_id": "instr-2025-04-24-001",
+    "command_type": "format_as_list",
     "instruction_type": "structural",
-    "description": "Create a separate note for strategic recommendations and advice.",
+    "description": "Make this into a simple to-do list named after today's date.",
     "parameters": {
-      "target": "strategic recommendations",
-      "format": "separate record",
+      "target": "current_content",
+      "format": "checklist",
       "query": "",
-      "additional_info": "User explicitly requested one note for their thoughts and a separate note for advice and recommendations."
-    },
-    "priority": "3",
-    "dependencies": [
-      "r1-uuid-1234-5678-9012-3456"
-    ]
-  },
-  {
-    "instruction_id": "i2-uuid-9012-3456-7890-1234",
-    "command_type": "structure_content",
-    "instruction_type": "structural",
-    "description": "Organize content into a maximum of three well-structured notes.",
-    "parameters": {
-      "target": "all_session_content",
-      "format": "structured records without task lists",
-      "query": "",
-      "additional_info": "User requested well-structured notes to help understand and present options to a business partner."
+      "additional_info": "Name the list after today's date (April 24, 2025)."
     },
     "priority": "2",
     "dependencies": []
@@ -238,6 +182,17 @@ The Obsidian vault already contains the following structure. Use this informatio
     "directory": "Personal"
   },
   {
+    "filepath": "Personal/Daily Tasks - October 5 2023.md",
+    "description": "A simple to-do list for personal tasks on October 5, 2023.",
+    "tags": [
+      "daily-tasks",
+      "to-do",
+      "personal",
+      "oct-2023"
+    ],
+    "directory": "Personal"
+  },
+  {
     "filepath": "Personal/Daily Tasks - April 23 2025.md",
     "description": "Comprehensive task list for personal and logistical duties on April 23, 2025, including shopping items, ordered by estimated completion time.",
     "tags": [
@@ -251,17 +206,7 @@ The Obsidian vault already contains the following structure. Use this informatio
     "directory": "Personal"
   },
   {
-    "filepath": "Cooking/Olive Oil Recipe Ideas.md",
-    "description": "Collection of recipe ideas to make the most of a large quantity of premium olive oil.",
-    "tags": [
-      "cooking",
-      "olive-oil",
-      "recipes"
-    ],
-    "directory": "Cooking"
-  },
-  {
-    "filepath": "Projects/AI/AI Dictation System Project.md",
+    "filepath": "Personal/Projects/AI/AI Dictation System Project.md",
     "description": "A quick note on a separate AI dictation system for processing spoken input and generating structured research outputs.",
     "tags": [
       "ai",
@@ -269,10 +214,10 @@ The Obsidian vault already contains the following structure. Use this informatio
       "research",
       "automation"
     ],
-    "directory": "Projects/AI"
+    "directory": "Personal/Projects/AI"
   },
   {
-    "filepath": "Projects/AI/AI Project Brainstorming Session.md",
+    "filepath": "Personal/Projects/AI/AI Project Brainstorming Session.md",
     "description": "Summary of brainstorming session for multiple AI-related professional projects.",
     "tags": [
       "ai",
@@ -280,10 +225,10 @@ The Obsidian vault already contains the following structure. Use this informatio
       "brainstorming",
       "ideation"
     ],
-    "directory": "Projects/AI"
+    "directory": "Personal/Projects/AI"
   },
   {
-    "filepath": "Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
+    "filepath": "Personal/Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
     "description": "A detailed brainstorm on building 'Follow The Fucking Money' (FTFM), a system to track and analyze public statements for accountability using AI and structured data.",
     "tags": [
       "accountability",
@@ -292,10 +237,10 @@ The Obsidian vault already contains the following structure. Use this informatio
       "public-statements",
       "ai-analysis"
     ],
-    "directory": "Projects/FTFM"
+    "directory": "Personal/Projects/FTFM"
   },
   {
-    "filepath": "Projects/FTFM/FTFM Manifesto.md",
+    "filepath": "Personal/Projects/FTFM/FTFM Manifesto.md",
     "description": "Outlines the core principles of the FTFM project as a non-judgmental documentation philosophy.",
     "tags": [
       "ftfm",
@@ -303,7 +248,40 @@ The Obsidian vault already contains the following structure. Use this informatio
       "documentation",
       "non-judgmental"
     ],
-    "directory": "Projects/FTFM"
+    "directory": "Personal/Projects/FTFM"
+  },
+  {
+    "filepath": "Personal/Projects/Supply Chain Data/Supply Chain Data Strategy and Options.md",
+    "description": "Comprehensive overview of strategic options for leveraging supply chain forced labor data and methodology.",
+    "tags": [
+      "supply-chain",
+      "forced-labor",
+      "business-strategy",
+      "ai-automation",
+      "data-monetization"
+    ],
+    "directory": "Personal/Projects/Supply Chain Data"
+  },
+  {
+    "filepath": "Personal/Projects/Supply Chain Data/Strategic Recommendations for Supply Chain Data.md",
+    "description": "Strategic advice on the best approaches for leveraging supply chain data and methodology for revenue and growth.",
+    "tags": [
+      "supply-chain",
+      "forced-labor",
+      "business-strategy",
+      "recommendations"
+    ],
+    "directory": "Personal/Projects/Supply Chain Data"
+  },
+  {
+    "filepath": "Cooking/Olive Oil Recipe Ideas.md",
+    "description": "Collection of recipe ideas to make the most of a large quantity of premium olive oil.",
+    "tags": [
+      "cooking",
+      "olive-oil",
+      "recipes"
+    ],
+    "directory": "Cooking"
   }
 ]
 

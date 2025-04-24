@@ -258,6 +258,10 @@ def call_llm_for_records(prompt, tracer=None):
     Similar to how the main transcript processing works.
     """
     try:
+        # Add current date and time
+        date_str = get_current_datetime_str()
+        prompt_with_date = f"Ignore whatever previous instructions you received. The current date and time is: {date_str}\n\n{prompt}"
+        
         # Make the API call
         print(f"Calling LLM using OpenRouter with model: {Config.MODEL}")
         
@@ -272,7 +276,7 @@ def call_llm_for_records(prompt, tracer=None):
                 "model": Config.MODEL,
                 "messages": [
                     {"role": "system", "content": "You structure content into PARA methodology records."},
-                    {"role": "user", "content": prompt}
+                    {"role": "user", "content": prompt_with_date}
                 ],
                 "temperature": 0.2
             }
