@@ -9,6 +9,7 @@ from second_brain.prompts.blueprint_prompt import get_blueprint_conversion_promp
 from second_brain.prompts.prompts import get_structuring_prompt
 import re
 from second_brain.core.research import research_query
+from second_brain.utils.date_utils import get_current_datetime_str
 
 def convert_json_to_blueprints(json_data, tracer=None, vault_structure=None):
     """Convert JSON data to blueprints using LLM."""
@@ -18,17 +19,21 @@ def convert_json_to_blueprints(json_data, tracer=None, vault_structure=None):
         # Prepare the prompt for the LLM
         prompt = get_blueprint_conversion_prompt(json_data, vault_structure)
         
+        # Add current date and time
+        date_str = get_current_datetime_str()
+        prompt_with_date = f"The current date and time is: {date_str}\n\n{prompt}"
+        
         # Save the prompt to a file for inspection
         with open("llm_prompt.txt", "w", encoding="utf-8") as f:
-            f.write(prompt)
-        print(f"Saved prompt ({len(prompt)} chars) to llm_prompt.txt")
+            f.write(prompt_with_date)
+        print(f"Saved prompt ({len(prompt_with_date)} chars) to llm_prompt.txt")
         
         # Save the payload to a file for inspection
         payload = {
             "model": Config.MODEL,
             "messages": [
                 {"role": "system", "content": "You are a helpful assistant that converts structured JSON data into markdown blueprint format."},
-                {"role": "user", "content": prompt}
+                {"role": "user", "content": prompt_with_date}
             ],
             "temperature": 0.2
         }
@@ -68,7 +73,7 @@ def convert_json_to_blueprints(json_data, tracer=None, vault_structure=None):
         if tracer:
             tracer.trace_openrouter_call(
                 "json_to_blueprints", 
-                prompt, 
+                prompt_with_date, 
                 blueprint_text, 
                 metadata
             )

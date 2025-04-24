@@ -12,6 +12,7 @@ from pathlib import Path
 from second_brain.utils.config import Config
 from second_brain.utils.langsmith_tracer import SecondBrainTracer
 from second_brain.utils.simple_file_index import create_vault_index
+from second_brain.utils.date_utils import get_current_datetime_str
 
 def find_relevant_files(blueprint_path, vault_path=None):
     """Send the blueprint and vault index to LLM and get relevant file recommendations."""
@@ -34,7 +35,9 @@ def find_relevant_files(blueprint_path, vault_path=None):
         vault_index = json.load(f)
     
     # Prepare the prompt
-    prompt = f"""You are a smart file finder. I have a new document (blueprint) and I want to know which existing files in my vault might be relevant to it.
+    date_str = get_current_datetime_str()
+    prompt = f"""You are a smart file finder. The current date and time is: {date_str}
+I have a new document (blueprint) and I want to know which existing files in my vault might be relevant to it.
 
 BLUEPRINT:
 {json.dumps(blueprint, indent=2)}
