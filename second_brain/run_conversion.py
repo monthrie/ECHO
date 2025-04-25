@@ -15,14 +15,18 @@ from second_brain.utils.config import Config
 from second_brain.utils.langsmith_tracer import SecondBrainTracer
 from second_brain.utils.simple_file_index import create_vault_index
 from second_brain.prompts.blueprint_prompt import get_blueprint_conversion_prompt
+# Import the document classifier
+from second_brain.utils.document_classifier import classify_document
+# Import process_article function
+from second_brain.utils.process_article import process_article, process_input_file
 
 
-def run_conversion(json_data_file, output_dir=None):
+def run_conversion(input_file, output_dir=None):
     """
-    Run the conversion process with awareness of existing vault structure.
+    Run the conversion process with document type classification.
     
     Args:
-        json_data_file: Path to the JSON data file to process
+        input_file: Path to the input file to process
         output_dir: Optional output directory (defaults to configured vault path)
     
     Returns:
@@ -35,6 +39,26 @@ def run_conversion(json_data_file, output_dir=None):
     # Determine the vault path
     vault_path = output_dir if output_dir else Config.OBSIDIAN_VAULT_PATH
     
+    # Initialize LangSmith tracer
+    tracer = SecondBrainTracer()
+    
+    # First, check if the input file exists and is a file (not JSON or directory)
+    if os.path.isfile(input_file) and not input_file.endswith('.json'):
+        # Classify the document
+        print(f"Classifying document type for: {input_file}")
+        classification_result = classify_document(input_file)
+        document_type = classification_result.get('document_type')
+        
+        print(f"Document classified as: {document_type}")
+        
+        # If it's an article, use the article processing pipeline
+        if document_type == "article":
+            print("Processing as article...")
+            created_files = process_input_file(input_file, vault_path, tracer)
+            print(f"Article processing complete. Created {len(created_files)} markdown files.")
+            return created_files
+    
+    # If it's not an article or the check was bypassed, continue with the existing pipeline
     # Create vault index to understand current structure
     print(f"Creating vault index from: {vault_path}")
     index_path = create_vault_index(vault_path, output_file="temp_vault_index.json")
@@ -48,12 +72,16 @@ def run_conversion(json_data_file, output_dir=None):
     except Exception as e:
         print(f"Warning: Could not load vault structure: {e}")
     
-    # Load the JSON data
-    with open(json_data_file, 'r', encoding='utf-8') as f:
-        json_data = json.load(f)
-    
-    # Generate the blueprint using the enhanced prompt with vault structure
-    prompt = get_blueprint_conversion_prompt(json_data, vault_structure)
+    # If the input is a JSON file, load it directly
+    json_data = None
+    if input_file.endswith('.json'):
+        try:
+            with open(input_file, 'r', encoding='utf-8') as f:
+                json_data = json.load(f)
+            print(f"Loaded JSON data from {input_file}")
+        except Exception as e:
+            print(f"Error loading JSON data: {e}")
+            return []
     
     # Add immediate model debugging
     print("\n===== MODEL CONFIGURATION DEBUG =====")
@@ -74,26 +102,24 @@ def run_conversion(json_data_file, output_dir=None):
     print(f"MODEL after Config.refresh_model_settings(): {refreshed_model}")
     print("===== END MODEL DEBUG =====\n")
     
-    # Initialize LangSmith tracer
-    tracer = SecondBrainTracer()
-    
     try:
-        # Process transcripts
-        print("Starting transcript processing...")
-        structured_json = process_transcripts(tracer)
+        # If we don't have JSON data yet (not loaded from file), process the transcript
+        if json_data is None:
+            print("Starting transcript processing...")
+            json_data = process_transcripts(tracer)
         
-        if structured_json:
+        if json_data:
             # Add debugging output
-            print(f"Type of structured_json: {type(structured_json)}")
-            if isinstance(structured_json, dict):
-                print(f"Keys in structured_json: {structured_json.keys()}")
+            print(f"Type of json_data: {type(json_data)}")
+            if isinstance(json_data, dict):
+                print(f"Keys in json_data: {json_data.keys()}")
             else:
-                print(f"structured_json is not a dictionary: {structured_json[:100]}...")
+                print(f"json_data is not a dictionary: {json_data[:100]}...")
             
             # Skip directly to blueprint conversion
             print("Converting JSON to blueprints...")
             # Pass vault_structure to process_json_to_blueprints
-            blueprints = process_json_to_blueprints(structured_json, tracer, vault_structure)
+            blueprints = process_json_to_blueprints(json_data, tracer, vault_structure)
             
             # Convert blueprints to markdown
             print("Converting blueprints to markdown...")
@@ -112,45 +138,59 @@ def run_conversion(json_data_file, output_dir=None):
         logger.error(f"Pipeline error: {str(e)}")
         print(f"Error in pipeline: {str(e)}")
         return []
-    
-    # Clean up temporary index file
-    try:
-        os.remove(index_path)
-    except Exception as e:
-        print(f"Warning: Could not delete temporary index file: {e}")
+    finally:
+        # Clean up temporary index file
+        try:
+            if os.path.exists(index_path):
+                os.remove(index_path)
+        except Exception as e:
+            print(f"Warning: Could not delete temporary index file: {e}")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Convert transcripts or JSON to markdown files")
-    parser.add_argument("--transcript", "-t", help="Path to transcript file")
-    parser.add_argument("--json", "-j", help="Path to JSON data file")
+    parser = argparse.ArgumentParser(description="Convert documents to markdown files")
+    parser.add_argument("--input", "-i", help="Path to input file (transcript, article, or JSON)")
     parser.add_argument("--output", "-o", help="Output directory for markdown files")
+    parser.add_argument("--all", "-a", action="store_true", help="Process all files in the input directory")
     
     args = parser.parse_args()
     
-    if args.json:
-        # If JSON file is provided, use it directly
-        run_conversion(args.json, args.output)
+    # Default input directory
+    default_input_dir = "/Users/wilmon/Documents/projects/ECHO/second_brain/data/input"
+    
+    if args.input:
+        # Process the specified input file
+        created_files = run_conversion(args.input, args.output)
+        print(f"Conversion complete. Created {len(created_files)} files.")
+    elif args.all:
+        # Process all files in the default input directory
+        created_files = []
+        print(f"Processing all files in {default_input_dir}")
+        file_count = 0
+        
+        for filename in os.listdir(default_input_dir):
+            if filename.endswith(('.txt', '.md', '.json')):
+                file_path = os.path.join(default_input_dir, filename)
+                print(f"\nProcessing file: {filename}")
+                try:
+                    files = run_conversion(file_path, args.output)
+                    created_files.extend(files)
+                    file_count += 1
+                except Exception as e:
+                    print(f"Error processing {filename}: {e}")
+        
+        print(f"\nConversion complete. Processed {file_count} files and created {len(created_files)} markdown files.")
     else:
-        # If no JSON file, process the transcript first
-        from second_brain.core.main import process_transcripts
+        # Look for the first suitable file in the input directory
+        print(f"No input specified. Looking for files in {default_input_dir}")
         
-        # Initialize config with transcript if provided
-        Config.initialize(args.transcript)
-        
-        # Initialize LangSmith tracer
-        tracer = SecondBrainTracer()
-        
-        # Process the transcript to get JSON
-        structured_json = process_transcripts(tracer)
-        
-        if structured_json:
-            # Save the structured JSON to a file
-            json_path = Path(Config.JSON_OUTPUT_DIR) / "structured_data.json"
-            with open(json_path, "w", encoding="utf-8") as f:
-                json.dump(structured_json, f, indent=2)
-            
-            # Now run conversion with the JSON file
-            run_conversion(str(json_path), args.output)
+        for filename in os.listdir(default_input_dir):
+            if filename.endswith(('.txt', '.md', '.json')):
+                file_path = os.path.join(default_input_dir, filename)
+                print(f"Found file: {filename}")
+                created_files = run_conversion(file_path, args.output)
+                print(f"Conversion complete. Created {len(created_files)} files.")
+                break
         else:
-            print("No structured JSON was generated. Pipeline halted.") 
+            print(f"No suitable files found in {default_input_dir}")
+            parser.print_help()
