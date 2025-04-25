@@ -42,6 +42,34 @@ def run_conversion(input_file, output_dir=None):
     # Initialize LangSmith tracer
     tracer = SecondBrainTracer()
     
+    # Create a source file for the transcript
+    source_link_path = None
+    if os.path.isfile(input_file) and not input_file.endswith('.json'):
+        try:
+            # Read the input file
+            with open(input_file, 'r', encoding='utf-8') as f:
+                text = f.read()
+            
+            # Generate a timestamp for unique source identification
+            from second_brain.utils.date_utils import get_current_datetime_str
+            timestamp = get_current_datetime_str()
+            source_filename = f"transcript_{timestamp}.md"
+            
+            # Create the source file in the Sources/Transcriptions directory
+            sources_dir = os.path.join(vault_path, "Sources", "Transcriptions")
+            os.makedirs(sources_dir, exist_ok=True)
+            
+            # Save the original text as a source file
+            source_file_path = os.path.join(sources_dir, source_filename)
+            with open(source_file_path, 'w', encoding='utf-8') as f:
+                f.write(f"# Original Transcript {timestamp}\n\n{text}")
+            
+            # Get the relative path for linking in Obsidian
+            source_link_path = f"Sources/Transcriptions/{source_filename}"
+            print(f"Created source file: {source_link_path}")
+        except Exception as e:
+            print(f"Warning: Could not create source file: {e}")
+    
     # First, check if the input file exists and is a file (not JSON or directory)
     if os.path.isfile(input_file) and not input_file.endswith('.json'):
         # Classify the document
@@ -118,8 +146,8 @@ def run_conversion(input_file, output_dir=None):
             
             # Skip directly to blueprint conversion
             print("Converting JSON to blueprints...")
-            # Pass vault_structure to process_json_to_blueprints
-            blueprints = process_json_to_blueprints(json_data, tracer, vault_structure)
+            # Pass vault_structure and source_link to process_json_to_blueprints
+            blueprints = process_json_to_blueprints(json_data, tracer, vault_structure, source_link_path)
             
             # Convert blueprints to markdown
             print("Converting blueprints to markdown...")

@@ -11,12 +11,12 @@ import re
 from second_brain.core.research import research_query
 from second_brain.utils.date_utils import get_current_datetime_str
 
-def convert_json_to_blueprints(json_data, tracer=None, vault_structure=None):
+def convert_json_to_blueprints(json_data, tracer=None, vault_structure=None, source_link=None):
     """Convert JSON data to blueprints using LLM."""
     try:
         print(f"convert_json_to_blueprints received data of type: {type(json_data)}")
         
-        # Prepare the prompt for the LLM
+        # Prepare the prompt for the LLM 
         prompt = get_blueprint_conversion_prompt(json_data, vault_structure)
         
         # Add current date and time
@@ -89,6 +89,16 @@ def convert_json_to_blueprints(json_data, tracer=None, vault_structure=None):
             # If not valid JSON, use a fallback parsing method
             print("Response is not valid JSON, using fallback parsing")
             blueprints = create_basic_blueprints(json_data, blueprint_text)
+        
+        # Consistently add source reference to all blueprints
+        if source_link and isinstance(blueprints, list):
+            for blueprint in blueprints:
+                content = blueprint.get("content", {})
+                body = content.get("body", "")
+                
+                # Simply append the source section
+                body += f"\n\n## Source\n\n[[{source_link}]]"
+                content["body"] = body
         
         return blueprints
     except Exception as e:
@@ -176,7 +186,7 @@ def create_basic_blueprints(json_data):
     
     return blueprints
 
-def process_json_to_blueprints(json_data, tracer=None, vault_structure=None):
+def process_json_to_blueprints(json_data, tracer=None, vault_structure=None, source_link=None):
     """
     Process JSON data to blueprint format.
     
@@ -184,6 +194,7 @@ def process_json_to_blueprints(json_data, tracer=None, vault_structure=None):
         json_data: JSON data to convert
         tracer: Optional tracer for LangSmith
         vault_structure: Optional vault structure information
+        source_link: Optional link to source file
         
     Returns:
         Blueprint JSON data
@@ -206,7 +217,7 @@ def process_json_to_blueprints(json_data, tracer=None, vault_structure=None):
                     })
     
     # Then convert to blueprints
-    blueprints = convert_json_to_blueprints(json_data, tracer, vault_structure)
+    blueprints = convert_json_to_blueprints(json_data, tracer, vault_structure, source_link)
     
     return blueprints
 
