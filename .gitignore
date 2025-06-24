@@ -43,3 +43,7 @@ htmlcov/
 *.swp
 *.swo
 .DS_Store
+
+# New folders to add
+archive/
+second_brain/data/obsidian_vault/
