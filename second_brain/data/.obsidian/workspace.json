@@ -8,13 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "731056a0cfa5326d",
+            "id": "f9fd5d2c9e6e8ebd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "obsidian_vault/Personal/Projects/Second Brain/Going Agentic - deletable.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Going Agentic - deletable"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#economics",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -164,43 +168,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "731056a0cfa5326d",
+  "active": "f9fd5d2c9e6e8ebd",
   "lastOpenFiles": [
+    "obsidian_vault/Personal/Projects/Second Brain/TODO.md",
+    "obsidian_vault/Personal/Projects/Second Brain/Going Agentic - deletable.md",
+    "Untitled 1.md",
+    "obsidian_vault/Research/AI/Platforms AI and BigTech Economics - Fallacies of AI Impact.md",
+    "Untitled.canvas",
+    "vaults/garden_20250425_121404/markdown",
+    "vaults/garden_20250425_121404/logs",
+    "vaults/garden_20250425_121404/json",
+    "vaults/garden_20250425_121404/blueprints",
+    "vaults/garden_20250425_121404",
+    "vaults/garden_20250425_120251/markdown",
+    "vaults/garden_20250425_120251/logs",
+    "vaults/garden_20250425_120251/json",
+    "vaults/garden_20250425_120251/blueprints",
+    "vaults/garden_20250425_120251",
+    "obsidian_vault/Gardening/Planting Calendar for Zone 7b Vegetable Garden.md",
+    "obsidian_vault/Gardening/Research on Ideal Dimensions for Beginner Raised Bed Garden.md",
+    "obsidian_vault/Gardening/Beginner Vegetable Garden Project Plan.md",
+    "obsidian_vault/Personal/Projects/Second Brain/Second Brain Project Overview.md",
+    "obsidian_vault/Sources/Transcriptions/transcript_2025-04-25T11:19:26.122105.md",
+    "obsidian_vault/Gardening/Vegetable Planting Calendar.md",
+    "obsidian_vault/Sources/Transcriptions/transcript_2025-04-25T11:15:01.376031.md",
+    "obsidian_vault/Research/Economics/British Steel Industry Decline - Doomberg Analysis.md",
+    "obsidian_vault/Personal/Projects/AI/AI Project Brainstorming Session.md",
+    "obsidian_vault/Sources/Articles/source_2025-04-25T00:01:04.358816.md",
+    "obsidian_vault/Research/Economics/British Steel Industry Collapse - Doomberg Summary 2025.md",
+    "obsidian_vault/Sources/Articles/source_2025-04-24T23:41:14.016237.md",
+    "obsidian_vault/Sources/Articles/source_2025-04-24T23:27:12.600762.md",
+    "UK Economic Decline.md",
+    "example.md",
+    "File_1.md",
     "obsidian_vault/Personal/Daily Tasks - April 24 2025.md",
-    "vaults/pamir_next_steps_20250424_164910/json/structured.json",
-    "vaults/pamir_next_steps_20250424_164910/markdown",
-    "vaults/pamir_next_steps_20250424_164910/blueprints",
-    "vaults/pamir_next_steps_20250424_164910/logs",
-    "vaults/pamir_next_steps_20250424_164910/json",
-    "vaults/pamir_next_steps_20250424_164910",
-    "vaults/pamir_next_steps_20250424_164854/json/structured_data.json",
-    "vaults/pamir_next_steps_20250424_164854/json/structured.json",
-    "vaults/pamir_next_steps_20250424_164854/markdown",
-    "vaults/pamir_next_steps_20250424_164854/logs",
     "obsidian_vault/Projects/AI/AI Project Brainstorming Session.md",
     "obsidian_vault/Personal/Projects/Supply Chain Data/Supply Chain Data Strategy and Options.md",
     "obsidian_vault/Personal/Projects/Supply Chain Data/Strategic Recommendations for Supply Chain Data.md",
     "obsidian_vault/Personal/Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
-    "obsidian_vault/Personal/Projects/FTFM/FTFM Manifesto.md",
-    "obsidian_vault/Personal/Projects/AI/AI Project Brainstorming Session.md",
-    "obsidian_vault/Personal/Projects/AI/AI Dictation System Project.md",
-    "obsidian_vault/Personal/Daily Tasks - October 5 2023.md",
-    "obsidian_vault/Projects/Supply Chain Data/Supply Chain Data Strategy and Options.md",
-    "obsidian_vault/Projects/Supply Chain Data/Strategic Recommendations for Supply Chain Data.md",
-    "obsidian_vault/Projects/FTFM/Follow The Fucking Money - Proof of Concept.md",
-    "obsidian_vault/Personal/Daily Tasks - April 23 2025.md",
-    "obsidian_vault/Personal/Daily Tasks - April 23 2023.md",
-    "obsidian_vault/Cooking/Olive Oil Recipe Ideas.md",
-    "obsidian_vault/Personal/Shopping List - April 23 2023.md",
-    "obsidian_vault/Personal/Daily Note - April 23 2025.md",
-    "obsidian_vault/Projects/FTFM/FTFM Manifesto.md",
-    "obsidian_vault/index.md",
-    "obsidian_vault/AI Projects/AI Project Brainstorming Session.md",
-    "obsidian_vault/Projects/AI/AI Dictation System Project.md",
-    "obsidian_vault/Personal/Personal Journaling - Daily and Weekly Stories.md",
-    "vaults/ftfm_20250421_193142/markdown/Projects/AI Tools/AI Dictation System Project.md",
-    "vaults/ftfm_20250421_193142/markdown/Projects/FTFM/Follow The Fucking Money (FTFM) Concept.md",
-    "vaults/ai_possibilities_20250421_192717/markdown/AI Projects/AI Project Ideas Overview.md",
-    "vaults/ftfm_20250421_193142/markdown/Personal/Journal/Daily Story Entry - 2023-10-01.md"
+    "obsidian_vault/Personal/Projects/FTFM/FTFM Manifesto.md"
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "tag: #ai  ",
+      "color": {
+        "a": 1,
+        "rgb": 15527951
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.267012687427912,
+  "repelStrength": 8.88119953863899,
+  "linkStrength": 0.247848460651229,
+  "linkDistance": 338,
+  "scale": 0.5609242577937316,
+  "close": false
+}
