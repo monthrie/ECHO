@@ -1,6 +1,6 @@
 # Second Brain AI
 
-> _"I got tired of shoehorning AI into note-taking apps that don't care about privacy or real customization. So I decided to build my own AI-powered second brain—one that's private, hackable, and actually works the way I want. It's a work in progress, but it's already way more fun than sending all of my notes off to OpenAI and Anthropic. We need privacy with our AI otherwise we will lose everything."_
+> _I got tired of shoehorning AI into note-taking apps that don't care about privacy or real customization... I decided to build my own AI-powered second brain—one that's private, hackable, and actually works the way I want. We need privacy with our AI otherwise we will lose everything._
 
 ---
 
