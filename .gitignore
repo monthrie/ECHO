@@ -47,3 +47,4 @@ htmlcov/
 # New folders to add
 archive/
 second_brain/data/obsidian_vault/
+.env
