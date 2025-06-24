@@ -1,9 +1,0 @@
-2025-03-22 15:33:42,193 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
-2025-03-22 15:33:42,193 - SecondBrain - INFO - Processing transcript: listed_things
-2025-03-22 15:33:42,193 - SecondBrain - INFO - Created vault: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_153342
-2025-03-22 15:33:42,193 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
-2025-03-22 15:39:04,968 - SecondBrain - INFO - No transcript specified, using: listed_things.csv
-2025-03-22 15:39:04,969 - SecondBrain - INFO - Processing transcript: listed_things
-2025-03-22 15:39:04,969 - SecondBrain - INFO - Created vault: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/listed_things_20250322_153904
-2025-03-22 15:39:04,969 - SecondBrain - INFO - Using model: anthropic/claude-3.7-sonnet
-2025-03-22 15:42:24,801 - SecondBrain - ERROR - No transcript files found in input
