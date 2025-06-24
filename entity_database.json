@@ -1,0 +1,95 @@
+{
+  "entities": {
+    "John": {
+      "alias": "Person1",
+      "mentions": [
+        "I",
+        "me",
+        "myself"
+      ],
+      "first_seen": "2025-05-01T16:04:13.245179",
+      "last_seen": "2025-05-01T16:04:13.245185"
+    },
+    "New York": {
+      "alias": "Location1",
+      "mentions": [],
+      "first_seen": null,
+      "last_seen": null
+    },
+    "Google": {
+      "alias": "Organization1",
+      "mentions": [
+        "company",
+        "firm"
+      ],
+      "first_seen": null,
+      "last_seen": null
+    },
+    "Starbucks": {
+      "alias": "Business1",
+      "mentions": [],
+      "first_seen": null,
+      "last_seen": null
+    },
+    "Person1": {
+      "alias": "Person1",
+      "mentions": [
+        "John",
+        "myself"
+      ],
+      "first_seen": "2025-05-01T16:04:13.245179",
+      "last_seen": "2025-05-01T16:04:13.245185"
+    },
+    "Location1": {
+      "alias": "Location1",
+      "mentions": [
+        "New York"
+      ],
+      "first_seen": null,
+      "last_seen": null
+    },
+    "Organization2": {
+      "alias": "Organization2",
+      "mentions": [
+        "Apple"
+      ],
+      "first_seen": null,
+      "last_seen": null
+    },
+    "Person2": {
+      "alias": "Person2",
+      "mentions": [
+        "Emily"
+      ],
+      "first_seen": null,
+      "last_seen": null
+    }
+  },
+  "special_entities": {
+    "user": {
+      "alias": "Self",
+      "mentions": [
+        "I",
+        "me",
+        "myself"
+      ],
+      "first_seen": "2025-05-01T16:04:13.245179",
+      "last_seen": "2025-05-01T16:04:13.245185"
+    },
+    "Self": {
+      "alias": "Self",
+      "mentions": [
+        "I",
+        "me",
+        "myself"
+      ],
+      "first_seen": "2025-05-01T16:04:13.245179",
+      "last_seen": "2025-05-01T16:04:13.245185"
+    }
+  },
+  "metadata": {
+    "created_at": "2025-05-01T16:04:13.245186",
+    "updated_at": "2025-05-01T16:13:43.177376",
+    "version": "1.0"
+  }
+}

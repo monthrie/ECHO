@@ -355,3 +355,168 @@
 2025-04-24 16:49:10,249 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/pamir_next_steps_20250424_164910
 2025-04-24 16:49:10,249 - SecondBrain - INFO - Starting pipeline...
 2025-04-24 16:49:10,249 - SecondBrain - INFO - Starting pipeline...
+2025-04-24 21:31:43,525 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 21:31:43,526 - SecondBrain - INFO - No transcript specified, using: sb_project.txt
+2025-04-24 21:31:43,526 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/sb_project.txt
+2025-04-24 21:31:43,526 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/sb_project_20250424_213143
+2025-04-24 21:32:19,620 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 21:32:19,620 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 21:32:19,620 - SecondBrain - INFO - No transcript specified, using: sb_project.txt
+2025-04-24 21:32:19,620 - SecondBrain - INFO - No transcript specified, using: sb_project.txt
+2025-04-24 21:32:19,620 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/sb_project.txt
+2025-04-24 21:32:19,620 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/sb_project.txt
+2025-04-24 21:32:19,621 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/sb_project_20250424_213219
+2025-04-24 21:32:19,621 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/sb_project_20250424_213219
+2025-04-24 21:32:19,621 - SecondBrain - INFO - Starting pipeline...
+2025-04-24 21:32:19,621 - SecondBrain - INFO - Starting pipeline...
+2025-04-24 21:52:09,422 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 21:52:09,422 - SecondBrain - INFO - No transcript specified, using: sb_project.txt
+2025-04-24 21:52:09,423 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/sb_project.txt
+2025-04-24 21:52:09,423 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/sb_project_20250424_215209
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 21:52:57,188 - SecondBrain - INFO - No transcript specified, using: sb_project.txt
+2025-04-24 21:52:57,188 - SecondBrain - INFO - No transcript specified, using: sb_project.txt
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/sb_project.txt
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/sb_project.txt
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/sb_project_20250424_215257
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/sb_project_20250424_215257
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Starting pipeline...
+2025-04-24 21:52:57,188 - SecondBrain - INFO - Starting pipeline...
+2025-04-24 23:15:41,846 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 23:15:41,848 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-24 23:15:41,848 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-24 23:15:41,848 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250424_231541
+2025-04-24 23:26:11,664 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 23:26:11,665 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-24 23:26:11,665 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-24 23:26:11,665 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250424_232611
+2025-04-24 23:27:12,599 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 23:27:12,600 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-24 23:27:12,600 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-24 23:27:12,600 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250424_232712
+2025-04-24 23:41:14,015 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 23:41:14,015 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-24 23:41:14,015 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-24 23:41:14,015 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250424_234114
+2025-04-24 23:43:30,341 - SecondBrain - INFO - Logger initialized successfully
+2025-04-24 23:43:30,341 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-24 23:43:30,341 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-24 23:43:30,341 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250424_234330
+2025-04-25 00:01:02,924 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 00:01:02,924 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250425_000102
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 00:01:02,925 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-25 00:01:02,925 - SecondBrain - INFO - No transcript specified, using: substack_article.txt
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/substack_article.txt
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250425_000102
+2025-04-25 00:01:02,925 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/substack_article_20250425_000102
+2025-04-25 11:15:01,375 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:15:01,375 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:15:01,375 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:15:01,375 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111501
+2025-04-25 11:15:01,376 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:15:01,376 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:15:01,376 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:15:01,376 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:15:01,376 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:15:01,376 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:15:01,376 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111501
+2025-04-25 11:15:01,376 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111501
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:15:02,639 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:15:02,639 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:15:02,639 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111502
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111502
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111502
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Starting pipeline...
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Starting pipeline...
+2025-04-25 11:15:02,639 - SecondBrain - INFO - Starting pipeline...
+2025-04-25 11:19:26,121 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:19:26,121 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:19:26,121 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:19:26,122 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111926
+2025-04-25 11:19:26,122 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:19:26,122 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:19:26,122 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:19:26,122 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:19:26,122 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:19:26,122 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:19:26,122 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111926
+2025-04-25 11:19:26,122 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111926
+2025-04-25 11:19:27,231 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:19:27,231 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:19:27,231 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:19:27,231 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:19:27,231 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:19:27,231 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:19:27,231 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:19:27,231 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:19:27,231 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:19:27,232 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111927
+2025-04-25 11:19:27,232 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111927
+2025-04-25 11:19:27,232 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_111927
+2025-04-25 11:19:27,232 - SecondBrain - INFO - Starting pipeline...
+2025-04-25 11:19:27,232 - SecondBrain - INFO - Starting pipeline...
+2025-04-25 11:19:27,232 - SecondBrain - INFO - Starting pipeline...
+2025-04-25 11:42:36,855 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:43:19,031 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:43:19,031 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:43:19,031 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:43:19,031 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_114319
+2025-04-25 11:43:19,031 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:43:19,031 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:57:29,279 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:57:29,280 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:57:29,280 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:57:29,280 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_115729
+2025-04-25 11:57:29,460 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:57:29,460 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:57:29,461 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:57:29,461 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_115729
+2025-04-25 11:59:30,247 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 11:59:30,247 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 11:59:30,248 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 11:59:30,248 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_115930
+2025-04-25 12:00:26,114 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:00:26,114 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 12:00:26,114 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 12:00:26,114 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_120026
+2025-04-25 12:00:27,277 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:00:27,277 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 12:00:27,277 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 12:00:27,277 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_120027
+2025-04-25 12:00:55,624 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:00:55,624 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 12:00:55,625 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 12:00:55,625 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_120055
+2025-04-25 12:00:55,745 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:00:55,745 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 12:00:55,745 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 12:00:55,745 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_120055
+2025-04-25 12:01:50,561 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:01:50,562 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 12:01:50,562 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 12:01:50,562 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_120150
+2025-04-25 12:02:51,621 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:02:51,621 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 12:02:51,622 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 12:02:51,622 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_120251
+2025-04-25 12:02:51,622 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:02:51,622 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:14:04,681 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:14:04,682 - SecondBrain - INFO - No transcript specified, using: garden.txt
+2025-04-25 12:14:04,682 - SecondBrain - INFO - Initialized with transcript: /Users/wilmon/Documents/projects/ECHO/second_brain/data/input/garden.txt
+2025-04-25 12:14:04,682 - SecondBrain - INFO - Output directories: /Users/wilmon/Documents/projects/ECHO/second_brain/data/vaults/garden_20250425_121404
+2025-04-25 12:14:04,682 - SecondBrain - INFO - Logger initialized successfully
+2025-04-25 12:14:04,682 - SecondBrain - INFO - Logger initialized successfully

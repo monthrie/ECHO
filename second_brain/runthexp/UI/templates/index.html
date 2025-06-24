@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Brain Chat Agent</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f9fc;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        #chat-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+        }
+        
+        #chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+        }
+        
+        .user-message {
+            justify-content: flex-end;
+        }
+        
+        .agent-message {
+            justify-content: flex-start;
+        }
+        
+        .message-content {
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+        
+        .user-message .message-content {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .agent-message .message-content {
+            background-color: #e9eef2;
+            color: #2c3e50;
+        }
+        
+        #input-container {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #e0e0e0;
+            background-color: #f9f9f9;
+        }
+        
+        #user-input {
+            flex-grow: 1;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        button {
+            margin-left: 10px;
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        #clear-chat {
+            background-color: #e74c3c;
+        }
+        
+        #clear-chat:hover {
+            background-color: #c0392b;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        #loading-indicator {
+            display: none;
+            justify-content: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Second Brain Chat Agent</h1>
+    
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <div id="loading-indicator">
+            <div class="loading"></div>
+        </div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-button">Send</button>
+            <button id="clear-chat">Clear</button>
+        </div>
+    </div>
+    
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+        const clearButton = document.getElementById('clear-chat');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        
+        // Add welcome message
+        addMessage('Hello! I\'m your Second Brain Chat Agent. How can I assist you today?', 'agent');
+        
+        // Send message when Send button is clicked
+        sendButton.addEventListener('click', sendMessage);
+        
+        // Send message when Enter key is pressed
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // Clear chat when Clear button is clicked
+        clearButton.addEventListener('click', clearChat);
+        
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+            
+            // Add user message to chat
+            addMessage(message, 'user');
+            
+            // Clear input field
+            userInput.value = '';
+            
+            // Show loading indicator
+            loadingIndicator.style.display = 'flex';
+            
+            // Send message to server
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading indicator
+                loadingIndicator.style.display = 'none';
+                
+                // Add agent response to chat
+                addMessage(data.response, 'agent');
+                
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                loadingIndicator.style.display = 'none';
+                addMessage('Sorry, an error occurred. Please try again.', 'agent');
+            });
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            const messageContent = document.createElement('div');
+            messageContent.className = 'message-content';
+            
+            // Format message with simple markdown-like handling
+            const formattedText = formatText(text);
+            messageContent.innerHTML = formattedText;
+            
+            messageDiv.appendChild(messageContent);
+            chatMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function formatText(text) {
+            // Convert line breaks to <br>
+            let formatted = text.replace(/\n/g, '<br>');
+            
+            // Bold text between ** **
+            formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            // Italic text between * *
+            formatted = formatted.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            
+            return formatted;
+        }
+        
+        function clearChat() {
+            // Clear chat messages from UI (except the welcome message)
+            while (chatMessages.children.length > 1) {
+                chatMessages.removeChild(chatMessages.lastChild);
+            }
+            
+            // Clear conversation history on server
+            fetch('/clear', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.status);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
